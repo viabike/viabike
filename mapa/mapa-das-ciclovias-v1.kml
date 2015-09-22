@@ -1,0 +1,2053 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Folder>
+	<name>Lugares temporários</name>
+	<open>1</open>
+	<Document id="ciclo_faixa" xsi:schemaLocation="http://www.opengis.net/kml/2.2 http://schemas.opengis.net/kml/2.2.0/ogckml22.xsd http://www.google.com/kml/ext/2.2 http://code.google.com/apis/kml/schema/kml22gx.xsd">
+		<name>Ciclo_faixas_Julho_2014</name>
+		<Snippet maxLines="0"></Snippet>
+		<Style id="LineStyle001">
+			<LabelStyle>
+				<color>00000000</color>
+				<scale>0</scale>
+			</LabelStyle>
+			<LineStyle>
+				<color>cc4040bd</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>00000000</color>
+				<outline>0</outline>
+			</PolyStyle>
+		</Style>
+		<Style id="LineStyle0010">
+			<LabelStyle>
+				<color>00000000</color>
+				<scale>0</scale>
+			</LabelStyle>
+			<LineStyle>
+				<color>cc4040bd</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>00000000</color>
+				<outline>0</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id="LineStyle0011">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#LineStyle001</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#LineStyle0010</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Folder id="FeatureLayer0">
+			<name>ciclo_faixa</name>
+			<Snippet maxLines="0"></Snippet>
+			<Placemark id="ID_00000">
+				<name>Av. Presciliana de Castilho até  Av. 9 de Julho</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Av. Presciliana de Castilho até  Av. 9 de Julho</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>0</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Av. Presciliana de Castilho até  Av. 9 de Julho</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td>Ciclofaixa com aproximadamente 417m de extensão</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle0011</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.41232173299996,-23.62023512099992,0 -45.41237014399992,-23.62027066899997,0 -45.41244001899995,-23.62032299599999,0 -45.41264558999995,-23.62047229699994,0 -45.41290284099996,-23.62066194899998,0 -45.41305227699997,-23.62076679999992,0 -45.41329688199991,-23.62094020699994,0 -45.41363043399999,-23.62118181399998,0 -45.41384784199995,-23.62134064199996,0 -45.41394907199999,-23.62142242799997,0 -45.41402032099996,-23.62148358099993,0 -45.41406659299995,-23.62153006099992,0 -45.41421146799995,-23.62169406899992,0 -45.41436025900001,-23.62185320099997,0 -45.41448193599995,-23.62198761400001,0 -45.41463511499999,-23.62215529199994,0 -45.41473882799991,-23.62227281599995,0 -45.41482963499991,-23.62237220499996,0 -45.41490894699997,-23.62246193399994,0 -45.4149896759999,-23.62255112499996,0 -45.41507815799999,-23.62265036099996,0 -45.41515879999992,-23.62273781499992,0 -45.41518870899997,-23.62277419699993,0 -45.41526620120578,-23.62289675995541,0 -45.41530766199995,-23.62294228699992,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark id="ID_00001">
+				<name>Ciclofaixa - Rua Oswaldo Cruz até Av. Miguel Varlez</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Ciclofaixa - Rua Oswaldo Cruz até Av. Miguel Varlez</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>1</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Ciclofaixa - Rua Oswaldo Cruz até Av. Miguel Varlez</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td>Ciclofaixa com aproximadamente 680m de extensão</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle0011</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.41530766199995,-23.62294228699992,0 -45.41539989599995,-23.62296134899995,0 -45.41560243699995,-23.62296600799994,0 -45.4158137709999,-23.62297568099997,0 -45.41606872299999,-23.62298420699996,0 -45.41635449599998,-23.62299047299998,0 -45.41650947999996,-23.62300711799995,0 -45.41667543299994,-23.6230225219999,0 -45.41691646799995,-23.62304981599995,0 -45.41721336799994,-23.62308590099994,0 -45.417553383,-23.62312865799991,0 -45.41782027999994,-23.62315738199994,0 -45.41793011399995,-23.62316808699994,0 -45.41803939099997,-23.62318182499994,0 -45.41821677799992,-23.62320013999992,0 -45.41834856699995,-23.62321409399993,0 -45.41846256799993,-23.62324086999998,0 -45.41865444799997,-23.62328597499997,0 -45.41887615199996,-23.62333638699993,0 -45.41901762799991,-23.62337510599998,0 -45.41913023399997,-23.62340683699997,0 -45.41919404899991,-23.62343434199991,0 -45.41925902599996,-23.62347482199992,0 -45.41931823099995,-23.62351907299996,0 -45.41937844799995,-23.62356335899994,0 -45.41945184199992,-23.62362096699998,0 -45.41956424099991,-23.62373172999998,0 -45.41968755999992,-23.62384243599997,0 -45.41982350299998,-23.62396540699995,0 -45.41998023799989,-23.62411011899997,0 -45.42010320099996,-23.62422317699994,0 -45.42021715899992,-23.62432506399995,0 -45.42030767999999,-23.62440741199997,0 -45.42040328299999,-23.62449156599994,0 -45.42053302399994,-23.62461366299991,0 -45.42075902199995,-23.62482519399996,0 -45.42093362399997,-23.62497507399999,0 -45.42110202699998,-23.62502939099995,0 -45.42114679199994,-23.62505667100001,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark id="ID_00002">
+				<name>Rua Engenheiro Jair Nunes de Souza (Ponte Seca)</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Rua Engenheiro Jair Nunes de Souza (Ponte Seca)</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>2</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Rua Engenheiro Jair Nunes de Souza (Ponte Seca)</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td>Ciclofaixa com aproximadamente 435m de extensão</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle0011</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.42563058999998,-23.61808328599994,0 -45.42572722499995,-23.61815903699994,0 -45.42579644099993,-23.61825229099998,0 -45.42604383699995,-23.61856905099995,0 -45.42623060099999,-23.61881250099998,0 -45.42643144899995,-23.61908606699996,0 -45.42660405399995,-23.61932710999997,0 -45.42673237099996,-23.61950510699995,0 -45.42718881499997,-23.62014613499997,0 -45.42747134499996,-23.62053915999996,0 -45.42774066399994,-23.62090500699998,0 -45.42804688699994,-23.62131491899993,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark id="ID_00003">
+				<name>Ciclofaixa - Rua Oswaldo Cruz até Av. Miguel Varlez</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Ciclofaixa - Rua Oswaldo Cruz até Av. Miguel Varlez</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>3</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Ciclofaixa - Rua Oswaldo Cruz até Av. Miguel Varlez</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td>Ciclofaixa com aproximadamente 158m de extensão</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle0011</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.41530766199995,-23.62294228699993,0 -45.41498673499995,-23.62306351599995,0 -45.41463574999993,-23.62315463299995,0 -45.41403018399993,-23.62331801399997,0 -45.41364959199999,-23.62342026799998,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark id="ID_00004">
+				<name>Av. Frei Pacifico Wagner até Praça Candido Mota</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Av. Frei Pacifico Wagner até Praça Candido Mota</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>4</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Av. Frei Pacifico Wagner até Praça Candido Mota</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td>Ciclofaixa com aproximadamente 189m de extensão</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle0011</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.41232326799997,-23.62022835399996,0 -45.41230128199994,-23.62026706799997,0 -45.41226122799997,-23.62034439199995,0 -45.41206156399994,-23.62073271899994,0 -45.41187557199999,-23.62107372099997,0 -45.41184100399994,-23.62113637699997,0 -45.41169708199993,-23.62142426399993,0 -45.41150947999995,-23.62177133099993,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark id="ID_00005">
+				<name>Av. Ethel Cintia de Medeiros até José Grealdo Fernandes da Silva Filho (Trecho Novo)</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Av. Ethel Cintia de Medeiros até José Grealdo Fernandes da Silva Filho (Trecho Novo)</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Av. Ethel Cintia de Medeiros até José Grealdo Fernandes da Silva Filho (Trecho Novo)</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td></td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle0011</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.44445038474441,-23.70413518330683,0 -45.4447153394071,-23.70315585301862,0 -45.44521502621831,-23.70122135122089,0 -45.44545059285788,-23.70046468262105,0 -45.44575468797437,-23.69941795772463,0 -45.44621868287056,-23.69759053167214,0 -45.44627222074319,-23.6973621034156,0 -45.44628649750919,-23.69718007464861,0 -45.44635074295638,-23.69678746358266,0 -45.44639357325446,-23.69620568536673,0 -45.44644354193555,-23.69585947379038,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark id="ID_00006">
+				<name>Rua Antonio Paulino Ferreira até Divisa com São Sebastião (Trecho Novo)</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Rua Antonio Paulino Ferreira até Divisa com São Sebastião (Trecho Novo)</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>6</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Rua Antonio Paulino Ferreira até Divisa com São Sebastião (Trecho Novo)</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td></td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle0011</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.43915612534381,-23.72113260160241,0 -45.43945532318953,-23.72019128168811,0 -45.44004758610644,-23.71832791619535,0 -45.44047896178757,-23.71697071389115,0 -45.44107970997241,-23.71508060482607,0 -45.44154476795021,-23.71361739320343,0 -45.44211684944488,-23.71181743078982,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark id="ID_00007">
+				<name>Rua São José dos Campos até Av. Lucas Nogueira Garcez</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Rua São José dos Campos até Av. Lucas Nogueira Garcez</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>7</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Rua São José dos Campos até Av. Lucas Nogueira Garcez</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td></td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle0011</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.40455696029881,-23.61982146755699,0 -45.40427774399993,-23.61968523899997,0 -45.40385167699996,-23.619345078,0 -45.40364893099992,-23.61925654999989,0 -45.40283041699993,-23.619063753,0 -45.40251709899999,-23.61907288599997,0 -45.40216435199993,-23.61913519099993,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark id="ID_00008">
+				<name>Rua Engenenheiro João Fonseca até São José dos Campos (Trecho Novo)</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Rua Engenenheiro João Fonseca até São José dos Campos (Trecho Novo)</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>8</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Rua Engenenheiro João Fonseca até São José dos Campos (Trecho Novo)</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td></td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle0011</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.40667105599994,-23.62039818499996,0 -45.40583102844679,-23.62017135262548,0 -45.40512793038313,-23.6199814949724,0 -45.40458380299996,-23.61983456399997,0 -45.40455696029881,-23.61982146755699,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark>
+				<name>Caminho sem título</name>
+				<styleUrl>#LineStyle0011</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-45.41260443833729,-23.62324659155846,0 -45.41192296309738,-23.62260573746343,0 -45.41138814592381,-23.62227639971655,0 -45.41058374208412,-23.62181897117397,0 -45.40935426244832,-23.62112108182958,0 -45.40922901067513,-23.62110126613882,0 -45.40895947452109,-23.62102935069564,0 -45.40798871775718,-23.62075423085055,0 -45.40698152452448,-23.62050110209263,0 -45.40691804381591,-23.62048784630793,0 -45.4068686496412,-23.62046226899442,0 -45.4068501050715,-23.62044039583497,0 -45.40666687632174,-23.62039595248931,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+	</Document>
+	<Document id="ciclovia" xsi:schemaLocation="http://www.opengis.net/kml/2.2 http://schemas.opengis.net/kml/2.2.0/ogckml22.xsd http://www.google.com/kml/ext/2.2 http://code.google.com/apis/kml/schema/kml22gx.xsd">
+		<name>Ciclovias_Julho_2014</name>
+		<Snippet maxLines="0"></Snippet>
+		<Style id="LineStyle00">
+			<LabelStyle>
+				<color>00000000</color>
+				<scale>0</scale>
+			</LabelStyle>
+			<LineStyle>
+				<color>cc4040bd</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>00000000</color>
+				<outline>0</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id="LineStyle000">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#LineStyle004</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#LineStyle0016</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id="LineStyle002">
+			<LabelStyle>
+				<color>00000000</color>
+				<scale>0</scale>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff3aa2f7</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>00000000</color>
+				<outline>0</outline>
+			</PolyStyle>
+		</Style>
+		<Style id="LineStyle003">
+			<LabelStyle>
+				<color>00000000</color>
+				<scale>0</scale>
+			</LabelStyle>
+			<LineStyle>
+				<color>cc4040bd</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>00000000</color>
+				<outline>0</outline>
+			</PolyStyle>
+		</Style>
+		<Style id="LineStyle004">
+			<LabelStyle>
+				<color>00000000</color>
+				<scale>0</scale>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff3aa2f7</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>00000000</color>
+				<outline>0</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id="LineStyle005">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#LineStyle00</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#LineStyle003</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id="LineStyle006">
+			<LabelStyle>
+				<color>00000000</color>
+				<scale>0</scale>
+			</LabelStyle>
+			<LineStyle>
+				<color>cc4040bd</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>00000000</color>
+				<outline>0</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id="LineStyle007">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#LineStyle002</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#LineStyle0012</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id="LineStyle008">
+			<LabelStyle>
+				<color>00000000</color>
+				<scale>0</scale>
+			</LabelStyle>
+			<LineStyle>
+				<color>cc4040bd</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>00000000</color>
+				<outline>0</outline>
+			</PolyStyle>
+		</Style>
+		<Style id="LineStyle009">
+			<LabelStyle>
+				<color>00000000</color>
+				<scale>0</scale>
+			</LabelStyle>
+			<LineStyle>
+				<color>cc4040bd</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>00000000</color>
+				<outline>0</outline>
+			</PolyStyle>
+		</Style>
+		<Style id="LineStyle0012">
+			<LabelStyle>
+				<color>00000000</color>
+				<scale>0</scale>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff3aa2f7</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>00000000</color>
+				<outline>0</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id="LineStyle0013">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#LineStyle0014</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#LineStyle008</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id="LineStyle0014">
+			<LabelStyle>
+				<color>00000000</color>
+				<scale>0</scale>
+			</LabelStyle>
+			<LineStyle>
+				<color>cc4040bd</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>00000000</color>
+				<outline>0</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id="LineStyle0015">
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#LineStyle006</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#LineStyle009</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id="LineStyle0016">
+			<LabelStyle>
+				<color>00000000</color>
+				<scale>0</scale>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff3aa2f7</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>00000000</color>
+				<outline>0</outline>
+			</PolyStyle>
+		</Style>
+		<Folder id="FeatureLayer0">
+			<name>ciclovia</name>
+			<Snippet maxLines="0"></Snippet>
+			<Placemark id="ID_00000">
+				<name>Ciclovia - Rua Salesópolis até Av. Marechal Floriano Peixoto</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Ciclovia - Rua Salesópolis até Av. Marechal Floriano Peixoto</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>0</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Ciclovia - Rua Salesópolis até Av. Marechal Floriano Peixoto</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td>Ciclovia com aproximadamente 8.575m de extensão</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle005</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.43124983799999,-23.64155938199997,0 -45.43143935099995,-23.64254228999995,0 -45.43165155299994,-23.64357386399997,0 -45.43204375099999,-23.64534148399999,0 -45.43212826999996,-23.64576353199994,0 -45.43216792299995,-23.64606731699998,0 -45.43237981699998,-23.64707852699998,0 -45.43265890699996,-23.64754662799994,0 -45.43266236299996,-23.64793462999997,0 -45.43257476099997,-23.64805572999997,0 -45.43261455799996,-23.648329286,0 -45.43291856199995,-23.64986115699998,0 -45.43296673299995,-23.65004478899995,0 -45.43301553699997,-23.65032206999997,0 -45.43311202399997,-23.65072930199996,0 -45.43328846299993,-23.65143260399999,0 -45.43345682099995,-23.65180851799995,0 -45.43350999999995,-23.65208764699997,0 -45.43365339099994,-23.65275113899998,0 -45.43372307899993,-23.65285534499999,0 -45.43373366699996,-23.65298361099996,0 -45.43368284699994,-23.65316666199993,0 -45.43375255399997,-23.65337474199999,0 -45.43392782599995,-23.65390001199996,0 -45.43398361399994,-23.65409261999998,0 -45.43415763499996,-23.65492925499995,0 -45.43405261199996,-23.65528421999994,0 -45.43405185999995,-23.65553420299996,0 -45.43410050499995,-23.65572107099997,0 -45.43421309699994,-23.65586636599996,0 -45.43439281999997,-23.65597137499999,0 -45.43445246199998,-23.65622005999996,0 -45.43446426499997,-23.65629701099995,0 -45.43429949699998,-23.65651063199996,0 -45.43428373199998,-23.65673010899998,0 -45.43437470299995,-23.65716291099996,0 -45.43443790699997,-23.65746991599998,0 -45.43447475299996,-23.65768838699994,0 -45.43457022399998,-23.65828236899995,0 -45.43460697399997,-23.65838600399997,0 -45.43466322499995,-23.65870007799999,0 -45.43475537099994,-23.65918660899996,0 -45.43492431999994,-23.65989332299995,0 -45.43497276099998,-23.660092601,0 -45.43499423899993,-23.66032392399998,0 -45.43520271699998,-23.66141900699995,0 -45.43528257799994,-23.66179613899993,0 -45.43549188199993,-23.66282256499994,0 -45.43558743499995,-23.66306261199999,0 -45.43567134799996,-23.66320777699998,0 -45.43579544599999,-23.66335209999996,0 -45.43584528899999,-23.66362065399995,0 -45.43589292599995,-23.66385422699996,0 -45.43589164299993,-23.66394295199996,0 -45.43592002099996,-23.66408041799998,0 -45.43595733699993,-23.66431057099993,0 -45.43592712499997,-23.66441178899993,0 -45.43580029299994,-23.66453152399998,0 -45.43590600899994,-23.66507644899998,0 -45.43611048399999,-23.66612327499998,0 -45.43620040499997,-23.66656653299999,0 -45.43634979699993,-23.66729141199996,0 -45.43647764099995,-23.66798007399996,0 -45.43663660099998,-23.66878250399999,0 -45.43670959099996,-23.66913966699997,0 -45.43681855299996,-23.66940532099994,0 -45.43680187999996,-23.66965279599998,0 -45.43689910999996,-23.67013540099998,0 -45.43701771199994,-23.67071640099994,0 -45.43712834499998,-23.67126871299996,0 -45.43722256699994,-23.67181564899995,0 -45.43733979099994,-23.67239463699997,0 -45.43739870699994,-23.672738833,0 -45.43744414299994,-23.67292615399997,0 -45.43758280599997,-23.673486112,0 -45.43783316799995,-23.67412060999995,0 -45.43787347699998,-23.67424283299995,0 -45.43788797699995,-23.67432153599998,0 -45.43789310399995,-23.67440593999994,0 -45.43796272599997,-23.67479789199998,0 -45.43800972699994,-23.67520391699997,0 -45.43801648699997,-23.67548178699998,0 -45.43801300299998,-23.67572607799997,0 -45.43802642599996,-23.67594179199996,0 -45.43811317299998,-23.67643493899995,0 -45.43821792699998,-23.67701262899994,0 -45.43836232999997,-23.67777108899997,0 -45.43837278099994,-23.67785320199995,0 -45.43848992399995,-23.67814394999994,0 -45.43849914999998,-23.67851865199998,0 -45.43863731999995,-23.67923438499997,0 -45.43867324699994,-23.67933165999996,0 -45.43867053499998,-23.67940402699997,0 -45.43873847299993,-23.67980650199998,0 -45.43879767399994,-23.67993252499997,0 -45.43881955099992,-23.67998657799997,0 -45.43882018299996,-23.68020888899997,0 -45.43893539599998,-23.68082773899993,0 -45.43901728399994,-23.68124310599998,0 -45.43910176599997,-23.68156118799994,0 -45.43912837599999,-23.68181566599997,0 -45.43921635899994,-23.68229756199999,0 -45.43938159699998,-23.68318880699998,0 -45.43956498199998,-23.68414281699996,0 -45.43964243699999,-23.68457696399998,0 -45.43974207199995,-23.68509130699993,0 -45.43985988799993,-23.68550875299998,0 -45.43990293099995,-23.68582427499998,0 -45.43996200499998,-23.68620233499998,0 -45.44002610699994,-23.68646536499995,0 -45.44012932499994,-23.68680298999993,0 -45.44022846999997,-23.68705851399996,0 -45.44037062799998,-23.68734852499996,0 -45.44057575599993,-23.68775744199997,0 -45.44072296699994,-23.68805773099997,0 -45.44089204399995,-23.68830115399993,0 -45.44099924299997,-23.68839276599994,0 -45.44126249899995,-23.68854394999994,0 -45.44154163999998,-23.68865887099999,0 -45.44176193499993,-23.68874539399997,0 -45.44197248799998,-23.68881312299994,0 -45.44199621899998,-23.68884120399998,0 -45.44207678799996,-23.68887339999999,0 -45.44228821199994,-23.68900226399995,0 -45.44245084599999,-23.68911958399998,0 -45.44268010799993,-23.68929632699996,0 -45.44291569699993,-23.68951682199999,0 -45.44309661899995,-23.68971940599994,0 -45.44320890199997,-23.68988147499993,0 -45.44334090999996,-23.69008283999994,0 -45.44346245799994,-23.69038920899994,0 -45.44355583899994,-23.69073911499993,0 -45.44363323299996,-23.69119371099998,0 -45.44345779099997,-23.692017923,0 -45.44283218799995,-23.69319923599996,0 -45.44264604999996,-23.69363752399995,0 -45.44235759799994,-23.69411307899999,0 -45.44186848699996,-23.69485561199997,0 -45.44130790299994,-23.69578240699996,0 -45.44086470599996,-23.69648430099996,0 -45.44067716199999,-23.69675574899999,0 -45.44054121399995,-23.69691150799998,0 -45.44035863499995,-23.69718728699997,0 -45.44025834699995,-23.69721946199996,0 -45.44013508399996,-23.69727928099996,0 -45.44005801499998,-23.69734669499998,0 -45.44001286799994,-23.69743762099995,0 -45.43998370799994,-23.69746915299995,0 -45.43991423199997,-23.69757336099997,0 -45.43954997499998,-23.69814483399996,0 -45.43943379899997,-23.69833041899996,0 -45.43915489199998,-23.69876902099999,0 -45.43905817099994,-23.69895392499995,0 -45.43888940299996,-23.69916642699998,0 -45.43886597299997,-23.69920003199997,0 -45.43842230099995,-23.69987580699996,0 -45.43769847199997,-23.70100128099996,0 -45.43744380499992,-23.701514741,0 -45.43714334499999,-23.70219461399996,0 -45.43666205799998,-23.70283548999992,0 -45.43620592099995,-23.70332372499997,0 -45.43598710799995,-23.70362509999996,0 -45.43493509999996,-23.70525315099996,0 -45.43480453799997,-23.70553683699997,0 -45.43457178699998,-23.70580982699994,0 -45.43429227199994,-23.70624607599995,0 -45.43426372199998,-23.70622380399994,0 -45.43427707399997,-23.70628057199998,0 -45.43424185699996,-23.70633764599997,0 -45.43415437699996,-23.70639447899998,0 -45.43397539599994,-23.70669213999997,0 -45.43361718899995,-23.70728685099995,0 -45.43321989499997,-23.70789019899996,0 -45.43324846099996,-23.707943679,0 -45.43320987799996,-23.70800064399998,0 -45.43312268999995,-23.70804127599998,0 -45.43274560199994,-23.70861420499995,0 -45.43261501199999,-23.70891946899998,0 -45.43241101799998,-23.70912942999996,0 -45.43198776699995,-23.70978885399997,0 -45.43159748899996,-23.71039976899995,0 -45.43125336899994,-23.71092185,0 -45.43113348899993,-23.71116191999995,0 -45.43107343099996,-23.71126216299997,0 -45.43105481599998,-23.71128901399993,0 -45.43089831999998,-23.71147124199997,0 -45.43067598699997,-23.71181264599996,0 -45.43062700699994,-23.71191653699999,0 -45.43054584099997,-23.71201243099997,0 -45.43004611599997,-23.71277940999994,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark id="ID_00001">
+				<name>Cliclovia - Av. Benedita Martins Cruz até Rua Benedito de Carvalho</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Cliclovia - Av. Benedita Martins Cruz até Rua Benedito de Carvalho</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>1</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Cliclovia - Av. Benedita Martins Cruz até Rua Benedito de Carvalho</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td>Ciclovia com aproximadamente 1.660m de extensão</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle005</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.42460006899995,-23.62595894599997,0 -45.42438705099994,-23.62623599399996,0 -45.42435894699997,-23.62630609299998,0 -45.42429325799997,-23.62655520699997,0 -45.42428176999994,-23.62680429599994,0 -45.42432292399997,-23.62698347199995,0 -45.42448017499999,-23.62723000899995,0 -45.42459212199998,-23.62735758799995,0 -45.42469372599992,-23.62753721899998,0 -45.42472360099998,-23.62767511099998,0 -45.42475596499997,-23.62779603399997,0 -45.42497564299998,-23.62814589199996,0 -45.42514962899999,-23.62832363499997,0 -45.42535548199993,-23.62851912499997,0 -45.42566299899994,-23.62901150299997,0 -45.42572869599997,-23.62912922599998,0 -45.42578021799994,-23.62931348499996,0 -45.42579391099997,-23.62952865299996,0 -45.42600321299994,-23.62987937799995,0 -45.42630995799993,-23.63036272799996,0 -45.42658887299996,-23.63081660399996,0 -45.42675392499995,-23.63110910799999,0 -45.42690746399996,-23.63133969299999,0 -45.42703220099999,-23.63157576099998,0 -45.42721738599993,-23.63195553499998,0 -45.42739623299997,-23.63227739799994,0 -45.42744502699998,-23.63239620099997,0 -45.42749381499993,-23.63247020399996,0 -45.42768554499997,-23.63285586299998,0 -45.42777762899992,-23.63305208699996,0 -45.42803258899995,-23.63355590899995,0 -45.42840115299998,-23.63428658299996,0 -45.42893185599997,-23.63535958799998,0 -45.42902162599995,-23.63552223399994,0 -45.42968464499996,-23.63685541699994,0 -45.43018843099997,-23.63786284099997,0 -45.43062979899997,-23.63874639699999,0 -45.43093938599998,-23.63938228799998,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark id="ID_00002">
+				<name>Ciclovia - Av. Benedita Martins Cruz até Rua Benedito de Carvalho</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Ciclovia - Av. Benedita Martins Cruz até Rua Benedito de Carvalho</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>2</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Ciclovia - Av. Benedita Martins Cruz até Rua Benedito de Carvalho</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td>Ciclovia com aproximadamente 2.160m de extensão</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle005</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.43123941899995,-23.61484407299999,0 -45.43123022099996,-23.61485800099996,0 -45.43116462599994,-23.61490672799995,0 -45.43114029299994,-23.61495018699997,0 -45.43112964499994,-23.61508234799994,0 -45.43114357999997,-23.61523373599993,0 -45.43117408199998,-23.61549046399996,0 -45.43117902899996,-23.61558962199998,0 -45.43118624899995,-23.61577769399997,0 -45.43120410399996,-23.61597707899994,0 -45.43121729999996,-23.61602256199996,0 -45.43125896999993,-23.61613611999998,0 -45.43128476099998,-23.61633559699995,0 -45.43128622399996,-23.61642547399999,0 -45.43126015499996,-23.61651214799998,0 -45.43125025199998,-23.61666284399996,0 -45.43119128599994,-23.61698426199997,0 -45.43102083899998,-23.61784883599996,0 -45.43092222299998,-23.61821955399996,0 -45.43088200499994,-23.61832245599993,0 -45.43077275699994,-23.61853622599995,0 -45.43065246999998,-23.618739373,0 -45.43061595099994,-23.61883895199999,0 -45.43047011699997,-23.61905369699997,0 -45.43037996199994,-23.61912798999999,0 -45.43011510099996,-23.61950923499997,0 -45.42981228099995,-23.61986688899998,0 -45.42958379099998,-23.62009464799996,0 -45.42937635399994,-23.62031056099993,0 -45.42919829599998,-23.62050544699998,0 -45.42906323099992,-23.62065858899996,0 -45.42886454099994,-23.62084989399995,0 -45.42841815299994,-23.62126096699997,0 -45.42814778799995,-23.62153065899999,0 -45.42776819199998,-23.62191984499997,0 -45.42763818699996,-23.62208758,0 -45.42753924099997,-23.62227943499995,0 -45.42738655599993,-23.62290898799995,0 -45.42736879999995,-23.62292381099996,0 -45.42732643399995,-23.62304866099994,0 -45.42718481199995,-23.62322683799995,0 -45.42704771099994,-23.62326437099996,0 -45.42688976399995,-23.62334913299999,0 -45.42668006299995,-23.62344469799997,0 -45.42653174299994,-23.62353483399995,0 -45.42645295599994,-23.623592096,0 -45.42639310199996,-23.62365903999996,0 -45.42599526499998,-23.624170442,0 -45.42538765899998,-23.62495655499998,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark id="ID_00003">
+				<name>Ciclovia -  Av. Jundiai até Rua Antonio Rosa Botelho</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Ciclovia -  Av. Jundiai até Rua Antonio Rosa Botelho</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>3</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Ciclovia -  Av. Jundiai até Rua Antonio Rosa Botelho</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td>Ciclovia com aproximadamente 3.166m de extensão</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle005</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.41661633999996,-23.63118672599997,0 -45.41664010999995,-23.63121627099999,0 -45.41671259999998,-23.63131357799997,0 -45.41692738099994,-23.63160015899996,0 -45.41700215799995,-23.63169795299997,0 -45.41715240499997,-23.63189680499995,0 -45.41728377099997,-23.63207779899996,0 -45.41747557899998,-23.63233336799994,0 -45.41759336899997,-23.63248798099995,0 -45.41768914199998,-23.63261388099995,0 -45.41779213599994,-23.63274520499995,0 -45.41783961499993,-23.63281485499994,0 -45.41794185899994,-23.63295910799996,0 -45.41800339899999,-23.633057497,0 -45.41803820399998,-23.63315094199995,0 -45.41814850999998,-23.63330214799994,0 -45.41829660499997,-23.63349712099996,0 -45.41834114299996,-23.63360551199999,0 -45.41841757399994,-23.63385130899996,0 -45.41846983899995,-23.63404172599996,0 -45.41852697299999,-23.63420924999998,0 -45.41858699699998,-23.63434091299998,0 -45.41869265399999,-23.63452090899995,0 -45.41875678799994,-23.63459949899994,0 -45.41888801799996,-23.63472426599998,0 -45.41918930099996,-23.63498791299999,0 -45.41937652899997,-23.63515960799999,0 -45.41962203699995,-23.63540674699993,0 -45.41978091599998,-23.63558228099995,0 -45.41989557899995,-23.63572595299996,0 -45.42024427899998,-23.63627022199997,0 -45.42060131499995,-23.63684366999997,0 -45.42085217399995,-23.63726965699994,0 -45.42114940799996,-23.63779409999995,0 -45.42137020099995,-23.63818990399996,0 -45.42146594399998,-23.63836632099999,0 -45.42158706999992,-23.63858096699994,0 -45.42169883699995,-23.63878230299998,0 -45.42186476299997,-23.63909276199997,0 -45.42194266299998,-23.63924180799996,0 -45.42213454899997,-23.63960034699996,0 -45.42224368199992,-23.63981177899997,0 -45.42240939599998,-23.64013416999995,0 -45.42249304399996,-23.64029985199996,0 -45.42271570599996,-23.64068468299997,0 -45.42282398999998,-23.64088047199995,0 -45.42297263599994,-23.64114395699994,0 -45.42308370299998,-23.64134193199993,0 -45.42319868399994,-23.64154330599996,0 -45.42322202299993,-23.64158644099996,0 -45.42326115699996,-23.64173373799998,0 -45.42330529199997,-23.64190829899997,0 -45.42338774499996,-23.64224240399996,0 -45.42346009699998,-23.64253770899995,0 -45.42351672899997,-23.64277734699994,0 -45.42357574599999,-23.64297848799998,0 -45.42368110799998,-23.64313064799996,0 -45.42394583199995,-23.64349312199994,0 -45.42408953999995,-23.64367906799998,0 -45.42420708499998,-23.64381714999998,0 -45.42433336699999,-23.64397664899997,0 -45.42438098199995,-23.64403120199997,0 -45.42443557199995,-23.64409330199994,0 -45.42450542899995,-23.64420956599998,0 -45.42459817399998,-23.64441115499994,0 -45.42470179599997,-23.64466390299999,0 -45.42493303599997,-23.645246984,0 -45.42511231799995,-23.64570049199996,0 -45.42538083899996,-23.64637288199998,0 -45.42561442899994,-23.64694903299996,0 -45.42583384399995,-23.64749592899995,0 -45.42613870299994,-23.64824238299997,0 -45.42641180499993,-23.64890418499994,0 -45.42655211599998,-23.64925584899993,0 -45.42669870899994,-23.64960919099998,0 -45.42689029299998,-23.65009031699999,0 -45.42707682799993,-23.65055676699997,0 -45.42721416799998,-23.65088056199994,0 -45.42724467499993,-23.65092956399996,0 -45.42739740399999,-23.65138635399995,0 -45.42754164399997,-23.65182260599994,0 -45.42773629299995,-23.65242591799996,0 -45.42793516599994,-23.65303759099993,0 -45.42800731899995,-23.65326306799996,0 -45.42817147399995,-23.65376527099995,0 -45.42831906799994,-23.65422913299996,0 -45.42842530499996,-23.65454951099997,0 -45.42862682599997,-23.65517363899994,0 -45.42869749999994,-23.655404183,0 -45.42872121199997,-23.65547019399998,0 -45.42871308499996,-23.65552144499998,0 -45.42867718599996,-23.65562540699995,0 -45.42862546899994,-23.65571592499999,0 -45.42854676099995,-23.65581862699997,0 -45.42852430199996,-23.65595093799995,0 -45.42855305099995,-23.65605511699996,0 -45.42863694899995,-23.65614344199999,0 -45.42873860799994,-23.65619528499998,0 -45.42878312699997,-23.65622108399998,0 -45.42901960599993,-23.65639786399995,0 -45.42916565399997,-23.65654142599995,0 -45.429317536,-23.65673920799998,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark id="ID_00004">
+				<name>Ciclovia - Av. Jundiai até Rua Antonio Rosa Botelho</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Ciclovia - Av. Jundiai até Rua Antonio Rosa Botelho</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>4</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Ciclovia - Av. Jundiai até Rua Antonio Rosa Botelho</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td>Ciclovia com aproximadamente 2.346m de extensão</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle005</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.39803448099997,-23.62406763699994,0 -45.39821843199997,-23.62405294599997,0 -45.39832373499997,-23.62403934399999,0 -45.39838989999998,-23.62402480799996,0 -45.39844222599999,-23.62400430999999,0 -45.39849386399993,-23.62397698599996,0 -45.39858718799997,-23.62393015599998,0 -45.39870383399995,-23.62386990099997,0 -45.39885885099995,-23.62379166099993,0 -45.39897203299995,-23.62373267899994,0 -45.39911121199997,-23.62366260299998,0 -45.39939460999995,-23.62352060599994,0 -45.39950336199996,-23.62346511299996,0 -45.39965100299996,-23.62338953499995,0 -45.39978844899998,-23.62332020299995,0 -45.39989694999997,-23.62326517899994,0 -45.40006199499992,-23.62318236399994,0 -45.40019615099993,-23.62311483699996,0 -45.40032493099994,-23.62305095499995,0 -45.40047977899997,-23.62297234499994,0 -45.40062297099996,-23.62289830199998,0 -45.40077452099996,-23.62282246999998,0 -45.40090004999996,-23.62276154399998,0 -45.40106647799996,-23.62267802099996,0 -45.40117924699996,-23.62262081999996,0 -45.40127833799994,-23.62256810799996,0 -45.40138986699997,-23.62251096199999,0 -45.40149606199998,-23.622464575,0 -45.40160881199995,-23.62241892199995,0 -45.40167859499996,-23.62239603899997,0 -45.40176755399996,-23.62236411699997,0 -45.40188491299995,-23.62232972699999,0 -45.40201663099998,-23.62229488199995,0 -45.40213607799996,-23.62226904999995,0 -45.40225543699995,-23.62225073399998,0 -45.40236263699995,-23.62223732099995,0 -45.40244717699994,-23.62222922199995,0 -45.40253701399996,-23.62222222599997,0 -45.40263941499995,-23.62221746599996,0 -45.40274940199998,-23.62221785699995,0 -45.40288636499997,-23.62221832899997,0 -45.40307497299995,-23.62221892199996,0 -45.40321106399994,-23.62222113199995,0 -45.40336320499995,-23.62222287199995,0 -45.40351303599994,-23.62222357799995,0 -45.40370366799994,-23.62222454199998,0 -45.40384859999994,-23.62222459599998,0 -45.40397239499998,-23.62222629899999,0 -45.40408340199996,-23.62222827099998,0 -45.40420792999998,-23.62222826499993,0 -45.40435545599996,-23.62223258699993,0 -45.40443370399999,-23.62223640199994,0 -45.40451708499996,-23.62224676399995,0 -45.40461584099995,-23.62225721599999,0 -45.40470722399994,-23.62226972799993,0 -45.40477178799996,-23.62228440899998,0 -45.40486507799994,-23.62230434999998,0 -45.40496649399994,-23.62232867099993,0 -45.40507427299997,-23.62234729899995,0 -45.40517275899998,-23.62235822299993,0 -45.40526480799996,-23.62236902899999,0 -45.40535670699995,-23.62238158799994,0 -45.40547246599994,-23.62240486999997,0 -45.40561649199997,-23.62243338799994,0 -45.40581518099998,-23.62247439799995,0 -45.40597094499998,-23.62250332099996,0 -45.40613971999994,-23.62254162499994,0 -45.40622554599998,-23.62256031899996,0 -45.40634533199994,-23.62259426399994,0 -45.40649448199997,-23.62264412899999,0 -45.40662733499994,-23.62270352199995,0 -45.40671719899996,-23.622748577,0 -45.40684941699993,-23.62280863899999,0 -45.40694900799998,-23.62283956899995,0 -45.40708661199994,-23.62286374699995,0 -45.40716991699998,-23.62287121399995,0 -45.40721052299995,-23.62287776799996,0 -45.40729623899995,-23.62290028199995,0 -45.40740508499993,-23.62294022399994,0 -45.40761119499996,-23.62302510399997,0 -45.40770349299999,-23.62306089899994,0 -45.40784698299996,-23.62311640299999,0 -45.40806304199999,-23.623203243,0 -45.40821481799998,-23.62326304599998,0 -45.40831495799995,-23.62330443399999,0 -45.40836794399996,-23.62332912399997,0 -45.40845090099998,-23.62337516799995,0 -45.40854696999998,-23.62343109299996,0 -45.40865522299998,-23.62349505599999,0 -45.40873574399996,-23.62353790099997,0 -45.40890089999994,-23.62361466099998,0 -45.40898617699997,-23.62366324999994,0 -45.40907939699996,-23.62371922199999,0 -45.40912885399996,-23.62374768499996,0 -45.40917100699994,-23.62378231599996,0 -45.40924768299993,-23.62385465599994,0 -45.40929554099994,-23.62390399899995,0 -45.40934617399995,-23.62394941499998,0 -45.40939386599996,-23.62398585199998,0 -45.40950998499994,-23.62406118199993,0 -45.40962862999998,-23.62413819599995,0 -45.40973404699997,-23.62421010399993,0 -45.40985053899993,-23.62428692199995,0 -45.40991833799995,-23.62433572799996,0 -45.40999614499998,-23.62439210899993,0 -45.41005823299997,-23.62443332699998,0 -45.41012934299994,-23.62448417699995,0 -45.41021938299996,-23.62455453499998,0 -45.41027360799995,-23.62459650599995,0 -45.41034696499998,-23.62465101099998,0 -45.41048006999995,-23.62472438299997,0 -45.41058682099998,-23.62478413799994,0 -45.41063781499997,-23.62482208299998,0 -45.41071145399997,-23.62488316299995,0 -45.41081416099997,-23.62497351999998,0 -45.41090395299995,-23.62505739099994,0 -45.41101951999998,-23.62517886299998,0 -45.41107679199996,-23.62523857399999,0 -45.41115986899996,-23.62532509199997,0 -45.41119189499995,-23.62536145599996,0 -45.41126248899996,-23.62542353999993,0 -45.41135247899996,-23.62548819799999,0 -45.41149504799997,-23.62557119699994,0 -45.41154848799993,-23.62560878299998,0 -45.41172724899995,-23.625756289,0 -45.41184471799994,-23.62585732399998,0 -45.41188102799998,-23.62588948899999,0 -45.41192032499998,-23.62593174399997,0 -45.41194917699994,-23.62596662999995,0 -45.41199894399995,-23.62603849899995,0 -45.41207310499993,-23.62611830599997,0 -45.41214175699997,-23.62618684599994,0 -45.41227388999994,-23.62631321199995,0 -45.41240647199993,-23.62644970799995,0 -45.41251860099994,-23.62656477799994,0 -45.41255085399997,-23.62658905699994,0 -45.41263040399997,-23.62663536599996,0 -45.41267008799997,-23.62666280099997,0 -45.41271798099997,-23.62671046199995,0 -45.41278550599998,-23.62678426199994,0 -45.41291934699996,-23.62693184099994,0 -45.41299210399996,-23.62701047199994,0 -45.41309342699997,-23.62710772799996,0 -45.41312132899998,-23.62713460799996,0 -45.41316742699996,-23.62718006899998,0 -45.41329712799996,-23.62730317200001,0 -45.41337331399996,-23.62736856099999,0 -45.41347955699996,-23.62745414499996,0 -45.41352566499996,-23.62749371499996,0 -45.41356047599993,-23.62752566199999,0 -45.41365735299997,-23.62765162099995,0 -45.41374030599997,-23.62775248499997,0 -45.41398955699998,-23.62803272499999,0 -45.41411850399993,-23.62818147499997,0 -45.41441409699996,-23.62851685199996,0 -45.41452878299998,-23.62864757299998,0 -45.41458957999998,-23.62871585799998,0 -45.41463793499997,-23.62876050499996,0 -45.41486484899997,-23.62895284999997,0 -45.41497915399997,-23.62905249499994,0 -45.41507239099997,-23.62914460499997,0 -45.41517581199997,-23.62926235299995,0 -45.41530176499998,-23.62941781499995,0 -45.41559255199996,-23.62980907699996,0 -45.41594685899998,-23.63029110599997,0 -45.41640818699995,-23.63090942599996,0 -45.41661634599996,-23.63118661099999,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark id="ID_00005">
+				<name>Ciclovia - Av. Fioravante Paschoalin até  Av. Jundiai</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Ciclovia - Av. Fioravante Paschoalin até  Av. Jundiai</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>5</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Ciclovia - Av. Fioravante Paschoalin até  Av. Jundiai</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td>Ciclovia com aproximadamente 1.351m de extensão</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle005</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.38752545199998,-23.62982086099994,0 -45.38758071499996,-23.62970008599998,0 -45.38758766199993,-23.62968291899995,0 -45.38766961499993,-23.62953979799995,0 -45.38779099499994,-23.62932352799992,0 -45.38787719299995,-23.62916762099997,0 -45.38797816999995,-23.62898243899997,0 -45.38807076199999,-23.62881010699994,0 -45.38815510399997,-23.62865272699998,0 -45.38821515699993,-23.62854455300001,0 -45.38829356199993,-23.62840364199997,0 -45.38836286799995,-23.62827498499997,0 -45.38840838899995,-23.62819488599996,0 -45.38848254699996,-23.62805982099996,0 -45.38858313899994,-23.62787576899997,0 -45.38863874699997,-23.62777817099993,0 -45.38873299099999,-23.62760490499995,0 -45.38879691799998,-23.62748638899997,0 -45.38885356899993,-23.62738284599993,0 -45.38893823299997,-23.62722746699997,0 -45.38900921699997,-23.62709404299996,0 -45.38908059399996,-23.62696843299995,0 -45.38916852599995,-23.62682496099997,0 -45.38923452999995,-23.62672504099993,0 -45.38930576799999,-23.62663510499995,0 -45.38936061999992,-23.626580049,0 -45.38946713999997,-23.62649999399999,0 -45.38959334199996,-23.62642084899996,0 -45.38972166799994,-23.62634585899998,0 -45.38977760099994,-23.62631645699998,0 -45.39003555699998,-23.62619931099994,0 -45.39015049899996,-23.62614669599997,0 -45.39027467699998,-23.62609221399999,0 -45.39041809799995,-23.62602771199995,0 -45.39056655099995,-23.62596097599994,0 -45.39067212699997,-23.62591435799995,0 -45.39091932899999,-23.62580706299998,0 -45.39112715099997,-23.62581587399995,0 -45.39122022399994,-23.62581563999994,0 -45.39136275199995,-23.62581037799999,0 -45.39147268399996,-23.62580739199996,0 -45.39148489099995,-23.62579371999994,0 -45.39151426599995,-23.62575828699994,0 -45.39157215499995,-23.62569225299996,0 -45.39160906999996,-23.62565291799997,0 -45.39165331799995,-23.625608878,0 -45.39171053499996,-23.62555780699996,0 -45.39177290799994,-23.62550969999995,0 -45.39181493699994,-23.62548016199999,0 -45.39188399999995,-23.62544208499999,0 -45.39198556599995,-23.62539066199999,0 -45.39213602399997,-23.62531829299996,0 -45.39227097099996,-23.62525645599995,0 -45.39241290599995,-23.62519664899999,0 -45.39253052499998,-23.62514687499994,0 -45.39261741699994,-23.62511364299997,0 -45.39277482099993,-23.625057257,0 -45.39295046799999,-23.62499450899998,0 -45.39296928299996,-23.62498571999995,0 -45.39310240099998,-23.62495206399996,0 -45.39338150999999,-23.62488538999999,0 -45.39353902799995,-23.62484982499996,0 -45.39366193499996,-23.62481996699995,0 -45.39382691799994,-23.62478104299994,0 -45.39397614699993,-23.62475230399997,0 -45.39419064199996,-23.62470274799996,0 -45.39445582999997,-23.62464651199998,0 -45.39460722599995,-23.62461604299996,0 -45.39472747599995,-23.62458203199999,0 -45.39493530299994,-23.62453913299994,0 -45.39510722799997,-23.62450288699996,0 -45.39536680799994,-23.62445417499999,0 -45.39555585499994,-23.62441525999998,0 -45.39580083299995,-23.62436424299995,0 -45.39603276099996,-23.62431491099996,0 -45.39629029499997,-23.62426018599996,0 -45.39657973099997,-23.62419990299999,0 -45.39671541899998,-23.62417070399995,0 -45.39686234899995,-23.62414085599995,0 -45.39702514899994,-23.62410861299998,0 -45.39717489499998,-23.62408547999997,0 -45.39733575599997,-23.62407219899996,0 -45.39760077699997,-23.62406234299993,0 -45.39785969599996,-23.62407042099994,0 -45.39803469099995,-23.62406785199994,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark id="ID_00006">
+				<name>Ciclovia - Av. Fioravante Paschoalin até  Av. Jundiai</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Ciclovia - Av. Fioravante Paschoalin até  Av. Jundiai</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>6</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Ciclovia - Av. Fioravante Paschoalin até  Av. Jundiai</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td>Ciclovia com aproximadamente 1.700m de extensão</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle005</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.37645542499996,-23.62354631199998,0 -45.37670928399996,-23.62367231499996,0 -45.37677570899997,-23.62372741699996,0 -45.37689726299993,-23.62374078699997,0 -45.37698123299997,-23.62372220699997,0 -45.37705246799994,-23.62372341499999,0 -45.37716450399996,-23.62375139999995,0 -45.37724699099994,-23.62380536599995,0 -45.37730093899995,-23.62382105499995,0 -45.37738262799996,-23.62382994299999,0 -45.37747920699997,-23.62384424799995,0 -45.37761712499997,-23.62388142999999,0 -45.37770417899997,-23.62390631399996,0 -45.37777042099998,-23.62393033499995,0 -45.37793323099998,-23.62400809699995,0 -45.37806903499995,-23.62407676499992,0 -45.37813834199994,-23.62414235799998,0 -45.37823733299996,-23.62418876599999,0 -45.37833711399998,-23.62420405299998,0 -45.37835787899995,-23.62420902199995,0 -45.37850130499999,-23.62427936499995,0 -45.37866657599994,-23.62435419899999,0 -45.37887128099994,-23.62445075399997,0 -45.37895763799997,-23.62449116699997,0 -45.37897969399995,-23.62450818499998,0 -45.37900758999995,-23.62451646299997,0 -45.37909126099999,-23.62456190299999,0 -45.37922964599994,-23.62462856199996,0 -45.37925294999997,-23.62467348299998,0 -45.37936972299998,-23.62473283799995,0 -45.37946914499997,-23.62475692299995,0 -45.37959677899994,-23.62481750099996,0 -45.37966556899995,-23.62485538699998,0 -45.37976898199997,-23.62491670299994,0 -45.37989888399994,-23.62499713399997,0 -45.38000287999996,-23.62506075099999,0 -45.38011724699993,-23.62513302699995,0 -45.38021140299999,-23.62522736499995,0 -45.38024423199994,-23.62525488799997,0 -45.38031549299997,-23.62530453799997,0 -45.38038492799997,-23.62533247399996,0 -45.38046361599999,-23.62537488999994,0 -45.38054992799994,-23.62543712799995,0 -45.38066545599999,-23.62552719599997,0 -45.38072885599996,-23.62556853999998,0 -45.38082986099994,-23.62565146899994,0 -45.38092881799997,-23.62572931299998,0 -45.38104095599994,-23.62581819199995,0 -45.38112855799994,-23.62591072299996,0 -45.38121443899996,-23.62597920599997,0 -45.38127105599995,-23.62599751599994,0 -45.38130665599994,-23.62602378299993,0 -45.38136557899998,-23.62606895899996,0 -45.38143233799997,-23.62612991499999,0 -45.38150029199995,-23.62617847699995,0 -45.38155276899995,-23.62622218299998,0 -45.38161715699993,-23.62627837899995,0 -45.38168836499995,-23.62633974199998,0 -45.38171053099995,-23.62638841399997,0 -45.38172909299993,-23.62641186099996,0 -45.38178333299993,-23.62645736999998,0 -45.38182513899994,-23.62649769899999,0 -45.38186920699997,-23.62650251799995,0 -45.38189508699999,-23.62652227799999,0 -45.38196160599995,-23.62658888999994,0 -45.38201206699994,-23.62662502999997,0 -45.38207892099996,-23.626676505,0 -45.38213269899995,-23.62672955599993,0 -45.38218376499998,-23.62676807499997,0 -45.38224822199993,-23.62681128299995,0 -45.38228468999995,-23.62681858799994,0 -45.38233513199997,-23.62678398199996,0 -45.38245417799993,-23.62691302899999,0 -45.38251781299994,-23.62697367799995,0 -45.38262775999993,-23.62709041499995,0 -45.38274196699995,-23.62720378399996,0 -45.38290968899998,-23.62738299299998,0 -45.38298935699999,-23.62745516699994,0 -45.38299973499994,-23.62747633899994,0 -45.38298664899997,-23.62750377499998,0 -45.38299975599995,-23.62759786599999,0 -45.38304738999996,-23.62767425199998,0 -45.38310611799994,-23.627739004,0 -45.38313782699999,-23.62777594399996,0 -45.38318754699998,-23.62783442899998,0 -45.38322169599996,-23.62789653299995,0 -45.38324332299993,-23.62794283799996,0 -45.38330491099998,-23.62800844299995,0 -45.38336488999994,-23.62805012999996,0 -45.38342125699995,-23.62809862699995,0 -45.38350735799998,-23.62819015599997,0 -45.38356596199998,-23.62831123099996,0 -45.38363637099998,-23.62838310599994,0 -45.38373305499994,-23.62845052899997,0 -45.38378568599995,-23.62849989499997,0 -45.38382910799993,-23.62855389299995,0 -45.38388768499993,-23.62861851999999,0 -45.38391581199993,-23.62865124399998,0 -45.38394429999993,-23.62869538199994,0 -45.38398599499994,-23.62874422499995,0 -45.38402860099997,-23.62879730699997,0 -45.38406354399996,-23.62884156099996,0 -45.38410792699995,-23.62889628299997,0 -45.38414136899996,-23.62895715699995,0 -45.38417358599997,-23.62900166399995,0 -45.38422018899997,-23.62906349299993,0 -45.38426442999997,-23.62911101299995,0 -45.38431887399997,-23.62914311199995,0 -45.38434340999999,-23.62916348999993,0 -45.38438939199995,-23.62921252999997,0 -45.38445083799996,-23.62928444999995,0 -45.38448722599998,-23.62932594999996,0 -45.38454091699998,-23.62938990799994,0 -45.38460285599996,-23.62947124099999,0 -45.38462660399995,-23.62950279399997,0 -45.38467497699998,-23.62956814799998,0 -45.38472570799996,-23.62963784099997,0 -45.38478272699997,-23.62971444799995,0 -45.38484144199998,-23.62979741399996,0 -45.38491730699997,-23.629903793,0 -45.38497883399998,-23.62998965899994,0 -45.38501775799993,-23.63004067799994,0 -45.38508924099995,-23.63013472799998,0 -45.38520799499998,-23.63029640099995,0 -45.38525622099996,-23.63036056899995,0 -45.38530079499999,-23.63042153999995,0 -45.38534339299997,-23.63047583999999,0 -45.38538245699994,-23.63053390299995,0 -45.38540627199997,-23.63055685199993,0 -45.38542862999998,-23.63058939399997,0 -45.38543801099996,-23.63063191499997,0 -45.38548949599993,-23.63069770299996,0 -45.38556520699997,-23.63080824699996,0 -45.38561845599999,-23.63088519999999,0 -45.38563363899993,-23.63092516399997,0 -45.38569824499995,-23.63102013299994,0 -45.38576332899999,-23.63111288799998,0 -45.38584608199994,-23.63123195299995,0 -45.38587136099994,-23.63125771899996,0 -45.38592905699995,-23.63130779999995,0 -45.38597570799993,-23.63134495899994,0 -45.38600195899994,-23.63138182099995,0 -45.38602982299994,-23.63143343499998,0 -45.38605151899998,-23.63147058099997,0 -45.38609549499995,-23.63149298399997,0 -45.38618649299996,-23.63152905199997,0 -45.38621571399995,-23.63153490299995,0 -45.38628161999998,-23.63154295799997,0 -45.38634194099997,-23.63154843599995,0 -45.38642895099996,-23.63156715299993,0 -45.38642429399994,-23.63158177099997,0 -45.38642132299998,-23.63162656699996,0 -45.38642767099997,-23.63166791699997,0 -45.38643452599996,-23.63169589699994,0 -45.38644303999997,-23.63171894999995,0 -45.38648090899994,-23.63175637199993,0 -45.38652551399997,-23.63178101899996,0 -45.38655979599998,-23.63174684899997,0 -45.38657677399993,-23.63172386199996,0 -45.38661620699998,-23.63166207799999,0 -45.38667579999999,-23.63154783299996,0 -45.38673791799994,-23.63142979199996,0 -45.38682413299995,-23.63127184599996,0 -45.38687693699995,-23.63117594799997,0 -45.38695240399995,-23.63103399699998,0 -45.38703837899993,-23.63087667199995,0 -45.38713971999994,-23.63068827799999,0 -45.38724656199997,-23.63048419799998,0 -45.38732497799998,-23.63033900199997,0 -45.38734664899994,-23.63030225299998,0 -45.38736858599998,-23.63026123199996,0 -45.38739798399996,-23.63021644399995,0 -45.38742025199997,-23.63018614799996,0 -45.38744557299999,-23.630159834,0 -45.38747890199994,-23.63012911599997,0 -45.38753765999996,-23.63010080399996,0 -45.38739147199993,-23.63000787599999,0 -45.38743334699996,-23.62994628999997,0 -45.38752567499995,-23.62982092599998,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark id="ID_00007">
+				<name>Ciclovia - Av. Lucas Nogueira Garcez até Av. Emiliano Campedelli</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Ciclovia - Av. Lucas Nogueira Garcez até Av. Emiliano Campedelli</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>7</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Ciclovia - Av. Lucas Nogueira Garcez até Av. Emiliano Campedelli</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td>Ciclovia com aproximadamente 1.950m de extensão</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle005</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.37952751199997,-23.61273479899997,0 -45.37954939699995,-23.61275295999997,0 -45.37959964499999,-23.61278383799996,0 -45.37965682599997,-23.61280726599997,0 -45.37972622099994,-23.61282854499995,0 -45.37984699099997,-23.61285822699995,0 -45.37999007999996,-23.61288562699997,0 -45.38011450399996,-23.61290682799996,0 -45.38029499999993,-23.61292539499995,0 -45.38041316299996,-23.61293247299996,0 -45.38052056699996,-23.61293040599998,0 -45.38062868399993,-23.61292805499995,0 -45.38071237299993,-23.61293095399999,0 -45.38083860099994,-23.61294563599995,0 -45.38099556199995,-23.61296366399998,0 -45.38112645699994,-23.61297182399996,0 -45.38126532299997,-23.61297211599998,0 -45.38136268299996,-23.61297343899997,0 -45.38140128699996,-23.61294935299997,0 -45.38158691799999,-23.61295314099994,0 -45.38167772299993,-23.61295899600001,0 -45.38182594299997,-23.61295954599997,0 -45.38195535399997,-23.61296124499997,0 -45.38203413499997,-23.61296449299994,0 -45.38212727899997,-23.61296930899996,0 -45.38217128399998,-23.61297562799996,0 -45.38223001199998,-23.61297028099995,0 -45.38236535399994,-23.612977589,0 -45.38248466099998,-23.612987575,0 -45.38258874999997,-23.61301029599997,0 -45.38265511999998,-23.61302450199997,0 -45.38275176699994,-23.61305722199995,0 -45.38285562399994,-23.61309103299993,0 -45.38293557099997,-23.613121683,0 -45.38304190499999,-23.613164662,0 -45.383127222,-23.61319684499998,0 -45.38324186999995,-23.61324454899996,0 -45.38332791299997,-23.61328242199996,0 -45.38342220899995,-23.61332544599999,0 -45.38353558499995,-23.61338738599994,0 -45.38364133899995,-23.613452206,0 -45.38372404299998,-23.61350688799998,0 -45.38381059899996,-23.61356930599996,0 -45.38389046299995,-23.61363392499994,0 -45.38399587299995,-23.61372592899996,0 -45.38404692299997,-23.61376945699998,0 -45.38410800399999,-23.61381716299996,0 -45.38418090699997,-23.61389046599993,0 -45.38424838099996,-23.61395598899999,0 -45.38433959499997,-23.61404987899995,0 -45.38441174899997,-23.61412296799997,0 -45.38450945799996,-23.61423532299996,0 -45.38458922299998,-23.614324078,0 -45.38466498599994,-23.61441003999997,0 -45.38481184499993,-23.61454953299997,0 -45.38488484499993,-23.61461057099997,0 -45.38496872699994,-23.61466897099999,0 -45.38511826799999,-23.61476265899994,0 -45.38525177799994,-23.61482876599996,0 -45.38536733999997,-23.61486415900001,0 -45.38548863199998,-23.61489113999995,0 -45.38563715799995,-23.61491378499995,0 -45.38574989699998,-23.61491649599997,0 -45.38589409799995,-23.61491889199995,0 -45.38603836799996,-23.61491230099997,0 -45.38616576499993,-23.61490425199997,0 -45.38629486799995,-23.61488614399997,0 -45.38639529399995,-23.61487235499996,0 -45.38651642699995,-23.61486099299999,0 -45.38664520899994,-23.61485273399996,0 -45.38675621999994,-23.61483529899995,0 -45.38686634899995,-23.61481246099996,0 -45.38698938399996,-23.61481030399997,0 -45.38703813799997,-23.61481997899996,0 -45.38709635299995,-23.61490233099995,0 -45.38720481899999,-23.61489826799993,0 -45.38736558699998,-23.61490894399998,0 -45.38758138099996,-23.61494443399997,0 -45.38780107499997,-23.61498471899996,0 -45.38786645999995,-23.615001529,0 -45.38793741999997,-23.61502771999994,0 -45.38803546299993,-23.61509796299998,0 -45.38815329899995,-23.61518182199997,0 -45.38824681499995,-23.61524344599999,0 -45.38830148499994,-23.61527344799998,0 -45.38836082699999,-23.61529382399994,0 -45.38845045699998,-23.61530519900001,0 -45.38854198099995,-23.61531278599994,0 -45.38862017099996,-23.61532069799998,0 -45.38872271899994,-23.61533319399998,0 -45.38881500199994,-23.61534285499995,0 -45.38889197499998,-23.61535829699997,0 -45.38901768299996,-23.61539184599997,0 -45.38916905399997,-23.61543362499999,0 -45.38939043799996,-23.61549582099998,0 -45.38953044399995,-23.61553353199999,0 -45.38970438499998,-23.61558351199996,0 -45.38999005699998,-23.61566065599994,0 -45.39018469399997,-23.61571395999994,0 -45.39046610599996,-23.61578997199996,0 -45.39062481999998,-23.61583609299996,0 -45.39079839999994,-23.61588330699997,0 -45.39101118999997,-23.61594030899995,0 -45.391106666,-23.61596868499993,0 -45.39124990199997,-23.61600737299997,0 -45.39138995699994,-23.61604168399998,0 -45.39163579999995,-23.61610396899996,0 -45.39185431,-23.61616565599998,0 -45.39205077199996,-23.61621898399996,0 -45.39230272599997,-23.61628925599998,0 -45.39260718299994,-23.61637225699997,0 -45.39281986899994,-23.61643059399997,0 -45.39300668699997,-23.61648252199998,0 -45.39321050999996,-23.61653930699998,0 -45.39336421299998,-23.61658238899998,0 -45.39347585899998,-23.61661355299998,0 -45.39359373399998,-23.61664598699999,0 -45.39373560399997,-23.61668665499997,0 -45.39392930699996,-23.61674524899999,0 -45.39401547899997,-23.61679074499996,0 -45.39409671499993,-23.61683980999995,0 -45.39412930999998,-23.61685367099997,0 -45.39420034199998,-23.61687960699994,0 -45.39430009199998,-23.61691733899994,0 -45.39437969699998,-23.61694742199996,0 -45.39445433999999,-23.61697674899996,0 -45.39450027699996,-23.61696912399998,0 -45.39454716099993,-23.61695915499998,0 -45.39461630599993,-23.61695151399994,0 -45.39466967199996,-23.61694996499994,0 -45.39473147299997,-23.61694938499994,0 -45.39480748999994,-23.61695575699997,0 -45.39485479999997,-23.61696113499996,0 -45.39493211499996,-23.61697893199995,0 -45.39502697999996,-23.61701427099996,0 -45.39513063399994,-23.61707440599998,0 -45.39525984899997,-23.61715481899995,0 -45.39538709599999,-23.61718975099998,0 -45.39553167999998,-23.61725610699997,0 -45.39576712699994,-23.61732554999999,0 -45.39593719699997,-23.61737175399999,0 -45.39611366199995,-23.61742149499997,0 -45.39634175699997,-23.61748822899996,0 -45.39653722299994,-23.61753712099994,0 -45.39689715999998,-23.61762107999996,0 -45.39724226599997,-23.61762168300001,0 -45.39762502999997,-23.61765087699997,0 -45.39799535599997,-23.61774160399997,0 -45.39821304399993,-23.617830214,0 -45.39844807999997,-23.61795394399999,0 -45.39849368799997,-23.61801489299996,0 -45.39855310699993,-23.61809777499999,0 -45.39863968299994,-23.61814103299999,0 -45.39917612599993,-23.61831169299998,0 -45.39976690499998,-23.61846864799999,0 -45.40089183199995,-23.61878799599999,0 -45.40166635499998,-23.61900127799993,0 -45.40216435199994,-23.61913519099997,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark id="ID_00008">
+				<name>Ciclovia - Rua Silvio de Oliveira até Rua José Fabrette</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Ciclovia - Rua Silvio de Oliveira até Rua José Fabrette</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>8</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Ciclovia - Rua Silvio de Oliveira até Rua José Fabrette</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td>Ciclovia com aproximadamente 400 metros de extensão</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle005</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.44328753599996,-23.67612085499997,0 -45.44324833199994,-23.67612748399996,0 -45.44318343199996,-23.67607727199994,0 -45.44303458499996,-23.67593529799996,0 -45.44290765299997,-23.67580989199997,0 -45.44279760199998,-23.67569543899998,0 -45.44268200299996,-23.67558491499996,0 -45.44260059899995,-23.67551844099997,0 -45.44252167299994,-23.67545333299997,0 -45.44243456399995,-23.67539032499998,0 -45.44234108199998,-23.67532270699998,0 -45.44223736399994,-23.67526646799997,0 -45.44211167199995,-23.67520666299998,0 -45.44196947899997,-23.67516554299994,0 -45.44180029699999,-23.67512406799995,0 -45.44175396799994,-23.67511254599999,0 -45.44170245899994,-23.67509945399998,0 -45.44165451399994,-23.67508837699996,0 -45.44155744499994,-23.67506948699998,0 -45.44145699799997,-23.67505734899993,0 -45.44113551599996,-23.67505155499998,0 -45.44093182699999,-23.67506560499993,0 -45.44079593999994,-23.67511331399993,0 -45.44070491499997,-23.67515455399997,0 -45.44052246199993,-23.67524505999996,0 -45.44040632199994,-23.67530161599996,0 -45.44030092899995,-23.67536085999997,0 -45.44013316099995,-23.67544626799998,0 -45.43989084999998,-23.67557043399995,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark id="ID_00009">
+				<name>Ciclovia - Av. Jundiai até Rua Antonio Rosa Botelho</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Ciclovia - Av. Jundiai até Rua Antonio Rosa Botelho</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>9</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Ciclovia - Av. Jundiai até Rua Antonio Rosa Botelho</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td>Ciclovia com aproximadamente 1.696m de extensão</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle005</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.43002371434574,-23.6954621038024,0 -45.43005010579358,-23.69499655866254,0 -45.43073755264749,-23.69090781543724,0 -45.43222233631512,-23.6791009299263,0 -45.43196633614759,-23.67866874434411,0 -45.43168671699993,-23.67226774999996,0 -45.43167699799994,-23.67221629899997,0 -45.43164328399996,-23.67214300999997,0 -45.43159160599998,-23.67203250499995,0 -45.43157496699997,-23.67196090199996,0 -45.43157267599998,-23.67187591199997,0 -45.43158255599997,-23.67180865599995,0 -45.43160694399995,-23.67170940199999,0 -45.43163205599996,-23.67162898399995,0 -45.43163687099997,-23.67157782499994,0 -45.43164214799997,-23.67150038599994,0 -45.43163666699996,-23.67131174599996,0 -45.43162772199997,-23.67115765999996,0 -45.43159666199994,-23.67107375299998,0 -45.43161222699996,-23.67099164399998,0 -45.43161260999995,-23.67096135299995,0 -45.43157063199993,-23.67073443599998,0 -45.43152413299998,-23.67048739999998,0 -45.43147706199994,-23.67024468599995,0 -45.43143522199995,-23.67018450099993,0 -45.43144836799996,-23.67011179899999,0 -45.43142483299994,-23.67000275999993,0 -45.43136069799992,-23.66977243499999,0 -45.43129655599995,-23.66958605199994,0 -45.43119959499995,-23.66931975899998,0 -45.43118108499994,-23.66925247499997,0 -45.43117040399995,-23.66918481999996,0 -45.43115181099995,-23.66901588599996,0 -45.43113983999996,-23.66889242999999,0 -45.43112969899994,-23.66878775699998,0 -45.43111517699998,-23.66865880699994,0 -45.43109063299994,-23.66844477899997,0 -45.43105957499995,-23.66817224299997,0 -45.43103244399998,-23.66789046399998,0 -45.43103408699994,-23.66771763399992,0 -45.43104268299994,-23.66760311999999,0 -45.43105160899995,-23.66756339299998,0 -45.43110637999997,-23.66741816999997,0 -45.43112260799995,-23.66736253799996,0 -45.43111971099996,-23.66724270399995,0 -45.43111089699994,-23.66714981499996,0 -45.43108277599998,-23.66689536999996,0 -45.43106431299998,-23.66670618599995,0 -45.43103764799997,-23.66644215699996,0 -45.43101947499997,-23.66629516799998,0 -45.43101325699996,-23.66626010899998,0 -45.43099597599996,-23.66620623299998,0 -45.43083277899996,-23.66589997099995,0 -45.43075750899994,-23.66576590199998,0 -45.43067310899994,-23.66561377799998,0 -45.43062714799999,-23.66550678399996,0 -45.43058994099994,-23.66538906899996,0 -45.43056221399996,-23.66525419699998,0 -45.43051310399994,-23.66499404099996,0 -45.43046589199998,-23.66476429399996,0 -45.43038604399992,-23.66434823799994,0 -45.43036742199996,-23.66424735499995,0 -45.43035558399998,-23.66417963299995,0 -45.43034413799995,-23.66415326799996,0 -45.43016429399995,-23.66397727099997,0 -45.43014533799993,-23.66395034799996,0 -45.43010037799996,-23.66377330899996,0 -45.430099489,-23.66374266999998,0 -45.43020462599998,-23.66349737799995,0 -45.43021324799998,-23.66347364599996,0 -45.43017304699998,-23.663232872,0 -45.43012144099998,-23.66297608599997,0 -45.43011043499996,-23.66293557099993,0 -45.43004165399998,-23.66283617499994,0 -45.42997535099994,-23.66271779799996,0 -45.42996943099996,-23.662688921,0 -45.42995086399998,-23.66255967199994,0 -45.42993382699996,-23.66243834599995,0 -45.42991520999994,-23.66230548799998,0 -45.42988837199994,-23.66219258499997,0 -45.42983440599993,-23.66196994999996,0 -45.42980414599998,-23.66184779399999,0 -45.42979240299997,-23.66176118699998,0 -45.42978857599996,-23.66167172099997,0 -45.429793331,-23.661552768,0 -45.42980818999995,-23.66138601599995,0 -45.42980347099996,-23.66133144199995,0 -45.42974182499995,-23.66101472099997,0 -45.42972323799995,-23.66096822699997,0 -45.42958373799996,-23.66069562599996,0 -45.42957817299998,-23.66066012499995,0 -45.42957173299994,-23.66054467199995,0 -45.42958389899997,-23.66044650299994,0 -45.42959370399996,-23.66024714899993,0 -45.42953128099997,-23.65993233299999,0 -45.42946049799996,-23.65956896499997,0 -45.42935364799996,-23.65933516199995,0 -45.42932454199995,-23.65916830199996,0 -45.42933751799995,-23.65893581799998,0 -45.42931912599994,-23.65884340699996,0 -45.42929055499997,-23.65870498599999,0 -45.42926388499996,-23.65856807299998,0 -45.42924745199997,-23.65847392999996,0 -45.42924689699999,-23.65840633799998,0 -45.42924924299996,-23.65833537299995,0 -45.42926452999996,-23.658237802,0 -45.42927841499994,-23.65812570699997,0 -45.42927555199998,-23.65808693699997,0 -45.42925952299999,-23.65796434699997,0 -45.42926287399996,-23.65790719999996,0 -45.42928735499999,-23.65785741299994,0 -45.42929589199998,-23.65783794799994,0 -45.42930147999995,-23.65776052399997,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark id="ID_00010">
+				<name>Ciclovia - UBS Pegorelli até Rua Antonio Paulino Ferreira (Trecho Novo)</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td> Ciclovia - UBS Pegorelli até Rua Antonio Paulino Ferreira (Trecho Novo)</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>10</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Ciclovia - UBS Pegorelli até Rua Antonio Paulino Ferreira (Trecho Novo)</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td></td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle005</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.44211684944488,-23.71181743078982,0 -45.44374451931672,-23.70663224554819,0 -45.44415140714876,-23.70524026085975,0 -45.44445038474441,-23.70413518330683,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark id="ID_00011">
+				<name>Ciclovia - UBS Pegorelli até Rua Antonio Paulino Ferreira (Trecho Novo)</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td> Ciclovia - UBS Pegorelli até Rua Antonio Paulino Ferreira (Trecho Novo)</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>11</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Ciclovia - UBS Pegorelli até Rua Antonio Paulino Ferreira (Trecho Novo)</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td></td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle005</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.44445038474441,-23.70413518330686,0 -45.44742444661244,-23.70518912282535,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark id="ID_00012">
+				<name>Ciclovia - Av. Benedita Martins Cruz até Rua Benedito de Carvalho</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Ciclovia - Av. Benedita Martins Cruz até Rua Benedito de Carvalho</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>12</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Ciclovia - Av. Benedita Martins Cruz até Rua Benedito de Carvalho</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td></td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle005</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.42538765899998,-23.62495655499995,0 -45.42460006899995,-23.625958946,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark id="ID_00013">
+				<name>Ciclovia - Av. Benedita Martins Cruz até Rua Benedito de Carvalho</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Ciclovia - Av. Benedita Martins Cruz até Rua Benedito de Carvalho</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>13</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Ciclovia - Av. Benedita Martins Cruz até Rua Benedito de Carvalho</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td>Ciclovia com aproximadamente 2.160m de extensão</td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle005</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.42846229099996,-23.60821884899998,0 -45.42857161599995,-23.60851348399995,0 -45.42865160099996,-23.60863673499994,0 -45.42875455299999,-23.60876424499998,0 -45.42894087699996,-23.60894667499998,0 -45.42915231899997,-23.60913104499998,0 -45.42963924799994,-23.60955826899993,0 -45.42991016799994,-23.60979807499995,0 -45.43004160799995,-23.60992807899993,0 -45.43012964599996,-23.610022976,0 -45.43020588799993,-23.61011212099994,0 -45.43029144899998,-23.61023490899993,0 -45.43036988599994,-23.61036476799995,0 -45.43041764599997,-23.61047663399996,0 -45.43048549899999,-23.61064598399997,0 -45.43053516699995,-23.61084527299993,0 -45.43056056999996,-23.61089865799994,0 -45.43058699899996,-23.61107047699994,0 -45.43057444799996,-23.61110631399999,0 -45.43058874699995,-23.61123935799999,0 -45.43063226299994,-23.61154581699999,0 -45.43066596299997,-23.61182395399992,0 -45.43068803399996,-23.61203021499996,0 -45.43070565699998,-23.61216770599998,0 -45.43074263899995,-23.61242279299995,0 -45.43076862399992,-23.61254375699997,0 -45.43080625699997,-23.61264918499996,0 -45.43086092199997,-23.61272746499999,0 -45.43097262499998,-23.61276671799993,0 -45.43103278999996,-23.61322682699996,0 -45.43108535799996,-23.61362301999997,0 -45.43113367499996,-23.61396887899997,0 -45.43116636899999,-23.61422989599998,0 -45.43118953399995,-23.61440239099994,0 -45.43121258999997,-23.61455941699995,0 -45.43120897499995,-23.61459573099996,0 -45.43121963999993,-23.61470933599998,0 -45.43123941899995,-23.61484407299999,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark id="ID_00014">
+				<name>Ciclovia -  Av. Jundiai até Rua Antonio Rosa Botelho</name>
+				<Snippet maxLines="0"></Snippet>
+				<description><![CDATA[<html xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+
+<head>
+
+<META http-equiv="Content-Type" content="text/html">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+</head>
+
+<body style="margin:0px 0px 0px 0px;overflow:auto;background:#FFFFFF;">
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-collapse:collapse;padding:3px 3px 3px 3px">
+
+<tr style="text-align:center;font-weight:bold;background:#9CBCE2">
+
+<td>Ciclovia -  Av. Jundiai até Rua Antonio Rosa Botelho</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+<table style="font-family:Arial,Verdana,Times;font-size:12px;text-align:left;width:100%;border-spacing:0px; padding:3px 3px 3px 3px">
+
+<tr>
+
+<td>FID</td>
+
+<td>14</td>
+
+</tr>
+
+<tr bgcolor="#D4E4F3">
+
+<td>Name</td>
+
+<td>Ciclovia -  Av. Jundiai até Rua Antonio Rosa Botelho</td>
+
+</tr>
+
+<tr>
+
+<td>PopupInfo</td>
+
+<td></td>
+
+</tr>
+
+</table>
+
+</td>
+
+</tr>
+
+</table>
+
+</body>
+
+</html>]]></description>
+				<styleUrl>#LineStyle005</styleUrl>
+				<MultiGeometry>
+					<LineString>
+						<coordinates>
+							-45.42930147999991,-23.65776052399996,0 -45.42930477808573,-23.6576586233846,0 -45.42935112563262,-23.6575305457913,0 -45.42941173396321,-23.65734663928174,0 -45.42944382072641,-23.65716601656242,0 -45.42942599474682,-23.65705107470063,0 -45.42937251680812,-23.65686716750919,0 -45.42931753599995,-23.65673920799994,0 
+						</coordinates>
+					</LineString>
+				</MultiGeometry>
+			</Placemark>
+			<Placemark>
+				<name>correção</name>
+				<styleUrl>#LineStyle0013</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-45.4128684878027,-23.62357750877544,0 -45.41275631682996,-23.62344741529049,0 -45.41267008883632,-23.62335473032635,0 -45.41259539655742,-23.62325148579564,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>correção praça centro</name>
+				<styleUrl>#LineStyle0015</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-45.41150981268964,-23.62177144802744,0 -45.411395138342,-23.6220170564492,0 -45.4113281561047,-23.62222915788259,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>orla massaguaçu pt2</name>
+				<styleUrl>#LineStyle000</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-45.34676682965316,-23.60350804965186,0 -45.34608182945632,-23.60286164145734,0 -45.34574679739519,-23.60221728907019,0 -45.34536930405812,-23.60163409638025,0 -45.344418323517,-23.60052106059713,0 -45.34385213650931,-23.59982037851581,0 -45.34310934738991,-23.59891969522937,0 -45.34268886030974,-23.59826768895335,0 -45.34222503238071,-23.59755720205058,0 -45.3417568087586,-23.59698788340693,0 -45.34131483743574,-23.59642975316984,0 -45.34088980738535,-23.59592919040838,0 -45.3404531796488,-23.59528492389192,0 -45.34003137583202,-23.59476599541273,0 -45.3396623993383,-23.59437554439864,0 -45.33925643519059,-23.59394821793374,0 -45.33837200133605,-23.59317067892072,0 -45.33783818250196,-23.59271342411368,0 -45.33737316686928,-23.59232533841061,0 -45.33678837201596,-23.59172020924023,0 -45.33618534952372,-23.59114078835354,0 -45.33562365956399,-23.59061725299528,0 -45.33511693776026,-23.59018963578242,0 -45.33454293245598,-23.58972566674966,0 -45.33395628847381,-23.58920963273943,0 -45.33348357651202,-23.58871557599453,0 -45.33301287139459,-23.58830792498541,0 -45.3324627090597,-23.58780810860574,0 -45.33185460085444,-23.587209896948,0 -45.33133760646072,-23.58670860412792,0 -45.33083097202624,-23.58631609200745,0 -45.33010629751195,-23.58563772875207,0 -45.32966178548982,-23.58525667377458,0 -45.32916091049707,-23.58481487970425,0 -45.3287002143754,-23.58438999247803,0 -45.32831745110801,-23.5839550491707,0 -45.32796511358204,-23.58346966691657,0 -45.32774758923489,-23.58305217723546,0 -45.3275619495528,-23.58273539687131,0 -45.32720371876724,-23.58264414127669,0 -45.32684912959909,-23.58267502981364,0 -45.32646424061129,-23.58256809872618,0 -45.32615466115168,-23.58239548308646,0 -45.32584748793662,-23.58212049240789,0 -45.32534751641099,-23.58188707501637,0 -45.32487788785017,-23.58163571185341,0 -45.32423120584492,-23.58122859958617,0 -45.32374788912657,-23.58093666297707,0 -45.32326725075943,-23.58057574889426,0 -45.32283259726737,-23.58035890929737,0 -45.32232728794821,-23.58003725349993,0 -45.32170492181361,-23.57965670105728,0 -45.32116826298531,-23.57935392150878,0 -45.32077727808257,-23.57912460247883,0 -45.32036340949112,-23.57893572783937,0 -45.31989859721641,-23.57863372458366,0 -45.31945050472933,-23.57820174716854,0 -45.31924303258302,-23.57801293214929,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark>
+				<name>orla massaguaçu pt1</name>
+				<styleUrl>#LineStyle007</styleUrl>
+				<LineString>
+					<tessellate>1</tessellate>
+					<coordinates>
+						-45.34674790513285,-23.60354723239911,0 -45.34737010986621,-23.60367003375261,0 -45.34804646136914,-23.60369444020052,0 -45.34864958119909,-23.60359667319813,0 -45.34926563211273,-23.6034640498861,0 -45.34968489067288,-23.60341255709162,0 -45.35011034716092,-23.60322735970695,0 -45.35046934549934,-23.60321074583839,0 -45.35088213152834,-23.60314484784118,0 -45.35155387893558,-23.60306052649288,0 -45.35219944248706,-23.60296696573758,0 -45.35277847279473,-23.60292749751815,0 -45.35312841671905,-23.60283020140006,0 -45.35358970534642,-23.60268611926132,0 -45.35394748307984,-23.60254259058815,0 -45.35426442243259,-23.60232439611463,0 -45.35444873658855,-23.6020085888047,0 -45.35475110678247,-23.60163276061668,0 -45.35519313484121,-23.60137264296284,0 -45.35560437969424,-23.6011719722822,0 -45.35595348394009,-23.60093458932285,0 -45.35644609221824,-23.60067829832703,0 -45.35691758416503,-23.60031046024988,0 -45.35727527085125,-23.60022802830412,0 -45.35770813687839,-23.6002425819614,0 -45.35824319973124,-23.60026033492186,0 -45.35862278181759,-23.60024436194011,0 -45.35917563506357,-23.60013653401176,0 -45.35970528741098,-23.60012736422644,0 -45.36003518538521,-23.60017370818578,0 -45.36032781057497,-23.60019684333906,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+		</Folder>
+	</Document>
+</Folder>
+</kml>

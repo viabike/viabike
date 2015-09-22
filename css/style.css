@@ -1,0 +1,162 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+/*TAGS*/
+body{
+	background-color: white;
+}
+h1{
+	font-weight: 400;
+}
+h3{
+	font-weight: 600;
+}
+/*TAGS*/
+
+
+/*BASE*/
+div#wrapper {
+	margin: auto;
+	width: 100%;
+	height: auto;
+	font-family: 'Raleway', sans-serif;
+	background-color: #232323;
+}
+
+div#container{
+	width: 100%;
+	background-color: white;
+	float: left;
+}
+
+div#header {
+	width: 980px;
+	height: 70px;
+	margin: 0 auto;
+	background-color: #232323;
+}
+
+div#mapa {
+	width: 100%;
+	height: 500px;
+	float: left;
+	background: transparent;
+	border-bottom: 1px solid #e3e3e3;
+}
+
+div#content {
+	width: 980px;
+	float:left;
+	margin-left:calc(50% - 525px);
+	padding:35px;
+	font-size:17px;
+	color:#535455;
+}
+
+div#footer {
+	clear: both;
+	float:left;
+	width:100%;
+	height: 90px;
+	background-color: #f6f6f6;
+}
+
+div#footer p{
+	margin-top: 40px;
+	font-size:14px;
+	color:#a7a7a7;
+}
+/*BASE*/
+
+/*MENU*/
+div#nav-header {
+	width: auto;
+	height: 30px;
+	line-height:30px;
+	float: right;
+	margin-top:15px;
+	padding: 5px 0px 5px 5px;
+}
+#nav-header ul li:nth-child(1){
+	margin-right:0px;
+	padding: 0px 0px 0px 10px;
+}
+
+div#nav-header ul {
+	list-style-type: none; 
+}
+
+div#nav-header ul li{
+	display: inline;
+	float: right;
+	padding: 0px 10px;
+}
+
+div#nav-header ul li a {
+	text-decoration: none;
+	color: #a7a7a7;
+}
+
+div#nav-header ul li a:hover {
+	color: #f8f8f8;
+}
+/*MENU*/
+
+/*DESENVOLVEDOR*/
+.esp{
+	width:100%;
+	height:20px;
+	float:left;
+}
+
+.desenvolvedor{
+	width:235px;
+	padding:5px;
+	float:left;
+    word-wrap: break-word;
+}
+.desenvolvedor p{
+    font-size: 16px;
+}
+
+.margin_des{
+	margin-right:0px;
+}
+.img-hover{
+	display:none;
+}
+/*DESENVOLVEDOR*/
+
+
+/*CLASSES*/
+.logo{
+	float:left;
+	margin-top:12.5px;
+	width:150px;
+}
+
+.text-home {
+	width: 500px;
+	float: left;
+}
+
+.legenda-home {
+	float: right;
+}
+
+.legenda-home ul {
+	list-style: none;
+}
+.legenda-cic-ativa {
+	color: rgba(189, 64, 64, 0.8);	
+}
+.legenda-cic-obras{
+	color: #00DAFF;
+}
+.paragrafo{
+	text-align: justify;
+}
+/*CLASSES*/
