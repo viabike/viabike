@@ -10,19 +10,19 @@
 </head>
 <body>
 	<div id="wrapper">
-	
+
 		<div id="header">
-		
+
 			<a href="index.php"><img src="imagens/viabike2.png" alt="ViaBike.me" class="logo"></a>
-			
+
 			<div id="nav-header">
 				<ul>
 					<li><a href="equipe.php">EQUIPE</a></li>
 					<li><a href="sobre.php">SOBRE</a></li>
 					<li><a href="index.php">HOME</a></li>
-				</ul>	
+				</ul>
 			</div>
 		</div>
-		
+
 		<div id="container">
 		<div id="content">

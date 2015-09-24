@@ -1,4 +1,3 @@
-
 <?php
 	require_once("../conexao/conexao.php");
 	require_once("template/header.php");
@@ -15,10 +14,10 @@
 ?>
 <CENTER>
 	<h1>Cadastar pontos de interesse</h1><br>
-		<form action="update_ponto.php" method="POST" class="formadm">
+		<form action="update_ponto.php" method="POST" class="form_adm">
 			
 			<div id="mapaadm"></div>
-		<div id="form_1">
+		<div id="form1">
 			<input type="hidden" name="id_ponto" value="<?=$linhas->id_ponto?>" class="form">
 			Nome:<input type="text" name="nome" value="<?=$linhas->nome?>" class="form"><br>
 
@@ -38,7 +37,7 @@
 			
 		</div>
 			
-			<div id="form_2">
+			<div id="form2">
 			<!-- PS: A categoria não está sendo alterada -->
 				Categoria:<select name="categoria" class="form select" id="tipo"><br>
 					<option value="BC" <?=($linhas->categoria == "BC")?'selected':''?>>Bicicletaria</option>

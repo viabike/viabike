@@ -1,9 +1,9 @@
 <?php include("template/header.php");?>
 	<CENTER>
 	<h1>Cadastar pontos de interesse</h1><br>
-		<form action="confirma_ponto.php" class="formadm" method="POST">
+		<form action="confirma_ponto.php" class="form_adm" method="POST">
 			<div id="mapaadm"></div>
-			<div id='form_1'>
+			<div id='form1'>
 			<input type="hidden" name="id_ponto" class="form">
 			Nome:<input type="text" name="nome" class="form"><br>
 			Bairro:<input type="text" name="bairro" class="form"><br>
@@ -14,7 +14,7 @@
 			Hora de Funcionamento:<input type="time" name="hr_inicio" class="form"><br>
 			Até:<input type="time" name="hr_fecha" class="form"><br>
 			</div>
-			<div id='form_2'>
+			<div id='form2'>
 				Categoria:<select name="categoria" class="form select" id="tipo" onchange="ChamarLink();"><br>
 							<option value="BC">Bicicletaria</option>
 							<option value="PG">Posto de Gasolina</option>
