@@ -1,6 +1,11 @@
 <?php
 function conectar() {
-	$conexao = new PDO("mysql:host=localhost;dbname=viabike_db", "root", ""); 
+  $host = "127.0.0.1";
+  $dbn  = "admvb_viabike_db";
+  $user = "admvb_adminvb";
+  $pass = "3web15";
+
+	$conexao = new PDO("mysql:dbname=$dbn; host=$host", $user, $pass);
 	return $conexao;
 }
 
