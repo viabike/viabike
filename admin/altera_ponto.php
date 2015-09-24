@@ -24,15 +24,15 @@
 				Número:<input type="text" name="num" value="<?=$linhas->num?>" class="form"><br>
 				CEP:<input type="text" name="cep" value="<?=$linhas->cep?>" class="form"><br>
 				Telefone:<input type="text" name="telefone" value="<?=$linhas->telefone?>" class="form"><br>
-				Hora de Funcionamento:<input type="time" name="hr_inicio" value="<?=$linhas->hr_inicio?>" class="form"><br>
+				Horário de Funcionamento:<input type="time" name="hr_inicio" value="<?=$linhas->hr_inicio?>" class="form"><br>
 				Até:<input type="time" name="hr_fecha" value="<?=$linhas->hr_fecha?>" class="form"><br>
 			</div>
 
 			<!-- PS: A categoria não está sendo alterada -->
 			<div id="form2">
 				Categoria:<select name="categoria" class="form select"><br>
-							<option value="<?=$linhas->categoria?>">Bicicletaria</option>
-							<option value="<?=$linhas->categoria?>">Posto de Gasolina</option>
+							<option value="BC" <?=($linhas->categoria == "BC")?'selected':''?>>Bicicletaria</option>
+							<option value="PG" <?=($linhas->categoria == "PG")?'selected':''?>>Posto de Gasolina</option>
 						  </select><br>
 
 				Latitude:<input type="text" name="latitude" id="lat" value="<?=$linhas->latitude?>" class="form"><br>

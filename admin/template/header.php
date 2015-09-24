@@ -13,12 +13,12 @@ include("funcoes/funcoes.php");
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-	<?php //var_dump($_SESSION); //mostrar se a sessão esta criada ?>
+	<!-- //var_dump($_SESSION); //mostrar se a sessão esta criada -->
 	<div id="wrapper">
 
 		<div id="header">
 
-			<a href="../index.php"><img src="../imagens/viabike2.png" alt="ViaBike.me" class="logo" width="150px"></a>
+			<a href="consulta_pontos.php"><img src="../imagens/viabike2.png" alt="ViaBike.me" class="logo" width="150px"></a>
 
 			<?php if(adminLogado()){ ?>
 				<div id="nav-header">
