@@ -30,7 +30,7 @@
 
             <div id="containermap">
                 <div id="mapa">
-                </div>           
+                </div>
 
                 <!--
                 <div id="filtros">

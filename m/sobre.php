@@ -18,7 +18,7 @@ include("template/header.php");
 <br>
 
 <center>
-<img src="imagens/equipe/equipe.jpg" alt="Nossa Equipe">
+<img src="imagens/equipe/equipe_m.jpg" width="100%" alt="Nossa Equipe">
 </center>
 
 <?php
