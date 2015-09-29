@@ -1,4 +1,5 @@
 <?php include("template/header.php");?>
+	<script src="funcoes/formatar.js"></script>
 	<CENTER>
 	<h1>Cadastar pontos de interesse</h1><br>
 		<form action="confirma_ponto.php" class="form_adm" method="POST">
@@ -9,8 +10,8 @@
 			Bairro:<input type="text" name="bairro" class="form"><br>
 			Rua:<input type="text" name="rua" class="form"><br>
 			Número:<input type="text" name="num" class="form"><br>
-			CEP:<input type="text" name="cep" class="form"><br>
-			Telefone:<input type="text" name="telefone" class="form"><br>
+			CEP:<input type="text" name="cep" class="form" maxlength="9" OnKeyPress="formatar('#####-###', this)"><br>
+			Telefone:<input type="text" name="telefone" class="form" maxlength="12" OnKeyPress="formatar('##-####-####', this)"><br>
 			Hora de Funcionamento:<input type="time" name="hr_inicio" class="form"><br>
 			Até:<input type="time" name="hr_fecha" class="form"><br>
 			</div>
@@ -30,22 +31,22 @@
 		var iconPosto = 'http://maps.google.com/mapfiles/kml/pal2/icon21.png';
 		var marker = '';
 		var map = '';
-	
+
 		function initMap() {
 		   map = new google.maps.Map(document.getElementById('mapaadm'), {
 			zoom: 15,
 			center: {lat: -23.6255903, lng: -45.4241453}
 		  });
-		   
+
 			addMarker(iconBicicletaria);
-			 
+
 			google.maps.event.addListener(marker, "dragend", function(event){
 			 document.getElementById("lat").value = event.latLng.lat();
 			 document.getElementById("lng").value = event.latLng.lng();
 			});
-			
+
 		}
-		
+
 		$("#tipo").change(function() {
 			var categoria = document.getElementById("tipo").value;
 			if(categoria == 'BC'){
