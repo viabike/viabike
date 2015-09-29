@@ -86,7 +86,7 @@ div#nav-header {
 }
 
 div#nav-header ul {
-	list-style-type: none; 
+	list-style-type: none;
 }
 
 div#nav-header ul li{
@@ -116,11 +116,27 @@ div#nav-header ul li a:hover {
 	width:235px;
 	padding:5px;
 	float:left;
-    word-wrap: break-word;
+  word-wrap: break-word;
 }
-.desenvolvedor p{
-    font-size: 16px;
+.desenvolvedor i{
+    font-size: 30px;
+		cursor: pointer;
 }
+
+/*classes icones*/
+.face:hover{
+	color: #3b5998;
+	transition: all 0.1s ease-out;
+}
+.mail:hover{
+	color: #F90101;
+	transition: all 0.1s ease-out;
+}
+.in:hover{
+	color: #007bb5;
+	transition: all 0.1s ease-out;
+}
+/*fim classes icones*/
 
 .margin_des{
 	margin-right:0px;
@@ -151,7 +167,7 @@ div#nav-header ul li a:hover {
 	list-style: none;
 }
 .legenda-cic-ativa {
-	color: rgba(189, 64, 64, 0.8);	
+	color: rgba(189, 64, 64, 0.8);
 }
 .legenda-cic-obras{
 	color: #00DAFF;

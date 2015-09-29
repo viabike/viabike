@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>

@@ -6,7 +6,8 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <script src="js/script.js"></script>
     </head>
     <body>
