@@ -31,7 +31,8 @@
 		var iconPosto = 'http://maps.google.com/mapfiles/kml/pal2/icon21.png';//exemplo até colocar o original.
 		var marker = '';
 		var map = '';
-
+		var mlat = document.getElementById("lat").value;
+		var mlgn = document.getElementById("lng").value;
 		function initMap() {
 		   map = new google.maps.Map(document.getElementById('mapaadm'), {
 			zoom: 15,
