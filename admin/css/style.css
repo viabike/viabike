@@ -1,0 +1,289 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+/*TAGS*/
+body{
+	background-color:white;
+}
+a{
+	cursor:pointer;
+}
+h1{
+	font-weight:400;
+}
+h3{
+	font-weight:600;
+}
+form{
+	text-align:left;
+	width:400px;
+	border:1px solid #bdc3c7;
+	padding:35px;
+	border-radius:10px;
+	margin-left:calc(25% - 235px);
+}
+table{
+	/*border:1px solid #bdc3c7;*/
+	border-radius:10px 10px 0px 0px;
+	-webkit-box-shadow: 1px 1px 5px 0px rgba(35,35,35,0.5);
+	-moz-box-shadow: 1px 1px 5px 0px rgba(35,35,35,0.5);
+	box-shadow: 1px 1px 5px 0px rgba(35,35,35,0.5);
+}
+table tr.border-tr td{
+	border-bottom:1px solid #bdc3c7;
+}
+table th{
+	border-bottom:1px solid #bdc3c7;
+	padding:10px 30px;
+	text-align:center;
+}
+table td{
+	border:0px solid #bdc3c7;
+	padding:10px 30px;
+	text-align:center;
+}
+.border-esq{
+	border-radius:10px 0px 0px 0px;
+}
+.border-dir{
+	border-radius:0px 10px 0px 0px;
+}
+.none-form{
+	width:auto;
+	border:none;
+	padding:0px;
+	border-radius:none;
+	margin-left:0px;
+	float:none;
+}
+.none-form button{
+	background:transparent;
+}
+.form_adm{
+	text-align:left;
+	width:908px;
+	border:1px solid #bdc3c7;
+	padding:35px;
+	border-radius:10px;
+	margin-left: 0px;
+	float:left;
+}
+/*TAGS*/
+
+
+/*BASE*/
+div#wrapper {
+	margin: auto;
+	width: 100%;
+	height: auto;
+	font-family: 'Raleway', sans-serif;
+	background:#232323;
+}
+
+div#container{
+	width:100%;
+	background:white;
+	float:left;
+}
+
+div#header {
+	width: 980px;
+	height: 70px;
+	margin:0 auto;
+	background-color: #232323;
+}
+
+div#mapa {
+	width: 100%;
+	height: 500px;
+	float: left;
+	background:transparent;
+	border-bottom: 1px solid #e3e3e3;
+}
+div#mapaadm {
+	width: 402px;
+	height: 370px;
+	float: right;
+	background:transparent;
+	margin-bottom: 35px;
+}
+
+div#content {
+	width: 980px;
+	float:left;
+	margin-left:calc(50% - 525px);
+	min-height:450px;
+	padding:35px;
+	font-size:17px;
+	color:#535455;
+}
+
+div#footer {
+	clear: both;
+	float:left;
+	width:100%;
+	height: 90px;
+	background-color: #f6f6f6;
+}
+
+div#footer p{
+	margin-top: 40px;
+	font-size:14px;
+	color:#a7a7a7;
+}
+
+div#form1{
+	float:left;
+	padding-right: 52px;
+	border-right: 1px solid #bdc3c7;
+}
+
+div#form2{
+	float:right;
+	margin-left
+}
+/*BASE*/
+
+/*MENU*/
+div#nav-header {
+	width: auto;
+	height: 30px;
+	line-height:30px;
+	float: right;
+	margin-top:15px;
+	padding: 5px 0px 5px 5px;
+}
+#nav-header ul li:nth-child(1){
+	margin-right:0px;
+	padding: 0px 0px 0px 10px;
+}
+
+div#nav-header ul {
+	list-style-type: none;
+}
+
+div#nav-header ul li{
+	display: inline;
+	float: right;
+	padding: 0px 10px;
+}
+
+div#nav-header ul li a {
+	text-decoration: none;
+	color: #a7a7a7;
+}
+
+div#nav-header ul li a:hover {
+	color: #f8f8f8;
+}
+/*MENU*/
+
+/*DESENVOLVEDOR*/
+.esp{
+	width:100%;
+	height:20px;
+	float:left;
+}
+
+.desenvolvedor{
+	width:235px;
+	padding:5px;
+	float:left;
+    word-wrap: break-word;
+}
+.desenvolvedor p{
+    font-size: 16px;
+}
+
+.margin_des{
+	margin-right:0px;
+}
+/*DESENVOLVEDOR*/
+
+/*TABELA*/
+.tabela{
+	margin-left:0px;
+}
+.tabela th{
+	border-color:#c6c6c6;
+	background:#f1f1f1;
+}
+.tabela td{
+	border-color:#c6c6c6;
+}
+.font-icon{
+	font-size:25px;
+	color:#ddd;
+}
+.font-icon:hover{
+	color:#535455;
+	transition:all 0.1s ease-out;
+}
+/*TABELA*/
+
+/*CLASSES*/
+.logo{
+	float:left;
+	margin-top:12.5px;
+}
+.form{
+	padding:10px;
+	width:380px;
+	display:block;
+	line-height:1.467;
+	color:#34495e;
+	border:1px solid #bdc3c7;
+	border-radius:4px;
+	box-shadow: none;
+	-webkit-transition: border 0.1s linear, color 0.1s linear, background-color 0.1s linear;
+	transition: border 0.1s linear, color 0.1s linear, background-color 0.1s linear;
+}
+.form:focus{
+	border:1px solid #535455;
+	outline:none;
+}
+.select{
+	width:402px;
+}
+
+.button{
+	width:auto;
+	padding: 0 35px;
+	height:40px;
+	font-size: 16px;
+	background: #BD4040;
+	border-radius:4px;
+	cursor:pointer;
+	color:#fff;
+	float:right;
+}
+.check{
+	margin-top:13px;
+}
+.button:hover{
+	transition:all 0.1s ease-out;
+	background:#B53737;
+}
+.text-home {
+	width: 500px;
+	float: left;
+}
+.legenda-home {
+	float: right;
+}
+.legenda-home ul {
+	list-style: none;
+}
+.legenda-cic-ativa {
+	color: rgba(189, 64, 64, 0.8);
+}
+.legenda-cic-obras{
+	color: #00DAFF;
+}
+.paragrafo{
+	text-align: justify;
+}
+/*CLASSES*/
