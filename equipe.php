@@ -1,4 +1,5 @@
 <?php include("template/header.php");?>
+
 <center><h1>Equipe</h1></center>
 <div class="esp"></div>
 

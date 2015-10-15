@@ -138,4 +138,7 @@ div#desen{
 .desenvolvedor p{
     font-size: 2em;
 }
+.desenvolvedor i{
+	color: #ddd;
+}
 /* desenvolvedor */
