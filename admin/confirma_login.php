@@ -35,22 +35,13 @@ if ($user == $userb AND $senha == $senhab AND $tipob == "a") {// verifica se usu
 			setcookie('username');
 		}
 
-		header("location: consulta_pontos.php");
+		header("location:consulta_pontos.php");
 	}
 	else {
 		header("location:index.php");
 	}
 }
-// else if ($user == $userb AND $senha == $senhab AND $tipob == "u") {// verifica se usuário, senha estão corretos e se se ele é usuário comum
-// 	echo "VOCE NAO TEM PERMISSAO PARA ACESSAR ESTA PAGINA";
-// }
-// else if ($user != $userb) { // verifica se o usuário existe no banco
-// 	echo "Usuário incorreto ou inexistente.";
-// }
-// else if ($senha != $senhab) { // verifica se a senha está incorreta
-// 	echo "Senha incorreta.";
-// }
-// else {
-// 	echo "Usuário e senha incorretos ou inexistentes.";
-// }
+else {
+	header("location:erro_login.php");
+}
 ?>
