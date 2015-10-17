@@ -1,3 +1,14 @@
+<?php
+require_once("conexao/conexao.php");
+// ======== SELECIONA TODOS OS REGISTROS DE PONTOS DE INTERESSE DO BANCO VIABIKE_DB =============
+$pdo = conectar();
+$buscaPonto = $pdo -> prepare("SELECT * FROM ponto_interesse");
+//Executando a QUERY
+$buscaPonto -> execute();
+// ========= FIM DA SELEÇÃO ==============================================
+
+$linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,6 +42,7 @@
 		<div id="mapa"></div>
 
 		<script>
+		var map;
 		function initMap() {
 		  map = new google.maps.Map(document.getElementById('mapa'), {
 			center: {lat: -23.6255903, lng: -45.4241453},
@@ -38,8 +50,27 @@
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		  });
 		  loadKmlLayer('http://viabike.me/mapa/mapa-das-ciclovias-v2.kml', map);
+      <?php
+      $contador = 0;
+      foreach ($linha as $linhas):
+        $contador++;
+      ?>
+      la<?=$contador?> = parseFloat(<?=$linhas->latitude;?>);
+      lo<?=$contador?> = parseFloat(<?=$linhas->longitude;?>);
+      local<?=$contador?> = {lat: la<?=$contador?>, lng: lo<?=$contador?>};
+      addMarker(local<?php echo $contador?>, map);
+      <?php
+      endforeach;
+      ?>
 		}
 
+		// FUNÇÃO QUE ADICIONA MARCAS NO MAPA
+		function addMarker(location, map) {
+  		var marker = new google.maps.Marker({
+    		position: location,
+    		map: map
+  		});
+		}
 		function loadKmlLayer(src, map){
 			var kmlLayer = new google.maps.KmlLayer(src, {
 				suppressInfoWindows: true,
@@ -47,6 +78,7 @@
 				map: map
 			});
 		}
+
 
 		google.maps.event.addDomListener(window, 'load', initMap);
 		</script>
