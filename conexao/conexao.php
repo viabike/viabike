@@ -1,11 +1,12 @@
 <?php
 function conectar() {
-  $host = "127.0.0.1";
-  $dbn  = "admvb_viabike_db";
-  $user = "admvb_adminvb";
-  $pass = "3web15";
+  $host = "localhost";
+  $dbn  = "viabike_db";//NOME DO BANCO
+  $user = "root"      ;//USUARIO DO BANCO
+  $pass = ""          ;//SENHA DO USUARIO DO  BANCO
 
 	$conexao = new PDO("mysql:dbname=$dbn; host=$host", $user, $pass);
+
 	return $conexao;
 }
 

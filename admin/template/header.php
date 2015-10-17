@@ -19,7 +19,11 @@ include("funcoes/funcoes.php");
 
 		<div id="header">
 
+			<?php if(adminLogado()){ ?>
 			<a href="consulta_pontos.php"><img src="../imagens/viabike2.png" alt="ViaBike.me" class="logo" width="150px"></a>
+			<?php }else{ ?>
+			<a href="index.php"><img src="../imagens/viabike2.png" alt="ViaBike.me" class="logo" width="150px"></a>
+			<?php } ?>
 
 			<?php if(adminLogado()){ ?>
 				<div id="nav-header">

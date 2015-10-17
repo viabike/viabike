@@ -60,14 +60,32 @@ div#footer {
 	clear: both;
 	float:left;
 	width:100%;
-	height: 90px;
+	height: 80px;
 	background-color: #f6f6f6;
+	font-family: 'Raleway', sans-serif;
 }
 
 div#footer p{
-	margin-top: 40px;
+	margin-top: 20px;
 	font-size:14px;
 	color:#a7a7a7;
+	line-height: 20px;
+}
+
+div#entar{
+	width: 180px;
+	padding: 15px 0px 15px 0;
+	border-radius: 10px 0px 0px 10px;
+	background: #BD4040;
+	color: #fff;
+	position: fixed;
+	right: 0;
+	top: 100px;
+	z-index: 9999;
+}
+div#entar a{
+	text-decoration: none;
+	color: #fff;
 }
 /*BASE*/
 
@@ -121,6 +139,7 @@ div#nav-header ul li a:hover {
 .desenvolvedor i{
     font-size: 30px;
 		cursor: pointer;
+		color: #ddd;
 }
 
 /*classes icones*/

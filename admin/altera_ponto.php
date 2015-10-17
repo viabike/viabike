@@ -15,7 +15,7 @@
 <CENTER>
 	<h1>Cadastar pontos de interesse</h1><br>
 		<form action="update_ponto.php" method="POST" class="form_adm">
-			
+
 			<div id="mapaadm"></div>
 		<div id="form1">
 			<input type="hidden" name="id_ponto" value="<?=$linhas->id_ponto?>" class="form">
@@ -34,9 +34,9 @@
 			Hora de Funcionamento:<input type="time" name="hr_inicio" value="<?=$linhas->hr_inicio?>" class="form"><br>
 
 			Até:<input type="time" name="hr_fecha" value="<?=$linhas->hr_fecha?>" class="form"><br>
-			
+
 		</div>
-			
+
 			<div id="form2">
 			<!-- PS: A categoria não está sendo alterada -->
 				Categoria:<select name="categoria" class="form select" id="tipo"><br>
@@ -55,35 +55,38 @@
 	<?php
 	endforeach;
 	?>
-		<script>		
+		<script>
 		var iconBicicletaria = '../imagens/viabike_ico.png';
 		var iconPosto = 'http://maps.google.com/mapfiles/kml/pal2/icon21.png';//exemplo até colocar o original.
 		var marker = '';
 		var map = '';
-		
+
+		var mlat = document.getElementById("lat").value;
+		var mlgn = document.getElementById("lng").value;
 		function initMap() {
+
 		  var map = new google.maps.Map(document.getElementById('mapaadm'), {
 			zoom: 15,
-			center: {lat: -23.6255903, lng: -45.4241453}
+			center: {lat: parseFloat(mlat), lng: parseFloat(mlgn)}
 		  });
-			
+
 			var cat = document.getElementById("tipo").value;
-			
+
 			if(cat == 'BC'){
 				addMarker(iconBicicletaria);
-			}			
+			}
 			else if(cat == 'PG'){
 				addMarker(iconPosto);
 			}
 			else{
 				addMarker(iconBicicletaria);
 			}
-			 
+
 			google.maps.event.addListener(marker, "dragend", function(event){
 			 document.getElementById("lat").value = event.latLng.lat();
 			 document.getElementById("lng").value = event.latLng.lng();
 			});
-			
+
 		$("#tipo").change(function() {
 			var categoria = document.getElementById("tipo").value;
 			if(categoria == 'BC'){
@@ -95,7 +98,7 @@
 				addMarker(iconPosto);
 			}
 		});
-			
+
 		function addMarker(myicon){
 			 var mlat = document.getElementById("lat").value;
 			 var mlgn = document.getElementById("lng").value;
@@ -113,8 +116,6 @@
 		}
 
 		}
-
-
 
 		google.maps.event.addDomListener(window, 'load', initMap);
 	</script>
