@@ -49,9 +49,9 @@ var map;
 //Função que inicia o mapa
 function initMap() {
   map = new google.maps.Map(document.getElementById('mapa'), {
-	center: {lat: -23.6255903, lng: -45.4241453},
-	zoom: 15,
-	mapTypeId: google.maps.MapTypeId.ROADMAP
+  	center: {lat: -23.6255903, lng: -45.4241453},
+  	zoom: 15,
+  	mapTypeId: google.maps.MapTypeId.ROADMAP
   });
   loadKmlLayer('http://viabike.me/mapa/mapa-das-ciclovias-v2.kml', map);
 	var iconPonto;
