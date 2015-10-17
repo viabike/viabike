@@ -42,45 +42,67 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 		<div id="mapa"></div>
 
 		<script>
-		var map;
-		function initMap() {
-		  map = new google.maps.Map(document.getElementById('mapa'), {
-			center: {lat: -23.6255903, lng: -45.4241453},
-			zoom: 15,
-			mapTypeId: google.maps.MapTypeId.ROADMAP
-		  });
-		  loadKmlLayer('http://viabike.me/mapa/mapa-das-ciclovias-v2.kml', map);
-      <?php
-      $contador = 0;
-      foreach ($linha as $linhas):
-        $contador++;
-      ?>
-      la<?=$contador?> = parseFloat(<?=$linhas->latitude;?>);
-      lo<?=$contador?> = parseFloat(<?=$linhas->longitude;?>);
-      local<?=$contador?> = {lat: la<?=$contador?>, lng: lo<?=$contador?>};
-      addMarker(local<?php echo $contador?>, map);
-      <?php
-      endforeach;
-      ?>
-		}
 
-		// FUNÇÃO QUE ADICIONA MARCAS NO MAPA
-		function addMarker(location, map) {
-  		var marker = new google.maps.Marker({
-    		position: location,
-    		map: map
-  		});
-		}
-		function loadKmlLayer(src, map){
-			var kmlLayer = new google.maps.KmlLayer(src, {
-				suppressInfoWindows: true,
-				preserveViewport: true,
-				map: map
-			});
-		}
+//Variavel do mapa
+var map;
+
+//Função que inicia o mapa
+function initMap() {
+  map = new google.maps.Map(document.getElementById('mapa'), {
+	center: {lat: -23.6255903, lng: -45.4241453},
+	zoom: 15,
+	mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+  loadKmlLayer('http://viabike.me/mapa/mapa-das-ciclovias-v2.kml', map);
+	var iconPonto;
+
+	<?php
+	$contador = 0;
+
+	foreach ($linha as $linhas):
+    $contador++;
+  ?>
+
+	if ("<?=$linhas->categoria;?>" == "PG") {
+		iconPonto = 'http://maps.google.com/mapfiles/kml/pal2/icon21.png';
+	}else if ("<?=$linhas->categoria;?>" == "BC") {
+		iconPonto = 'imagens/viabike_ico.png';
+	}
 
 
-		google.maps.event.addDomListener(window, 'load', initMap);
+  la<?=$contador?> = parseFloat(<?=$linhas->latitude; ?>);
+  lo<?=$contador?> = parseFloat(<?=$linhas->longitude;?>);
+
+  local<?=$contador?> = {lat: la<?=$contador?>, lng: lo<?=$contador?>};
+
+  addMarker(local<?php echo $contador?>, map, iconPonto);
+
+	<?php
+  endforeach;
+  ?>
+}
+var marker;
+// FUNÇÃO QUE ADICIONA MARCAS NO MAPA
+function addMarker(location, map, myIcon) {
+	  marker = new google.maps.Marker({
+		position: location,
+    icon: myIcon,
+    map: map
+	});
+}
+
+// FUNÇÃO QUE CARREGA KML
+function loadKmlLayer(src, map){
+	var kmlLayer = new google.maps.KmlLayer(src, {
+		suppressInfoWindows: true,
+		preserveViewport: true,
+		map: map
+	});
+}
+
+//EVENTO QUE CHAMA FUNÇÃO initMap() QUANDO A JANELA FOR CARREGADA.
+google.maps.event.addDomListener(window, 'load', initMap);
+
 		</script>
 
 		<div id="content">
