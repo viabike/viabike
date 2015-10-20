@@ -1,8 +1,8 @@
 * {
-	padding: 0;
-	margin: 0;
+	padding: 0; 
+	margin: 0; 
 	border: 0;
-}
+} 
 
 /*TAGS*/
 body{
@@ -27,7 +27,7 @@ form{
 }
 table{
 	/*border:1px solid #bdc3c7;*/
-	border-radius:10px 10px 0px 0px;
+	border-radius:5px 5px 0px 0px;
 	-webkit-box-shadow: 1px 1px 5px 0px rgba(35,35,35,0.5);
 	-moz-box-shadow: 1px 1px 5px 0px rgba(35,35,35,0.5);
 	box-shadow: 1px 1px 5px 0px rgba(35,35,35,0.5);
@@ -46,10 +46,10 @@ table td{
 	text-align:center;
 }
 .border-esq{
-	border-radius:10px 0px 0px 0px;
+	border-radius:5px 0px 0px 0px;
 }
 .border-dir{
-	border-radius:0px 10px 0px 0px;
+	border-radius:0px 5px 0px 0px;
 }
 .none-form{
 	width:auto;
@@ -70,6 +70,22 @@ table td{
 	border-radius:10px;
 	margin-left: 0px;
 	float:left;
+}
+.form_user1{
+	border: 0px;
+	text-align:left;
+	width:400px;
+	float:left;
+	left: 0px;
+	padding: 30px 45px 30px 30px;
+}
+.form_user2{
+	border: 0px;
+	text-align:left;
+	width:400px;
+	float:right;
+	left: 0px;
+	padding: 30px 30px 30px 20px;
 }
 /*TAGS*/
 
@@ -144,6 +160,18 @@ div#form1{
 div#form2{
 	float:right;
 	margin-left
+}
+div#form_user{
+	padding:10px;
+	width: auto;
+	height: 430px;
+	line-height:1.467;
+	color:#34495e;
+	border:1px solid #bdc3c7;
+	border-radius:4px;
+	box-shadow: none;
+	-webkit-transition: border 0.1s linear, color 0.1s linear, background-color 0.1s linear;
+	transition: border 0.1s linear, color 0.1s linear, background-color 0.1s linear;
 }
 /*BASE*/
 
@@ -228,6 +256,7 @@ div#nav-header ul li a:hover {
 .logo{
 	float:left;
 	margin-top:12.5px;
+	width:150px;
 }
 .form{
 	padding:10px;
@@ -259,6 +288,18 @@ div#nav-header ul li a:hover {
 	cursor:pointer;
 	color:#fff;
 	float:right;
+}
+.button_user{
+	width:auto;
+	padding: 0 35px;
+	height:40px;
+	font-size: 16px;
+	background: #BD4040;
+	border-radius:4px;
+	cursor:pointer;
+	color:#fff;
+	float:right;
+	right: 0;
 }
 .check{
 	margin-top:13px;
