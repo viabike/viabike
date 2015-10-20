@@ -14,7 +14,7 @@ $user_conf = $conexao->prepare("INSERT INTO usuario (nome, apelido, senha) VALUE
 $user_conf->execute();
 
 if($user_conf) {
-  header("location: user_login.php"); die();
+  // header("location: user_login.php"); die();
 }
 
 ?>
