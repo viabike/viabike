@@ -30,8 +30,7 @@ include("funcoes/funcoes.php");
 					<ul>
 						<li><a href="logout.php">SAIR</a></li>
 						<!-- <li><a href="logout.php"><?=$_SESSION['username']; ?></a></li> -->
-						<li><a href="insere_ponto.php">CADASTRAR</a></li>
-						<li><a href="consulta_pontos.php">CONSULTAR</a></li>
+						<li><a href="consulta_pontos.php">PRINCIPAL</a></li>
 					</ul>
 				</div>
 			<?php } ?>

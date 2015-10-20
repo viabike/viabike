@@ -27,7 +27,7 @@ form{
 }
 table{
 	/*border:1px solid #bdc3c7;*/
-	border-radius:10px 10px 0px 0px;
+	border-radius:5px 5px 0px 0px;
 	-webkit-box-shadow: 1px 1px 5px 0px rgba(35,35,35,0.5);
 	-moz-box-shadow: 1px 1px 5px 0px rgba(35,35,35,0.5);
 	box-shadow: 1px 1px 5px 0px rgba(35,35,35,0.5);
@@ -46,10 +46,10 @@ table td{
 	text-align:center;
 }
 .border-esq{
-	border-radius:10px 0px 0px 0px;
+	border-radius:5px 0px 0px 0px;
 }
 .border-dir{
-	border-radius:0px 10px 0px 0px;
+	border-radius:0px 5px 0px 0px;
 }
 .none-form{
 	width:auto;

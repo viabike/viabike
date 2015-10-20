@@ -3,7 +3,9 @@ if(adminLogado()){
 ?>
 <!-- =================================== -->
 
-<center><h1>Consultar pontos de interesse</h1><br></center>
+<center><h1 style="text-align: left">Consultar pontos de interesse
+<a href="insere_ponto.php"><button class="button">Cadastar</button></a></h1><br></center>
+
 <?php
 require_once("../conexao/conexao.php");
 // =======================================================================

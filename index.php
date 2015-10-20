@@ -35,7 +35,7 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 
 		</div>
 
-		<div id="entar">
+		<div id="entrar">
 			<p><center><a href="#">Cadastre-se / Entrar</a></center></p>
 		</div>
 
@@ -119,7 +119,7 @@ google.maps.event.addDomListener(window, 'load', initMap);
 		</div>
 
 		<div id="footer">
-			<center><p>Copyright &copy 2015</p></center>
+  		<center><p>&copy ViaBike.me - 2015 <br>Site em desenvolvimento</p></center>
 		</div>
 	</div>
 </body>
