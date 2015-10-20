@@ -72,18 +72,18 @@ div#footer p{
 	line-height: 20px;
 }
 
-div#entar{
+div#entrar{
 	width: 180px;
 	padding: 15px 0px 15px 0;
 	border-radius: 10px 0px 0px 10px;
-	background: #BD4040;
+	background: #40BD68;
 	color: #fff;
 	position: fixed;
 	right: 0;
 	top: 100px;
 	z-index: 9999;
 }
-div#entar a{
+div#entrar a{
 	text-decoration: none;
 	color: #fff;
 }

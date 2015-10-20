@@ -3,7 +3,7 @@ include("conexao/conexao.php");
 
 $conexao = conectar();//Conexao com o banco de dados viabike_db
 
-$user_buscador = $conexao -> prepare ("SELECT * FROM usuario");//pegando todos os usuarios cadastrados
+$user_buscador = $conexao -> prepare ("SELECT * FROM usuario where id_usuario > 1");//pegando todos os usuarios cadastrados
 
 $user_buscador -> execute();//executando a query de uma maneira segura
 
@@ -18,7 +18,7 @@ $user = $user_buscador->fetchAll(PDO::FETCH_OBJ);?>
 
         <tr>
             <td><?=$usuario->nome?></td>
-            <td><?=$usuario->apelido?></td>
+            <td><?=$usuario->username?></td>
         </tr>
         <tr>
             <td>

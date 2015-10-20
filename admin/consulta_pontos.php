@@ -1,9 +1,9 @@
 <?php include("template/header.php");
 if(adminLogado()){
 ?>
-<!-- =================================== -->
+<h1 style="text-align: left">Consultar pontos de interesse
+<a href="insere_ponto.php"><button class="button">Cadastar</button></a></h1><br>
 
-<center><h1>Consultar pontos de interesse</h1><br></center>
 <?php
 require_once("../conexao/conexao.php");
 // =======================================================================
@@ -12,13 +12,12 @@ if (array_key_exists("removido", $_GET) && $_GET['removido'] == 'true'):?>
 
 <?php
 endif;
-// =======================================================================
-// ======== SELECIONA TODOS OS REGISTROS DO BANCO VIABIKE_DB =============
+// SELECIONA TODOS OS REGISTROS DO BANCO VIABIKE_DB
 $pdo = conectar();
 $buscaPonto = $pdo -> prepare("SELECT * FROM ponto_interesse");
 //Executando a QUERY
 $buscaPonto -> execute();
-// ========= FIM DA SELEÇÃO ==============================================
+//  FIM DA SELEÇÃO
 ?>
 
 <?php
@@ -43,20 +42,27 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);?>
 			</td>
 
 			<td>
-				<script>
-					function remove(id) {
-						var remover = confirm('Deseja realmente remover este ponto?');
-						if (remover){
-							document.location.href = "delete_ponto.php?id_ponto=" + id;
-						}
-						else{
-							alert('Remoção cancelada.');
-						}
-					}
-				</script>
+			<!--
+				CÓDIGO NAO FUNCIONAL, PROVAVELMENTE ERRO NA FUNÇÃO.
 
+				<script>
+					// function remove(id)
+					// {
+						// var remover = confirm('Deseja realmente remover este ponto?');
+						// if (remover)
+						// {
+							// document.location.href = "delete_ponto.php?id_ponto=" + id;
+						// }
+						// else
+						// {
+							// alert('Remoção cancelada.');
+						// }
+					// }
+				</script>
 				<a onClick="remove(<?php echo $linhas->id_ponto;?>);"><i class="fa fa-times font-icon"></i></a>
-				</td>
+				-->
+				<a href="delete_ponto.php?id_ponto=<?php echo $linhas->id_ponto;?>"><i class="fa fa-times font-icon"></i></a>
+			</td>
 		</tr>
 <?php
 endforeach;

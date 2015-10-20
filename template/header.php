@@ -25,5 +25,8 @@
 			</div>
 		</div>
 
+		<div id="entrar">
+			<p><center><a href="#">Cadastre-se / Entrar</a></center></p>
+		</div>
 		<div id="container">
 		<div id="content">

@@ -1,19 +1,31 @@
 <?php include("template/header.php");?>
-	<script src="funcoes/formatar.js"></script>
+	<script>
+	function formatar(mascara, documento)
+	{
+	  var i = documento.value.length;
+	  var saida = mascara.substring(0,1);
+	  var texto = mascara.substring(i)
+
+	  if (texto.substring(0,1) != saida)
+	  {
+			documento.value += texto.substring(0,1);
+	  }
+	}
+	</script>
 	<CENTER>
 	<h1>Cadastar pontos de interesse</h1><br>
 		<form action="confirma_ponto.php" class="form_adm" method="POST">
 			<div id="mapaadm"></div>
 			<div id='form1'>
 			<input type="hidden" name="id_ponto" class="form">
-			Nome:<input type="text" name="nome" class="form"><br>
-			Bairro:<input type="text" name="bairro" class="form"><br>
-			Rua:<input type="text" name="rua" class="form"><br>
-			Número:<input type="text" name="num" class="form"><br>
-			CEP:<input type="text" name="cep" class="form" maxlength="9" OnKeyPress="formatar('#####-###', this)"><br>
-			Telefone:<input type="text" name="telefone" class="form" maxlength="12" OnKeyPress="formatar('##-####-####', this)"><br>
-			Hora de Funcionamento:<input type="time" name="hr_inicio" class="form"><br>
-			Até:<input type="time" name="hr_fecha" class="form"><br>
+			Nome:<input type="text" name="nome" class="form" required><br>
+			Bairro:<input type="text" name="bairro" class="form" required><br>
+			Rua:<input type="text" name="rua" class="form" required><br>
+			Número:<input type="text" name="num" class="form" required><br>
+			CEP:<input type="text" name="cep" class="form" maxlength="9" OnKeyPress="formatar('#####-###', this)" required><br>
+			Telefone:<input type="text" name="telefone" class="form" maxlength="12" OnKeyPress="formatar('##-####-####', this)" required><br>
+			Hora de Funcionamento:<input type="time" name="hr_inicio" class="form" required><br>
+			Até:<input type="time" name="hr_fecha" class="form" required><br>
 			</div>
 			<div id='form2'>
 				Categoria:<select name="categoria" class="form select" id="tipo" onchange="ChamarLink();"><br>
@@ -25,7 +37,7 @@
 				<input type="submit" value="Cadastrar" class="button">
 			</div>
 		</form>
-	</CENTER>
+	</center>
 	<script>
 		var iconBicicletaria = '../imagens/viabike_ico.png';
 		var iconPosto = 'http://maps.google.com/mapfiles/kml/pal2/icon21.png';//exemplo até colocar o original.
