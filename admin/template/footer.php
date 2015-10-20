@@ -1,7 +1,7 @@
 		</div>
 		</div>
 		<div id="footer">
-			<center><p>Copyright &copy 2015</p></center>
+			<center><p>&copy ViaBike.me - 2015</center>
 		</div>
 	</div>
 </body>

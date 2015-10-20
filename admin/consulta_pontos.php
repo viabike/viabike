@@ -1,8 +1,8 @@
 <?php include("template/header.php");
 if(adminLogado()){
 ?>
-<center><h1>Consultar pontos de interesse</h1><br></center>
-<a href="insere_ponto.php"><button class="button">Cadastar</button></a></h1><br></center>
+<h1 style="text-align: left">Consultar pontos de interesse
+<a href="insere_ponto.php"><button class="button">Cadastar</button></a></h1><br>
 
 <?php
 require_once("../conexao/conexao.php");
@@ -17,7 +17,7 @@ $pdo = conectar();
 $buscaPonto = $pdo -> prepare("SELECT * FROM ponto_interesse");
 //Executando a QUERY
 $buscaPonto -> execute();
-//  FIM DA SELEÇÃO 
+//  FIM DA SELEÇÃO
 ?>
 
 <?php
@@ -40,13 +40,13 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);?>
 			<td>
 				<a href="altera_ponto.php?id_ponto=<?php echo $linhas->id_ponto;?>"><i class="fa fa-pencil font-icon"></i></a>
 			</td>
-			
+
 			<td>
 			<!--
 				CÓDIGO NAO FUNCIONAL, PROVAVELMENTE ERRO NA FUNÇÃO.
-				
+
 				<script>
-					// function remove(id) 
+					// function remove(id)
 					// {
 						// var remover = confirm('Deseja realmente remover este ponto?');
 						// if (remover)
