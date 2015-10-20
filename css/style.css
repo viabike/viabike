@@ -165,6 +165,22 @@ div#nav-header ul li a:hover {
 }
 /*DESENVOLVEDOR*/
 
+/*INFOWINDOW*/
+div#infoWindow {
+	width: 450px;
+	height: 200px;
+	margin:auto;
+	background: gray;
+}
+div#infoWindow h1{
+	font-size: 25px;
+	margin: 0px 0px 5px 3px;
+}
+
+div#infoWindow {
+	font-size: 20px;
+}
+/*FIM INFOWINDOW*/
 
 /*CLASSES*/
 .logo{

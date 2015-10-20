@@ -1,29 +1,18 @@
 <?php include("template/header.php");?>
-	<script>
-	function formatar(mascara, documento)
-	{
-	  var i = documento.value.length;
-	  var saida = mascara.substring(0,1);
-	  var texto = mascara.substring(i)
+	<script src="funcoes/funcoes.js"></script>
 
-	  if (texto.substring(0,1) != saida)
-	  {
-			documento.value += texto.substring(0,1);
-	  }
-	}
-	</script>
-	<CENTER>
+	<center>
 	<h1>Cadastar pontos de interesse</h1><br>
-		<form action="confirma_ponto.php" class="form_adm" method="POST">
+		<form action="confirma_ponto.php" class="form_adm" name="form_adm" method="POST">
 			<div id="mapaadm"></div>
 			<div id='form1'>
 			<input type="hidden" name="id_ponto" class="form">
-			Nome:<input type="text" name="nome" class="form" required><br>
-			Bairro:<input type="text" name="bairro" class="form" required><br>
-			Rua:<input type="text" name="rua" class="form" required><br>
-			Número:<input type="text" name="num" class="form" required><br>
-			CEP:<input type="text" name="cep" class="form" maxlength="9" OnKeyPress="formatar('#####-###', this)" required><br>
-			Telefone:<input type="text" name="telefone" class="form" maxlength="12" OnKeyPress="formatar('##-####-####', this)" required><br>
+			Nome:<input type="text" name="nome" class="form" maxlength="45" required><br>
+			Bairro:<input type="text" name="bairro" class="form" maxlength="45" required><br>
+			Rua:<input type="text" name="rua" class="form" maxlength="45" required><br>
+			Número:<input type="text" name="num" class="form" maxlength="4" required><br>
+			CEP:<input type="text" name="cep" class="form" maxlength="9" OnKeyPress="formatar('#####-###', this)" placeholder="Exemplo: (99999-999)" required><br>
+			Telefone:<input type="text" name="telefone" class="form" maxlength="12" OnKeyPress="formatar('##-####-####', this)" placeholder="Exemplo: (99-9999-9999)" required><br>
 			Hora de Funcionamento:<input type="time" name="hr_inicio" class="form" required><br>
 			Até:<input type="time" name="hr_fecha" class="form" required><br>
 			</div>
@@ -34,7 +23,7 @@
 						  </select><br>
 				Latitude:<input type="text" name="latitude" class="form" id="lat" value="-23.6255903"><br>
 				Longitude:<input type="text" name="longitude" class="form" id="lng" value="-45.4241453"><br>
-				<input type="submit" value="Cadastrar" class="button">
+				<input type="submit" value="Cadastrar" class="button" onclick="return validar();">
 			</div>
 		</form>
 	</center>
