@@ -10,5 +10,4 @@ $user_alterar = $conexao -> prepare("UPDATE usuario set nome = :nome, email = :e
     $user_alterar -> bindValue(":email"    , $_POST['email']);
     $user_alterar -> bindValue(":id_usuario" , $id_usuario);
 $user_alterar -> execute();
-
 ?>

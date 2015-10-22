@@ -22,7 +22,7 @@ if($num_rows == 1){
     $user_conf->bindValue(":tipo_usuario"    , 'u'    , PDO::PARAM_STR);
   $user_conf->execute();
 
-    header("location: user_consulta.php"); die();
+    // header("location: user_painel.php"); die();
 }
 
 
