@@ -17,9 +17,9 @@ $user = $user_buscador->fetchAll(PDO::FETCH_OBJ);
 foreach ($user as $usuario) :?>
 <form class="" action="user_altera.php" method="post">
     <input type="hidden" name="id_usuario" value="<?=$usuario->id_usuario?>">
-    nome completo:<input type="text" name="nome" value="<?=$usuario->nome?>"><br>
-    apelido:<input type="text" name="username" value="<?=$usuario->username?>"><br>
-    senha: <input type="password" name="senha" value="">
+    Nome completo:<input type="text" name="nome" value="<?=$usuario->nome?>"><br>
+    E-mail:<input type="email" name="email" value="<?=$usuario->email?>"><br>
+    senha:<input type="password" name="senha" value="">
     <input type="submit" name="name" value="alterar">
 </form>
 <?php endforeach; ?>

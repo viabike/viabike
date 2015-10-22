@@ -18,7 +18,7 @@ $user = $user_buscador->fetchAll(PDO::FETCH_OBJ);?>
 
         <tr>
             <td><?=$usuario->nome?></td>
-            <td><?=$usuario->username?></td>
+            <td><?=$usuario->email?></td>
         </tr>
         <tr>
             <td>
