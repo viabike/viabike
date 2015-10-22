@@ -37,7 +37,11 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
                     <li><a href="equipe.php">EQUIPE</a></li>
                 </ul>
             </div>
-
+			
+			<div id="entrar">
+				<p><center><a href="user_formulario.php">Cadastre-se / Entrar</a></center></p>
+			</div>
+			
             <div id="containermap">
                 <div id="mapa">
                 </div>
