@@ -26,7 +26,7 @@
 		</div>
 
 		<div id="entrar">
-			<p><center><a href="#">Cadastre-se / Entrar</a></center></p>
+			<p><center><a href="user_formulario.php">Cadastre-se / Entrar</a></center></p>
 		</div>
 		<div id="container">
 		<div id="content">

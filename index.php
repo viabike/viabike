@@ -36,8 +36,8 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 
 		</div>
 
-		<div id="entrar">
-			<p><center><a href="#">Cadastre-se / Entrar</a></center></p>
+    <div id="entrar">
+			<p><center><a href="user_formulario.php">Cadastre-se / Entrar</a></center></p>
 		</div>
 
 		<div id="mapa"></div>
@@ -48,8 +48,8 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 var map;
 var infowindow = new google.maps.InfoWindow();
 var pontos = [
-<?php  
-foreach ($linha as $linhas):	
+<?php
+foreach ($linha as $linhas):
 	echo '['.$linhas->id_ponto.', '.$linhas->latitude.', '.$linhas->longitude.', "'.$linhas->categoria.'", "'.$linhas->nome.'"],';
 endforeach;
   ?>];
@@ -85,12 +85,12 @@ function initMap() {
 }
 
 function getContentPonto(id){
-	
+
    $.ajax({
        type: "GET",
        url: "/viabike/get_info_ponto.php?id="+id,
        dataType: "json",
-       success: function(data){    
+       success: function(data){
           $('#marker'+id).html('Teste nome='+data.nome+' teste outro='+data['nome']);
           $('#marker'+id).css('background','none');
        }

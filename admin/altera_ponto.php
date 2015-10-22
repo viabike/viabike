@@ -13,7 +13,7 @@
 	foreach ($linha as $linhas):
 ?>
 <CENTER>
-	<h1>Cadastar pontos de interesse</h1><br>
+	<h1>Alterar ponto de interesse</h1><br>
 		<form action="update_ponto.php" method="POST" class="form_adm">
 
 			<div id="mapaadm"></div>

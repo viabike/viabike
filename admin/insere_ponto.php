@@ -2,7 +2,7 @@
 	<script src="funcoes/funcoes.js"></script>
 
 	<center>
-	<h1>Cadastar pontos de interesse</h1><br>
+	<h1>Cadastrar ponto de interesse</h1><br>
 		<form action="confirma_ponto.php" class="form_adm" name="form_adm" method="POST">
 			<div id="mapaadm"></div>
 			<div id='form1'>

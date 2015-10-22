@@ -1,8 +1,8 @@
 * {
-	padding: 0; 
-	margin: 0; 
+	padding: 0;
+	margin: 0;
 	border: 0;
-} 
+}
 
 /*TAGS*/
 body{
@@ -72,6 +72,7 @@ table td{
 	float:left;
 }
 .form_user1{
+	border-radius: 0px;
 	border: 0px;
 	text-align:left;
 	width:400px;
@@ -141,14 +142,16 @@ div#footer {
 	clear: both;
 	float:left;
 	width:100%;
-	height: 90px;
+	height: 80px;
 	background-color: #f6f6f6;
+	font-family: 'Raleway', sans-serif;
 }
 
 div#footer p{
-	margin-top: 40px;
+	margin-top: 20px;
 	font-size:14px;
 	color:#a7a7a7;
+	line-height: 20px;
 }
 
 div#form1{
@@ -162,7 +165,7 @@ div#form2{
 	margin-left
 }
 div#form_user{
-	padding:10px;
+	padding:30px 10px 40px 10px;
 	width: auto;
 	height: 430px;
 	line-height:1.467;
