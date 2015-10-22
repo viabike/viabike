@@ -1,9 +1,10 @@
 <?php
+session_start();
 include("conexao/conexao.php");
 
 $conexao = conectar();//Conexao com o banco de dados viabike_db
 
-// $user_buscador = $conexao -> prepare("SELECT * FROM usuario where email = 'haryelllc@gmail.com'");//pegando todos os usuarios cadastrados
+$user_buscador = $conexao -> prepare("SELECT * FROM usuario where email = '".$_COOKIE['email']."'");//pegando todos os usuarios cadastrados
 
 $user_buscador -> execute();//executando a query de uma maneira segura
 

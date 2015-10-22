@@ -5,10 +5,10 @@ if(adminLogado()){
 	header("location:consulta_pontos.php");
 	exit();
 }else{
-	if(isset($_COOKIE['email'])) {
-		$login = $_COOKIE['email'];
+	if(isset($_COOKIE['admin_email'])) {
+		$login = $_COOKIE['admin_email'];
 	}
-	else {
+	else{
 		$login = '';
 	}
 
@@ -16,9 +16,9 @@ if(adminLogado()){
 	<center>
 	<h1>Login Administrativo</h1><br>
 	<form method='POST' name='login' action='confirma_login.php'>
-		<input type='text'		name='email'		class='form'	placeholder='Ex: ex@exemplo.com' required value=$login><br>
-		<input type='password'	name='senha'		class='form'	placeholder='Senha' required><br>
-		<input type='submit'	name='login'		class='button'	value='Entrar' required>
+		<input type='text'		name='email'		class='form' value=$login><br>
+		<input type='password'	name='senha'		class='form'><br>
+		<input type='submit'	name='login'		class='button'	value='Entrar'>
 		<input type='checkbox'	name='conectado'	class='check'> Lembrar nome de usuário
 	</form>
 	</center>

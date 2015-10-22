@@ -14,7 +14,7 @@ $senhab;
 $tipob;
 
 //pega os dados do banco
-$consulta = $conexao->query('SELECT email, senha, tipo_usuario FROM usuario');
+$consulta = $conexao->query("SELECT email, senha, tipo_usuario FROM usuario where email = '".$user."'");
 while	($linha = $consulta->fetch(PDO::FETCH_OBJ)){
 	// dados vindos do banco, por isso o "b"
 	$userb	= $linha->email;
@@ -22,22 +22,20 @@ while	($linha = $consulta->fetch(PDO::FETCH_OBJ)){
 	$tipob	= $linha->tipo_usuario;
 }
 
-if ($user == $userb AND $senha == $senhab AND $tipob == "u") {// verifica se usuário, senha estão corretos e se ele é administrador
+if($user == $userb AND $senha == $senhab AND $tipob == "u"){// verifica se usuário, senha estão corretos e se ele é administrador
 
 	if (count($consulta) > 0) {
-		$_SESSION['email'] = $userb;
+		$_SESSION['email'] = $user;
 		$_SESSION['tipo'] = 'user';
 
-		setcookie('email', $userb, time()+3600);
-		
+		setcookie('email', $user, time()+3600);
+
 		header("location:user_painel.php");
 
+	}else{
+		 header("location:index.php");
 	}
-	else {
-		header("location:index.php");
-	}
-}
-else {
-	header("location:erro_login.php");
+}else{
+ 	header("location:erro_login.php");
 }
 ?>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 22-Set-2015 às 22:00
+-- Generation Time: 22-Out-2015 às 22:23
 -- Versão do servidor: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -58,7 +58,15 @@ CREATE TABLE IF NOT EXISTS `ponto_interesse` (
   `latitude` double DEFAULT NULL,
   `longitude` double DEFAULT NULL,
   `fk_id_usuario` int(11) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `ponto_interesse`
+--
+
+INSERT INTO `ponto_interesse` (`id_ponto`, `nome`, `bairro`, `rua`, `num`, `cep`, `telefone`, `hr_inicio`, `hr_fecha`, `categoria`, `latitude`, `longitude`, `fk_id_usuario`) VALUES
+(20, 'Ponto', 'Ponto', 'Ponto', 100, '00000-00', '00-0000-0000', '00:00:00', '00:00:00', 'BC', -23.62838187270207, -45.42247160157467, NULL),
+(21, 'Ponto 2', 'Ponto', 'Ponto', 101, '11111-11', '11-1111-1111', '11:11:00', '11:11:00', 'PG', -23.62614075566465, -45.42852266511227, NULL);
 
 -- --------------------------------------------------------
 
@@ -87,18 +95,17 @@ DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE IF NOT EXISTS `usuario` (
 `id_usuario` int(11) NOT NULL,
   `nome` varchar(45) DEFAULT NULL,
-  `sobrenome` varchar(45) DEFAULT NULL,
-  `username` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
   `senha` char(40) DEFAULT NULL,
   `tipo_usuario` char(1) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `nome`, `sobrenome`, `username`, `senha`, `tipo_usuario`) VALUES
-(1, 'adminvb', 'adminvb', 'adminvb', 'd7bbcbafd82ad717cda09fb58d06a7173dc197b5', 'a');
+INSERT INTO `usuario` (`id_usuario`, `nome`, `email`, `senha`, `tipo_usuario`) VALUES
+(1, 'adminvb', 'adminvb', 'd7bbcbafd82ad717cda09fb58d06a7173dc197b5', 'a');
 
 --
 -- Indexes for dumped tables
@@ -141,7 +148,7 @@ MODIFY `id_mapa` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `ponto_interesse`
 --
 ALTER TABLE `ponto_interesse`
-MODIFY `id_ponto` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
+MODIFY `id_ponto` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT for table `sinalizacao`
 --
@@ -151,7 +158,7 @@ MODIFY `id_sinal` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- Constraints for dumped tables
 --

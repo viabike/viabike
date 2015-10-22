@@ -10,14 +10,14 @@
 	cursor:pointer;
 	color:#fff;
 }
-</style>	
+</style>
 
 <body onload=iniciarContagem()>
 	<script>
 	// SCRIPT PARA REDIRECIONAR PARA OUTRA PÁGINA DEPOIS DE UM DETERMINADO TEMPO
 		//tempo para o redirecionamento em segundos
 		var cont = 30;
-		 
+
 		function iniciarContagem()
 		{
 		   if ((cont - 1) >= 0)
@@ -36,10 +36,10 @@
 		ALGO SAIU ERRADO. <br>
 		Verifique se seu nome de usuário está correto; <br>
 		Verifique se sua senha está correta; <br>
-		Tenha certeza que está utilizando uma conta de usuário com permissões administrativas. 
+		Tenha certeza que está utilizando uma conta de usuário com permissões administrativas.
 		<br><br>
 		<b><div id=contagem></div></b>
-		
+
 		<a href="index.php"><button class="botao">Ir para login agora</button></a>
 	</div>
 	<br>

@@ -10,5 +10,5 @@ $user_desativa = $conexao -> prepare("DELETE FROM usuario where id_usuario = :id
   $user_desativa -> bindValue(":id_usuario" , $id_usuario, PDO::PARAM_INT);
 $user_desativa -> execute();
 
-header("location:user_consulta.php"); die();
+header("location:user_painel.php"); die();
 ?>
