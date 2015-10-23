@@ -68,9 +68,9 @@ function initMap() {
   	var myLatLng = new google.maps.LatLng(ponto[1], ponto[2]);
   	var iconPonto = '';
   	if (ponto[3] == "PG") {
-		iconPonto = 'http://maps.google.com/mapfiles/kml/pal2/icon21.png';
+		iconPonto = 'imagens/posto1.png';
 	}else if (ponto[3] == "BC") {
-		iconPonto = 'imagens/viabike_ico.png';
+		iconPonto = 'imagens/bike1.png';
 	}
   	marker = new google.maps.Marker({
   		position: myLatLng,

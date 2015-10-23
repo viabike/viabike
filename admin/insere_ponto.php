@@ -28,9 +28,8 @@
 		</form>
 	</center>
 	<script>
-		var iconBicicletaria = '../imagens/viabike_ico.png';
-		var iconPosto = 'http://maps.google.com/mapfiles/kml/pal2/icon21.png';//exemplo até colocar o original.
-		var marker = '';
+		var iconBicicletaria = '../imagens/bike1.png';
+		var iconPosto = '../imagens/posto1.png';//exemplo até colocar o original.
 		var map = '';
 		var mlat = document.getElementById("lat").value;
 		var mlgn = document.getElementById("lng").value;
