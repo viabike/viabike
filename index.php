@@ -91,7 +91,14 @@ function getContentPonto(id){
        url: "/viabike/get_info_ponto.php?id="+id,
        dataType: "json",
        success: function(data){
-          $('#marker'+id).html('Teste nome='+data.nome+' teste outro='+data['nome']);
+          $('#marker'+id).html(
+          '<h1>'+data.nome+'</h1>'+
+          '<h3>Localização e contato:</h3>'+
+          '<p>'+data.bairro+', '+data.rua+', '+data.num+'</p>'+
+          '<p>Tel: '+data.telefone+'</p><br>'+
+          '<h3>Funcionamento:</h3>'+
+          '<p>Das '+data.hr_inicio+' até as '+data.hr_fecha+'</p>'
+        );
           $('#marker'+id).css('background','none');
        }
    });
@@ -101,7 +108,7 @@ function getContentPonto(id){
 //FUNÇÃO QUE EXIBE JANELA DE INFORMAÇÕES DO PONTO
 function infoCallback (infowindow, marker, id) {
 	return function() {
-		infowindow.setContent('<div id="marker'+id+'" style="background: url(imagens/loading.gif) no-repeat center center; width: 450px; height: 200px"></div>');
+		infowindow.setContent('<div class="infoWindow" id="marker'+id+'" style="background: url(imagens/loading.gif) no-repeat center center;"></div>');
 		infowindow.open(map, marker);
 		getContentPonto(id);
 	}
