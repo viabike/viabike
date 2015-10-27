@@ -92,11 +92,11 @@ function getContentPonto(id){
        dataType: "json",
        success: function(data){
           $('#marker'+id).html(
-          '<h1>'+data.nome+'</h1>'+
-          '<h3>Localização e contato:</h3>'+
+          '<h1 style="font-size:14px; font-weight:600">'+data.nome+'</h1>'+
+          '<h3 style="font-size:13px; font-weight:600">Localização e contato:</h3>'+
           '<p>'+data.bairro+', '+data.rua+', '+data.num+'</p>'+
           '<p>Tel: '+data.telefone+'</p><br>'+
-          '<h3>Funcionamento:</h3>'+
+          '<h3 style="font-size:13px; font-weight:600">Funcionamento:</h3>'+
           '<p>Das '+data.hr_inicio+' até as '+data.hr_fecha+'</p>'
         );
           $('#marker'+id).css('background','none');
