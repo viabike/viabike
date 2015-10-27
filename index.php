@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once("conexao/conexao.php");
 // ======== SELECIONA TODOS OS REGISTROS DE PONTOS DE INTERESSE DO BANCO VIABIKE_DB =============
 $pdo = conectar();
@@ -108,7 +108,7 @@ function getContentPonto(id){
 //FUNÇÃO QUE EXIBE JANELA DE INFORMAÇÕES DO PONTO
 function infoCallback (infowindow, marker, id) {
 	return function() {
-		infowindow.setContent('<div class="infoWindow" id="marker'+id+'" style="background: url(imagens/loading.gif) no-repeat center center;"></div>');
+		infowindow.setContent('<div class="infoWindow" id="marker'+id+'" style="min-width:200px; min-height:100px; width:auto; height:auto; background: url(imagens/loading.gif) no-repeat center center;"></div>');
 		infowindow.open(map, marker);
 		getContentPonto(id);
 	}
