@@ -215,4 +215,14 @@ div.infoWindow p{
 .paragrafo{
 	text-align: justify;
 }
+.button{
+	width:auto;
+	padding: 0 35px;
+	height:40px;
+	font-size: 16px;
+	background: #BD4040;
+	border-radius:4px;
+	cursor:pointer;
+	color:#fff;
+}
 /*CLASSES*/

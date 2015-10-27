@@ -1,6 +1,6 @@
 <?php
-session_start();
 include("conexao/conexao.php");
+include("template/header.php");
 
 $conexao = conectar();//Conexao com o banco de dados viabike_db
 
@@ -12,28 +12,8 @@ $user = $user_buscador->fetchAll(PDO::FETCH_OBJ);?>
 
 <?php foreach ($user as $usuario): ?>
     <table>
-        <tr>
-            <td>Nome:</td>
-            <td>Apelido:</td>
-        </tr>
-
-        <tr>
-            <td><?=$usuario->nome?></td>
-            <td><?=$usuario->email?></td>
-        </tr>
-        <tr>
-            <td>
-                <form class="" action="user_desativar.php" method="post">
-                    <input type="hidden" name="id_usuario" value="<?=$usuario->id_usuario?>">
-                    <input type="submit" value="Desativar Conta">
-                </form>
-            </td>
-            <td>
-                <form class="" action="user_altera_form.php" method="post">
-                    <input type="hidden" name="id_usuario" value="<?=$usuario->id_usuario?>">
-                    <input type="submit" value="Alterar">
-                </form>
-            </td>
-        </tr>
+        
     </table>
-<?php endforeach; ?>
+<?php endforeach;
+include("template/footer.php");
+?>
