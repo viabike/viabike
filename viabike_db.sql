@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 22-Out-2015 às 22:23
+-- Generation Time: 27-Out-2015 às 19:49
 -- Versão do servidor: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `viabike_db`
 --
-CREATE DATABASE IF NOT EXISTS `viabike_db` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `viabike_db`;
 
 -- --------------------------------------------------------
 
@@ -28,7 +26,6 @@ USE `viabike_db`;
 -- Estrutura da tabela `mapa`
 --
 
-DROP TABLE IF EXISTS `mapa`;
 CREATE TABLE IF NOT EXISTS `mapa` (
 `id_mapa` int(11) NOT NULL,
   `kml` varchar(45) DEFAULT NULL,
@@ -43,7 +40,6 @@ CREATE TABLE IF NOT EXISTS `mapa` (
 -- Estrutura da tabela `ponto_interesse`
 --
 
-DROP TABLE IF EXISTS `ponto_interesse`;
 CREATE TABLE IF NOT EXISTS `ponto_interesse` (
 `id_ponto` int(11) NOT NULL,
   `nome` varchar(45) DEFAULT NULL,
@@ -74,7 +70,6 @@ INSERT INTO `ponto_interesse` (`id_ponto`, `nome`, `bairro`, `rua`, `num`, `cep`
 -- Estrutura da tabela `sinalizacao`
 --
 
-DROP TABLE IF EXISTS `sinalizacao`;
 CREATE TABLE IF NOT EXISTS `sinalizacao` (
 `id_sinal` int(11) NOT NULL,
   `titulo` varchar(45) DEFAULT NULL,
@@ -91,21 +86,21 @@ CREATE TABLE IF NOT EXISTS `sinalizacao` (
 -- Estrutura da tabela `usuario`
 --
 
-DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE IF NOT EXISTS `usuario` (
 `id_usuario` int(11) NOT NULL,
   `nome` varchar(45) DEFAULT NULL,
   `email` varchar(45) DEFAULT NULL,
   `senha` char(40) DEFAULT NULL,
-  `tipo_usuario` char(1) DEFAULT NULL
+  `tipo_usuario` char(1) DEFAULT NULL,
+  `usuario_ativo` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `nome`, `email`, `senha`, `tipo_usuario`) VALUES
-(1, 'adminvb', 'adminvb', 'd7bbcbafd82ad717cda09fb58d06a7173dc197b5', 'a');
+INSERT INTO `usuario` (`id_usuario`, `nome`, `email`, `senha`, `tipo_usuario`, `usuario_ativo`) VALUES
+(1, 'adminvb', 'adminvb', 'd7bbcbafd82ad717cda09fb58d06a7173dc197b5', 'a', 0);
 
 --
 -- Indexes for dumped tables
