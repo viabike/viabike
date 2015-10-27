@@ -16,8 +16,8 @@ if(adminLogado()){
 	<center>
 	<h1>Login Administrativo</h1><br>
 	<form method='POST' name='login' action='confirma_login.php'>
-		<input type='text'		name='email'		class='form' value=$login><br>
-		<input type='password'	name='senha'		class='form'><br>
+		<input type='text'		name='email' placeholder='Ex: ex@exemplo.com' class='form' value=$login><br>
+		<input type='password'	name='senha'	class='form'><br>
 		<input type='submit'	name='login'		class='button'	value='Entrar'>
 		<input type='checkbox'	name='conectado'	class='check'> Lembrar nome de usuário
 	</form>
