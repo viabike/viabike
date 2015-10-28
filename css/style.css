@@ -174,16 +174,9 @@ div.infoWindow {
 	padding: 7px 0px 0px 7px;
 	font-family: 'Raleway', sans-serif;
 }
-div.infoWindow h1{
-	font-size: 30px;
-	margin-bottom: 3px;
-}
-div.infoWindow h2{
-	font-size: 18px;
-}
+
 div.infoWindow p{
-	font-size: 14px;
-	margin-left: 3px;
+	font-size: 16px;
 }
 /*FIM INFOWINDOW*/
 
