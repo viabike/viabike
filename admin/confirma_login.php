@@ -34,6 +34,6 @@ if ($user == $userb AND $senha == $senhab AND $tipob == "a") {// verifica se usu
 	}
 }
 else {
-	header("location:erro_login.php");
+	header("location:admin_erro_login.php");
 }
 ?>
