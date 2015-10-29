@@ -14,9 +14,10 @@ function formatar(mascara, documento)
 // enviar o formulário somente dpeois de verificar todos os campos
 function validar()
 {
-  var nome    = form_adm.nome.value;
-  var numero  = form_adm.num.value;
-  var cep     = form_adm.cep.value;
+  var nome     = form_adm.nome.value;
+  var numero   = form_adm.num.value;
+  var cep      = form_adm.cep.value;
+  var telefone = form_adm.telefone.value;
 
   // Campo nome
   if (!apenas_letras(nome) == 1)
@@ -42,6 +43,14 @@ function validar()
     alert("CEP deve conter apenas caracteres númericos.");
     form_adm.cep.focus();
     form_adm.cep.style.border='1px solid #bd4040';
+    return false
+  }
+
+   if (!apenas_nums(telefone) == 1)
+  {
+    alert("TELEFONE deve conter apenas caracteres númericos.");
+    form_adm.telefone.focus();
+    form_adm.telefone.style.border='1px solid #bd4040';
     return false
   }
 
