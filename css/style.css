@@ -173,10 +173,19 @@ div.infoWindow {
 	background: white;
 	padding: 7px 0px 0px 7px;
 	font-family: 'Raleway', sans-serif;
+	min-width:200px;
+	min-height:100px;
 }
-
+div.infoWindow h1{
+	font-size:16px;
+	font-weight:600;
+}
+div.infoWindow h3{
+	font-size:15px;
+	font-weight:600;
+}
 div.infoWindow p{
-	font-size: 16px;
+	font-size: 15px;
 }
 /*FIM INFOWINDOW*/
 
