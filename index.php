@@ -104,7 +104,7 @@ function getContentPonto(id){
           '<p>'+data.bairro+', '+data.rua+', '+data.num+'</p>'+
           '<p>Tel: '+data.telefone+'</p><br>'+
           '<h3>Funcionamento:</h3>'+
-          '<p>Das '+data.hr_inicio+' até as '+data.hr_fecha+'</p>'
+          '<p>Das '+data.hr_inicio.substr(0,5)+' até as '+data.hr_fecha.substr(0,5)+'</p>'
         );
           $('#marker'+id).css('background','none');
        }
