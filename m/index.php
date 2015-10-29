@@ -37,11 +37,11 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
                     <li><a href="equipe.php">EQUIPE</a></li>
                 </ul>
             </div>
-			
+
 			<div id="entrar">
 				<p><center><a href="user_formulario.php">Cadastre-se / Entrar</a></center></p>
 			</div>
-			
+
             <div id="containermap">
                 <div id="mapa">
                 </div>
@@ -55,64 +55,85 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 
             <script>
 
-//Variavel do mapa
-var map;
+            //Variavel do mapa
+            var map;
+            var infowindow = new google.maps.InfoWindow();
+            var pontos = [
+            <?php
+            foreach ($linha as $linhas):
+            	echo '['.$linhas->id_ponto.', '.$linhas->latitude.', '.$linhas->longitude.', "'.$linhas->categoria.'", "'.$linhas->nome.'"],';
+            endforeach;
+              ?>];
 
-//Função que inicia o mapa
-function initMap() {
-  map = new google.maps.Map(document.getElementById('mapa'), {
-  	center: {lat: -23.6255903, lng: -45.4241453},
-  	zoom: 16,
-  	mapTypeId: google.maps.MapTypeId.ROADMAP
-  });
-  loadKmlLayer('http://viabike.me/mapa/mapa-das-ciclovias-v2.kml', map);
-	var iconPonto;
+            //Função que inicia o mapa
+            function initMap() {
+              map = new google.maps.Map(document.getElementById('mapa'), {
+              	center: {lat: -23.6255903, lng: -45.4241453},
+              	zoom: 15,
+              	mapTypeId: google.maps.MapTypeId.ROADMAP
+              });
+              loadKmlLayer('http://viabike.me/mapa/mapa-das-ciclovias-v2.kml', map);
 
-	<?php
-	$contador = 0;
+              for (var i = 0; i < pontos.length; i++) {
+              	var ponto = pontos[i];
+              	var myLatLng = new google.maps.LatLng(ponto[1], ponto[2]);
+              	var iconPonto = '';
+              	if (ponto[3] == "PG") {
+            		iconPonto = '../imagens/posto1.png';
+            	}else if (ponto[3] == "BC") {
+            		iconPonto = '../imagens/bike1.png';
+            	}
+              	marker = new google.maps.Marker({
+              		position: myLatLng,
+              		map:map,
+              		title:ponto[4].toString(),
+              		icon:iconPonto
+              	});
+              	var id = ponto[0].toString();
+              	google.maps.event.addListener(marker, "click", infoCallback(infowindow, marker, id));
+              };
 
-	foreach ($linha as $linhas):
-    $contador++;
-  ?>
+            }
 
-	if ("<?=$linhas->categoria;?>" == "PG") {
-		iconPonto = 'http://maps.google.com/mapfiles/kml/pal2/icon21.png';
-	}else if ("<?=$linhas->categoria;?>" == "BC") {
-		iconPonto = '../imagens/viabike_ico.png';
-	}
+            function getContentPonto(id){
+               $.ajax({
+                   type: "GET",
+                   url: "/viabike/get_info_ponto.php?id="+id,
+                   dataType: "json",
+                   success: function(data){
+                      $('#marker'+id).html(
+                      '<h1>'+data.nome+'</h1>'+
+                      '<h3>Localização e contato:</h3>'+
+                      '<p>'+data.bairro+', '+data.rua+', '+data.num+'</p>'+
+                      '<p>Tel: '+data.telefone+'</p><br>'+
+                      '<h3>Funcionamento:</h3>'+
+                      '<p>Das '+data.hr_inicio+' até as '+data.hr_fecha+'</p>'
+                    );
+                      $('#marker'+id).css('background','none');
+                   }
+               });
+            }
 
+            //FUNÇÃO QUE EXIBE JANELA DE INFORMAÇÕES DO PONTO
+            function infoCallback (infowindow, marker, id) {
+            	return function() {
+            		infowindow.setContent('<div class="infoWindow" id="marker'+id+'" style="width:auto; height:auto; background: url(imagens/loading.gif) no-repeat center center;"></div>');
+            		infowindow.open(map, marker);
+            		getContentPonto(id);
+            	}
+            }
 
-  la<?=$contador?> = parseFloat(<?=$linhas->latitude; ?>);
-  lo<?=$contador?> = parseFloat(<?=$linhas->longitude;?>);
+            // FUNÇÃO QUE CARREGA KML
+            function loadKmlLayer(src, map){
+            	var kmlLayer = new google.maps.KmlLayer(src, {
+            		suppressInfoWindows: true,
+            		preserveViewport: true,
+            		map: map
+            	});
+            }
 
-  local<?=$contador?> = {lat: la<?=$contador?>, lng: lo<?=$contador?>};
-
-  addMarker(local<?php echo $contador?>, map, iconPonto);
-
-	<?php
-  endforeach;
-  ?>
-}
-
-var marker;
-// FUNÇÃO QUE ADICIONA MARCAS NO MAPA
-function addMarker(location, map, myIcon) {
-	  marker = new google.maps.Marker({
-		position: location,
-    icon: myIcon,
-    map: map
-	});
-}
-
-function loadKmlLayer(src, map) {
-    var kmlLayer = new google.maps.KmlLayer(src, {
-        suppressInfoWindows: true,
-        preserveViewport: true,
-        map: map
-    });
-}
-
-google.maps.event.addDomListener(window, 'load', initMap);
+            //EVENTO QUE CHAMA FUNÇÃO initMap() QUANDO A JANELA FOR CARREGADA.
+            google.maps.event.addDomListener(window, 'load', initMap);
             </script>
         </div>
     </body>

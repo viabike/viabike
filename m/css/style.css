@@ -240,3 +240,27 @@ div#form_user{
 }
 
 /* desenvolvedor */
+
+/*INFOWINDOW*/
+div.infoWindow {
+	min-width: 100%;
+	min-height: 200px;
+	margin:auto;
+	background: white;
+	padding: 7px 0px 0px 7px;
+	font-family: 'Raleway', sans-serif;
+	min-width:200px;
+	min-height:100px;
+}
+div.infoWindow h1{
+	font-size:46px;
+	font-weight:600;
+}
+div.infoWindow h3{
+	font-size:45px;
+	font-weight:600;
+}
+div.infoWindow p{
+	font-size: 45px;
+}
+/*FIM INFOWINDOW*/
