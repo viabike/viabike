@@ -12,17 +12,20 @@ $user_verif -> bindValue(":email", $email);
 $user_verif -> execute();
 $num_rows = $user_verif->fetchColumn();
 
-if($num_rows == 1){
-  echo "Usuário já cadastrado!";
-}else{
-  $user_conf = $conexao->prepare("INSERT INTO usuario (nome, email, senha, tipo_usuario) VALUES (:nome, :email, :senha, :tipo_usuario)");
-    $user_conf->bindValue(":nome"     , $nome     , PDO::PARAM_STR);
-    $user_conf->bindValue(":email"  , $email  , PDO::PARAM_STR);
-    $user_conf->bindValue(":senha"    , $senha    , PDO::PARAM_STR);
-    $user_conf->bindValue(":tipo_usuario"    , 'u'    , PDO::PARAM_STR);
-  $user_conf->execute();
+if($num_rows == 1)
+{
+	echo "Usuário já cadastrado!";
+}
+else
+{
+	$user_conf = $conexao->prepare("INSERT INTO usuario (nome, email, senha, tipo_usuario) VALUES (:nome, :email, :senha, :tipo_usuario)");
+	$user_conf->bindValue(":nome"     , $nome     , PDO::PARAM_STR);
+	$user_conf->bindValue(":email"  , $email  , PDO::PARAM_STR);
+	$user_conf->bindValue(":senha"    , $senha    , PDO::PARAM_STR);
+	$user_conf->bindValue(":tipo_usuario"    , 'u'    , PDO::PARAM_STR);
+	$user_conf->execute();
 
-    // header("location: user_painel.php"); die();
+    header("location: user_sucesso_cadastro.php");
 }
 
 

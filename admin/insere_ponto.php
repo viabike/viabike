@@ -7,14 +7,14 @@
 			<div id="mapaadm"></div>
 			<div id='form1'>
 			<input type="hidden" name="id_ponto" class="form">
-			Nome:<input type="text" name="nome" class="form" maxlength="45" required><br>
-			Bairro:<input type="text" name="bairro" class="form" maxlength="45" required><br>
-			Rua:<input type="text" name="rua" class="form" maxlength="45" required><br>
-			Número:<input type="text" name="num" class="form" maxlength="4" required><br>
-			CEP:<input type="text" name="cep" class="form" maxlength="9" OnKeyPress="formatar('#####-###', this)" placeholder="Exemplo: (99999-999)" required><br>
-			Telefone:<input type="text" name="telefone" class="form" maxlength="12" OnKeyPress="formatar('##-####-####', this)" placeholder="Exemplo: (99-9999-9999)" required><br>
+			Nome:                 <input type="text" name="nome" class="form" maxlength="45" minlength="3" required><br>
+			Bairro:               <input type="text" name="bairro" class="form" maxlength="45" minlength="3" required><br>
+			Rua:                  <input type="text" name="rua" class="form" maxlength="45" minlength="3" required><br>
+			Número:               <input type="text" name="num" class="form" maxlength="4" minlength="1" required><br>
+			CEP:                  <input type="text" name="cep" class="form" maxlength="9" minlength="9" OnKeyPress="formatar('#####-###', this)" placeholder="Exemplo: (99999-999)" required><br>
+			Telefone:             <input type="text" name="telefone" class="form" maxlength="12" minlength="8" OnKeyPress="formatar('##-####-####', this)" placeholder="Exemplo: (99-9999-9999)" required><br>
 			Hora de Funcionamento:<input type="time" name="hr_inicio" class="form" required><br>
-			Até:<input type="time" name="hr_fecha" class="form" required><br>
+			Até:                  <input type="time" name="hr_fecha" class="form" required><br>
 			</div>
 			<div id='form2'>
 				Categoria:<select name="categoria" class="form select" id="tipo" onchange="ChamarLink();"><br>
@@ -28,8 +28,9 @@
 		</form>
 	</center>
 	<script>
-		var iconBicicletaria = '../imagens/bike1.png';
-		var iconPosto = '../imagens/posto1.png';//exemplo até colocar o original.
+		var iconBicicletaria = '../imagens/viabike_ico.png';
+		var iconPosto = 'http://maps.google.com/mapfiles/kml/pal2/icon21.png';//exemplo até colocar o original.
+		var marker = '';
 		var map = '';
 		var mlat = document.getElementById("lat").value;
 		var mlgn = document.getElementById("lng").value;
