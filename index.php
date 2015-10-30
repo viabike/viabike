@@ -102,7 +102,7 @@ function getContentPonto(id){
           '<h1>'+data.nome+'</h1>'+
           '<h3>Localização e contato:</h3>'+
           '<p>'+data.bairro+', '+data.rua+', '+data.num+'</p>'+
-          '<p>Tel: '+data.telefone+'</p><br>'+
+          '<p>('+data.telefone.substr(0,2)+') '+data.telefone.substr(3,9)+'</p><br>'+
           '<h3>Funcionamento:</h3>'+
           '<p>Das '+data.hr_inicio.substr(0,5)+' até as '+data.hr_fecha.substr(0,5)+'</p>'
         );

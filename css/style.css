@@ -192,25 +192,24 @@ div#nav-header ul li a:hover {
 
 /*INFOWINDOW*/
 div.infoWindow {
-	width: 300px;
-	height: 150px;
+	min-width: 200px;
+	min-height: 100px;
 	margin:auto;
 	background: white;
 	padding: 7px 0px 0px 7px;
 	font-family: 'Raleway', sans-serif;
-	min-width:200px;
-	min-height:100px;
 }
 div.infoWindow h1{
-	font-size:16px;
+	font-size:14px;
 	font-weight:600;
+	margin-bottom: 3px;
 }
-div.infoWindow h3{
-	font-size:15px;
+div.infoWindow h2{
+	font-size:13px;
 	font-weight:600;
 }
 div.infoWindow p{
-	font-size: 15px;
+	font-size: 14px;
 }
 /*FIM INFOWINDOW*/
 
