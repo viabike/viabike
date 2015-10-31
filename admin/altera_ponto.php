@@ -30,7 +30,7 @@
 
 			CEP:<input type="text" name="cep" value="<?=$linhas->cep?>" class="form" maxlength="9" minlength="9"><br>
 
-			Telefone:<input type="text" name="telefone" value="<?=$linhas->telefone?>" class="form" maxlength="12" minlength="8"><br>
+			Telefone:<input type="text" name="telefone" value="<?=$linhas->telefone?>" class="form" maxlength="12" minlength="12"><br>
 
 			Hora de Funcionamento:<input type="time" name="hr_inicio" value="<?=$linhas->hr_inicio?>" class="form"><br>
 
