@@ -18,8 +18,10 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	
 </head>
 <body>
 	<div id="wrapper">
@@ -100,11 +102,10 @@ function getContentPonto(id){
        success: function(data){
           $('#marker'+id).html(
           '<h1>'+data.nome+'</h1>'+
-          '<h3>Localização e contato:</h3>'+
-          '<p>'+data.bairro+', '+data.rua+', '+data.num+'</p>'+
-          '<p>('+data.telefone.substr(0,2)+') '+data.telefone.substr(3,9)+'</p><br>'+
-          '<h3>Funcionamento:</h3>'+
-          '<p>Das '+data.hr_inicio.substr(0,5)+' até as '+data.hr_fecha.substr(0,5)+'</p>'
+          '<p><i class="fa fa-map-marker"></i> '+data.rua+', '+data.num+' - '+data.bairro+'</p>'+
+          '<p><i class="fa fa-phone"></i> ('+data.telefone.substr(0,2)+') '+data.telefone.substr(3,9)+'</p><br>'+
+          '<h4>Funcionamento</h4>'+
+          '<p><i class="fa fa-clock-o"></i> '+data.hr_inicio.substr(0,5)+' às '+data.hr_fecha.substr(0,5)+'</p>'
         );
           $('#marker'+id).css('background','none');
        }
