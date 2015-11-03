@@ -1,5 +1,7 @@
 <?php
+session_start();
 require_once("../conexao/conexao.php");
+include("../admin/funcoes/funcoes.php");
 // ======== SELECIONA TODOS OS REGISTROS DE PONTOS DE INTERESSE DO BANCO VIABIKE_DB =============
 $pdo = conectar();
 $buscaPonto = $pdo -> prepare("SELECT * FROM ponto_interesse");
@@ -8,7 +10,7 @@ $buscaPonto -> execute();
 // ========= FIM DA SELEÇÃO ==============================================
 
 $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
-?>
+ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,6 +20,7 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
         <script src="https://maps.googleapis.com/maps/api/js"></script>
         <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <script src="js/script.js"></script>
     </head>
     <body>
@@ -32,16 +35,35 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
             </div>
             <div id="menu">
                 <ul>
-                    <li><a href="index.php">HOME</a></li>
-                    <li><a href="sobre.php">SOBRE</a></li>
-                    <li><a href="equipe.php">EQUIPE</a></li>
-                </ul>
+					<?php if(userLogado()){
+						echo "
+						<li><a href='user_painel.php'>".$_SESSION['nome']."</a></li>";
+					} ?>
+						<li><a href="equipe.php">EQUIPE</a></li>
+						<li><a href="sobre.php">SOBRE</a></li>
+						<li><a href="index.php">HOME</a></li>
+					<?php if(userLogado()){
+						echo "
+						<li><a href='user_logout.php'>SAIR</a></li>";
+					}
+					?>
+				</ul>
             </div>
 
-			<div id="entrar">
-				<p><center><a href="user_formulario.php">Cadastre-se / Entrar</a></center></p>
-			</div>
-
+			<?php if(!userLogado()){ ?>
+				
+				<div id="entrar">
+					<p><center><a href="user_formulario.php">Cadastre-se / Entrar</a></center></p>
+				</div>
+			<?php } ?>
+			<?php if(userLogado()){?>
+				<div id="pop">
+					<a href="#" onclick="document.getElementById('pop').style.display='none';"><img src="imagens/close.png" alt="fechar" class="fechar"></i></a>
+					<br />
+						<i class="fa fa-check-circle"></i>  Logado com sucesso
+				</div>
+			<?php } ?>
+				</ul>
             <div id="containermap">
                 <div id="mapa">
                 </div>

@@ -25,6 +25,9 @@ SET time_zone = "+00:00";
 --
 -- Estrutura da tabela `mapa`
 --
+create database viabike_db;
+
+use viabike_db;
 
 CREATE TABLE IF NOT EXISTS `mapa` (
 `id_mapa` int(11) NOT NULL,
