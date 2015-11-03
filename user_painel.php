@@ -13,7 +13,8 @@ $user_buscador -> execute();//executando a query de uma maneira segura
 
 $user = $user_buscador->fetchAll(PDO::FETCH_OBJ);?>
 
-<?php foreach ($user as $usuario): ?>
+<?php foreach ($user as $usuario):
+?>
 			<!--
 				FALTA AINDA UMA CONFIRMAÇÃO PARA NAO DESATIVAR POR ENGANO
 			-->
@@ -24,7 +25,8 @@ $user = $user_buscador->fetchAll(PDO::FETCH_OBJ);?>
 				E-mail:<input type="email" name="email" class="input" value="<?=$usuario->email?>" placeholder="Ex: ex@exemplo.com" required><br>
 				<hr style="border:1px; padding:2px; margin-bottom:10px; border-radius:5px; background-color:rgba(204,204,204, 0.25);">
 				Senha:<input type="password" name="senha" class="input" required><br>
-				<a href="user_desativar.php" style="float: left;font-size:14px; line-height:65px; color:#535455;">Dasativar conta</button></a>
+				<!-- Alterar para utilizar método POST e não GET -->
+				<a href="user_desativar.php?id_usuario=<?=$usuario->id_usuario?>" style="float: left;font-size:14px; line-height:65px; color:#535455;">Dasativar conta</button></a>
 				<input type="submit" value="Alterar" class="button" style="float: right">
 			</form>
 
