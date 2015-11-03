@@ -33,20 +33,21 @@
 				
 					<CENTER>
 					<div id='form_user'>
-						<form action="user_confirmaCad.php" class="form_user1" method="POST">
-							<h1>Cadastre-se</h1><br>
-							Nome Completo:<input type="text" name="nome" class="form"><br>
-							Apelido:<input type="text" name="apelido" class="form"><br>
-							Senha:<input type="text" name="email" class="form"><br>
-							<input type="submit" value="Cadastrar" class="button">
-						</form>
-						
-						<form action="cofirma_login.php" class="form_user2" method="POST">
-							<center><h1>Entrar</h1></center><br>
-							Apelido:<input type="text" name="nome_usuario" class="form"><br>
-							Senha:<input type="password" name="senha" class="form"><br>
-							<input type="submit" value="Entrar" class="button">
-						</form><br><br><br>
+					<form action="user_confirmaCad.php" class="form_user1" method="POST">
+						<h1>Cadastre-se</h1><br>
+						Nome Completo:<input type="text" name="nome" class="form" placeholder="Ex: Exemplo de Nome" required><br>
+						E-mail:<input type="email" name="email" class="form" placeholder="Ex: ex@exemplo.com" required><br>
+						Senha:<input type="password" name="senha" class="form" required><br>
+						Confirme sua senha:<input type="password" name="senha_confirma" class="form" required><br>
+						<input type="submit" value="Cadastrar" class="button">
+					</form>
+
+					<form action="confirma_login.php" class="form_user2" method="POST">
+						<h1>Entrar</h1><br>
+						E-mail:<input type="email" name="email" class="form" placeholder="Ex: ex@exemplo.com" required><br>
+						Senha:<input type="password" name="senha" class="form" required><br>
+						<input type="submit" value="Entrar" class="button">
+					</form><br><br><br>
 					</div>
 					</CENTER>
 				

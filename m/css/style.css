@@ -1,4 +1,8 @@
-* {margin: 0; padding: 0; border: 0;}
+* {
+	margin: 0; 
+	padding: 0; 
+	border: 0;
+}
 /* TAGS */
 body {
 	font-family: 'Raleway', sans-serif;
@@ -132,6 +136,23 @@ div#entrar a{
 	color: #fff;
 	font-size: 1.35em;
 }
+div#pop{
+	width: 190px;
+	height: 45px;
+	padding: 15px 15px 15px 15px;
+	border-radius: 10px 0px 0px 10px;
+	background: #40BD68;
+	color: #fff;
+	position: fixed;
+	right: 0;
+	top: 350px;
+	z-index: 9999;
+}
+div#pop a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.35em;
+}
 div#form_user{
 	padding:30px 10px 40px 10px;
 	width: auto;
@@ -144,6 +165,10 @@ div#form_user{
 .paragrafo {
   text-align:justify;
   font-size: 2em;
+}
+.fechar{
+	margin-left: 90%;
+	margin-bottom: 5%;
 }
 /* classes */
 
@@ -198,6 +223,16 @@ div#form_user{
 	cursor:pointer;
 	color:#fff;
 	float:right;
+}
+.button_altera{
+	width:auto;
+	padding: 0 35px;
+	height:40px;
+	font-size: 16px;
+	background: #BD4040;
+	border-radius:4px;
+	cursor:pointer;
+	color:#fff;
 }
 .button_user{
 	width:auto;
