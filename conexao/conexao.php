@@ -1,7 +1,7 @@
 <?php
 function conectar() {
   $host = "localhost";
-  $dbn  = "viabike_db";//NOME DO BANCO
+  $dbn  = "admvb_viabike_db";//NOME DO BANCO
   $user = "root"      ;//USUARIO DO BANCO
   $pass = ""          ;//SENHA DO USUARIO DO  BANCO
 
