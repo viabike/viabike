@@ -4,7 +4,7 @@ include("conexao/conexao.php");
 $conexao = conectar();
 
 $id_usuario = $_POST['id_usuario'];
-$senha = sha1($_POST['senha']);
+$senha = sha1(strtolower($_POST['senha']));
 
 $consulta = $conexao->query("SELECT senha FROM usuario WHERE id_usuario = '".$id_usuario."'");
 
