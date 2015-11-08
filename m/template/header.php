@@ -1,15 +1,6 @@
 <?php
 session_start();
 include_once("funcoes/funcoes.php");
-
-//  SELECIONA TODOS OS REGISTROS DE PONTOS DE INTERESSE DO BANCO VIABIKE_DB
-$pdo = conectar();
-$buscaPonto = $pdo->prepare("SELECT * FROM ponto_interesse");
-//Executando a QUERY
-$buscaPonto->execute();
-// FIM DA SELEÇÃO 
-
-$linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 ?>
 <!DOCTYPE html>
 <html>
