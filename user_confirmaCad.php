@@ -1,6 +1,6 @@
 <?php
-include_once("conexao/conexao.php");
-include_once("template/header.php");
+require_once("conexao/conexao.php");
+require_once("template/header.php");
 
 $conexao = conectar();//Funcão de conexão com o banco de dados viabike_db
 
@@ -37,7 +37,7 @@ else
 	$user_conf->bindValue(":tipo_usuario", 'u', PDO::PARAM_STR);
 	$user_conf->bindValue(":usuario_ativo", true, PDO::PARAM_BOOL);
 	$user_conf->execute();
-	
+
 	// print_r($user_conf->errorInfo());
   header("location: user_sucesso_cadastro.php");
 }

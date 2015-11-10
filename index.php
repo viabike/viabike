@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once("conexao/conexao.php");
-include("admin/funcoes/funcoes.php");
+require_once("admin/funcoes/funcoes.php");
 // ======== SELECIONA TODOS OS REGISTROS DE PONTOS DE INTERESSE DO BANCO VIABIKE_DB =============
 $pdo = conectar();
 $buscaPonto = $pdo -> prepare("SELECT * FROM ponto_interesse");

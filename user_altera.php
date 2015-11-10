@@ -1,7 +1,8 @@
 <?php
 // Dados vindo da página user_painel.php
 session_start();
-include("conexao/conexao.php");
+require_once("conexao/conexao.php");
+require_once("verificaSessao.php");
 
 $conexao = conectar();
 
@@ -46,7 +47,7 @@ if ($senha == $senhab) {
     $user_alterar -> bindValue(":email", $_POST['email']);
     $user_alterar -> bindValue(":foto", $foto);
     $user_alterar -> bindValue(":id_usuario", $id_usuario);
-	
+
 	$user_alterar -> execute();
 }
 else {

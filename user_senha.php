@@ -1,5 +1,6 @@
 <?php
-include("template/header.php");
+require_once("template/header.php");
+require_once("verificaSessao.php");
 
 echo '<h1 style="float: left; text-align: left">Alterar senha</h1>
 <a href="user_painel.php"><button class="button" style="float: right;">Editar perfil</button></a></h1><br>';

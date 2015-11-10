@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("conexao/conexao.php");
+require_once("conexao/conexao.php");
 $conexao = conectar();
 
 $id_usuario = $_POST['id_usuario'];
