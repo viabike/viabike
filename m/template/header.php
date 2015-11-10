@@ -46,6 +46,7 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 					?>
 						<li><a href="equipe.php">EQUIPE</a></li>
 						<li><a href="sobre.php">SOBRE</a></li>
+						
 					<?php 
 					if(!userLogado())
 					{
