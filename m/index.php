@@ -68,9 +68,9 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
                 <div id="user" style="background-image: url('imagens/users/<?=$fotolinha[0]['foto']?>'); background-size: 100%;">
                 </div>
 
-                <!-- <div id="filtros">
-                    <img src="imagens/filtroicon.png" alt="Filtros" style="width: 100px;">
-                </div> -->
+                <div id="filtros">
+                    <i class="fa fa-sliders" style="font-size: 6.5em; color: #232323"></i>
+                </div>
             </div>
 
             <script>
