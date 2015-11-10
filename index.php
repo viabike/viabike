@@ -21,10 +21,10 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-	
+
 </head>
 <body>
-	<div id="wrapper">
+	<div id="wrapper-index">
 
 		<div id="header">
 			<a href="index.php"><img src="imagens/viabike2.png" alt="ViaBike.me" class="logo"></a>
@@ -49,8 +49,12 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 			<p><center><a href="user_formulario.php">Cadastre-se / Entrar</a></center></p>
 		</div>
     <?php } ?>
+	</div>
 		<div id="mapa"></div>
-
+		<div id="info-viabike">
+			<p>Para os ciclistas de Caraguatatuba que querem economizar tempo e encontrar uma rota segura o ViaBike.me é um sistema web que mostra um mapa de ciclovias.</p>
+		</div>	
+			
 		<script>
 
 //Variavel do mapa
@@ -135,7 +139,7 @@ function loadKmlLayer(src, map){
 google.maps.event.addDomListener(window, 'load', initMap);
 
 		</script>
-
+<!--
 		<div id="content">
 			<div class="text-home">
 				<p>Para os ciclistas de Caraguatatuba que querem economizar tempo e encontrar uma rota segura o ViaBike.me é um sistema web que mostra um mapa de ciclovias.</p>
@@ -152,6 +156,6 @@ google.maps.event.addDomListener(window, 'load', initMap);
 		<div id="footer">
   		<center><p>&copy ViaBike.me - 2015 <br>Site em desenvolvimento</p></center>
 		</div>
-	</div>
+-->
 </body>
 </html>
