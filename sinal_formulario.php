@@ -10,5 +10,6 @@
   </textarea><br>
   Longitude<input type="number" name="longitude"><br>
   Latitude:<input type="number" name="latitude"><br>
+  Data de publicação:<input type="date" name="data_public">
   <input type="submit" value="Cadastrar sinal"><br>
 </form>
