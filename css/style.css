@@ -5,8 +5,12 @@
 }
 
 /*TAGS*/
+html{
+	height: 100%;
+}
 body{
 	background-color: white;
+	height: 100%;
 }
 h1{
 	font-weight: 400;
@@ -51,6 +55,15 @@ div#wrapper {
 	background-color: #232323;
 }
 
+div#wrapper-index {
+	width: 100%;
+	height: 70px;
+	top: 0px;
+	left: 0px;
+	font-family: 'Raleway', sans-serif;
+	background-color: #232323;
+}
+
 div#container{
 	width: 100%;
 	background-color: white;
@@ -65,11 +78,24 @@ div#header {
 }
 
 div#mapa {
+	top: 70px;
+	margin: 0;
 	width: 100%;
-	height: 500px;
-	float: left;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute !important;
 	background: transparent;
 	border-bottom: 1px solid #e3e3e3;
+}
+
+div#info-viabike {
+	width: 400px;
+	position: absolute;
+	bottom: 80px;
+	left: 20px;
+	padding: 20px;
+	background: rgba(255,255,255,0.8);
 }
 
 div#content {
