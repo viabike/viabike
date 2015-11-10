@@ -1,6 +1,6 @@
 * {
-    margin: 0; 
-    padding: 0; 
+    margin: 0;
+    padding: 0;
     border: 0;
 }
 /* TAGS */
@@ -32,6 +32,18 @@ div#logo {
     float: left;
 }
 
+div#user {
+  height:60px;
+  width:60px;
+  -moz-border-radius:64px;
+  -webkit-border-radius:64px;
+  padding:32px;
+  z-index: 99;
+  position: fixed;
+  right: 40px;
+  top: 230px;
+}
+
 div#nav {
     width: 100px;
     margin: 45px 36px 0 0;
@@ -58,7 +70,7 @@ div#footer p{
 div#menu{
     width:100%;
     height: auto;
-    z-index:99;
+    z-index:100;
     background: #1E1E1E;
     position: absolute;
     margin-top: -1px;

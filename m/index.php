@@ -1,14 +1,15 @@
 <?php
+ob_start();
 session_start();
 require_once("../conexao/conexao.php");
-include_once("funcoes/funcoes.php");
+require_once("funcoes/funcoes.php");
 
 //  SELECIONA TODOS OS REGISTROS DE PONTOS DE INTERESSE DO BANCO VIABIKE_DB
 $pdo = conectar();
 $buscaPonto = $pdo->prepare("SELECT * FROM ponto_interesse");
 //Executando a QUERY
 $buscaPonto->execute();
-// FIM DA SELEÇÃO 
+// FIM DA SELEÇÃO
 
 $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 ?>
@@ -58,11 +59,18 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
                 <div id="mapa">
                 </div>
 
-                <!--
-                <div id="filtros">
-                    <img src="imagens/filtroicon.png" alt="Filtros" style="width: 100px;">
+                <?php
+                $email = $_SESSION['email'];
+                $fotouser = $pdo->prepare("SELECT foto FROM usuario WHERE email = '".$email."'");
+                $fotouser->execute();
+                $fotolinha = $fotouser->fetchAll(PDO::FETCH_ASSOC);?>
+
+                <div id="user" style="background-image: url('imagens/users/<?=$fotolinha[0]['foto']?>'); background-size: 100%;">
                 </div>
-                -->
+
+                <!-- <div id="filtros">
+                    <img src="imagens/filtroicon.png" alt="Filtros" style="width: 100px;">
+                </div> -->
             </div>
 
             <script>
