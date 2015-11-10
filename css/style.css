@@ -85,16 +85,15 @@ div#footer {
 	clear: both;
 	float:left;
 	width:100%;
-	height: 80px;
+	height: 40px;
 	background-color: #f6f6f6;
 	font-family: 'Raleway', sans-serif;
 }
 
 div#footer p{
-	margin-top: 20px;
 	font-size:14px;
 	color:#a7a7a7;
-	line-height: 20px;
+	line-height: 40px;
 }
 
 div#entrar{
