@@ -1,7 +1,7 @@
 <?php
 ob_start();
 session_start();
-include("admin/funcoes/funcoes.php");
+require_once("admin/funcoes/funcoes.php");
 ?>
 <!DOCTYPE html>
 <html>

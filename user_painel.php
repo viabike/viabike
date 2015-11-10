@@ -1,6 +1,7 @@
 <?php
-include("conexao/conexao.php");
-include("template/header.php");
+require_once("conexao/conexao.php");
+require_once("template/header.php");
+require_once("verificaSessao.php");
 ?>
 
 <script>
@@ -10,7 +11,7 @@ include("template/header.php");
 $(document).ready(function () {
 	$('#passNotOk').hide();
 	$("#botaoOk").hide();
-	
+
 	$("#senha").change(function(){
 			$.ajax({
 			type: "POST",
@@ -66,21 +67,21 @@ $user = $user_buscador->fetchAll(PDO::FETCH_OBJ);?>
 				<img src="imagens/users/<?=$usuario->foto?>" width="400px">
 				Foto:<input type="file" name="foto" class="input"><br>
 				<input type="hidden" name="foto_velha" value="<?=$usuario->foto?>">
-				
+
 				<hr style="border:1px; padding:2px; margin-bottom:10px; border-radius:5px; background-color:rgba(204,204,204, 0.25);">
 				<p id="passNotOk">
 					<font color="red"><b>Senha incorreta! Tente novamente.</b></font>
 				</p>
-				
+
 				Confirme sua senha:<input type="password" name="senha" id="senha" class="input" required><br>
-				
+
 				<a href="user_desativar.php?id_usuario=<?=$usuario->id_usuario?>" style="float: left;font-size:14px; line-height:65px; color:#535455;">Desativar conta</button></a>
-				
+
 				<input type="button" value="Alterar" class="button" style="float: right; background-color: #c0c0c0; cursor: auto;" id="botaoNotOK">
 				<input type="submit" value="Alterar" class="button" style="float: right" id="botaoOk">
 			</form>
-			
-			
+
+
 <?php endforeach;
 include("template/footer.php");
 ?>
