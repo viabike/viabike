@@ -1,7 +1,7 @@
-﻿<?php
+<?php
 session_start();
 require_once("conexao/conexao.php");
-include("admin/funcoes/funcoes.php");
+require_once("admin/funcoes/funcoes.php");
 // ======== SELECIONA TODOS OS REGISTROS DE PONTOS DE INTERESSE DO BANCO VIABIKE_DB =============
 $pdo = conectar();
 $buscaPonto = $pdo -> prepare("SELECT * FROM ponto_interesse");
@@ -31,11 +31,19 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 
       <div id="nav-header">
 				<ul>
-					<?php if(userLogado()){
+          <?php if(userLogado()){
+						$conexao = conectar();//Conexao com o banco de dados viabike_db
+						$user_buscador = $conexao -> prepare("SELECT * FROM usuario WHERE email = '".$_SESSION['email']."'");//pegando todos os usuarios cadastrados
+						$user_buscador -> execute();//executando a query de uma maneira segura
+						$user = $user_buscador->fetchAll(PDO::FETCH_OBJ);?>
+
+						<?php foreach ($user as $usuario):
             echo "
 						<li><a href='user_logout.php'>SAIR</a></li>
 						<li><a href='user_painel.php'>".$_SESSION['nome']."</a></li>
+						<li><a href='user_painel.php'><img src='imagens/users/".$usuario->foto."' width='30px' height='30px'></a></li>
 						<li style='color:#a7a7a7'> | </li>";
+					endforeach;
 					} ?>
 					<li><a href="equipe.php">EQUIPE</a></li>
 					<li><a href="sobre.php">SOBRE</a></li>
@@ -101,7 +109,7 @@ function getContentPonto(id){
 
    $.ajax({
        type: "GET",
-       url: "/viabike/get_info_ponto.php?id="+id,
+       url: "/viabike/get_info_ponto.php?id="+id, //online é somente /get...
        dataType: "json",
        success: function(data){
           $('#marker'+id).html(
@@ -142,7 +150,7 @@ google.maps.event.addDomListener(window, 'load', initMap);
 <!--
 		<div id="content">
 			<div class="text-home">
-				<p>Para os ciclistas de Caraguatatuba que querem economizar tempo e encontrar uma rota segura o ViaBike.me é um sistema web que mostra um mapa de ciclovias.</p>
+				<p>Para os ciclistas de Caraguatatuba que querem economizar tempo e encontrar uma rota segura. O ViaBike.me é um sistema web que mostra um mapa de ciclovias.</p>
 			</div>
 
 			<div class="legenda-home" style="text-align:right">
@@ -154,7 +162,7 @@ google.maps.event.addDomListener(window, 'load', initMap);
 		</div>
 
 		<div id="footer">
-  		<center><p>&copy ViaBike.me - 2015 <br>Site em desenvolvimento</p></center>
+  		<center><p>&copy ViaBike.me - 2015</p></center>
 		</div>
 -->
 </body>

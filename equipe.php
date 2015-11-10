@@ -117,7 +117,7 @@ $(document).ready(function(){
 		<h3>William de Melo</h3>
 		<p>
 			<a href="https://www.linkedin.com/pub/william-melo/a2/215/173"><i class="fa fa-linkedin-square in"></i></a>
-			<a href="mailto:willblood33@gmail.com"><i class="fa fa-envelope-square mail"></i></a>
+			<a href="mailto:william@hexadc.com.br"><i class="fa fa-envelope-square mail"></i></a>
 			<a href="https://www.facebook.com/william.melo.7165"><i class="fa fa-facebook-square face"></i></a>
 		</p>
 	</center>

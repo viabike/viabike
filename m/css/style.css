@@ -34,7 +34,7 @@ div#logo {
 
 div#nav {
     width: 100px;
-    margin: 50px 36px 0 0;
+    margin: 45px 36px 0 0;
     float: right;
     background-color: transparent;
 }
@@ -169,6 +169,9 @@ div#form_user{
 .fechar{
 	margin-left: 90%;
 	margin-bottom: 5%;
+}
+.icon-menu {
+	color: #fff;
 }
 /* classes */
 
