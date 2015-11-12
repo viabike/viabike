@@ -71,13 +71,13 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
         <div id="filtros">
             <i class="fa fa-sliders" style="font-size: 3em; color: #232323"></i>
             Filtros: 
-            <select>
+            <select id="filtro-ponto">
                 <option selected>PONTOS DE INTERESSE</option>
                 <option value="BC">Bicicletarias</option>
                 <option value="PG">Postos de Gasolina</option>
             </select>
 
-            <select>
+            <select id="filtro-sinal">
                 <option selected>SINALIZAÇÕES</option>
                 <option value="OB">Obras</option>
                 <option value="IT">Interditado</option>
@@ -193,6 +193,51 @@ function loadKmlLayer(src, map){
 //EVENTO QUE CHAMA FUNÃ‡ÃƒO initMap() QUANDO A JANELA FOR CARREGADA.
 google.maps.event.addDomListener(window, 'load', initMap);
 
+
+/*
+* 
+* Programação dos filtros
+* (por william e itallo)   
+*                 
+*/
+
+// filtro-ponto (pontos de interesse)
+// filtro-sinal (sinalizações)
+
+/*
+$(document).ready(function(){
+    //pegando o valor do campo 
+    var filtro_ponto;
+    var filtro_sinal;
+    
+    $("#filtro-ponto").change(function(){
+        filtro_ponto = $("#filtro-ponto").val();
+    });
+
+    $("#filtro-sinal").change(function(){
+        filtro_sinal = $("#filtro-sinal").val();
+    });
+    
+    //busca os no banco de acordo com o filtro
+    $("#filtro-ponto").change(function(){
+        $.ajax({
+            type: "POST",
+            url: "filtro_pega_ponto.php",
+            data:"filtro_ponto="+filtro_ponto,
+            success:function(resultado){
+                console.log(resultado);
+            },
+            error: function(){
+                alert("Erro");
+            }
+        });
+    });
+  
+  // Para fazer: Pegar os valores retornados do banco e exibilos no mapa
+    
+});
+*/
+    
 		</script>
 
 </body>
