@@ -91,12 +91,21 @@ div#mapa {
 
 div#info-viabike {
 	width: 400px;
-	position: absolute;
+	top: 25px;
+	position: relative;
 	bottom: 80px;
 	left: 20px;
 	padding: 20px;
 	background: rgba(255,255,255,0.8);
 }
+/* ARRUMAR CSS FILTROS 
+div#filtros {
+	width: 400px;
+	float: left;
+	left: 20px;
+	background: black;
+}
+*/
 
 div#content {
 	width: 980px;
@@ -121,7 +130,7 @@ div#footer p{
 	color:#a7a7a7;
 	line-height: 40px;
 }
-
+/*
 div#entrar{
 	width: 180px;
 	padding: 15px 0px 15px 0;
@@ -133,6 +142,8 @@ div#entrar{
 	top: 100px;
 	z-index: 9999;
 }
+*/
+
 div#entrar a{
 	text-decoration: none;
 	color: #fff;
