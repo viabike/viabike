@@ -24,6 +24,7 @@ foreach ($sinal as $sinalizacao) :?>
     <option value="OT" <?=($sinalizacao->categoria == "OT")?'selected':''?>>Outros</option>
     </select><br>
     Descrição:<textarea name="descricao">
+      <?=$sinalizacao->descricao?>
     </textarea><br>
     Longitude<input type="number" name="longitude" value="<?=$sinalizacao->longitude?>"><br>
     Latitude:<input type="number" name="latitude" value="<?=$sinalizacao->latitude?>"><br>
