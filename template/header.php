@@ -13,6 +13,7 @@ require_once("admin/funcoes/funcoes.php");
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="admin/funcoes/funcoes.js"></script>
 </head>
 <body>
 	<div id="wrapper">
