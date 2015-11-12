@@ -62,15 +62,40 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
     <?php // } ?>
 	-->
 	</div>
-		<div id="mapa"></div>
+    
+    
+    <div id="content">
+                    
+                    
+                    <div id="mapa"></div>
+                    <div id="filtros">
+                        <i class="fa fa-sliders" style="font-size: 3em; color: #232323"></i>
+                    </div>   
+                    
 		<div id="info-viabike">
 			<p>Para os ciclistas de Caraguatatuba que querem economizar tempo e encontrar uma rota segura o ViaBike.me é um sistema web que mostra um mapa de ciclovias.</p>
 		</div>
-		<!-- ARRUMAR CSS FILTROS
-		<div id="filtros">
-			<p> FILTROS </P>
+                    
+                    
+ <!--
+			<div class="text-home">
+				<p>Para os ciclistas de Caraguatatuba que querem economizar tempo e encontrar uma rota segura. O ViaBike.me é um sistema web que mostra um mapa de ciclovias.</p>
+			</div>
+
+			<div class="legenda-home" style="text-align:right">
+				<ul>
+					<li>Ciclovia Ativa <span class="legenda-cic-ativa">&#9679;</span></li>
+					<li>Ciclovia em Obras <span class="legenda-cic-obras"> &#9679;</span></li></li>
+				</ul>
+			</div>
 		</div>
-		-->
+
+		<div id="footer">
+  		<center><p>&copy ViaBike.me - 2015</p></center>
+-->
+    </div>
+  
+                
 		<script>
 
 //Variavel do mapa
@@ -155,23 +180,6 @@ function loadKmlLayer(src, map){
 google.maps.event.addDomListener(window, 'load', initMap);
 
 		</script>
-<!--
-		<div id="content">
-			<div class="text-home">
-				<p>Para os ciclistas de Caraguatatuba que querem economizar tempo e encontrar uma rota segura. O ViaBike.me é um sistema web que mostra um mapa de ciclovias.</p>
-			</div>
 
-			<div class="legenda-home" style="text-align:right">
-				<ul>
-					<li>Ciclovia Ativa <span class="legenda-cic-ativa">&#9679;</span></li>
-					<li>Ciclovia em Obras <span class="legenda-cic-obras"> &#9679;</span></li></li>
-				</ul>
-			</div>
-		</div>
-
-		<div id="footer">
-  		<center><p>&copy ViaBike.me - 2015</p></center>
-		</div>
--->
 </body>
 </html>

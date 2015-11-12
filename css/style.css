@@ -1,290 +1,301 @@
 * {
-	padding: 0;
-	margin: 0;
-	border: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
 }
 
 /*TAGS*/
 html{
-	height: 100%;
+    height: 100%;
 }
 body{
-	background-color: white;
-	height: 100%;
+    background-color: white;
+    height: 100%;
 }
 h1{
-	font-weight: 400;
+    font-weight: 400;
 }
 h3{
-	font-weight: 600;
+    font-weight: 600;
 }
 form{
-	text-align:left;
-	width:400px;
-	margin-left: calc(50% - 235px);
-	border:0;
-	float: left;
-	padding:35px;
-	border-radius:10px;
+    text-align:left;
+    width:400px;
+    margin-left: calc(50% - 235px);
+    border:0;
+    float: left;
+    padding:35px;
+    border-radius:10px;
 }
 .input{
-	padding:10px;
-	width:380px;
-	display:block;
-	line-height:1.467;
-	color:#34495e;
-	border:1px solid #bdc3c7;
-	border-radius:4px;
-	box-shadow: none;
-	-webkit-transition: border 0.1s linear, color 0.1s linear, background-color 0.1s linear;
-	transition: border 0.1s linear, color 0.1s linear, background-color 0.1s linear;
+    padding:10px;
+    width:380px;
+    display:block;
+    line-height:1.467;
+    color:#34495e;
+    border:1px solid #bdc3c7;
+    border-radius:4px;
+    box-shadow: none;
+    -webkit-transition: border 0.1s linear, color 0.1s linear, background-color 0.1s linear;
+    transition: border 0.1s linear, color 0.1s linear, background-color 0.1s linear;
 }
 .input:focus{
-	border:1px solid #535455;
-	outline:none;
+    border:1px solid #535455;
+    outline:none;
 }
 /*TAGS*/
 
 
 /*BASE*/
 div#wrapper {
-	margin: auto;
-	width: 100%;
-	height: auto;
-	font-family: 'Raleway', sans-serif;
-	background-color: #232323;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    font-family: 'Raleway', sans-serif;
+    background-color: #232323;
 }
 
 div#wrapper-index {
-	width: 100%;
-	height: 70px;
-	top: 0px;
-	left: 0px;
-	font-family: 'Raleway', sans-serif;
-	background-color: #232323;
+    width: 100%;
+    height: 70px;
+    top: 0px;
+    left: 0px;
+    font-family: 'Raleway', sans-serif;
+    background-color: #232323;
 }
 
 div#container{
-	width: 100%;
-	background-color: white;
-	float: left;
+    width: 100%;
+    background-color: white;
+    float: left;
+    position: relative;
 }
 
 div#header {
-	width: 980px;
-	height: 70px;
-	margin: 0 auto;
-	background-color: #232323;
+    width: 980px;
+    height: 70px;
+    margin: 0 auto;
+    background-color: #232323;
 }
 
 div#mapa {
-	top: 70px;
-	margin: 0;
-	width: 100%;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	position: absolute !important;
-	background: transparent;
-	border-bottom: 1px solid #e3e3e3;
+    top: 70px;
+    margin: 0;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute !important;
+    background: transparent;
+    border-bottom: 1px solid #e3e3e3;
+    z-index: 1;
+}
+
+div#filtros {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    left: 100px;
+    bottom: 0px;
+    z-index: 99;
 }
 
 div#info-viabike {
-	width: 400px;
-	top: 25px;
-	position: relative;
-	bottom: 80px;
-	left: 20px;
-	padding: 20px;
-	background: rgba(255,255,255,0.8);
+    width: 400px;
+    top: 25px;
+    position: relative;
+    bottom: 80px;
+    left: 20px;
+    padding: 20px;
+    background: rgba(255,255,255,0.8);
 }
 /* ARRUMAR CSS FILTROS 
 div#filtros {
-	width: 400px;
-	float: left;
-	left: 20px;
-	background: black;
+        width: 400px;
+        float: left;
+        left: 20px;
+        background: black;
 }
 */
 
 div#content {
-	width: 980px;
-	float:left;
-	margin-left:calc(50% - 525px);
-	padding:35px;
-	font-size:17px;
-	color:#535455;
+    width: 980px;
+    float:left;
+    margin-left:calc(50% - 525px);
+    padding:35px;
+    font-size:17px;
+    color:#535455;
 }
 
 div#footer {
-	clear: both;
-	float:left;
-	width:100%;
-	height: 40px;
-	background-color: #f6f6f6;
-	font-family: 'Raleway', sans-serif;
+    clear: both;
+    float:left;
+    width:100%;
+    height: 40px;
+    background-color: #f6f6f6;
+    font-family: 'Raleway', sans-serif;
 }
 
 div#footer p{
-	font-size:14px;
-	color:#a7a7a7;
-	line-height: 40px;
+    font-size:14px;
+    color:#a7a7a7;
+    line-height: 40px;
 }
 /*
 div#entrar{
-	width: 180px;
-	padding: 15px 0px 15px 0;
-	border-radius: 10px 0px 0px 10px;
-	background: #40BD68;
-	color: #fff;
-	position: fixed;
-	right: 0;
-	top: 100px;
-	z-index: 9999;
+        width: 180px;
+        padding: 15px 0px 15px 0;
+        border-radius: 10px 0px 0px 10px;
+        background: #40BD68;
+        color: #fff;
+        position: fixed;
+        right: 0;
+        top: 100px;
+        z-index: 9999;
 }
 */
 
 div#entrar a{
-	text-decoration: none;
-	color: #fff;
+    text-decoration: none;
+    color: #fff;
 }
 /*BASE*/
 
 /*MENU*/
 div#nav-header {
-	width: auto;
-	height: 30px;
-	line-height:30px;
-	float: right;
-	margin-top:15px;
-	padding: 5px 0px 5px 5px;
+    width: auto;
+    height: 30px;
+    line-height:30px;
+    float: right;
+    margin-top:15px;
+    padding: 5px 0px 5px 5px;
 }
 #nav-header ul li:nth-child(1){
-	margin-right:0px;
-	padding: 0px 0px 0px 10px;
+    margin-right:0px;
+    padding: 0px 0px 0px 10px;
 }
 
 div#nav-header ul {
-	list-style-type: none;
+    list-style-type: none;
 }
 
 div#nav-header ul li{
-	display: inline;
-	float: right;
-	padding: 0px 10px;
+    display: inline;
+    float: right;
+    padding: 0px 10px;
 }
 
 div#nav-header ul li a {
-	text-decoration: none;
-	color: #a7a7a7;
+    text-decoration: none;
+    color: #a7a7a7;
 }
 
 div#nav-header ul li a:hover {
-	color: #f8f8f8;
+    color: #f8f8f8;
 }
 /*MENU*/
 
 /*DESENVOLVEDOR*/
 .esp{
-	width:100%;
-	height:20px;
-	float:left;
+    width:100%;
+    height:20px;
+    float:left;
 }
 
 .desenvolvedor{
-	width:235px;
-	padding:5px;
-	float:left;
-  word-wrap: break-word;
+    width:235px;
+    padding:5px;
+    float:left;
+    word-wrap: break-word;
 }
 .desenvolvedor i{
     font-size: 30px;
-		cursor: pointer;
-		color: #ddd;
+    cursor: pointer;
+    color: #ddd;
 }
 
 /*classes icones*/
 .face:hover{
-	color: #3b5998;
-	transition: all 0.1s ease-out;
+    color: #3b5998;
+    transition: all 0.1s ease-out;
 }
 .mail:hover{
-	color: #F90101;
-	transition: all 0.1s ease-out;
+    color: #F90101;
+    transition: all 0.1s ease-out;
 }
 .in:hover{
-	color: #007bb5;
-	transition: all 0.1s ease-out;
+    color: #007bb5;
+    transition: all 0.1s ease-out;
 }
 /*fim classes icones*/
 
 .margin_des{
-	margin-right:0px;
+    margin-right:0px;
 }
 .img-hover{
-	display:none;
+    display:none;
 }
 /*DESENVOLVEDOR*/
 
 /*INFOWINDOW*/
 div.infoWindow {
-	min-width: 200px;
-	min-height: 100px;
-	margin:auto;
-	background: white;
-	padding: 7px 0px 0px 7px;
-	font-family: 'Raleway', sans-serif;
+    min-width: 200px;
+    min-height: 100px;
+    margin:auto;
+    background: white;
+    padding: 7px 0px 0px 7px;
+    font-family: 'Raleway', sans-serif;
 }
 div.infoWindow h1{
-	font-size:14px;
-	font-weight:600;
-	margin-bottom: 3px;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom: 3px;
 }
 div.infoWindow h2{
-	font-size:13px;
-	font-weight:600;
+    font-size:13px;
+    font-weight:600;
 }
 div.infoWindow p{
-	font-size: 14px;
+    font-size: 14px;
 }
 /*FIM INFOWINDOW*/
 
 /*CLASSES*/
 .logo{
-	float:left;
-	margin-top:12.5px;
-	width:150px;
+    float:left;
+    margin-top:12.5px;
+    width:150px;
 }
 
 .text-home {
-	width: 500px;
-	float: left;
+    width: 500px;
+    float: left;
 }
 
 .legenda-home {
-	float: right;
+    float: right;
 }
 
 .legenda-home ul {
-	list-style: none;
+    list-style: none;
 }
 .legenda-cic-ativa {
-	color: rgba(189, 64, 64, 0.8);
+    color: rgba(189, 64, 64, 0.8);
 }
 .legenda-cic-obras{
-	color: #00DAFF;
+    color: #00DAFF;
 }
 .paragrafo{
-	text-align: justify;
+    text-align: justify;
 }
 .button{
-	width:auto;
-	padding: 0 35px;
-	height:40px;
-	font-size: 16px;
-	background: #BD4040;
-	border-radius:4px;
-	cursor:pointer;
-	color:#fff;
+    width:auto;
+    padding: 0 35px;
+    height:40px;
+    font-size: 16px;
+    background: #BD4040;
+    border-radius:4px;
+    cursor:pointer;
+    color:#fff;
 }
 /*CLASSES*/
