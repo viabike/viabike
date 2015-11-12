@@ -45,24 +45,32 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 						<li style='color:#a7a7a7'> | </li>";
 					endforeach;
 					} ?>
+					<?php if(!userLogado()){ ?>
+						<li><a href="user_formulario.php">ENTRAR</a></li>
+					<?php } ?>
 					<li><a href="equipe.php">EQUIPE</a></li>
 					<li><a href="sobre.php">SOBRE</a></li>
 					<li><a href="index.php">HOME</a></li>
 				</ul>
 			</div>
 		</div>
-
-    <?php if(!userLogado()){ ?>
+	<!---
+    <?php // if(!userLogado()){ ?>
     <div id="entrar">
 			<p><center><a href="user_formulario.php">Cadastre-se / Entrar</a></center></p>
 		</div>
-    <?php } ?>
+    <?php // } ?>
+	-->
 	</div>
 		<div id="mapa"></div>
 		<div id="info-viabike">
 			<p>Para os ciclistas de Caraguatatuba que querem economizar tempo e encontrar uma rota segura o ViaBike.me é um sistema web que mostra um mapa de ciclovias.</p>
-		</div>	
-			
+		</div>
+		<!-- ARRUMAR CSS FILTROS
+		<div id="filtros">
+			<p> FILTROS </P>
+		</div>
+		-->
 		<script>
 
 //Variavel do mapa
