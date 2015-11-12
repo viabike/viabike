@@ -66,32 +66,46 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
     
     <div id="content">
                     
-                    
-                    <div id="mapa"></div>
-                    <div id="filtros">
-                        <i class="fa fa-sliders" style="font-size: 3em; color: #232323"></i>
-                    </div>   
-                    
-		<div id="info-viabike">
-			<p>Para os ciclistas de Caraguatatuba que querem economizar tempo e encontrar uma rota segura o ViaBike.me é um sistema web que mostra um mapa de ciclovias.</p>
-		</div>
-                    
-                    
- <!--
-			<div class="text-home">
-				<p>Para os ciclistas de Caraguatatuba que querem economizar tempo e encontrar uma rota segura. O ViaBike.me é um sistema web que mostra um mapa de ciclovias.</p>
-			</div>
+        <div id="mapa"></div>
 
-			<div class="legenda-home" style="text-align:right">
-				<ul>
-					<li>Ciclovia Ativa <span class="legenda-cic-ativa">&#9679;</span></li>
-					<li>Ciclovia em Obras <span class="legenda-cic-obras"> &#9679;</span></li></li>
-				</ul>
-			</div>
-		</div>
+        <div id="filtros">
+            <i class="fa fa-sliders" style="font-size: 3em; color: #232323"></i>
+            Filtros: 
+            <select>
+                <option selected>PONTOS DE INTERESSE</option>
+                <option value="BC">Bicicletarias</option>
+                <option value="PG">Postos de Gasolina</option>
+            </select>
 
-		<div id="footer">
-  		<center><p>&copy ViaBike.me - 2015</p></center>
+            <select>
+                <option selected>SINALIZA��ES</option>
+                <option value="OB">Obras</option>
+                <option value="IT">Interditado</option>
+                <option value="AC">Acidentado</option>
+                <option value="OT">Outros</option>
+            </select>
+        </div>   
+                    
+<!--
+        <div id="info-viabike">
+                <p>Para os ciclistas de Caraguatatuba que querem economizar tempo e encontrar uma rota segura o ViaBike.me é um sistema web que mostra um mapa de ciclovias.</p>
+        </div>
+
+
+            <div class="text-home">
+                    <p>Para os ciclistas de Caraguatatuba que querem economizar tempo e encontrar uma rota segura. O ViaBike.me é um sistema web que mostra um mapa de ciclovias.</p>
+            </div>
+
+            <div class="legenda-home" style="text-align:right">
+                    <ul>
+                            <li>Ciclovia Ativa <span class="legenda-cic-ativa">&#9679;</span></li>
+                            <li>Ciclovia em Obras <span class="legenda-cic-obras"> &#9679;</span></li></li>
+                    </ul>
+            </div>
+        </div>
+
+        <div id="footer">
+        <center><p>&copy ViaBike.me - 2015</p></center>
 -->
     </div>
   

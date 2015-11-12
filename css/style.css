@@ -92,12 +92,14 @@ div#mapa {
 }
 
 div#filtros {
-    width: 100px;
-    height: 100px;
+    width: 450px;
+    min-height: 10px;
+    height: auto;
     position: fixed;
     left: 100px;
-    bottom: 0px;
+    bottom: 10px;
     z-index: 99;
+    //background-color: #00ff99;
 }
 
 div#info-viabike {
