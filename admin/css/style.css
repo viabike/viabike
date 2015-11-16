@@ -71,6 +71,7 @@ table td{
 	margin-left: 0px;
 	float:left;
 }
+
 .form_user1{
 	border-radius: 0px;
 	border: 0px;
@@ -128,6 +129,76 @@ div#mapaadm {
 	margin-bottom: 35px;
 }
 
+/*-----------------FORM SINALIZAÇÃO */
+.formSinal{
+	text-align:left;
+	min-width:700px;
+	width: auto;
+	border:1px solid #bdc3c7;
+	padding:35px;
+	border-radius:10px;
+	margin-left: 0px;
+	float:left;
+}
+
+div#mapaSinal {
+	width: 365px;
+	height: 250px;
+	float: right;
+	background:transparent;
+	margin-bottom: 3px;
+}
+
+div#formSinalEsquerda{
+	width: 253px;
+	float:left;
+	padding-right: 52px;
+	border-right: 1px solid #bdc3c7;
+}
+
+div#formSinalDireita{
+	width: 375px;
+	float:right;
+}
+
+.formSinalInput{
+	padding:10px;
+	width:250px;
+	display:block;
+	line-height:1.467;
+	color:#34495e;
+	border:1px solid #bdc3c7;
+	border-radius:4px;
+	box-shadow: none;
+	-webkit-transition: border 0.1s linear, color 0.1s linear, background-color 0.1s linear;
+	transition: border 0.1s linear, color 0.1s linear, background-color 0.1s linear;
+}
+.formSinalInput:focus{
+	border:1px solid #535455;
+	outline:none;
+}
+
+/*TEXT ÁREA*/
+textarea { resize:both; } /* none|horizontal|vertical|both */
+textarea.vert { resize:vertical; }
+textarea.noResize { resize:none; }
+textarea { resize:vertical; max-height:300px; min-height:200px; }
+textarea.horiz { resize:horizontal; max-width:400px; min-width:200px; }
+
+.tablelatLng{
+	margin: 20px 3px 20px 0px;
+	float: right;
+}
+
+.latLng{
+	width: 100px;
+}
+
+.selectSinal{
+	width:270px;
+}
+
+/*FIM SINAL*/
 div#content {
 	width: 980px;
 	float:left;

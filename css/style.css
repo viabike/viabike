@@ -111,7 +111,7 @@ div#info-viabike {
     padding: 20px;
     background: rgba(255,255,255,0.8);
 }
-/* ARRUMAR CSS FILTROS 
+/* ARRUMAR CSS FILTROS
 div#filtros {
         width: 400px;
         float: left;
@@ -262,6 +262,109 @@ div.infoWindow p{
 }
 /*FIM INFOWINDOW*/
 
+
+/*FORM SINALIZAÇÃO */
+div#formWindow{
+  margin: auto;
+  width: 900px;
+}
+
+.formSinal{
+	text-align:left;
+	min-width:700px;
+	width: auto;
+	border:1px solid #bdc3c7;
+	padding:35px;
+  margin: 0;
+	border-radius:10px;
+	float:left;
+}
+
+div#mapaSinal {
+	width: 365px;
+	height: 250px;
+	float: right;
+	background:transparent;
+	margin-bottom: 3px;
+}
+
+div#formSinalEsquerda{
+	width: 250px;
+	float:left;
+	padding-right: 52px;
+	border-right: 1px solid #bdc3c7;
+}
+
+div#formSinalDireita{
+	width: 375px;
+	float:right;
+}
+
+.formSinalInput{
+	padding:10px;
+	width:250px;
+	display:block;
+	line-height:1.467;
+	color:#34495e;
+	border:1px solid #bdc3c7;
+	border-radius:4px;
+	box-shadow: none;
+	-webkit-transition: border 0.1s linear, color 0.1s linear, background-color 0.1s linear;
+	transition: border 0.1s linear, color 0.1s linear, background-color 0.1s linear;
+}
+.formSinalInput:focus{
+	border:1px solid #535455;
+	outline:none;
+}
+
+.selectSinal{
+	width:250px;
+}
+
+table{
+	/*border:1px solid #bdc3c7;*/
+	border-radius:5px 5px 0px 0px;
+	-webkit-box-shadow: 1px 1px 5px 0px rgba(35,35,35,0.5);
+	-moz-box-shadow: 1px 1px 5px 0px rgba(35,35,35,0.5);
+	box-shadow: 1px 1px 5px 0px rgba(35,35,35,0.5);
+}
+table tr.border-tr td{
+	border-bottom:1px solid #bdc3c7;
+}
+table th{
+	border-bottom:1px solid #bdc3c7;
+	padding:10px 30px;
+	text-align:center;
+}
+table td{
+	border:0px solid #bdc3c7;
+	padding:10px 30px;
+	text-align:center;
+}
+
+
+/*TEXT ÁREA*/
+.formSinal textarea { resize:both; } /* none|horizontal|vertical|both */
+.formSinal textarea.vert { resize:vertical; }
+.formSinal textarea.noResize { resize:none; }
+.formSinal textarea { resize:vertical; max-height:300px; min-height:200px; }
+.formSinal textarea.horiz { resize:horizontal; max-width:400px; min-width:200px; }
+
+.tablelatLng{
+	margin: 20px 3px 20px 0px;
+	float: right;
+}
+.latLng{
+	width: 100px;
+}
+.lng {
+  margin-top: 17px;
+}
+.botaoSubmitSinal{
+  float: right;
+}
+/*FIM SINALIZAÇÃO */
+
 /*CLASSES*/
 .logo{
     float:left;
@@ -300,4 +403,5 @@ div.infoWindow p{
     cursor:pointer;
     color:#fff;
 }
+
 /*CLASSES*/

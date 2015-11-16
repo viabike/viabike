@@ -1,39 +1,51 @@
 <?php include("template/header.php");?>
-<link rel="stylesheet" type="text/css" href="admin/css/style.css">
-	<script src="funcoes/funcoes.js"></script>
+</div>
+	<div id="formWindow">
+		<form action="sinal_confirmaCad.php" class="formSinal" name="formSinal" method="POST">
+			<center>
+				<h1>Cadastrar sinalização</h1><br>
+			</center>
 
-	<center>
-		<h1>Cadastrar sinalização</h1><br>
-		<form action="sinal_confirmaCad.php" class="form_adm" name="form_adm" method="POST">
-			<div id="mapaadm"></div>
-			<div id='form1'>
-				<input type="hidden" name="id_ponto" class="form">
-				Titulo:   <input type="text" name="Titulo" class="form" maxlength="45" minlength="3" required><br>
-				Categoria:<select name="categoria" >
+			<div id='formSinalEsquerda'>
+				Titulo:   <input type="text" name="titulo" class="formSinalInput" maxlength="45" minlength="3" required><br>
+				Categoria:<select name="categoria" class="formSinalInput selectSinal">
 				<option value="OB" selected>Obras</option>
 				<option value="IT">Interditado</option>
 				<option value="AC">Acidentado</option>
 				<option value="OT">Outros</option>
 				</select><br>
-				<textarea placeholder="Descrição"class="input"name="descricao"></textarea><br>
+				<textarea placeholder="Descrição aqui..."class="formSinalInput"name="descricao"></textarea><br>
 			</div>
-			<div id='form2'>
-				Latitude:<input type="text" name="latitude" class="form" id="lat" value="-23.6255903"><br>
-				Longitude:<input type="text" name="longitude" class="form" id="lng" value="-45.4241453"><br>
-				<input type="submit" value="Cadastrar" class="button" onclick="return validar();">
+			<div id='formSinalDireita'>
+				<div id="mapaSinal"></div>
+				<table class="tablelatLng">
+					<tr>
+						<th>Latitude</th>
+						<th>Longitude</th>
+					</tr>
+					<tr>
+						<td>
+							<input type="text" name="latitude" class="formSinalInput latLng" id="lat" value="-23.6255903">
+						</td>
+						<td>
+							<input type="text" name="longitude" class="formSinalInput latLng lng" id="lng" value="-45.4241453"><br>
+						</td>
+					</tr>
+				</table><br>
+				<input type="submit" value="Cadastrar" class="button botaoSubmitSinal" onclick="return validar();">
 			</div>
 		</form>
-	</center>
+	</div>
 	<script>
-		var iconBicicletaria = '../imagens/bike1.png';
-		var iconPosto = '../imagens/posto1.png';//exemplo até colocar o original.
+		var iconBicicletaria = 'imagens/bike1.png';
+		var iconPosto = 'imagens/posto1.png';//exemplo até colocar o original.
 		var marker = '';
 		var map = '';
 		var mlat = document.getElementById("lat").value;
 		var mlgn = document.getElementById("lng").value;
 
 		function initMap() {
-		   map = new google.maps.Map(document.getElementById('mapaadm'), {
+		   map = new google.maps.Map(document.getElementById('mapaSinal'), {
 			zoom: 15,
 			center: {lat: -23.6255903, lng: -45.4241453}
 		  });
@@ -77,5 +89,4 @@
 
 		google.maps.event.addDomListener(window, 'load', initMap);
 	</script>
-
 <?php include("template/footer.php");?>
