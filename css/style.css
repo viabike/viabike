@@ -99,7 +99,7 @@ div#filtros {
     left: 100px;
     bottom: 10px;
     z-index: 99;
-    //background-color: #00ff99;
+    background-color: rgba(255,255,255,0.8);
 }
 
 div#info-viabike {
