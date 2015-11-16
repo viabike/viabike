@@ -38,4 +38,4 @@ $sql = $pdo -> prepare("INSERT INTO ponto_interesse(nome, bairro, rua, num, cep,
 $sql -> execute();
 
 header("location:consulta_pontos.php");
-?>
+
