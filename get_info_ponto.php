@@ -9,9 +9,11 @@ $buscaPonto = $pdo -> prepare("SELECT * FROM ponto_interesse where id_ponto =$id
 $buscaPonto -> execute();
 $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 
-foreach ($linha as $linhas):
+$linhas = $linha[0];
+
+//foreach ($linha as $linhas):
 
  echo json_encode($linhas);
 
-endforeach;
+//endforeach;
 ?>
