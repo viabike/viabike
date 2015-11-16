@@ -73,20 +73,24 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
             <div id="mapa"></div>
 
             <div id="filtros">
-                <i class="fa fa-sliders" style="font-size: 3em; color: #232323"></i>
+                <i class="fa fa-sliders" style="font-size: 1.5em; color: #232"></i>
                 Filtros: 
                 <select id="filtro-ponto">
-                    <option selected>PONTOS DE INTERESSE</option>
+                    <option value="TODOS" selected>Pontos de Interesse</option>
                     <option value="BC">Bicicletarias</option>
                     <option value="PG">Postos de Gasolina</option>
+                    <option value="TODOS">Todos</option>
+                    <option value="">Nenhum</option>
                 </select>
 
                 <select id="filtro-sinal">
-                    <option selected>SINALIZA«’ES</option>
+                    <option value="TODOS" selected>Sinaliza√ß√µes</option>
                     <option value="OB">Obras</option>
                     <option value="IT">Interditado</option>
                     <option value="AC">Acidentado</option>
                     <option value="OT">Outros</option>
+                    <option value="TODOS">Todos</option>
+                    <option value="">Nenhum</option>
                 </select>
             </div>   
 
@@ -125,6 +129,7 @@ foreach ($linha as $linhas):
     echo '[' . $linhas->id_ponto . ', ' . $linhas->latitude . ', ' . $linhas->longitude . ', "' . $linhas->categoria . '", "' . $linhas->nome . '"],';
 endforeach;
 ?>];
+			var markersPontos = [];
 
 //Fun√ß√£o que inicia o mapa
             function initMap() {
@@ -150,6 +155,7 @@ endforeach;
                         title: ponto[4].toString(),
                         icon: iconPonto
                     });
+					markersPontos.push(marker);
                     var id = ponto[0].toString();
                     google.maps.event.addListener(marker, "click", infoCallback(infowindow, marker, id));
                 }
@@ -207,51 +213,48 @@ endforeach;
              */
 
 // filtro-ponto (pontos de interesse)
-// filtro-sinal (sinalizaÁıes)
+// filtro-sinal (sinaliza√ß√µes)
 
     
-     $(document).ready(function(){
+     $(document).ready(function() {
      //pegando o valor do campo 
         var filtro_ponto;
         var filtro_sinal;
 
         $("#filtro-ponto").change(function(){
-            filtro_ponto = $("#filtro-ponto").val();
+            filtro_ponto = $("#filtro-ponto").val();	
             $.ajax({
-                type: "POST",
-                url: "filtro_pega_ponto.php",
-                data:"filtro_ponto="+filtro_ponto,
-                success:function(resultado){
-                console.log(resultado);
-                },
-                error: function(){
-                    alert("Erro");
+                type: "GET",
+                url: "/viabike/filtro_pega_ponto.php?filtro_ponto="+filtro_ponto,
+                dataType: "json",
+                success: function(resultado) {
+					while(markersPontos.length) {
+									markersPontos.pop().setMap(null);
+					}
+							
+					$.each(resultado, function(i, ponto) {	
+						var myLatLng = new google.maps.LatLng(ponto['latitude'], ponto['longitude']);
+						var iconPonto = '';
+						if (ponto['categoria'] === "PG") {
+							iconPonto = 'imagens/posto1.png';
+						} else if (ponto['categoria'] === "BC") {
+							iconPonto = 'imagens/bike1.png';
+						}
+						marker = new google.maps.Marker({
+							position: myLatLng,
+							map: map,
+							title: ponto['nome'].toString(),
+							icon: iconPonto
+						});
+						markersPontos.push(marker);
+						var id = ponto['id_ponto'].toString();
+						google.maps.event.addListener(marker, "click", infoCallback(infowindow, marker, id));
+					});
                 }
             });
             
         });
-
-        $("#filtro-sinal").change(function(){
-            filtro_sinal = $("#filtro-sinal").val();
-        });
-
-     //busca os no banco de acordo com o filtro
-//        $("#filtro-ponto").change(function(){
-//            $.ajax({
-//                type: "POST",
-//                url: "filtro_pega_ponto.php",
-//                data:"filtro_ponto="+filtro_ponto,
-//                success:function(resultado){
-//                console.log(resultado);
-//                },
-//                error: function(){
-//                    alert("Erro");
-//                }
-//            });
-//        });
-
-     // Para fazer: Pegar os valores retornados do banco e exibilos no mapa
-
+		
      });
 
         </script>
