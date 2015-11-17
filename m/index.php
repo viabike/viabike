@@ -32,7 +32,7 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
                     <a href="index.php"><img src="imagens/viabike2.png" alt="ViaBike.me logo" style="width:100%;"></a>
                 </div>
                 <div id="nav">
-                    <i class="fa fa-bars fa-5x icon-menu"></i>
+                    <i class="fa fa-bars fa-5x" style="font-size: 3em; color: #fff;"></i>
                 </div>
             </div>
 
@@ -72,7 +72,7 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
                 </div>
 
                 <div id="filtros">
-                    <i class="fa fa-sliders" style="font-size: 3.5em; color: #232323"></i>
+                    <i class="fa fa-sliders" style="font-size: 3em; color: #232323"></i>
                 </div>
                 
                 <div id="botao-entrar">
