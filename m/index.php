@@ -70,13 +70,33 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 
                 <div id="user" style="background-image: url('imagens/users/<?=$fotolinha[0]['foto']?>'); background-size: 100%;">
                 </div>
-
+                
+                <div id="botao-entrar">
+                    <button class="botao-entrar">ENTRAR</button>
+                </div>
+                
                 <div id="filtros">
                     <i class="fa fa-sliders" style="font-size: 3em; color: #232323"></i>
                 </div>
                 
-                <div id="botao-entrar">
-                    <button class="botao-entrar">ENTRAR</button>
+                <div id="filtros-menu">
+                  <form id="filtro-ponto">
+                      Pontos de Interesse<br>
+                      <input type="radio" name="filtro-ponto" value="BC" class="filtro-input">Bicicletarias<br>
+                      <input type="radio" name="filtro-ponto" value="PG" class="filtro-input">Postos de Gasolina<br>
+                      <input type="radio" name="filtro-ponto" value="TODOS" class="filtro-input">Todos<br>
+                      <input type="radio" name="filtro-ponto" value="" class="filtro-input">Nenhum
+                  </form>
+
+                 <!-- <form id="filtro-sinal">
+                    Sinalizações
+                      Obras<input type="radio" name="filtro-sinal" value="OB" class="filtro-input"><br>
+                      Acidentado<input type="radio" name="filtro-sinal" value="AC" class="filtro-input"><br>
+                      Outros<input type="radio" name="filtro-sinal" value="OT" class="filtro-input"<br>
+                      Todos<input type="radio" name="filtro-sinal" value="TODOS" class="filtro-input"><br>
+                      Nenhum<input type="radio" name="filtro-sinal" value="" class="filtro-input">
+                  </form>
+                 -->
                 </div>
             </div>
 
