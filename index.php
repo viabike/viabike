@@ -73,9 +73,9 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
             <div id="mapa"></div>
 
             <div id="filtros">
-                <i class="fa fa-sliders" style="font-size: 1.5em; color: #232"></i>
-                Filtros:
-                <select id="filtro-ponto">
+                <i class="fa fa-sliders" style="font-size: 1em; color: #232"></i>
+                <span style="font-family: Roboto, Arial, sans-serif; font-size: 13px; font-weight: bold;">Filtros:</span>
+                <select id="filtro-ponto" style="font-family: Roboto, Arial, sans-serif; font-size: 13px; border: 1px solid #eee;">
                     <option value="TODOS" selected>Pontos de Interesse</option>
                     <option value="BC">Bicicletarias</option>
                     <option value="PG">Postos de Gasolina</option>
@@ -83,7 +83,7 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
                     <option value="">Nenhum</option>
                 </select>
 
-                <select id="filtro-sinal">
+                <select id="filtro-sinal" style="font-family: Roboto, Arial, sans-serif; font-size: 13px; border: 1px solid #eee;">
                     <option value="TODOS" selected>Sinalizações</option>
                     <option value="OB">Obras</option>
                     <option value="IT">Interditado</option>
@@ -93,7 +93,19 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
                     <option value="">Nenhum</option>
                 </select>
             </div>
-
+			
+			<div id="legenda">
+                <p>Ciclovias: <span class="legenda-cic-ativa">&#9679;</span> Ativas | <span class="legenda-cic-obras">&#9679;</span> Obras</p>
+            </div>
+			
+			<?php
+            if (userLogado()) { ?>
+			<div id="botao-sinalizacao">
+				<a href="sinal_form_cadastro.php"><button style="background: #BD4040;"class="entrar">SINALIZAR</button></a>
+			</div>
+			<?php } ?>
+			
+			
             <!--
                     <div id="info-viabike">
                             <p>Para os ciclistas de Caraguatatuba que querem economizar tempo e encontrar uma rota segura o ViaBike.me é um sistema web que mostra um mapa de ciclovias.</p>
@@ -136,7 +148,20 @@ endforeach;
                 map = new google.maps.Map(document.getElementById('mapa'), {
                     center: {lat: -23.6255903, lng: -45.4241453},
                     zoom: 15,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+					
+					mapTypeControl: true,
+					mapTypeControlOptions: {
+						position: google.maps.ControlPosition.TOP_RIGHT
+					},
+					streetViewControl: true,
+					streetViewControlOptions: {
+						position: google.maps.ControlPosition.LEFT_BOTTOM
+					},
+					zoomControl: true,
+					zoomControlOptions: {
+						position: google.maps.ControlPosition.LEFT_BOTTOM
+					}
                 });
                 loadKmlLayer('http://viabike.me/mapa/mapa-das-ciclovias-v2.kml', map);
 
