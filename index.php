@@ -50,7 +50,7 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
                         }
                         ?>
                         <?php if (!userLogado()) { ?>
-                            <li><a href="user_formulario.php">ENTRAR</a></li>
+                            <li><a href="user_formulario.php"><button class="entrar">ENTRAR</button></a></li>
                         <?php } ?>
                         <li><a href="equipe.php">EQUIPE</a></li>
                         <li><a href="sobre.php">SOBRE</a></li>
@@ -74,7 +74,7 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 
             <div id="filtros">
                 <i class="fa fa-sliders" style="font-size: 1.5em; color: #232"></i>
-                Filtros: 
+                Filtros:
                 <select id="filtro-ponto">
                     <option value="TODOS" selected>Pontos de Interesse</option>
                     <option value="BC">Bicicletarias</option>
@@ -92,18 +92,18 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
                     <option value="TODOS">Todos</option>
                     <option value="">Nenhum</option>
                 </select>
-            </div>   
+            </div>
 
             <!--
                     <div id="info-viabike">
                             <p>Para os ciclistas de Caraguatatuba que querem economizar tempo e encontrar uma rota segura o ViaBike.me é um sistema web que mostra um mapa de ciclovias.</p>
                     </div>
-            
-            
+
+
                         <div class="text-home">
                                 <p>Para os ciclistas de Caraguatatuba que querem economizar tempo e encontrar uma rota segura. O ViaBike.me é um sistema web que mostra um mapa de ciclovias.</p>
                         </div>
-            
+
                         <div class="legenda-home" style="text-align:right">
                                 <ul>
                                         <li>Ciclovia Ativa <span class="legenda-cic-ativa">&#9679;</span></li>
@@ -111,7 +111,7 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
                                 </ul>
                         </div>
                     </div>
-            
+
                     <div id="footer">
                     <center><p>&copy ViaBike.me - 2015</p></center>
             -->
@@ -206,23 +206,23 @@ endforeach;
 
 
             /*
-             * 
-             * Programa��o dos filtros
-             * (por william e itallo)   
-             *                 
+             *
+             * Programa��o dos filtros
+             * (por william e itallo)
+             *
              */
 
 // filtro-ponto (pontos de interesse)
 // filtro-sinal (sinalizações)
 
-    
+
      $(document).ready(function() {
-     //pegando o valor do campo 
+     //pegando o valor do campo
         var filtro_ponto;
         var filtro_sinal;
 
         $("#filtro-ponto").change(function(){
-            filtro_ponto = $("#filtro-ponto").val();	
+            filtro_ponto = $("#filtro-ponto").val();
             $.ajax({
                 type: "GET",
                 url: "/viabike/filtro_pega_ponto.php?filtro_ponto="+filtro_ponto,
@@ -231,8 +231,8 @@ endforeach;
 					while(markersPontos.length) {
 									markersPontos.pop().setMap(null);
 					}
-							
-					$.each(resultado, function(i, ponto) {	
+
+					$.each(resultado, function(i, ponto) {
 						var myLatLng = new google.maps.LatLng(ponto['latitude'], ponto['longitude']);
 						var iconPonto = '';
 						if (ponto['categoria'] === "PG") {
@@ -252,9 +252,9 @@ endforeach;
 					});
                 }
             });
-            
+
         });
-		
+
      });
 
         </script>

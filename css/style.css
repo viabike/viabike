@@ -404,4 +404,16 @@ table td{
     color:#fff;
 }
 
+.entrar{
+  width:auto;
+  padding: 0 25px;
+  height:30px;
+  font-size: 16px;
+  background: #40BD68;
+  line-height: 31px;
+  border-radius:4px;
+  cursor:pointer;
+  color:#fff;
+}
+
 /*CLASSES*/
