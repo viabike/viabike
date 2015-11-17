@@ -7,7 +7,7 @@ $categoria   = addslashes(trim($_POST['categoria'  ]));
 $descricao   = addslashes(trim($_POST['descricao'  ]));
 $longitude   = addslashes(trim($_POST['longitude'  ]));
 $latitude    = addslashes(trim($_POST['latitude'   ]));
-$data_public = addslashes(trim($_POST['data_public']));
+$data_public = date("Y-m-d"); //adicionando data atual
 
 $addsinal = $conexao -> prepare("INSERT INTO sinalizacao (titulo, descricao, latitude, longitude, categoria, data_public) values(:titulo, :descricao, :latitude, :longitude, :categoria, :data_public)");
 $addsinal->bindValue(":titulo"      , $titulo      );

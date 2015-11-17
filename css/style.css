@@ -1,31 +1,308 @@
 * {
-	padding: 0;
-	margin: 0;
-	border: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
 }
 
 /*TAGS*/
+html{
+    height: 100%;
+}
 body{
-	background-color: white;
+    background-color: white;
+    height: 100%;
 }
 h1{
-	font-weight: 400;
+    font-weight: 400;
 }
 h3{
-	font-weight: 600;
+    font-weight: 600;
 }
 form{
-	text-align:left;
-	width:400px;
-	margin-left: calc(50% - 235px);
-	border:0;
-	float: left;
-	padding:35px;
-	border-radius:10px;
+    text-align:left;
+    width:400px;
+    margin-left: calc(50% - 235px);
+    border:0;
+    float: left;
+    padding:35px;
+    border-radius:10px;
 }
 .input{
+    padding:10px;
+    width:380px;
+    display:block;
+    line-height:1.467;
+    color:#34495e;
+    border:1px solid #bdc3c7;
+    border-radius:4px;
+    box-shadow: none;
+    -webkit-transition: border 0.1s linear, color 0.1s linear, background-color 0.1s linear;
+    transition: border 0.1s linear, color 0.1s linear, background-color 0.1s linear;
+}
+.input:focus{
+    border:1px solid #535455;
+    outline:none;
+}
+/*TAGS*/
+
+
+/*BASE*/
+div#wrapper {
+    margin: auto;
+    width: 100%;
+    height: auto;
+    font-family: 'Raleway', sans-serif;
+    background-color: #232323;
+}
+
+div#wrapper-index {
+    width: 100%;
+    height: 70px;
+    top: 0px;
+    left: 0px;
+    font-family: 'Raleway', sans-serif;
+    background-color: #232323;
+}
+
+div#container{
+    width: 100%;
+    background-color: white;
+    float: left;
+    position: relative;
+}
+
+div#header {
+    width: 980px;
+    height: 70px;
+    margin: 0 auto;
+    background-color: #232323;
+}
+
+div#mapa {
+    top: 70px;
+    margin: 0;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute !important;
+    background: transparent;
+    border-bottom: 1px solid #e3e3e3;
+    z-index: 1;
+}
+
+div#filtros {
+    width: 450px;
+    min-height: 10px;
+    height: auto;
+    position: fixed;
+    left: 100px;
+    bottom: 10px;
+    z-index: 99;
+    background-color: rgba(255,255,255,0.8);
+}
+
+div#info-viabike {
+    width: 400px;
+    top: 25px;
+    position: relative;
+    bottom: 80px;
+    left: 20px;
+    padding: 20px;
+    background: rgba(255,255,255,0.8);
+}
+/* ARRUMAR CSS FILTROS
+div#filtros {
+        width: 400px;
+        float: left;
+        left: 20px;
+        background: black;
+}
+*/
+
+div#content {
+    width: 980px;
+    float:left;
+    margin-left:calc(50% - 525px);
+    padding:35px;
+    font-size:17px;
+    color:#535455;
+}
+
+div#footer {
+    clear: both;
+    float:left;
+    width:100%;
+    height: 40px;
+    background-color: #f6f6f6;
+    font-family: 'Raleway', sans-serif;
+}
+
+div#footer p{
+    font-size:14px;
+    color:#a7a7a7;
+    line-height: 40px;
+}
+/*
+div#entrar{
+        width: 180px;
+        padding: 15px 0px 15px 0;
+        border-radius: 10px 0px 0px 10px;
+        background: #40BD68;
+        color: #fff;
+        position: fixed;
+        right: 0;
+        top: 100px;
+        z-index: 9999;
+}
+*/
+
+div#entrar a{
+    text-decoration: none;
+    color: #fff;
+}
+/*BASE*/
+
+/*MENU*/
+div#nav-header {
+    width: auto;
+    height: 30px;
+    line-height:30px;
+    float: right;
+    margin-top:15px;
+    padding: 5px 0px 5px 5px;
+}
+#nav-header ul li:nth-child(1){
+    margin-right:0px;
+    padding: 0px 0px 0px 10px;
+}
+
+div#nav-header ul {
+    list-style-type: none;
+}
+
+div#nav-header ul li{
+    display: inline;
+    float: right;
+    padding: 0px 10px;
+}
+
+div#nav-header ul li a {
+    text-decoration: none;
+    color: #a7a7a7;
+}
+
+div#nav-header ul li a:hover {
+    color: #f8f8f8;
+}
+/*MENU*/
+
+/*DESENVOLVEDOR*/
+.esp{
+    width:100%;
+    height:20px;
+    float:left;
+}
+
+.desenvolvedor{
+    width:235px;
+    padding:5px;
+    float:left;
+    word-wrap: break-word;
+}
+.desenvolvedor i{
+    font-size: 30px;
+    cursor: pointer;
+    color: #ddd;
+}
+
+/*classes icones*/
+.face:hover{
+    color: #3b5998;
+    transition: all 0.1s ease-out;
+}
+.mail:hover{
+    color: #F90101;
+    transition: all 0.1s ease-out;
+}
+.in:hover{
+    color: #007bb5;
+    transition: all 0.1s ease-out;
+}
+/*fim classes icones*/
+
+.margin_des{
+    margin-right:0px;
+}
+.img-hover{
+    display:none;
+}
+/*DESENVOLVEDOR*/
+
+/*INFOWINDOW*/
+div.infoWindow {
+    min-width: 200px;
+    min-height: 100px;
+    margin:auto;
+    background: white;
+    padding: 7px 0px 0px 7px;
+    font-family: 'Raleway', sans-serif;
+}
+div.infoWindow h1{
+    font-size:14px;
+    font-weight:600;
+    margin-bottom: 3px;
+}
+div.infoWindow h2{
+    font-size:13px;
+    font-weight:600;
+}
+div.infoWindow p{
+    font-size: 14px;
+}
+/*FIM INFOWINDOW*/
+
+
+/*FORM SINALIZAÇÃO */
+div#formWindow{
+  margin: auto;
+  width: 900px;
+}
+
+.formSinal{
+	text-align:left;
+	min-width:700px;
+	width: auto;
+	border:1px solid #bdc3c7;
+	padding:35px;
+  margin: 0;
+	border-radius:10px;
+	float:left;
+}
+
+div#mapaSinal {
+	width: 365px;
+	height: 250px;
+	float: right;
+	background:transparent;
+	margin-bottom: 3px;
+}
+
+div#formSinalEsquerda{
+	width: 250px;
+	float:left;
+	padding-right: 52px;
+	border-right: 1px solid #bdc3c7;
+}
+
+div#formSinalDireita{
+	width: 375px;
+	float:right;
+}
+
+.formSinalInput{
 	padding:10px;
-	width:380px;
+	width:250px;
 	display:block;
 	line-height:1.467;
 	color:#34495e;
@@ -35,219 +312,108 @@ form{
 	-webkit-transition: border 0.1s linear, color 0.1s linear, background-color 0.1s linear;
 	transition: border 0.1s linear, color 0.1s linear, background-color 0.1s linear;
 }
-.input:focus{
+.formSinalInput:focus{
 	border:1px solid #535455;
 	outline:none;
 }
-/*TAGS*/
 
-
-/*BASE*/
-div#wrapper {
-	margin: auto;
-	width: 100%;
-	height: auto;
-	font-family: 'Raleway', sans-serif;
-	background-color: #232323;
+.selectSinal{
+	width:250px;
 }
 
-div#container{
-	width: 100%;
-	background-color: white;
-	float: left;
+table{
+	/*border:1px solid #bdc3c7;*/
+	border-radius:5px 5px 0px 0px;
+	-webkit-box-shadow: 1px 1px 5px 0px rgba(35,35,35,0.5);
+	-moz-box-shadow: 1px 1px 5px 0px rgba(35,35,35,0.5);
+	box-shadow: 1px 1px 5px 0px rgba(35,35,35,0.5);
+}
+table tr.border-tr td{
+	border-bottom:1px solid #bdc3c7;
+}
+table th{
+	border-bottom:1px solid #bdc3c7;
+	padding:10px 30px;
+	text-align:center;
+}
+table td{
+	border:0px solid #bdc3c7;
+	padding:10px 30px;
+	text-align:center;
 }
 
-div#header {
-	width: 980px;
-	height: 70px;
-	margin: 0 auto;
-	background-color: #232323;
-}
 
-div#mapa {
-	width: 100%;
-	height: 500px;
-	float: left;
-	background: transparent;
-	border-bottom: 1px solid #e3e3e3;
-}
+/*TEXT ÁREA*/
+.formSinal textarea { resize:both; } /* none|horizontal|vertical|both */
+.formSinal textarea.vert { resize:vertical; }
+.formSinal textarea.noResize { resize:none; }
+.formSinal textarea { resize:vertical; max-height:300px; min-height:200px; }
+.formSinal textarea.horiz { resize:horizontal; max-width:400px; min-width:200px; }
 
-div#content {
-	width: 980px;
-	float:left;
-	margin-left:calc(50% - 525px);
-	padding:35px;
-	font-size:17px;
-	color:#535455;
-}
-
-div#footer {
-	clear: both;
-	float:left;
-	width:100%;
-	height: 40px;
-	background-color: #f6f6f6;
-	font-family: 'Raleway', sans-serif;
-}
-
-div#footer p{
-	font-size:14px;
-	color:#a7a7a7;
-	line-height: 40px;
-}
-
-div#entrar{
-	width: 180px;
-	padding: 15px 0px 15px 0;
-	border-radius: 10px 0px 0px 10px;
-	background: #40BD68;
-	color: #fff;
-	position: fixed;
-	right: 0;
-	top: 100px;
-	z-index: 9999;
-}
-div#entrar a{
-	text-decoration: none;
-	color: #fff;
-}
-/*BASE*/
-
-/*MENU*/
-div#nav-header {
-	width: auto;
-	height: 30px;
-	line-height:30px;
+.tablelatLng{
+	margin: 20px 3px 20px 0px;
 	float: right;
-	margin-top:15px;
-	padding: 5px 0px 5px 5px;
 }
-#nav-header ul li:nth-child(1){
-	margin-right:0px;
-	padding: 0px 0px 0px 10px;
+.latLng{
+	width: 100px;
 }
-
-div#nav-header ul {
-	list-style-type: none;
+.lng {
+  margin-top: 17px;
 }
-
-div#nav-header ul li{
-	display: inline;
-	float: right;
-	padding: 0px 10px;
+.botaoSubmitSinal{
+  float: right;
 }
-
-div#nav-header ul li a {
-	text-decoration: none;
-	color: #a7a7a7;
-}
-
-div#nav-header ul li a:hover {
-	color: #f8f8f8;
-}
-/*MENU*/
-
-/*DESENVOLVEDOR*/
-.esp{
-	width:100%;
-	height:20px;
-	float:left;
-}
-
-.desenvolvedor{
-	width:235px;
-	padding:5px;
-	float:left;
-  word-wrap: break-word;
-}
-.desenvolvedor i{
-    font-size: 30px;
-		cursor: pointer;
-		color: #ddd;
-}
-
-/*classes icones*/
-.face:hover{
-	color: #3b5998;
-	transition: all 0.1s ease-out;
-}
-.mail:hover{
-	color: #F90101;
-	transition: all 0.1s ease-out;
-}
-.in:hover{
-	color: #007bb5;
-	transition: all 0.1s ease-out;
-}
-/*fim classes icones*/
-
-.margin_des{
-	margin-right:0px;
-}
-.img-hover{
-	display:none;
-}
-/*DESENVOLVEDOR*/
-
-/*INFOWINDOW*/
-div.infoWindow {
-	min-width: 200px;
-	min-height: 100px;
-	margin:auto;
-	background: white;
-	padding: 7px 0px 0px 7px;
-	font-family: 'Raleway', sans-serif;
-}
-div.infoWindow h1{
-	font-size:14px;
-	font-weight:600;
-	margin-bottom: 3px;
-}
-div.infoWindow h2{
-	font-size:13px;
-	font-weight:600;
-}
-div.infoWindow p{
-	font-size: 14px;
-}
-/*FIM INFOWINDOW*/
+/*FIM SINALIZAÇÃO */
 
 /*CLASSES*/
 .logo{
-	float:left;
-	margin-top:12.5px;
-	width:150px;
+    float:left;
+    margin-top:12.5px;
+    width:150px;
 }
 
 .text-home {
-	width: 500px;
-	float: left;
+    width: 500px;
+    float: left;
 }
 
 .legenda-home {
-	float: right;
+    float: right;
 }
 
 .legenda-home ul {
-	list-style: none;
+    list-style: none;
 }
 .legenda-cic-ativa {
-	color: rgba(189, 64, 64, 0.8);
+    color: rgba(189, 64, 64, 0.8);
 }
 .legenda-cic-obras{
-	color: #00DAFF;
+    color: #00DAFF;
 }
 .paragrafo{
-	text-align: justify;
+    text-align: justify;
 }
 .button{
-	width:auto;
-	padding: 0 35px;
-	height:40px;
-	font-size: 16px;
-	background: #BD4040;
-	border-radius:4px;
-	cursor:pointer;
-	color:#fff;
+    width:auto;
+    padding: 0 35px;
+    height:40px;
+    font-size: 16px;
+    background: #BD4040;
+    border-radius:4px;
+    cursor:pointer;
+    color:#fff;
 }
+
+.entrar{
+  width:auto;
+  padding: 0 25px;
+  height:30px;
+  font-size: 16px;
+  background: #40BD68;
+  line-height: 31px;
+  border-radius:4px;
+  cursor:pointer;
+  color:#fff;
+}
+
 /*CLASSES*/

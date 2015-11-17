@@ -13,6 +13,7 @@ require_once("admin/funcoes/funcoes.php");
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="admin/funcoes/funcoes.js"></script>
 </head>
 <body>
 	<div id="wrapper">
@@ -36,6 +37,10 @@ require_once("admin/funcoes/funcoes.php");
 						<li style='color:#a7a7a7'> | </li>";
 					endforeach;
 					} ?>
+
+					<?php if(!userLogado()){ ?>
+						<li><a href="user_formulario.php"><button class="entrar">ENTRAR</button></a></li>
+					<?php } ?>
 					<li><a href="equipe.php">EQUIPE</a></li>
 					<li><a href="sobre.php">SOBRE</a></li>
 					<li><a href="index.php">HOME</a></li>
@@ -43,11 +48,13 @@ require_once("admin/funcoes/funcoes.php");
 			</div>
 		</div>
 
-		<?php if(!userLogado()){ ?>
+	<!---
+    <?php // if(!userLogado()){ ?>
     <div id="entrar">
 			<p><center><a href="user_formulario.php">Cadastre-se / Entrar</a></center></p>
 		</div>
-    <?php } ?>
+    <?php // } ?>
+	-->
 
 		<div id="container">
 		<div id="content">
