@@ -1,6 +1,4 @@
 <?php include("template/header.php");?>
-</div>
-	<div id="formWindow">
 		<form action="sinal_confirmaCad.php" class="formSinal" name="formSinal" method="POST">
 			<center>
 				<h1>Cadastrar sinalização</h1><br>
@@ -14,28 +12,15 @@
 				<option value="AC">Acidentado</option>
 				<option value="OT">Outros</option>
 				</select><br>
-				<textarea placeholder="Descrição aqui..."class="formSinalInput"name="descricao"></textarea><br>
+				<textarea placeholder="Descrição..."class="formSinalInput"name="descricao"></textarea><br>
 			</div>
 			<div id='formSinalDireita'>
 				<div id="mapaSinal"></div>
-				<table class="tablelatLng">
-					<tr>
-						<th>Latitude</th>
-						<th>Longitude</th>
-					</tr>
-					<tr>
-						<td>
-							<input type="text" name="latitude" class="formSinalInput latLng" id="lat" value="-23.6255903">
-						</td>
-						<td>
-							<input type="text" name="longitude" class="formSinalInput latLng lng" id="lng" value="-45.4241453"><br>
-						</td>
-					</tr>
-				</table><br>
+					<input  type="hidden" name="latitude" class="formSinalInput latLng" id="lat" value="-23.6255903">
+					<input  type="hidden" name="longitude" class="formSinalInput latLng lng" id="lng" value="-45.4241453">
 				<input type="submit" value="Cadastrar" class="button botaoSubmitSinal" onclick="return validar();">
 			</div>
 		</form>
-	</div>
 	<script>
 		var iconBicicletaria = 'imagens/bike1.png';
 		var iconPosto = 'imagens/posto1.png';//exemplo até colocar o original.
