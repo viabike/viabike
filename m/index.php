@@ -18,6 +18,7 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
     <head>
         <title>Viabike.me</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
         <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
@@ -29,10 +30,10 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
         <div id="wrapper">
             <div id="header">
                 <div id="logo">
-                    <a href="index.php"><img src="imagens/viabike2.png" alt="ViaBike.me logo" style="width:100%;"></a>
+                    <a href="index.php"><img src="imagens/viabike2.png" alt="ViaBike.me logo" style="width:100px;"></a>
                 </div>
                 <div id="nav">
-                    <i class="fa fa-bars fa-5x" style="font-size: 3em; color: #fff;"></i>
+                    <i class="fa fa-bars fa-5x icon-menu" style="font-size: 1em; color: #fff;"></i>
                 </div>
             </div>
 
@@ -72,11 +73,11 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
                 </div>
                 
                 <div id="botao-entrar">
-                    <button class="botao-entrar">ENTRAR</button>
+                    <button class="button_entrar">ENTRAR</button>
                 </div>
                 
                 <div id="filtros">
-                    <i class="fa fa-sliders" style="font-size: 3em; color: #232323"></i>
+                    <i class="fa fa-sliders" style="font-size: 1.65em; color: #232323;"></i>
                 </div>
                 
                 <div id="filtros-menu">
