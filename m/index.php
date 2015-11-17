@@ -60,16 +60,23 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
                 </div>
 
                 <?php
-                $email = $_SESSION['email'];
-                $fotouser = $pdo->prepare("SELECT foto FROM usuario WHERE email = '".$email."'");
-                $fotouser->execute();
-                $fotolinha = $fotouser->fetchAll(PDO::FETCH_ASSOC);?>
+                if (userLogado()) {
+                  $email = $_SESSION['email'];
+                  $fotouser = $pdo->prepare("SELECT foto FROM usuario WHERE email = '".$email."'");
+                  $fotouser->execute();
+                  $fotolinha = $fotouser->fetchAll(PDO::FETCH_ASSOC);
+                }
+                ?>
 
                 <div id="user" style="background-image: url('imagens/users/<?=$fotolinha[0]['foto']?>'); background-size: 100%;">
                 </div>
 
                 <div id="filtros">
-                    <i class="fa fa-sliders" style="font-size: 6.5em; color: #232323"></i>
+                    <i class="fa fa-sliders" style="font-size: 3.5em; color: #232323"></i>
+                </div>
+                
+                <div id="botao-entrar">
+                    <button class="botao-entrar">ENTRAR</button>
                 </div>
             </div>
 
