@@ -2,7 +2,7 @@
 
 // Dados vindo da página user_painel.php
 session_start();
-include("../conexao/conexao.php");
+require_once("../conexao/conexao.php");
 
 $conexao = conectar();
 

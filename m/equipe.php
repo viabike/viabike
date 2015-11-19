@@ -1,5 +1,5 @@
 <?php
-include("template/header.php");
+require_once("template/header.php");
 ?>
 <center><h1>Equipe</h1></center>
 <div id="desen">
@@ -54,5 +54,5 @@ include("template/header.php");
 </div>
 </div>
 <?php
-include("template/footer.php");
+require_once("template/footer.php");
 ?>

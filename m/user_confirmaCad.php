@@ -1,5 +1,5 @@
 <?php
-include_once("../conexao/conexao.php");
+require_once("../conexao/conexao.php");
 
 $conexao = conectar();//Funcão de conexão com o banco de dados viabike_db
 

@@ -1,11 +1,10 @@
 <?php
-include('template/header.php');;
+require_once('template/header.php');;
 ?>
-
-Senha incorreta
+<span style="font-size: 2em">Senha incorreta
 <br>
-Retornar à <a href='user_painel.php'>pagina de alteração.</a>
+Retornar à <a href='user_painel.php'>pagina de alteração.</a></span>
 
 <?php
-include('template/footer.php');
+require_once('template/footer.php');
 ?>

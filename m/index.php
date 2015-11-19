@@ -81,23 +81,22 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
                 </div>
 
                 <div id="filtros-menu">
-                  <form id="filtro-ponto">
-                      Pontos de Interesse<br>
+                  <form id="filtro-ponto" style="margin-left:10%; margin-top:20%">
+                      <h1 style="font-size:1.5em">Pontos de Interesse</h1><br>
                       <input type="radio" name="filtro-ponto" value="BC" class="filtro-input">Bicicletarias<br>
                       <input type="radio" name="filtro-ponto" value="PG" class="filtro-input">Postos de Gasolina<br>
                       <input type="radio" name="filtro-ponto" value="TODOS" class="filtro-input">Todos<br>
                       <input type="radio" name="filtro-ponto" value="" class="filtro-input">Nenhum
                   </form>
 
-                 <!-- <form id="filtro-sinal">
-                    Sinaliza��es
-                      Obras<input type="radio" name="filtro-sinal" value="OB" class="filtro-input"><br>
-                      Acidentado<input type="radio" name="filtro-sinal" value="AC" class="filtro-input"><br>
-                      Outros<input type="radio" name="filtro-sinal" value="OT" class="filtro-input"<br>
-                      Todos<input type="radio" name="filtro-sinal" value="TODOS" class="filtro-input"><br>
-                      Nenhum<input type="radio" name="filtro-sinal" value="" class="filtro-input">
+                 <form id="filtro-sinal" style="margin-left:10%; margin-top:20%">
+                      <h1 style="font-size:1.5em">Sinalizações</h1><br>
+                      <input type="radio" name="filtro-sinal" value="OB" class="filtro-input">Obras<br>
+                      <input type="radio" name="filtro-sinal" value="AC" class="filtro-input">Acidentado<br>
+                      <input type="radio" name="filtro-sinal" value="OT" class="filtro-input">Outros<br>
+                      <input type="radio" name="filtro-sinal" value="TODOS" class="filtro-input">Todos<br>
+                      <input type="radio" name="filtro-sinal" value="" class="filtro-input">Nenhum
                   </form>
-                 -->
                 </div>
             </div>
 

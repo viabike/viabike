@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("../conexao/conexao.php");
+require_once("../conexao/conexao.php");
 
 // dados vindos da página index
 $user	=	$_POST['email'];
