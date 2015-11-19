@@ -24,13 +24,16 @@ div#wrapper {
 div#header {
     width: 100%;
     height: 70px;
+    position: fixed;
+    z-index: 101;
     background: #1E1E1E;
 }
 
 div#logo {
     width: auto;
     padding: 6%;
-    float: left;
+    position: fixed;
+    z-index: 99;
 }
 
 div#user {
@@ -41,8 +44,8 @@ div#user {
   padding:6%;
   z-index: 99;
   position: fixed;
-  right: 6%;
-  top: 230px;
+  right: 5%;
+  top: 100px;
 }
 
 div#nav {
@@ -74,17 +77,21 @@ div#menu{
     width:100%;
     height: auto;
     z-index:100;
-    background: #1E1E1E;
-    position: absolute;
+    position: fixed;
     //margin-top: -1px;
 }
+#menu ul{
+  margin-top: 70px;
+  width: 100%;
+  position: fixed;
+}
 #menu ul li a{
-    background: #1E1E1E;
+    background: #262626;
     font-size: 1em;
     text-align: center;
-    width: calc(100%-40px);
+    width: calc(100%-20px);
+    padding: 10px;
     color: #F8F8F8;
-    padding:5%;
     display: block;
     text-decoration: none;
 }
@@ -98,8 +105,7 @@ div#menu{
 /* index */
 div#mapa {
     width: 100%;
-    min-height: 500px;
-    height: auto;
+    height: 1600px;
     z-index: 1;
 }
 
@@ -107,8 +113,8 @@ div#filtros {
     width: 6%;
     height: 100px;
     position: fixed;
-    left: 6%;
-    bottom: 0px;
+    left: 5%;
+    bottom: -40px;
     z-index: 99;
 }
 
@@ -131,13 +137,13 @@ div#filtros-menu {
 
 div#botao-entrar {
     position: fixed;
-    right: 30px;
-    bottom: 30px;
+    right: 5%;
+    bottom: 15px;
     z-index: 99;
 }
 
 .botao-entrar {
-   width: 200px; 
+   width: 200px;
    padding: 30px;
    font-size: 1em;
    background: #40bd68;
@@ -151,9 +157,10 @@ div#containermap {
 }
 
 div#container {
-    width: calc(100% - 120px);
-    padding:30px 60px;
-    font-size: 1.0625em; /*17*/
+    width: 90%;
+    padding:5%;
+    margin-top: 70px;
+    font-size: 0.5em; /*17*/
     color:#535455;
     float:left;
 }
@@ -162,9 +169,8 @@ div#container h1{
 }
 div#desen{
     float:left;
-    width: calc(100% - 120px); /*120px vem do dobro do padding*/
-    padding:30px 60px;
-    font-size: 2em;/*/17*/
+    width: 100%; /*120px vem do dobro do padding*/
+    font-size: 1.65em;/*/17*/
 }
 div#entrar{
     width: 200px;
@@ -252,12 +258,12 @@ div#form_user{
 .form_user2{
     border: 0px;
     text-align:left;
-    width:400px;
-    padding-top: 8%;
+    width:100%;
+    padding-top: 5%;
 }
 .form{
-    padding:10px;
-    width:380px;
+    padding:5%;
+    width:90%;
     display:block;
     line-height:1.467;
     color:#34495e;
@@ -337,7 +343,7 @@ div#form_user{
     padding: 10px;
     float: left;
     word-wrap: break-word;
-    min-height:370px;
+    min-height:150px;
 }
 .desenvolvedor p{
     font-size: 2em;

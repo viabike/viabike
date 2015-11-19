@@ -45,14 +45,9 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
                         echo "<li> <a href='user_painel.php'>" . $_SESSION['nome'] . "</a> <a href='user_logout.php'><i class='fa fa-sign-out'></i> </a> </li>";
                     }
                     ?>
-                    <li><a href="equipe.php">EQUIPE</a></li>
+                    <li><a href="index.php">HOME</a></li>
                     <li><a href="sobre.php">SOBRE</a></li>
-                    <?php
-                    if (!userLogado())
-                    {
-                        echo '<li><a href="user_login.php">LOGIN</a></li>';
-                    }
-                    ?>
+                    <li><a href="equipe.php">EQUIPE</a></li>
                 </ul>
             </div>
 
@@ -71,15 +66,20 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 
                 <div id="user" style="background-image: url('imagens/users/<?=$fotolinha[0]['foto']?>'); background-size: 100%;">
                 </div>
-                
-                <div id="botao-entrar">
-                    <button class="button_entrar">ENTRAR</button>
-                </div>
-                
+
+                <?php
+                if (!userLogado())
+                {
+                  echo "<div id='botao-entrar'>
+                      <a href='user_login.php'><button class='button_entrar'>ENTRAR</button></a>
+                  </div>";
+                }
+                ?>
+
                 <div id="filtros">
                     <i class="fa fa-sliders" style="font-size: 1.65em; color: #232323;"></i>
                 </div>
-                
+
                 <div id="filtros-menu">
                   <form id="filtro-ponto">
                       Pontos de Interesse<br>
@@ -90,7 +90,7 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
                   </form>
 
                  <!-- <form id="filtro-sinal">
-                    Sinaliza��es
+                    Sinaliza��es
                       Obras<input type="radio" name="filtro-sinal" value="OB" class="filtro-input"><br>
                       Acidentado<input type="radio" name="filtro-sinal" value="AC" class="filtro-input"><br>
                       Outros<input type="radio" name="filtro-sinal" value="OT" class="filtro-input"<br>
@@ -151,12 +151,12 @@ endforeach;
                         dataType: "json",
                         success: function (data) {
                             $('#marker' + id).html(
-                                    '<h1>' + data.nome + '</h1>' +
-                                    '<h3>Localização e contato:</h3>' +
-                                    '<p>' + data.bairro + ', ' + data.rua + ', ' + data.num + '</p>' +
-                                    '<p>(' + data.telefone.substr(0, 2) + ') ' + data.telefone.substr(3, 9) + '</p><br>' +
-                                    '<h3>Funcionamento:</h3>' +
-                                    '<p>Das ' + data.hr_inicio.substr(0, 5) + ' até as ' + data.hr_fecha.substr(0, 5) + '</p>'
+                                    '<h1 style="font-size: 15px">' + data.nome + '</h1>' +
+                                    '<h3 style="font-size: 15px">Localização e contato:</h3>' +
+                                    '<p style="font-size: 15px">' + data.bairro + ', ' + data.rua + ', ' + data.num + '</p>' +
+                                    '<p style="font-size: 15px">(' + data.telefone.substr(0, 2) + ') ' + data.telefone.substr(3, 9) + '</p><br>' +
+                                    '<h3 style="font-size: 15px">Funcionamento:</h3>' +
+                                    '<p style="font-size: 15px">Das ' + data.hr_inicio.substr(0, 5) + ' até as ' + data.hr_fecha.substr(0, 5) + '</p>'
                                     );
                             $('#marker' + id).css('background', 'none');
                         }

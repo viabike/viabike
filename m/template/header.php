@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("funcoes/funcoes.php");
+require_once("funcoes/funcoes.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,10 +19,10 @@ include_once("funcoes/funcoes.php");
         <div id="wrapper">
             <div id="header">
                 <div id="logo">
-                    <a href="index.php"><img src="imagens/viabike2.png" alt="ViaBike.me logo" style="width:100%;"></a>
+                    <a href="index.php"><img src="imagens/viabike2.png" alt="ViaBike.me logo" style="width:100px;"></a>
                 </div>
                 <div id="nav">
-                    <i class="fa fa-bars fa-5x icon-menu"></i>
+                    <i class="fa fa-bars fa-5x icon-menu" style="font-size: 1em; color: #fff;"></i>
                 </div>
             </div>
 
@@ -34,14 +34,9 @@ include_once("funcoes/funcoes.php");
                         echo "<li> <a href='user_painel.php'>" . $_SESSION['nome'] . "</a> <a href='user_logout.php'><i class='fa fa-sign-out'></i> </a> </li>";
                     }
                     ?>
-                    <li><a href="equipe.php">EQUIPE</a></li>
+                    <li><a href="index.php">HOME</a></li>
                     <li><a href="sobre.php">SOBRE</a></li>
-                    <?php
-                    if (!userLogado())
-                    {
-                        echo '<li><a href="user_login.php">LOGIN</a></li>';
-                    }
-                    ?>
+                    <li><a href="equipe.php">EQUIPE</a></li>
                 </ul>
             </div>
 
