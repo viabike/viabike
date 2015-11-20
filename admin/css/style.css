@@ -55,7 +55,6 @@ table td{
 	width:auto;
 	border:none;
 	padding:0px;
-	border-radius:none;
 	margin-left:0px;
 	float:none;
 }
@@ -232,7 +231,6 @@ div#form1{
 
 div#form2{
 	float:right;
-	margin-left
 }
 div#form_user{
 	padding:30px 10px 40px 10px;
