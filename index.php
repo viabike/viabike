@@ -38,8 +38,7 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
                 <div id="nav-header">
                     <ul>
                         <?php
-                        if (userLogado())
-                        {
+                        if (userLogado()) {
                             $conexao = conectar(); //Conexao com o banco de dados viabike_db
                             $user_buscador = $conexao->prepare("SELECT * FROM usuario WHERE email = '" . $_SESSION['email'] . "'"); //pegando todos os usuarios cadastrados
                             $user_buscador->execute(); //executando a query de uma maneira segura
@@ -56,10 +55,10 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
                             endforeach;
                         }
                         ?>
-                        <?php if (!userLogado())
-                        { ?>
+                        <?php if (!userLogado()) {
+                            ?>
                             <li><a href="user_formulario.php"><button class="entrar">ENTRAR</button></a></li>
-<?php } ?>
+                        <?php } ?>
                         <li><a href="equipe.php">EQUIPE</a></li>
                         <li><a href="sobre.php">SOBRE</a></li>
                         <li><a href="index.php">HOME</a></li>
@@ -67,11 +66,11 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
                 </div>
             </div>
             <!---
-<?php // if(!userLogado()){  ?>
+            <?php // if(!userLogado()){   ?>
         <div id="entrar">
                             <p><center><a href="user_formulario.php">Cadastre-se / Entrar</a></center></p>
                     </div>
-<?php // }   ?>
+            <?php // }    ?>
             -->
         </div>
 
@@ -106,12 +105,12 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
                 <p>Ciclovias: <span class="legenda-cic-ativa">&#9679;</span> Ativas | <span class="legenda-cic-obras">&#9679;</span> Obras</p>
             </div>
 
-<?php if (userLogado())
-{ ?>
+            <?php if (userLogado()) {
+                ?>
                 <div id="botao-sinalizacao">
                     <a href="sinal_form_cadastro.php"><button style="background: #BD4040;"class="entrar">SINALIZAR</button></a>
                 </div>
-<?php } ?>
+            <?php } ?>
 
 
             <!--
@@ -152,7 +151,7 @@ endforeach;
             var sinais = [
 <?php
 foreach ($linhaSinal as $linhasSinais):
-    echo '[' . $linhasSinais->id_sinal . ', "' . $linhasSinais->titulo . '", "' . $linhasSinais->descricao . '", ' . $linhasSinais->latitude . ', ' . $linhasSinais->longitude . ', "' . $linhasSinais->categoria . '"]';
+    echo '[' . $linhasSinais->id_sinal . ', "' . $linhasSinais->titulo . '", "' . $linhasSinais->descricao . '", ' . $linhasSinais->latitude . ', ' . $linhasSinais->longitude . ', "' . $linhasSinais->categoria . '"],';
 endforeach;
 ?>
             ];
@@ -207,16 +206,16 @@ endforeach;
                     var sinal = sinais[i];
                     var myLatLng = new google.maps.LatLng(sinal[3], sinal[4]);
                     var iconSinal = '';
-                    if (ponto[5] === "OB") {
+                    if (sinal[5] === "OB") {
                         iconSinal = 'imagens/sinal_obras.png';
                     }
-                    else if (ponto[5] === "IT") {
+                    else if (sinal[5] === "IT") {
                         iconSinal = 'imagens/sinal_inderditado.png';
                     }
-                    else if (ponto[5] === "AC") {
+                    else if (sinal[5] === "AC") {
                         iconSinal = 'imagens/sinal_acidentado.png';
                     }
-                    else {
+                    else if (sinal[5] === "OT") {
                         iconSinal = 'imagens/sinal_outros.png';
                     }
                     markerS = new google.maps.Marker({
@@ -314,8 +313,8 @@ endforeach;
                                     icon: iconPonto
                                 });
                                 markersPontos.push(marker);
-                                var id = ponto['id_ponto'].toString();
-                                google.maps.event.addListener(marker, "click", infoCallback(infowindow, marker, id));
+                                var id_ponto = ponto['id_ponto'].toString();
+                                google.maps.event.addListener(marker, "click", infoCallback(infowindow, marker, id_ponto));
                             });
                         }
                     });
@@ -337,16 +336,16 @@ endforeach;
                             $.each(resultado, function (i, sinal) {
                                 var myLatLng = new google.maps.LatLng(sinal['latitude'], sinal['longitude']);
                                 var iconSinal = '';
-                                if (sinal[5] === "OB") {
+                                if (sinal['categoria'] === "OB") {
                                     iconSinal = 'imagens/sinal_obras.png';
                                 }
-                                else if (sinal[5] === "IT") {
+                                else if (sinal['categoria'] === "IT") {
                                     iconSinal = 'imagens/sinal_inderditado.png';
                                 }
-                                else if (sinal[5] === "AC") {
+                                else if (sinal['categoria'] === "AC") {
                                     iconSinal = 'imagens/sinal_acidentado.png';
                                 }
-                                else {
+                                else if (sinal['categoria'] === "OT") {
                                     iconSinal = 'imagens/sinal_outros.png';
                                 }
                                 markerS = new google.maps.Marker({
@@ -356,8 +355,8 @@ endforeach;
                                     icon: iconSinal
                                 });
                                 markersSinal.push(markerS);
-                                var id = sinal['id_ponto'].toString();
-                                google.maps.event.addListener(markerS, "click", infoCallback(infowindow, markerS, id));
+                                var id_sinal = sinal['id_sinal'].toString();
+                                google.maps.event.addListener(markerS, "click", infoCallback(infowindow, markerS, id_sinal));
                             });
                         }
                     });
