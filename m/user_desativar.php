@@ -1,5 +1,5 @@
 <?php
-require_once("conexao/conexao.php");
+require_once("../conexao/conexao.php");
 require_once("verificaSessao.php");
 
 $conexao = conectar();
@@ -10,5 +10,4 @@ $user_desativa = $conexao -> prepare("UPDATE usuario SET usuario_ativo = false W
 $user_desativa -> bindValue(":id_usuario" , $id_usuario, PDO::PARAM_INT);
 $user_desativa -> execute();
 
-header("location:user_logout.php");
-?>
+header("location: user_logout.php");
