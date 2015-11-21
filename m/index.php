@@ -40,8 +40,7 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
             <div id="menu">
                 <ul>
                     <?php
-                    if (userLogado())
-                    {
+                    if (userLogado()) {
                         echo "<li> <a href='user_painel.php'>" . $_SESSION['nome'] . "</a> <a href='user_logout.php'><i class='fa fa-sign-out'></i> </a> </li>";
                     }
                     ?>
@@ -57,20 +56,19 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 
                 <?php
                 if (userLogado()) {
-                  $email = $_SESSION['email'];
-                  $fotouser = $pdo->prepare("SELECT foto FROM usuario WHERE email = '".$email."'");
-                  $fotouser->execute();
-                  $fotolinha = $fotouser->fetchAll(PDO::FETCH_ASSOC);
+                    $email = $_SESSION['email'];
+                    $fotouser = $pdo->prepare("SELECT foto FROM usuario WHERE email = '" . $email . "'");
+                    $fotouser->execute();
+                    $fotolinha = $fotouser->fetchAll(PDO::FETCH_ASSOC);
                 }
                 ?>
 
-                <div id="user" style="background-image: url('imagens/users/<?=$fotolinha[0]['foto']?>'); background-size: 100%;">
+                <div id="user" style="background-image: url('imagens/users/<?= $fotolinha[0]['foto'] ?>'); background-size: 100%;">
                 </div>
 
                 <?php
-                if (!userLogado())
-                {
-                  echo "<div id='botao-entrar'>
+                if (!userLogado()) {
+                    echo "<div id='botao-entrar'>
                       <a href='user_login.php'><button class='button_entrar'>ENTRAR</button></a>
                   </div>";
                 }
@@ -81,22 +79,27 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
                 </div>
 
                 <div id="filtros-menu">
-                  <form id="filtro-ponto" style="margin-left:10%; margin-top:20%">
-                      <h1 style="font-size:1.5em">Pontos de Interesse</h1><br>
-                      <input type="radio" name="filtro-ponto" value="BC" class="filtro-input">Bicicletarias<br>
-                      <input type="radio" name="filtro-ponto" value="PG" class="filtro-input">Postos de Gasolina<br>
-                      <input type="radio" name="filtro-ponto" value="TODOS" class="filtro-input">Todos<br>
-                      <input type="radio" name="filtro-ponto" value="" class="filtro-input">Nenhum
-                  </form>
+                    <form id="filtro-ponto" style="margin-left:10%; margin-top:20%">
+                        <h1 style="font-size:1.5em">Pontos de Interesse</h1><br>
+                        <input type="radio" name="filtro-ponto" value="BC" class="filtro-input"> Bicicletarias<br>
+                        <input type="radio" name="filtro-ponto" value="PG" class="filtro-input"> Postos de Gasolina<br>
+                        <input type="radio" name="filtro-ponto" value="TODOS" class="filtro-input"> Todos<br>
+                        <input type="radio" name="filtro-ponto" value="" class="filtro-input"> Nenhum
+                    </form>
 
-                 <form id="filtro-sinal" style="margin-left:10%; margin-top:20%">
-                      <h1 style="font-size:1.5em">Sinalizações</h1><br>
-                      <input type="radio" name="filtro-sinal" value="OB" class="filtro-input">Obras<br>
-                      <input type="radio" name="filtro-sinal" value="AC" class="filtro-input">Acidentado<br>
-                      <input type="radio" name="filtro-sinal" value="OT" class="filtro-input">Outros<br>
-                      <input type="radio" name="filtro-sinal" value="TODOS" class="filtro-input">Todos<br>
-                      <input type="radio" name="filtro-sinal" value="" class="filtro-input">Nenhum
-                  </form>
+                    <form id="filtro-sinal" style="margin-left:10%; margin-top:20%">
+                        <h1 style="font-size:1.5em">Sinalizações</h1><br>
+                        <input type="radio" name="filtro-sinal" value="OB" class="filtro-input"> Obras<br>
+                        <input type="radio" name="filtro-sinal" value="AC" class="filtro-input"> Acidentado<br>
+                        <input type="radio" name="filtro-sinal" value="OT" class="filtro-input"> Outros<br>
+                        <input type="radio" name="filtro-sinal" value="TODOS" class="filtro-input"> Todos<br>
+                        <input type="radio" name="filtro-sinal" value="" class="filtro-input"> Nenhum
+                    </form>
+                    
+                    <div id="filtro-botoes" style="float:right;">
+                        <i class="fa fa-times" id="filtro-conf"></i>
+                        <i class="fa fa-check" id="filtro-cancel"></i>                    
+                    </div>
                 </div>
             </div>
 
