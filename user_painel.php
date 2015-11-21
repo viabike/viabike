@@ -5,14 +5,16 @@ require_once("verificaSessao.php");
 ?>
 
 <script>
-// Verifica campo de confrmação de senha e exibe mensagem de erro caso esteja errada
+/*
+ * Verifica campo de confrmação de senha e exibe mensagem de erro caso esteja errada
+ */
 
 // Envia para o arquivo PHP as informações para ele verificar se a senha está correta ou não
 $(document).ready(function () {
 	$('#passNotOk').hide();
 	$("#botaoOk").hide();
 
-	$("#senha").change(function(){
+	$("#senha").keyup(function(){
 			$.ajax({
 			type: "POST",
 			url: "user_painel_verifica.php",
@@ -30,7 +32,7 @@ $(document).ready(function () {
 
 //exibe mensagem caso esteja errado
 function getMessage(type) {
-	if (type  == 1) {
+	if (type  === 1) {
 		$("#senha").css("border", "1px solid #bdc3c7");
 		$('#passNotOk').hide();
 		$("#botaoNotOK").hide();
@@ -38,7 +40,6 @@ function getMessage(type) {
 	}
 	else {
 		$("#senha").css("border", "1px solid #f00");
-		$("#senha").val("");
 		$("#passNotOk").show();
 		$("#botaoNotOK").show();
 		$("#botaoOk").hide();
@@ -56,7 +57,8 @@ $user_buscador = $conexao -> prepare("SELECT * FROM usuario WHERE email = '".$_C
 
 $user_buscador -> execute();//executando a query de uma maneira segura
 
-$user = $user_buscador->fetchAll(PDO::FETCH_OBJ);?>
+$user = $user_buscador->fetchAll(PDO::FETCH_OBJ);
+?>
 
 <?php foreach ($user as $usuario):
 ?>
@@ -83,5 +85,5 @@ $user = $user_buscador->fetchAll(PDO::FETCH_OBJ);?>
 
 
 <?php endforeach;
-include("template/footer.php");
+require_once("template/footer.php");
 ?>
