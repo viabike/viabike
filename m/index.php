@@ -176,7 +176,9 @@ endforeach;
                         markersPontos.push(markerP);
                         var id = ponto[0].toString();
                         google.maps.event.addListener(markerP, "click", infoCallback(infowindow, markerP, id));
-                    };
+                    }
+
+                    ;
 
                     // Sinalizações
                     for (var i = 0; i < sinais.length; i++) {
@@ -231,7 +233,7 @@ endforeach;
                     };
                 }
 
-// FUNÇÃO QUE CARREGA KML
+                // FUNÇÃO QUE CARREGA KML
                 function loadKmlLayer(src, map) {
                     var kmlLayer = new google.maps.KmlLayer(src, {suppressInfoWindows: true, preserveViewport: true,
                         map: map
@@ -282,6 +284,50 @@ endforeach;
                                         markersPontos.push(marker);
                                         var id_ponto = ponto['id_ponto'].toString();
                                         google.maps.event.addListener(marker, "click", infoCallback(infowindow, marker, id_ponto));
+                                    });
+                                }
+                            });
+                            $("#filtros-menu").hide();
+                        });
+                    });          
+                    
+                    // Programação do botão "Sinalizações"
+                    $("#filtro-sinal").change(function() {
+                        filtro_sinal = $("input[name='filtro-sinal']:checked").val();
+                        $("#filtro-conf").click(function() {
+                            $.ajax({
+                                type: "GET",
+                                url: "/viabike/filtro_pega_sinal.php?filtro_sinal=" + filtro_sinal,
+                                dataType: "json",
+                                success: function(resultado) {
+                                    while (markersSinal.length) {
+                                        markersSinal.pop().setMap(null);
+                                    }
+
+                                    $.each(resultado, function(i, sinal) {
+                                        var myLatLng = new google.maps.LatLng(sinal['latitude'], sinal['longitude']);
+                                        var iconSinal = '';
+                                        if (sinal['categoria'] === "OB") {
+                                            iconSinal = 'imagens/sinal_obras.png';
+                                        }
+                                        else if (sinal['categoria'] === "IT") {
+                                            iconSinal = 'imagens/sinal_inderditado.png';
+                                        }
+                                        else if (sinal['categoria'] === "AC") {
+                                            iconSinal = 'imagens/sinal_acidentado.png';
+                                        }
+                                        else if (sinal['categoria'] === "OT") {
+                                            iconSinal = 'imagens/sinal_outros.png';
+                                        }
+                                        markerS = new google.maps.Marker({
+                                            position: myLatLng,
+                                            map: map,
+                                            title: sinal['titulo'].toString(),
+                                            icon: iconSinal
+                                        });
+                                        markersSinal.push(markerS);
+                                        var id_sinal = sinal['id_sinal'].toString();
+                                        google.maps.event.addListener(markerS, "click", infoCallback(infowindow, markerS, id_sinal));
                                     });
                                 }
                             });
