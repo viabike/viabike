@@ -67,10 +67,19 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
                 </div>
 
                 <?php
-                if (!userLogado()) {
-                    echo "<div id='botao-entrar'>
-                      <a href='user_login.php'><button class='button_entrar'>ENTRAR</button></a>
-                  </div>";
+                if (userLogado()) {
+                    echo "
+                    <div id='botao-direito'>
+                        <a href='sinal_form_cadastro.php'><button class='button_direito' style='background-color: #f00;'>SINALIZAR</button></a>
+                    </div>
+                    ";
+                }
+                else {
+                    echo "
+                    <div id='botao-direito'>
+                        <a href='user_login.php'><button class='button_direito'>ENTRAR</button></a>
+                    </div>
+                    ";
                 }
                 ?>
 
