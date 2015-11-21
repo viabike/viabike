@@ -110,8 +110,8 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
                     </form>
 
                     <div id="filtro-botoes" style="float:right;">
-                        <i class="fa fa-times" id="filtro-conf"></i>
-                        <i class="fa fa-check" id="filtro-cancel"></i>                    
+                        <i class="fa fa-times" id="filtro-cancel"></i>
+                        <i class="fa fa-check" id="filtro-conf"></i>                    
                     </div>
                 </div>
             </div>
@@ -216,18 +216,13 @@ endforeach;
                         dataType: "json",
                         success: function(data) {
                             $('#marker' + id).html(
-                                    '<h1>' + data.nome + '</h1>' +
-                                    '<p><i class="fa fa-map-marker"></i> ' + data.rua + ', ' + data.num + ' - ' + data.bairro + '</p>' +
-                                    '<p><i class="fa fa-phone"></i> (' + data.telefone.substr(0, 2) + ') ' + data.telefone.substr(3, 9) + '</p><br>' +
-                                    '<h4>Funcionamento</h4>' +
-                                    '<p><i class="fa fa-clock-o"></i> ' + data.hr_inicio.substr(0, 5) + ' às ' + data.hr_fecha.substr(0, 5) + '</p>'
-                                    );
+                                    '<h1>' + data.nome + '</h1>' + '<p><i class="fa fa-map-marker"></i> ' + data.rua + ', ' + data.num + ' - ' + data.bairro + '</p>' + '<p><i class="fa fa-phone"></i> (' + data.telefone.substr(0, 2) + ') ' + data.telefone.substr(3, 9) + '</p><br>' + '<h4>Funcionamento</h4>' + '<p><i class="fa fa-clock-o"></i> ' + data.hr_inicio.substr(0, 5) + ' às ' + data.hr_fecha.substr(0, 5) + '</p>');
                             $('#marker' + id).css('background', 'none');
                         }
                     });
                 }
 
-//FUNÇÃO QUE EXIBE JANELA DE INFORMAÇÕES DO PONTO
+                //FUNÇÃO QUE EXIBE JANELA DE INFORMAÇÕES DO PONTO
                 function infoCallback(infowindow, marker, id) {
                     return function() {
                         infowindow.setContent('<div class="infoWindow" id="marker' + id + '" style="width:auto; height:auto; background: url(imagens/loading.gif) no-repeat center center;"></div>');
@@ -238,15 +233,62 @@ endforeach;
 
 // FUNÇÃO QUE CARREGA KML
                 function loadKmlLayer(src, map) {
-                    var kmlLayer = new google.maps.KmlLayer(src, {
-                        suppressInfoWindows: true,
-                        preserveViewport: true,
+                    var kmlLayer = new google.maps.KmlLayer(src, {suppressInfoWindows: true, preserveViewport: true,
                         map: map
                     });
                 }
 
-//EVENTO QUE CHAMA FUNÇÃO initMap() QUANDO A JANELA FOR CARREGADA.
+                //EVENTO QUE CHAMA FUNÇÃO initMap() QUANDO A JANELA FOR CARREGADA.
                 google.maps.event.addDomListener(window, 'load', initMap);
+
+                /*
+                 * Programação dos filtros
+                 * 
+                 * filtro-ponto (pontos de interesse)
+                 * filtro-sinal (sinalizações)
+                 */
+
+                $(document).ready(function() {
+                    var filtro_ponto;
+                    var filtro_sinal;
+
+                    // Programaçao do botão "Pontos de Interesse"
+                    $("#filtro-ponto").change(function() {
+                        filtro_ponto = $("input[name='filtro-ponto']:checked").val();
+                        $("#filtro-conf").click(function() {
+                            $.ajax({
+                                type: "GET",
+                                url: "/viabike/filtro_pega_ponto.php?filtro_ponto=" + filtro_ponto,
+                                dataType: "json",
+                                success: function(resultado) {
+                                    while (markersPontos.length) {
+                                        markersPontos.pop().setMap(null);
+                                    }
+
+                                    $.each(resultado, function(i, ponto) {
+                                        var myLatLng = new google.maps.LatLng(ponto['latitude'], ponto['longitude']);
+                                        var iconPonto = '';
+                                        if (ponto['categoria'] === "PG") {
+                                            iconPonto = 'imagens/posto1.png';
+                                        } else if (ponto['categoria'] === "BC") {
+                                            iconPonto = 'imagens/bike1.png';
+                                        }
+                                        marker = new google.maps.Marker({
+                                            position: myLatLng,
+                                            map: map,
+                                            title: ponto['nome'].toString(),
+                                            icon: iconPonto
+                                        });
+                                        markersPontos.push(marker);
+                                        var id_ponto = ponto['id_ponto'].toString();
+                                        google.maps.event.addListener(marker, "click", infoCallback(infowindow, marker, id_ponto));
+                                    });
+                                }
+                            });
+                            $("#filtros-menu").hide();
+                        });
+                    });
+                });
             </script>
         </div>
     </body>
