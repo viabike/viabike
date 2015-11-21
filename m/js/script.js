@@ -32,11 +32,6 @@ $(document).ready(function() {
         }
     });
 
-    // Botões CONFIRMAR/CANCELAR
-    $("#filtro-conf").click(function() {
-        $("#filtros-menu").hide();
-    });
-    
     $("#filtro-cancel").click(function() {
         $("#filtros-menu").hide();
     });
