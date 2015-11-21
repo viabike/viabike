@@ -66,9 +66,9 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
                     $fotolinha = $fotouser->fetchAll(PDO::FETCH_ASSOC);
                 }
                 ?>
-
-                <div id="user" style="background-image: url('imagens/users/<?= $fotolinha[0]['foto'] ?>'); background-size: 100%;">
-                </div>
+                
+                <a href="user_painel.php"><div id="user" style="background-image: url('imagens/users/<?= $fotolinha[0]['foto'] ?>'); background-size: 100%;">
+                </div></a>
 
                 <?php
                 if (userLogado()) {
