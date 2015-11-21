@@ -3,15 +3,19 @@ ob_start();
 session_start();
 require_once("../conexao/conexao.php");
 require_once("funcoes/funcoes.php");
-
-//  SELECIONA TODOS OS REGISTROS DE PONTOS DE INTERESSE DO BANCO VIABIKE_DB
 $pdo = conectar();
-$buscaPonto = $pdo->prepare("SELECT * FROM ponto_interesse");
-//Executando a QUERY
-$buscaPonto->execute();
-// FIM DA SELEÇÃO
 
-$linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
+// Pontos de interesse
+$buscaPonto = $pdo->prepare("SELECT * FROM ponto_interesse");
+$buscaPonto->execute();
+
+$linhaPonto = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
+
+// Sinalizações
+$buscaSinal = $pdo->prepare("SELECT * FROM sinalizacao");
+$buscaSinal->execute();
+
+$linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
 ?>
 <!DOCTYPE html>
 <html>
@@ -104,7 +108,7 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
                         <input type="radio" name="filtro-sinal" value="TODOS" class="filtro-input"> Todos<br>
                         <input type="radio" name="filtro-sinal" value="" class="filtro-input"> Nenhum
                     </form>
-                    
+
                     <div id="filtro-botoes" style="float:right;">
                         <i class="fa fa-times" id="filtro-conf"></i>
                         <i class="fa fa-check" id="filtro-cancel"></i>                    
@@ -113,43 +117,93 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
             </div>
 
             <script>
-
-                //Variavel do mapa
+//Variavel do mapa
                 var map;
                 var infowindow = new google.maps.InfoWindow();
                 var pontos = [
 <?php
-foreach ($linha as $linhas):
-    echo '[' . $linhas->id_ponto . ', ' . $linhas->latitude . ', ' . $linhas->longitude . ', "' . $linhas->categoria . '", "' . $linhas->nome . '"],';
+foreach ($linhaPonto as $linhasPontos):
+    echo '[' . $linhasPontos->id_ponto . ', ' . $linhasPontos->latitude . ', ' . $linhasPontos->longitude . ', "' . $linhasPontos->categoria . '", "' . $linhasPontos->nome . '"],';
 endforeach;
 ?>];
+                var sinais = [
+<?php
+foreach ($linhaSinal as $linhasSinais):
+    echo '[' . $linhasSinais->id_sinal . ', "' . $linhasSinais->titulo . '", "' . $linhasSinais->descricao . '", ' . $linhasSinais->latitude . ', ' . $linhasSinais->longitude . ', "' . $linhasSinais->categoria . '"],';
+endforeach;
+?>
+                ];
+                var markersPontos = [];
+                var markersSinal = [];
 
-                //Função que inicia o mapa
+//Função que inicia o mapa
                 function initMap() {
                     map = new google.maps.Map(document.getElementById('mapa'), {
-                        center: {lat: -23.6255903, lng: -45.4241453},
+                        center: {lat: -23.6457413, lng: -45.4242261},
                         zoom: 15,
-                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                        mapTypeControl: true,
+                        mapTypeControlOptions: {
+                            position: google.maps.ControlPosition.TOP_RIGHT
+                        },
+                        streetViewControl: true,
+                        streetViewControlOptions: {
+                            position: google.maps.ControlPosition.LEFT_BOTTOM
+                        },
+                        zoomControl: true,
+                        zoomControlOptions: {
+                            position: google.maps.ControlPosition.LEFT_BOTTOM
+                        }
                     });
                     loadKmlLayer('http://viabike.me/mapa/mapa-das-ciclovias-v2.kml', map);
 
+                    // Pontos de Interesse
                     for (var i = 0; i < pontos.length; i++) {
                         var ponto = pontos[i];
                         var myLatLng = new google.maps.LatLng(ponto[1], ponto[2]);
                         var iconPonto = '';
-                        if (ponto[3] == "PG") {
-                            iconPonto = '../imagens/posto1.png';
-                        } else if (ponto[3] == "BC") {
-                            iconPonto = '../imagens/bike1.png';
+                        if (ponto[3] === "PG") {
+                            iconPonto = 'imagens/posto1.png';
+                        } else if (ponto[3] === "BC") {
+                            iconPonto = 'imagens/bike1.png';
                         }
-                        marker = new google.maps.Marker({
+                        markerP = new google.maps.Marker({
                             position: myLatLng,
                             map: map,
                             title: ponto[4].toString(),
                             icon: iconPonto
                         });
+                        markersPontos.push(markerP);
                         var id = ponto[0].toString();
-                        google.maps.event.addListener(marker, "click", infoCallback(infowindow, marker, id));
+                        google.maps.event.addListener(markerP, "click", infoCallback(infowindow, markerP, id));
+                    };
+
+                    // Sinalizações
+                    for (var i = 0; i < sinais.length; i++) {
+                        var sinal = sinais[i];
+                        var myLatLng = new google.maps.LatLng(sinal[3], sinal[4]);
+                        var iconSinal = '';
+                        if (sinal[5] === "OB") {
+                            iconSinal = 'imagens/sinal_obras.png';
+                        }
+                        else if (sinal[5] === "IT") {
+                            iconSinal = 'imagens/sinal_inderditado.png';
+                        }
+                        else if (sinal[5] === "AC") {
+                            iconSinal = 'imagens/sinal_acidentado.png';
+                        }
+                        else if (sinal[5] === "OT") {
+                            iconSinal = 'imagens/sinal_outros.png';
+                        }
+                        markerS = new google.maps.Marker({
+                            position: myLatLng,
+                            map: map,
+                            title: sinal[1].toString(),
+                            icon: iconSinal
+                        });
+                        markersSinal.push(markerS);
+                        var id = sinal[0].toString();
+                        google.maps.event.addListener(markerS, "click", infoCallback(infowindow, markerS, id));
                     }
                     ;
 
@@ -158,32 +212,31 @@ endforeach;
                 function getContentPonto(id) {
                     $.ajax({
                         type: "GET",
-                        url: "/viabike/get_info_ponto.php?id=" + id,
+                        url: "/viabike/get_info_ponto.php?id=" + id, //online é somente /get...
                         dataType: "json",
-                        success: function (data) {
+                        success: function(data) {
                             $('#marker' + id).html(
-                                    '<h1 style="font-size: 15px">' + data.nome + '</h1>' +
-                                    '<h3 style="font-size: 15px">Localização e contato:</h3>' +
-                                    '<p style="font-size: 15px">' + data.bairro + ', ' + data.rua + ', ' + data.num + '</p>' +
-                                    '<p style="font-size: 15px">(' + data.telefone.substr(0, 2) + ') ' + data.telefone.substr(3, 9) + '</p><br>' +
-                                    '<h3 style="font-size: 15px">Funcionamento:</h3>' +
-                                    '<p style="font-size: 15px">Das ' + data.hr_inicio.substr(0, 5) + ' até as ' + data.hr_fecha.substr(0, 5) + '</p>'
+                                    '<h1>' + data.nome + '</h1>' +
+                                    '<p><i class="fa fa-map-marker"></i> ' + data.rua + ', ' + data.num + ' - ' + data.bairro + '</p>' +
+                                    '<p><i class="fa fa-phone"></i> (' + data.telefone.substr(0, 2) + ') ' + data.telefone.substr(3, 9) + '</p><br>' +
+                                    '<h4>Funcionamento</h4>' +
+                                    '<p><i class="fa fa-clock-o"></i> ' + data.hr_inicio.substr(0, 5) + ' às ' + data.hr_fecha.substr(0, 5) + '</p>'
                                     );
                             $('#marker' + id).css('background', 'none');
                         }
                     });
                 }
 
-                //FUNÇÃO QUE EXIBE JANELA DE INFORMAÇÕES DO PONTO
+//FUNÇÃO QUE EXIBE JANELA DE INFORMAÇÕES DO PONTO
                 function infoCallback(infowindow, marker, id) {
-                    return function () {
+                    return function() {
                         infowindow.setContent('<div class="infoWindow" id="marker' + id + '" style="width:auto; height:auto; background: url(imagens/loading.gif) no-repeat center center;"></div>');
                         infowindow.open(map, marker);
                         getContentPonto(id);
-                    }
+                    };
                 }
 
-                // FUNÇÃO QUE CARREGA KML
+// FUNÇÃO QUE CARREGA KML
                 function loadKmlLayer(src, map) {
                     var kmlLayer = new google.maps.KmlLayer(src, {
                         suppressInfoWindows: true,
@@ -192,7 +245,7 @@ endforeach;
                     });
                 }
 
-                //EVENTO QUE CHAMA FUNÇÃO initMap() QUANDO A JANELA FOR CARREGADA.
+//EVENTO QUE CHAMA FUNÇÃO initMap() QUANDO A JANELA FOR CARREGADA.
                 google.maps.event.addDomListener(window, 'load', initMap);
             </script>
         </div>
