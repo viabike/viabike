@@ -20,7 +20,7 @@ if ($_FILES["foto"]["error"] == 0)
         {
             unlink('imagens/users/' . $_POST['foto_velha']);
         }
-        move_uploaded_file($_FILES["foto"]["tmp_name"], "imagens/users/" . $foto);
+        move_uploaded_file($_FILES["foto"]["tmp_name"], "../imagens/users/" . $foto);
     }
     else
     {

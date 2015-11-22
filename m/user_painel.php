@@ -21,7 +21,7 @@ foreach ($user as $usuario):
         <input type="hidden" name="id_usuario" value="<?= $usuario->id_usuario ?>">
         <span style="font-size: 2em">Nome:</span><input type="text" name="nome" class="form" value="<?= $usuario->nome ?>" placeholder="Ex: Exemplo de Nome" required><br>
         <span style="font-size: 2em">E-mail:</span><input type="email" name="email" class="form" value="<?= $usuario->email ?>" placeholder="Ex: ex@exemplo.com" required><br>
-        <img src="imagens/users/<?= $usuario->foto ?>" width="100%">
+        <img src="../imagens/users/<?= $usuario->foto ?>" width="100%">
         <span style="font-size: 2em">Foto:</span><input type="file" name="foto" class="form"><br>
         <input type="hidden" name="foto_velha" value="<?= $usuario->foto ?>">
 
