@@ -1,6 +1,6 @@
 <?php
-include("../conexao/conexao.php");
-include("template/header.php");
+require_once("../conexao/conexao.php");
+require_once("template/header.php");
 
 
 echo '<h1 style="float: left; text-align: left">Editar Perfil</h1><br><br>';
@@ -21,20 +21,30 @@ foreach ($user as $usuario):
         <input type="hidden" name="id_usuario" value="<?= $usuario->id_usuario ?>">
         <span style="font-size: 2em">Nome:</span><input type="text" name="nome" class="form" value="<?= $usuario->nome ?>" placeholder="Ex: Exemplo de Nome" required><br>
         <span style="font-size: 2em">E-mail:</span><input type="email" name="email" class="form" value="<?= $usuario->email ?>" placeholder="Ex: ex@exemplo.com" required><br>
-        <img src="imagens/users/<?= $usuario->foto ?>" width="100%">
+        <img src="../imagens/users/<?= $usuario->foto ?>" width="100%">
         <span style="font-size: 2em">Foto:</span><input type="file" name="foto" class="form"><br>
         <input type="hidden" name="foto_velha" value="<?= $usuario->foto ?>">
 
         <hr style="border:1px; padding:2px; margin-bottom:10px; border-radius:5px; background-color:rgba(204,204,204, 0.25);">
 
         <span style="font-size: 2em">Confirme sua senha:</span><input type="password" name="senha" id="senha" class="form" required><br>
-
-        <a href="user_desativar.php?id_usuario=<?= $usuario->id_usuario ?>" style="float: left;font-size:14px; line-height:65px; color:#535455;">Desativar conta</button></a>
-
+        
+        <a onClick="confirmaDesativar()" style="float: left;font-size:14px; line-height:65px; color:#535455;">Desativar conta</button></a>
+        
         <input type="submit" value="Alterar" class="button" style="float: right" id="botaoOk">
     </form>
 
+    <script>
+    function confirmaDesativar() {
+        var confirma1 = confirm("Deseja desativar sua conta? \nVocê pode reativá-la simplesmente fazendo login novamente.");
+        if (confirma1) {
+           var confirma2 = confirm("Tem certeza? \nAs sinalizações cadastradas por você não apareceram mais no mapa.");
+           if (confirma2) {
+               location.href="user_desativar.php?id_usuario=<?= $usuario->id_usuario ?>";
+           }
+        }
+    }
+    </script>
 <?php
 endforeach;
-include("template/footer.php");
-?>
+require_once("template/footer.php");

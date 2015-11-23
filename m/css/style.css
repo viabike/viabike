@@ -135,19 +135,11 @@ div#filtros-menu {
     height: 15px;
 }
 
-div#botao-entrar {
+div#botao-direito {
     position: fixed;
     right: 5%;
     bottom: 15px;
     z-index: 99;
-}
-
-.botao-entrar {
-   width: 200px;
-   padding: 30px;
-   font-size: 1em;
-   background: #40bd68;
-   color: #fff;
 }
 
 div#containermap {
@@ -289,7 +281,7 @@ div#form_user{
     cursor:pointer;
     color:#fff;
 }
-.button_entrar{
+.button_direito{
     width:auto;
     padding: 0 15%;
     height:40px;
