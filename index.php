@@ -197,7 +197,7 @@ endforeach;
                     });
                     markersPontos.push(markerP);
                     var id = ponto[0].toString();
-                    google.maps.event.addListener(markerP, "click", infoCallback(infowindow, markerP, id));
+                    google.maps.event.addListener(markerP, "click", infoCallbackPonto(infowindow, markerP, id));
                 }
                 ;
 
@@ -226,14 +226,13 @@ endforeach;
                     });
                     markersSinal.push(markerS);
                     var id = sinal[0].toString();
-                    google.maps.event.addListener(markerS, "click", infoCallback(infowindow, markerS, id));
+                    google.maps.event.addListener(markerS, "click", infoCallbackSinal(infowindow, markerS, id));
                 }
                 ;
 
             }
 
             function getContentPonto(id) {
-
                 $.ajax({
                     type: "GET",
                     url: "/viabike/get_info_ponto.php?id=" + id, //online é somente /get...
@@ -250,14 +249,38 @@ endforeach;
                     }
                 });
             }
-
+            
+            function getContentSinal(id) {
+                $.ajax({
+                    type: "GET",
+                    url: "/viabike/get_info_sinal.php?id=" + id,
+                    dataType: "json",
+                    success: function (data) {
+                        $('#marker' + id).html(
+							'<h1>' + data.titulo + '</h1>' +
+							'<p style="font-size:0.8em; margin: 0 0 10px 0">' + data.data_public + '</p>' +
+                            data.descricao				
+                        );
+                        $('#marker' + id).css('background', 'none');
+                    }
+                });
+            }
 
 //FUNÇÃO QUE EXIBE JANELA DE INFORMAÇÕES DO PONTO
-            function infoCallback(infowindow, marker, id) {
+            function infoCallbackPonto(infowindow, marker, id) {
                 return function () {
                     infowindow.setContent('<div class="infoWindow" id="marker' + id + '" style="width:auto; height:auto; background: url(imagens/loading.gif) no-repeat center center;"></div>');
                     infowindow.open(map, marker);
                     getContentPonto(id);
+                };
+            }
+
+//FUNÇÃO QUE EXIBE JANELA DE INFORMAÇÕES DA SINALIZAÇÃO
+            function infoCallbackSinal(infowindow, marker, id) {
+                return function () {
+                    infowindow.setContent('<div class="infoWindow" id="marker' + id + '" style="width:auto; height:auto; background: url(imagens/loading.gif) no-repeat center center;"></div>');
+                    infowindow.open(map, marker);
+                    getContentSinal(id);
                 };
             }
 
