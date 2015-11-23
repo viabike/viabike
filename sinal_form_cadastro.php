@@ -8,7 +8,7 @@ require_once("template/header.php");
 
     <div id='formSinalEsquerda'>
         Titulo:   <input type="text" name="titulo" class="formSinalInput" maxlength="45" minlength="3" required><br>
-        Categoria:<select name="categoria" class="formSinalInput selectSinal">
+        Categoria:<select name="categoria_sinal" id="categoria_sinal" class="formSinalInput selectSinal">
             <option value="OB" selected>Obras</option>
             <option value="IT">Interditado</option>
             <option value="AC">Acidentado</option>
@@ -24,8 +24,10 @@ require_once("template/header.php");
     </div>
 </form>
 <script>
-    var iconBicicletaria = 'imagens/bike1.png';
-    var iconPosto = 'imagens/posto1.png';//exemplo até colocar o original.
+    var iconOb = 'imagens/sinal_obras.png';//exemplo até colocar o original.
+    var iconIt = 'imagens/sinal_interditado.png';//exemplo até colocar o original.
+    var iconAc = 'imagens/sinal_acidentado.png';//exemplo até colocar o original.
+    var iconOt = 'imagens/sinal_outros.png';//exemplo até colocar o original.    var marker = '';
     var marker = '';
     var map = '';
     var mlat = document.getElementById("lat").value;
@@ -37,7 +39,7 @@ require_once("template/header.php");
             center: {lat: -23.6255903, lng: -45.4241453}
         });
 
-        addMarker(iconBicicletaria);
+        addMarker(iconOb);
 
         google.maps.event.addListener(marker, "dragend", function (event) {
             document.getElementById("lat").value = event.latLng.lat();
@@ -46,17 +48,29 @@ require_once("template/header.php");
 
     }
 
-    $("#tipo").change(function () {
-        var categoria = document.getElementById("tipo").value;
-        if (categoria == 'BC') {
+   $("#categoria_sinal").change(function() {
+
+        var categoria_sinal = document.getElementById("categoria_sinal").value;
+
+        if(categoria_sinal == 'OB'){
             marker.setMap(null);
-            addMarker(iconBicicletaria);
+            addMarker(iconOb);
         }
-        if (categoria == 'PG') {
+        if(categoria_sinal == 'IT'){
             marker.setMap(null);
-            addMarker(iconPosto);
+            addMarker(iconIt);
         }
+        if(categoria_sinal == 'AC'){
+            marker.setMap(null);
+            addMarker(iconAc);
+        }
+        if(categoria_sinal == 'OT'){
+            marker.setMap(null);
+            addMarker(iconOt);
+        }
+
     });
+
 
     function addMarker(myicon) {
         var mlat = document.getElementById("lat").value;
