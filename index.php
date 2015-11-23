@@ -12,7 +12,7 @@ $buscaPonto->execute();
 $linhaPonto = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 
 // Sinalizações
-$buscaSinal = $pdo->prepare("SELECT * FROM sinalizacao");
+$buscaSinal = $pdo->prepare("SELECT * FROM sinalizacao WHERE DATEDIFF(CURDATE(), data_public) <  60");
 $buscaSinal->execute();
 
 $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
