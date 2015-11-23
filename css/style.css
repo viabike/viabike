@@ -92,14 +92,41 @@ div#mapa {
 }
 
 div#filtros {
-    width: 450px;
+    width: auto;
     min-height: 10px;
     height: auto;
     position: fixed;
-    left: 100px;
-    bottom: 10px;
+    left: 80px;
+    bottom: 5px;
+	padding: 3px 5px;
     z-index: 99;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgb(255,255,255);
+	border-radius: 2px;
+}
+
+div#legenda {
+    font-size: 10px;
+    font-family: Roboto, Arial, sans-serif;
+    width: auto;
+    min-height: 10px;
+    height: 14px;
+    position: fixed;
+    right: 362px;
+    bottom: 1px;
+    padding: 0px 6px;
+    z-index: 99;
+    background-color: rgba(255,255,255,0.5);
+}
+
+div#botao-sinalizacao {
+    width: auto;
+    min-height: 10px;
+    height: auto;
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+    z-index: 99;
+    
 }
 
 div#info-viabike {
@@ -271,21 +298,21 @@ div#formWindow{
 
 .formSinal{
 	text-align:left;
-	min-width:700px;
+	min-width:908px;
 	width: auto;
 	border:1px solid #bdc3c7;
 	padding:35px;
-  margin: 0;
+    margin: auto;
 	border-radius:10px;
 	float:left;
 }
 
 div#mapaSinal {
-	width: 365px;
-	height: 250px;
+	width: 100%;
+	height: 400px;
 	float: right;
 	background:transparent;
-	margin-bottom: 3px;
+	margin-bottom: 15px;
 }
 
 div#formSinalEsquerda{
@@ -296,7 +323,7 @@ div#formSinalEsquerda{
 }
 
 div#formSinalDireita{
-	width: 375px;
+	width: 580px;
 	float:right;
 }
 
@@ -318,7 +345,7 @@ div#formSinalDireita{
 }
 
 .selectSinal{
-	width:250px;
+	width:271px;
 }
 
 table{
