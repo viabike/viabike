@@ -67,8 +67,8 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
                 }
                 ?>
 
-                <a href="user_painel.php"><div id="user" style="background-image: url('../imagens/users/<?= $fotolinha[0]['foto'] ?>'); background-size: 100%;">
-                </div></a>
+                <div id="user" style="background-image: url('../imagens/users/<?= $fotolinha[0]['foto'] ?>'); background-size: 100%;">
+                </div>
 
                 <?php
                 if (userLogado()) {
@@ -89,6 +89,14 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
 
                 <div id="filtros">
                     <i class="fa fa-sliders" style="font-size: 1.65em; color: #232323;"></i>
+                </div>
+
+                <div id="menu_user">
+                  <ul>
+                    <li><a href="user_painel.php">EDITAR PERFIL</a></li>
+                    <li><a href="user_senha.php">ALTERAR SENHA</a></li>
+                    <li><a href="user_logout.php">SAIR</a></li>
+                  </ul>
                 </div>
 
                 <div id="filtros-menu">

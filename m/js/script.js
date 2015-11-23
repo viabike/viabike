@@ -16,7 +16,7 @@ $(document).ready(function() {
 
     /*
      * Filtros
-     * 
+     *
      */
     $("#filtros-menu").hide();
     var aux = 0;
@@ -36,4 +36,21 @@ $(document).ready(function() {
         $("#filtros-menu").hide();
     });
 
+    /*
+     * Menu user
+     *
+     */
+    $("#menu_user").hide();
+    var aux = 0;
+
+    $("#user").click(function() {
+        if (aux === 0) {
+            aux = 1;
+            $("#menu_user").show();
+        }
+        else {
+            $("#menu_user").hide();
+            aux = 0;
+        }
+    });
 });
