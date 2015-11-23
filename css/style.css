@@ -269,7 +269,7 @@ div#nav-header ul li a:hover {
 /*INFOWINDOW*/
 div.infoWindow {
     min-width: 200px;
-    min-height: 100px;
+    min-height: 50px;
     margin:auto;
     background: white;
     padding: 7px 0px 0px 7px;
