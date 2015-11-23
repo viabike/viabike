@@ -66,7 +66,7 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
                     $fotolinha = $fotouser->fetchAll(PDO::FETCH_ASSOC);
                 }
                 ?>
-                
+
                 <a href="user_painel.php"><div id="user" style="background-image: url('../imagens/users/<?= $fotolinha[0]['foto'] ?>'); background-size: 100%;">
                 </div></a>
 
@@ -74,7 +74,7 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
                 if (userLogado()) {
                     echo "
                     <div id='botao-direito'>
-                        <a href='sinal_form_cadastro.php'><button class='button_direito' style='background-color: #f00;'>SINALIZAR</button></a>
+                        <a href='sinal_form_cadastro.php'><button class='button_direito' style='background-color: #BD4040;'>SINALIZAR</button></a>
                     </div>
                     ";
                 }
@@ -92,16 +92,16 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
                 </div>
 
                 <div id="filtros-menu">
-                    <form id="filtro-ponto" style="margin-left:10%; margin-top:20%">
-                        <h1 style="font-size:1.5em">Pontos de Interesse</h1><br>
+                    <form id="filtro-ponto" style="margin-left:10%; margin-top:30px">
+                        <h1 style="font-size:1em; font-weight:600; margin:0px 0px 5px 0px;">Pontos de Interesse</h1>
                         <input type="radio" name="filtro-ponto" value="BC" class="filtro-input"> Bicicletarias<br>
                         <input type="radio" name="filtro-ponto" value="PG" class="filtro-input"> Postos de Gasolina<br>
                         <input type="radio" name="filtro-ponto" value="TODOS" class="filtro-input"> Todos<br>
                         <input type="radio" name="filtro-ponto" value="" class="filtro-input"> Nenhum
                     </form>
 
-                    <form id="filtro-sinal" style="margin-left:10%; margin-top:20%">
-                        <h1 style="font-size:1.5em">Sinalizações</h1><br>
+                    <form id="filtro-sinal" style="margin-left:10%; margin-top:5px">
+                        <h1 style="font-size:1em; font-weight:600; margin:0px 0px 5px 0px;">Sinalizações</h1>
                         <input type="radio" name="filtro-sinal" value="OB" class="filtro-input"> Obras<br>
                         <input type="radio" name="filtro-sinal" value="AC" class="filtro-input"> Acidentado<br>
                         <input type="radio" name="filtro-sinal" value="OT" class="filtro-input"> Outros<br>
@@ -109,9 +109,10 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
                         <input type="radio" name="filtro-sinal" value="" class="filtro-input"> Nenhum
                     </form>
 
-                    <div id="filtro-botoes" style="float:right;">
-                        <i class="fa fa-times" id="filtro-cancel"></i>
-                        <i class="fa fa-check" id="filtro-conf"></i>                    
+                    <br>
+                    <div id="filtro-botoes" style="width:100%; float:left;">
+                        <center><i class="fa fa-times" id="filtro-cancel" style="font-size:2em; color:#ccc"></i>&nbsp&nbsp&nbsp
+                        <i class="fa fa-check" id="filtro-conf" style="font-size:2em; color:#ccc"></i></center>
                     </div>
                 </div>
             </div>
@@ -218,7 +219,15 @@ endforeach;
                         dataType: "json",
                         success: function(data) {
                             $('#marker' + id).html(
-                                    '<h1>' + data.nome + '</h1>' + '<p><i class="fa fa-map-marker"></i> ' + data.rua + ', ' + data.num + ' - ' + data.bairro + '</p>' + '<p><i class="fa fa-phone"></i> (' + data.telefone.substr(0, 2) + ') ' + data.telefone.substr(3, 9) + '</p><br>' + '<h4>Funcionamento</h4>' + '<p><i class="fa fa-clock-o"></i> ' + data.hr_inicio.substr(0, 5) + ' às ' + data.hr_fecha.substr(0, 5) + '</p>');
+                                    '<h1 style="font-size:1em;">' + data.nome + '</h1>' +
+                                    '<p style="font-size:1em;"><i class="fa fa-map-marker"></i> ' +
+                                    data.rua + ', ' + data.num +
+                                    ' - ' + data.bairro + '</p>' +
+                                    '<p style="font-size:1em;"><i class="fa fa-phone"></i> (' + data.telefone.substr(0, 2) + ') ' +
+                                    data.telefone.substr(3, 9) + '</p><br>' + '<h4>Funcionamento</h4>' +
+                                    '<p style="font-size:1em;"><i class="fa fa-clock-o"></i> ' +
+                                    data.hr_inicio.substr(0, 5) + ' às ' +
+                                    data.hr_fecha.substr(0, 5) + '</p>');
                             $('#marker' + id).css('background', 'none');
                         }
                     });
@@ -245,7 +254,7 @@ endforeach;
 
                 /*
                  * Programação dos filtros
-                 * 
+                 *
                  * filtro-ponto (pontos de interesse)
                  * filtro-sinal (sinalizações)
                  */
@@ -289,8 +298,8 @@ endforeach;
                             });
                             $("#filtros-menu").hide();
                         });
-                    });          
-                    
+                    });
+
                     // Programação do botão "Sinalizações"
                     $("#filtro-sinal").change(function() {
                         filtro_sinal = $("input[name='filtro-sinal']:checked").val();
