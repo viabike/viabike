@@ -35,6 +35,10 @@ $(document).ready(function() {
     $("#filtro-cancel").click(function() {
         $("#filtros-menu").hide();
     });
+    
+     $("#filtro-conf").click(function() {
+        $("#filtros-menu").hide();
+    });
 
     /*
      * Menu user

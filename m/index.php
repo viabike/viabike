@@ -12,7 +12,7 @@ $buscaPonto->execute();
 $linhaPonto = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 
 // Sinalizações
-$buscaSinal = $pdo->prepare("SELECT * FROM sinalizacao");
+$buscaSinal = $pdo->prepare("SELECT * FROM sinalizacao WHERE DATEDIFF(CURDATE(), data_public) <  60");
 $buscaSinal->execute();
 
 $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
@@ -184,7 +184,7 @@ endforeach;
                         });
                         markersPontos.push(markerP);
                         var id = ponto[0].toString();
-                        google.maps.event.addListener(markerP, "click", infoCallback(infowindow, markerP, id));
+                        google.maps.event.addListener(markerP, "click", infoCallbackPonto(infowindow, markerP, id));
                     }
 
                     ;
@@ -214,7 +214,7 @@ endforeach;
                         });
                         markersSinal.push(markerS);
                         var id = sinal[0].toString();
-                        google.maps.event.addListener(markerS, "click", infoCallback(infowindow, markerS, id));
+                        google.maps.event.addListener(markerS, "click", infoCallbackSinal(infowindow, markerS, id));
                     }
                     ;
 
@@ -223,7 +223,7 @@ endforeach;
                 function getContentPonto(id) {
                     $.ajax({
                         type: "GET",
-                        url: "/viabike/get_info_ponto.php?id=" + id, //online é somente /get...
+                        url: "/viabike/m/get_info_ponto.php?id=" + id, //online é somente /get...
                         dataType: "json",
                         success: function(data) {
                             $('#marker' + id).html(
@@ -240,15 +240,41 @@ endforeach;
                         }
                     });
                 }
+                
+                function getContentSinal(id) {
+                    $.ajax({
+                        type: "GET",
+                        url: "/viabike/m/get_info_sinal.php?id=" + id,
+                        dataType: "json",
+                        success: function (data) {
+                            $('#marker' + id).html(
+                                '<h1>' + data.titulo + '</h1>' +
+                                '<p style="font-size:0.8em; margin: 0 0 10px 0">'
+                                  + 'Adicionado em ' + data.data_public.substr(8,2) + data.data_public.substr(4,3) + '-' + data.data_public.substr(0,4) + '</p>'
+                                  + data.descricao				
+                            );
+                            $('#marker' + id).css('background', 'none');
+                        }
+                    });
+                }
 
                 //FUNÇÃO QUE EXIBE JANELA DE INFORMAÇÕES DO PONTO
-                function infoCallback(infowindow, marker, id) {
+                function infoCallbackPonto(infowindow, marker, id) {
                     return function() {
                         infowindow.setContent('<div class="infoWindow" id="marker' + id + '" style="width:auto; height:auto; background: url(imagens/loading.gif) no-repeat center center;"></div>');
                         infowindow.open(map, marker);
                         getContentPonto(id);
                     };
                 }
+                //FUNÇÃO QUE EXIBE JANELA DE INFORMAÇÕES DA SINALIZAÇÃO
+                function infoCallbackSinal(infowindow, marker, id) {
+                    return function() {
+                        infowindow.setContent('<div class="infoWindow" id="marker' + id + '" style="width:auto; height:auto; background: url(imagens/loading.gif) no-repeat center center;"></div>');
+                        infowindow.open(map, marker);
+                        getContentSinal(id);
+                    };
+                }
+                
 
                 // FUNÇÃO QUE CARREGA KML
                 function loadKmlLayer(src, map) {
@@ -300,7 +326,7 @@ endforeach;
                                         });
                                         markersPontos.push(marker);
                                         var id_ponto = ponto['id_ponto'].toString();
-                                        google.maps.event.addListener(marker, "click", infoCallback(infowindow, marker, id_ponto));
+                                        google.maps.event.addListener(marker, "click", infoCallbackPonto(infowindow, marker, id_ponto));
                                     });
                                 }
                             });
@@ -344,7 +370,7 @@ endforeach;
                                         });
                                         markersSinal.push(markerS);
                                         var id_sinal = sinal['id_sinal'].toString();
-                                        google.maps.event.addListener(markerS, "click", infoCallback(infowindow, markerS, id_sinal));
+                                        google.maps.event.addListener(markerS, "click", infoCallbackSinal(infowindow, markerS, id_sinal));
                                     });
                                 }
                             });
