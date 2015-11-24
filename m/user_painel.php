@@ -3,7 +3,7 @@ require_once("../conexao/conexao.php");
 require_once("template/header.php");
 
 
-echo '<h1 style="float: left; text-align: left">Editar Perfil</h1><br><br>';
+echo '<center><h1>Editar Perfil</h1></center>';
 // <a href="user_senha.php"><button class="button" style="float: left;">Alterar senha</button></a></h1><br>';
 
 $conexao = conectar(); //Conexao com o banco de dados viabike_db
@@ -28,9 +28,9 @@ foreach ($user as $usuario):
         <hr style="border:1px; padding:2px; margin-bottom:10px; border-radius:5px; background-color:rgba(204,204,204, 0.25);">
 
         <span style="font-size: 2em">Confirme sua senha:</span><input type="password" name="senha" id="senha" class="form" required><br>
-        
+
         <a onClick="confirmaDesativar()" style="float: left;font-size:14px; line-height:65px; color:#535455;">Desativar conta</button></a>
-        
+
         <input type="submit" value="Alterar" class="button" style="float: right" id="botaoOk">
     </form>
 
