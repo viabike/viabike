@@ -28,12 +28,6 @@ require_once("funcoes/funcoes.php");
 
             <div id="menu">
                 <ul>
-                    <?php
-                    if (userLogado())
-                    {
-                        echo "<li> <a href='user_painel.php'>" . $_SESSION['nome'] . "</a> <a href='user_logout.php'><i class='fa fa-sign-out'></i> </a> </li>";
-                    }
-                    ?>
                     <li><a href="index.php">HOME</a></li>
                     <li><a href="sobre.php">SOBRE</a></li>
                     <li><a href="equipe.php">EQUIPE</a></li>
