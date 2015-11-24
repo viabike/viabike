@@ -375,10 +375,10 @@ div#menu_user ul li a{
 
 /* desenvolvedor */
 
-/*INFOWINDOW*/
+/*INFOWINDOW PONTO E SINALIZAÇÃO*/
 div.infoWindow {
     min-width: 100%;
-    min-height: 200px;
+    min-height: 10px;
     margin:auto;
     background: white;
     padding: 7px 0px 0px 7px;
@@ -397,4 +397,12 @@ div.infoWindow h3{
 div.infoWindow p{
     font-size: 45px;
 }
-/*FIM INFOWINDOW*/
+div.infoWindowSinal {
+    margin:auto;
+    background: white;
+    padding: 7px 0px 0px 7px;
+    font-family: 'Raleway', sans-serif;
+    min-width:200px;
+    min-height:1px;
+}
+/*FIM INFOWINDOW PONTO E SINALIZAÇÃO*/

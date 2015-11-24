@@ -260,7 +260,7 @@ endforeach;
                 //FUNÇÃO QUE EXIBE JANELA DE INFORMAÇÕES DA SINALIZAÇÃO
                 function infoCallbackSinal(infowindow, marker, id) {
                     return function() {
-                        infowindow.setContent('<div class="infoWindow" id="marker' + id + '" style="width:auto; height:auto; background: url(imagens/loading.gif) no-repeat center center;"></div>');
+                        infowindow.setContent('<div class="infoWindowSinal" id="marker' + id + '" style="width:auto; height:auto; background: url(imagens/loading.gif) no-repeat center center;"></div>');
                         infowindow.open(map, marker);
                         getContentSinal(id);
                     };
