@@ -43,11 +43,6 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
 
             <div id="menu">
                 <ul>
-                    <?php
-                    if (userLogado()) {
-                        echo "<li> <a href='user_painel.php'>" . $_SESSION['nome'] . "</a> <a href='user_logout.php'><i class='fa fa-sign-out'></i> </a> </li>";
-                    }
-                    ?>
                     <li><a href="index.php">HOME</a></li>
                     <li><a href="sobre.php">SOBRE</a></li>
                     <li><a href="equipe.php">EQUIPE</a></li>
@@ -64,13 +59,9 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
                     $fotouser = $pdo->prepare("SELECT foto FROM usuario WHERE email = '" . $email . "'");
                     $fotouser->execute();
                     $fotolinha = $fotouser->fetchAll(PDO::FETCH_ASSOC);
-                }
-                ?>
-
-                <div id="user" style="background-image: url('../imagens/users/<?= $fotolinha[0]['foto'] ?>'); background-size: 100%;">
-                </div>
-
-                <?php
+                    ?><div id="user" style="background-image: url('../imagens/users/<?= $fotolinha[0]['foto'] ?>'); background-size: 100%;">
+                    </div>
+                <?php }
                 if (userLogado()) {
                     echo "
                     <div id='botao-direito'>
@@ -240,7 +231,7 @@ endforeach;
                         }
                     });
                 }
-                
+
                 function getContentSinal(id) {
                     $.ajax({
                         type: "GET",
@@ -248,10 +239,10 @@ endforeach;
                         dataType: "json",
                         success: function (data) {
                             $('#marker' + id).html(
-                                '<h1>' + data.titulo + '</h1>' +
+                                '<h1 style="font-size:1em;">' + data.titulo + '</h1>' +
+                                data.descricao +
                                 '<p style="font-size:0.8em; margin: 0 0 10px 0">'
-                                  + 'Adicionado em ' + data.data_public.substr(8,2) + data.data_public.substr(4,3) + '-' + data.data_public.substr(0,4) + '</p>'
-                                  + data.descricao				
+                                + 'Adicionado em ' + data.data_public.substr(8,2) + data.data_public.substr(4,3) + '-' + data.data_public.substr(0,4) + '</p>'
                             );
                             $('#marker' + id).css('background', 'none');
                         }
@@ -274,7 +265,7 @@ endforeach;
                         getContentSinal(id);
                     };
                 }
-                
+
 
                 // FUNÇÃO QUE CARREGA KML
                 function loadKmlLayer(src, map) {
