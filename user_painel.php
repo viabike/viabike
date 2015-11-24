@@ -13,12 +13,14 @@ require_once("verificaSessao.php");
 $(document).ready(function () {
 	$('#passNotOk').hide();
 	$("#botaoOk").hide();
+	$("#senha").css("border", "1px solid #bdc3c7");
 
 	$("#senha").keyup(function(){
+		var senha = $(this).val();
 			$.ajax({
 			type: "POST",
 			url: "user_painel_verifica.php",
-			data: "id_usuario=<?php echo $usuario->id_usuario ?>&senha=" + $("#senha").val(),
+			data: "id_usuario=<?php echo $usuario->id_usuario ?>&senha=" + senha,
 			success: function(resultado){
 				var retorno = resultado;
 				getMessage(retorno);
@@ -32,15 +34,13 @@ $(document).ready(function () {
 
 //exibe mensagem caso esteja errado
 function getMessage(type) {
-	if (type  === 1) {
-		$("#senha").css("border", "1px solid #bdc3c7");
-		$('#passNotOk').hide();
+	if (type  == 1) {
+		$("#senha").css("border", "1px solid #40bd68");
 		$("#botaoNotOK").hide();
 		$("#botaoOk").show();
 	}
 	else {
 		$("#senha").css("border", "1px solid #f00");
-		$("#passNotOk").show();
 		$("#botaoNotOK").show();
 		$("#botaoOk").hide();
 	}
@@ -80,7 +80,7 @@ $user = $user_buscador->fetchAll(PDO::FETCH_OBJ);
 				<a href="user_desativar.php?id_usuario=<?=$usuario->id_usuario?>" style="float: left;font-size:14px; line-height:65px; color:#535455;">Desativar conta</button></a>
 
 				<input type="button" value="Alterar" class="button" style="float: right; background-color: #c0c0c0; cursor: auto;" id="botaoNotOK">
-				<input type="submit" value="Alterar" class="button" style="float: right" id="botaoOk">
+				<input type="submit" value="Alterar" class="button" style="float: right; background-color: #40bd68;" id="botaoOk">
 			</form>
 
 
