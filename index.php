@@ -210,7 +210,7 @@ endforeach;
                         iconSinal = 'imagens/sinal_obras.png';
                     }
                     else if (sinal[5] === "IT") {
-                        iconSinal = 'imagens/sinal_inderditado.png';
+                        iconSinal = 'imagens/sinal_interditado.png';
                     }
                     else if (sinal[5] === "AC") {
                         iconSinal = 'imagens/sinal_acidentado.png';
@@ -364,7 +364,7 @@ endforeach;
                                     iconSinal = 'imagens/sinal_obras.png';
                                 }
                                 else if (sinal['categoria'] === "IT") {
-                                    iconSinal = 'imagens/sinal_inderditado.png';
+                                    iconSinal = 'imagens/sinal_interditado.png';
                                 }
                                 else if (sinal['categoria'] === "AC") {
                                     iconSinal = 'imagens/sinal_acidentado.png';
