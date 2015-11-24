@@ -6,7 +6,7 @@ require_once("funcoes/funcoes.php");
 $pdo = conectar();
 
 // Pontos de interesse
-$buscaPonto = $pdo->prepare("SELECT * FROM ponto_interesse");
+$buscaPonto = $pdo->prepare("SELECT * FROM sinalizacao WHERE DATEDIFF(CURDATE(), data_public) <  60");
 $buscaPonto->execute();
 
 $linhaPonto = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
