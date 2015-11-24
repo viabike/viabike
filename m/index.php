@@ -6,13 +6,13 @@ require_once("funcoes/funcoes.php");
 $pdo = conectar();
 
 // Pontos de interesse
-$buscaPonto = $pdo->prepare("SELECT * FROM sinalizacao WHERE DATEDIFF(CURDATE(), data_public) <  60");
+$buscaPonto = $pdo->prepare("SELECT * FROM ponto_interesse");
 $buscaPonto->execute();
 
 $linhaPonto = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 
 // Sinalizações
-$buscaSinal = $pdo->prepare("SELECT * FROM sinalizacao");
+$buscaSinal = $pdo->prepare("SELECT * FROM sinalizacao WHERE DATEDIFF(CURDATE(), data_public) <  60");
 $buscaSinal->execute();
 
 $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
@@ -232,7 +232,7 @@ endforeach;
                         }
                     });
                 }
-
+                
                 //FUNÇÃO QUE EXIBE JANELA DE INFORMAÇÕES DO PONTO
                 function infoCallback(infowindow, marker, id) {
                     return function() {
