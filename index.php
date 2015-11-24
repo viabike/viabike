@@ -338,7 +338,7 @@ endforeach;
                                 });
                                 markersPontos.push(marker);
                                 var id_ponto = ponto['id_ponto'].toString();
-                                google.maps.event.addListener(marker, "click", infoCallback(infowindow, marker, id_ponto));
+                                google.maps.event.addListener(marker, "click", infoCallbackPonto(infowindow, marker, id_ponto));
                             });
                         }
                     });
@@ -380,7 +380,7 @@ endforeach;
                                 });
                                 markersSinal.push(markerS);
                                 var id_sinal = sinal['id_sinal'].toString();
-                                google.maps.event.addListener(markerS, "click", infoCallback(infowindow, markerS, id_sinal));
+                                google.maps.event.addListener(markerS, "click", infoCallbackSinal(infowindow, markerS, id_sinal));
                             });
                         }
                     });
