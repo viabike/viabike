@@ -44,6 +44,18 @@ require_once("verificaSessao.php");
             $("#botaoOk").hide();
         }
     }
+
+    //  Confirmação para desativar a conta
+    function confirmaDesativar() {
+        var conf1 = confirm("Deseja realmente desativar sua conta? \nVocê pode reativá-la apenas fazendo  login novamente.");
+
+        if (conf1) {
+            var conf2 = confirm("Tem certeza? \nAs sinalizações que você criou deixarão de ser exibidas no mapa.");
+            if (conf2) {
+                window.location.href = "user_desativar.php?id_usuario=<?= $usuario->id_usuario ?>";
+            }
+        }
+    }
 </script>
 
 <?php
@@ -73,14 +85,14 @@ $user = $user_buscador->fetchAll(PDO::FETCH_OBJ);
 
         Confirme sua senha:<input type="password" name="senha" id="senha" class="input" required><br>
 
-        <a href="user_desativar.php?id_usuario=<?= $usuario->id_usuario ?>" style="float: left;font-size:14px; line-height:65px; color:#535455;">Desativar conta</button></a>
+        <a onClick="confirmaDesativar();" class="link-desativar"">Desativar conta</a>
 
         <input type="button" value="Alterar" class="button" style="float: right; background-color: #c0c0c0; cursor: auto;" id="botaoNotOK">
         <input type="submit" value="Alterar" class="button" style="float: right; background-color: #40bd68;" id="botaoOk">
     </form>
 
 
-<?php
+    <?php
 endforeach;
 require_once("template/footer.php");
 ?>

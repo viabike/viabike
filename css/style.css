@@ -444,4 +444,13 @@ table td{
   color:#fff;
 }
 
+.link-desativar {
+    float: left; 
+    font-size:14px; 
+    text-decoration: underline; 
+    line-height:65px; 
+    color:#535455; 
+    cursor: pointer;
+}
+
 /*CLASSES*/
