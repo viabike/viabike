@@ -60,7 +60,7 @@ if (isset($_POST['submit'])) {
         <h1>Cadastre-se</h1><br>
         
         <label for="nome">Nome Completo:</label>
-        <input type="text" name="nome" class="form" placeholder="ex: John Smith" maxlength="45" pattern="^[a-zA-Z\s][^0-9]+$" required title="Nome deve conter apenas letras e no mínimo 3 caracteres.">
+        <input type="text" name="nome" class="form" placeholder="ex: John Smith" maxlength="45" pattern="^[a-zA-Z\s]{3,}[^0-9]+$" required title="Deve conter apenas letras, entre 3 e 5 caracteres.">
         <?php if (isset($_POST['submit'])) {echo $nomeErro;} ?>
 
         <br><label for="email">E-mail:</label>
