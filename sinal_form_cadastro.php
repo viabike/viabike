@@ -8,7 +8,7 @@ require_once("template/header.php");
 
     <div id='formSinalEsquerda'>
         Titulo:   <input type="text" name="titulo" class="formSinalInput" maxlength="45" minlength="3" required><br>
-        Categoria:<select name="categoria_sinal" id="categoria_sinal" class="formSinalInput selectSinal">
+        Categoria:<select name="categoria" id="categoria_sinal" class="formSinalInput selectSinal">
             <option value="OB" selected>Obras</option>
             <option value="IT">Interditado</option>
             <option value="AC">Acidentado</option>
