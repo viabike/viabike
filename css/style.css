@@ -358,7 +358,7 @@ table td{
 }
 
 
-/*TEXT √ÅREA*/
+/*TEXT √?REA*/
 .formSinal textarea { resize:both; } /* none|horizontal|vertical|both */
 .formSinal textarea.vert { resize:vertical; }
 .formSinal textarea.noResize { resize:none; }
@@ -417,6 +417,7 @@ table td{
     border-radius:4px;
     cursor:pointer;
     color:#fff;
+    text-transform: capitalize;
 }
 
 .entrar{
@@ -430,6 +431,18 @@ table td{
     cursor:pointer;
     color:#fff;
 }
+.sinalizacao{
+    width:auto;
+    padding: 4px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #e89401;
+    line-height: 31px;
+    border-radius:4px;
+    cursor:pointer;
+    color:#fff;
+}
+
 
 .link-desativar {
     float: left; 
