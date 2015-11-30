@@ -1,7 +1,8 @@
 <?php
 	require_once("../conexao/conexao.php");
 	require_once("template/header.php");
-
+	require_once("verificaAdmin.php");
+	
 	$id_ponto = $_GET['id_ponto'];
 	$pdo = conectar();
 

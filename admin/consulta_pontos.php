@@ -1,5 +1,6 @@
-<?php include("template/header.php");
-if(adminLogado()){
+<?php
+require_once("template/header.php");
+require_once("verificaAdmin.php");
 ?>
 <h1 style="text-align: left">Consultar pontos de interesse
 <a href="insere_ponto.php"><button class="button">Cadastar</button></a></h1><br>
@@ -75,8 +76,5 @@ endforeach;
 }*/
 ?>
 <?php
-include("template/footer.php");
-}
-else{
-	header("location:index.php");
-} ?>
+require_once("template/footer.php");
+?>

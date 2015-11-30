@@ -1,4 +1,7 @@
-<?php include("template/header.php");?>
+<?php 
+require_once("template/header.php");
+require_once("verificaAdmin.php");
+?>
 	<script src="funcoes/funcoes.js"></script>
 
 	<center>
@@ -81,4 +84,4 @@
 		google.maps.event.addDomListener(window, 'load', initMap);
 	</script>
 
-<?php include("template/footer.php");?>
+<?php require_once("template/footer.php");?>
