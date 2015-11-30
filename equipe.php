@@ -1,4 +1,4 @@
-<?php include("template/header.php");?>
+<?php require_once("template/header.php");?>
 
 <center><h1>Equipe</h1></center>
 <div class="esp"></div>
@@ -122,4 +122,4 @@ $(document).ready(function(){
 		</p>
 	</center>
 </div>
-<?php include("template/footer.php");?>
+<?php require_once("template/footer.php");?>

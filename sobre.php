@@ -1,4 +1,4 @@
-<?php include("template/header.php");?>
+<?php require_once("template/header.php");?>
 <script>
 $(document).ready(function(){
 	$('.img-pb').mouseenter(function() {
@@ -29,4 +29,4 @@ $(document).ready(function(){
 <img src="imagens/equipe/equipe-pb.jpg" alt="Nossa Equipe" class="img-pb">
 <img src="imagens/equipe/equipe.jpg" alt="Nossa Equipe" class="img-hover">
 </center>
-<?php include("template/footer.php");?>
+<?php require_once("template/footer.php");?>

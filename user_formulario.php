@@ -1,8 +1,7 @@
 <?php
 require_once("template/header.php");
-
 if (isset($_POST['submit'])) {
-    include_once("user_form_verifica_dados.php");
+    include_once("user_form_cad_verifica_dados.php");
 }
 ?>
 <link rel="stylesheet" type="text/css" href="admin/css/style.css">
@@ -13,7 +12,6 @@ if (isset($_POST['submit'])) {
         $("#campoSenha").css("border", "1px solid #bdc3c7");
         $("#campoConfSenha").css("border", "1px solid #bdc3c7");
         $("#emailIndisponivel").hide();
-
         $("#campoConfSenha").keyup(function() {
             var senha = $("#campoSenha").val();
             var confSenha = $(this).val();
@@ -25,8 +23,6 @@ if (isset($_POST['submit'])) {
                 $("#campoConfSenha").css("border", "1px solid #f00");
             }
         });
-
-
         $("#campoemail").keyup(function() {
             var email = $(this).val();
       
@@ -50,7 +46,6 @@ if (isset($_POST['submit'])) {
             }
         });
     });
-
     function getMessage(type) {
         if (type == 1) {
             $("#campoemail").css("border", "1px solid #f00");
