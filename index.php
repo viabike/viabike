@@ -30,7 +30,33 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-
+	<link rel="stylesheet" href="/ui/css/black-tie/jquery-ui-1.10.4.custom.min.css" id="theme">
+	<script src="/ui/js/jquery-ui.min.js"></script>
+	<script>  
+		//Tooltip config    
+		$(function() {
+		  $( document ).tooltip({
+			position: {
+			  my: "center bottom-15",
+			  at: "center top",
+			  using: function( position, feedback ) {
+				$( this ).css( position );
+				$( "<div>" )
+				  .addClass( "arrow" )
+				  .addClass( feedback.vertical )
+				  .addClass( feedback.horizontal )
+				  .appendTo( this );
+			  }
+			},
+			 items: "[tooltip]",
+			 content: function() {
+					  return $(this).attr("tooltip");}        
+		  });
+		});
+		$('#text-report_ifr').tooltip( "option", "disabled", true );
+		$('#text-report_ifr *[title]').tooltip('disable');
+		$('#text-report_ifr').tooltip('disable');        
+	</script>
 
     <body>
         <div id="wrapper-index">
