@@ -163,9 +163,9 @@ endforeach;
                         var myLatLng = new google.maps.LatLng(ponto[1], ponto[2]);
                         var iconPonto = '';
                         if (ponto[3] === "PG") {
-                            iconPonto = 'imagens/posto1.png';
+                            iconPonto = 'imagens/ponto_posto.png';
                         } else if (ponto[3] === "BC") {
-                            iconPonto = 'imagens/bike1.png';
+                            iconPonto = 'imagens/ponto_bicicletaria.png';
                         }
                         markerP = new google.maps.Marker({
                             position: myLatLng,
@@ -189,7 +189,7 @@ endforeach;
                             iconSinal = 'imagens/sinal_obras.png';
                         }
                         else if (sinal[5] === "IT") {
-                            iconSinal = 'imagens/sinal_inderditado.png';
+                            iconSinal = 'imagens/sinal_interditado.png';
                         }
                         else if (sinal[5] === "AC") {
                             iconSinal = 'imagens/sinal_acidentado.png';
@@ -305,9 +305,9 @@ endforeach;
                                         var myLatLng = new google.maps.LatLng(ponto['latitude'], ponto['longitude']);
                                         var iconPonto = '';
                                         if (ponto['categoria'] === "PG") {
-                                            iconPonto = 'imagens/posto1.png';
+                                            iconPonto = 'imagens/ponto_posto.png';
                                         } else if (ponto['categoria'] === "BC") {
-                                            iconPonto = 'imagens/bike1.png';
+                                            iconPonto = 'imagens/ponto_bicicletaria.png';
                                         }
                                         marker = new google.maps.Marker({
                                             position: myLatLng,
@@ -345,7 +345,7 @@ endforeach;
                                             iconSinal = 'imagens/sinal_obras.png';
                                         }
                                         else if (sinal['categoria'] === "IT") {
-                                            iconSinal = 'imagens/sinal_inderditado.png';
+                                            iconSinal = 'imagens/sinal_interditado.png';
                                         }
                                         else if (sinal['categoria'] === "AC") {
                                             iconSinal = 'imagens/sinal_acidentado.png';
