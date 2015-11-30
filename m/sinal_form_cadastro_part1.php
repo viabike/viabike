@@ -4,7 +4,7 @@
 	<div id="formWindow">
 		<form action="sinal_form_cadastro_part2.php" class="formSinal" name="formSinal" method="POST">
 			<center>
-				<h1>Cadastrar sinalização</h1><br>
+				<h1>Cadastrar Sinalização</h1><br>
 			</center>
 
 			<div class="form_user2">

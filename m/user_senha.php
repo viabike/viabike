@@ -3,7 +3,7 @@ require_once("template/header.php");
 require_once("../conexao/conexao.php");
 require_once("verificaSessao.php");
 
-echo '<center><h1>Alterar senha</h1></center>';
+echo '<center><h1>Alterar Senha</h1></center>';
 
 ?>
 
