@@ -60,7 +60,7 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
                         ?>
                         <?php if (!userLogado()) {
                             ?>
-                            <li><a href="user_formulario.php"><button class="entrar">ENTRAR</button></a></li>
+                            <li><a href="user_formulario.php"><button class="entrar">Entrar</button></a></li>
                         <?php } ?>
                         <li><a href="equipe.php">EQUIPE</a></li>
                         <li><a href="sobre.php">SOBRE</a></li>
@@ -104,7 +104,7 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
             <?php if (userLogado()) {
                 ?>
                 <div id="botao-sinalizacao">
-                    <a href="sinal_form_cadastro.php"><button style="background: #BD4040;"class="entrar">SINALIZAR</button></a>
+                    <a href="sinal_form_cadastro.php"><button style="background: #e89401;" class="sinalizacao">Sinalizar</button></a>
                 </div>
             <?php } ?>
         </div>

@@ -3,7 +3,7 @@ require_once("template/header.php");
 ?>
 <form action="sinal_confirmaCad.php" class="formSinal" name="formSinal" method="POST">
     <center>
-        <h1>Cadastrar sinalização</h1><br>
+        <h1>Cadastrar Sinalização</h1><br>
     </center>
 
     <div id='formSinalEsquerda'>
@@ -14,13 +14,13 @@ require_once("template/header.php");
             <option value="AC">Acidentado</option>
             <option value="OT">Outros</option>
         </select><br>
-        <textarea placeholder="Descrição..."class="formSinalInput"name="descricao"></textarea><br>
+        <textarea placeholder="Descrição..." class="formSinalInput" name="descricao"></textarea><br>
     </div>
     <div id='formSinalDireita'>
         <div id="mapaSinal"></div>
         <input  type="hidden" name="latitude" class="formSinalInput latLng" id="lat" value="-23.6255903">
         <input  type="hidden" name="longitude" class="formSinalInput latLng lng" id="lng" value="-45.4241453">
-        <input type="submit" value="Cadastrar" class="button botaoSubmitSinal" onclick="return validar();">
+        <input type="submit" value="Cadastrar" class="button sinalizacao botaoSubmitSinal" onclick="return validar();">
     </div>
 </form>
 <script>
