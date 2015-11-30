@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
         $("#campoConfSenha").keyup(function() {
             var senha = $("#campoSenha").val();
             var confSenha = $(this).val();
-
+            
             if (confSenha === senha) {
                 $("#campoConfSenha").css("border", "1px solid #40bd68");
             }
@@ -29,18 +29,25 @@ if (isset($_POST['submit'])) {
 
         $("#campoemail").keyup(function() {
             var email = $(this).val();
-            $.ajax({
-                type: "POST",
-                url: "user_form_verifica_email.php",
-                data: "email=" + email,
-                success: function(resultado) {
-                    var retorno = resultado;
-                    getMessage(retorno);
-                },
-                error: function() {
-                    alert("Erro ao verificar os detalhes do usuario!");
-                }
-            });
+      
+            if (email === "") {
+                $("#campoemail").css("border", "1px solid #bdc3c7");
+                $("#emailIndisponivel").hide();
+            }
+            else {
+                $.ajax({
+                    type: "POST",
+                    url: "user_form_verifica_email.php",
+                    data: "email=" + email,
+                    success: function(resultado) {
+                        var retorno = resultado;
+                        getMessage(retorno);
+                    },
+                    error: function() {
+                        alert("Erro ao verificar os detalhes do usuario!");
+                    }
+                });
+            }
         });
     });
 
