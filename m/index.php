@@ -68,7 +68,7 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
                 if (userLogado()) {
                     echo "
                     <div id='botao-direito'>
-                        <a href='sinal_form_cadastro.php'><button class='button_direito' style='background-color: #BD4040;'>SINALIZAR</button></a>
+                        <a href='sinal_form_cadastro_part1.php'><button class='button_direito' style='background-color: #BD4040;'>SINALIZAR</button></a>
                     </div>
                     ";
                 }
