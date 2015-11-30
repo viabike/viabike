@@ -20,7 +20,7 @@ require_once("template/header.php");
         <div id="mapaSinal"></div>
         <input  type="hidden" name="latitude" class="formSinalInput latLng" id="lat" value="-23.6255903">
         <input  type="hidden" name="longitude" class="formSinalInput latLng lng" id="lng" value="-45.4241453">
-        <input type="submit" value="Cadastrar" class="button sinalizacao botaoSubmitSinal" onclick="return validar();">
+        <input type="submit" value="Cadastrar" class="button sinalizacao botaoSubmitSinal"  onclick="return validar();">
     </div>
 </form>
 <script>

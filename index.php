@@ -104,7 +104,7 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
             <?php if (userLogado()) {
                 ?>
                 <div id="botao-sinalizacao">
-                    <a href="sinal_form_cadastro.php"><button style="background: #e89401;" class="sinalizacao">Sinalizar</button></a>
+                    <a href="sinal_form_cadastro.php"><button style="background: #e89401;" class="sinalizacao" >Sinalizar</button></a>
                 </div>
             <?php } ?>
         </div>

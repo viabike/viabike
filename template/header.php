@@ -45,7 +45,7 @@ require_once("admin/funcoes/funcoes.php");
                         ?>
 
 <?php if (!userLogado()) { ?>
-                            <li><a href="user_formulario.php"><button class="entrar">Entrar</button></a></li>
+                            <li><a href="user_formulario.php"><button class="entrar">Entrar </button></a></li>
 <?php } ?>
                         <li><a href="equipe.php">EQUIPE</a></li>
                         <li><a href="sobre.php">SOBRE</a></li>
