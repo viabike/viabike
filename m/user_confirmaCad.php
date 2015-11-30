@@ -25,6 +25,11 @@ else {
     $user_conf->bindValue(":usuario_ativo", true, PDO::PARAM_BOOL);
     $user_conf->bindValue(":foto", 'nouser.png', PDO::PARAM_STR);
     $user_conf->execute();
-    
-    header("location: index.php");
+
+    $_SESSION['email'] = $email;
+    $_SESSION['nome'] = strtoupper($nome);
+    $_SESSION['tipo'] = 'user';
+
+    setcookie('email', $email, time() + 3600);
+    header("location: user_painel.php");
 }
