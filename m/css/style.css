@@ -438,7 +438,7 @@ div.infoWindow {
 div.infoWindow h1{
     text-transform: capitalize;
     font-size:14px;
-    font-weight:200;
+    font-weight:600;
     margin: 0 0 3px 0;
 }
 div.infoWindow p{
