@@ -8,6 +8,11 @@ $user_conf->bindValue(":tipo_usuario", 'u', PDO::PARAM_STR);
 $user_conf->bindValue(":usuario_ativo", true, PDO::PARAM_BOOL);
 $user_conf->execute();
 
-header("location: user_sucesso_cadastro.php");
+$_SESSION['email'] = $email;
+$_SESSION['nome'] = strtoupper($nome);
+$_SESSION['tipo'] = 'user';
+
+setcookie('email', $email, time() + 3600);
+header("location: user_painel.php");
 
 ?>
