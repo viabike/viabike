@@ -428,32 +428,28 @@ div#formSinal{
 
 /*INFOWINDOW PONTO E SINALIZAÇÃO*/
 div.infoWindow {
-    min-width: 100%;
-    min-height: 10px;
+    min-width: 150px;
+    min-height: 50px;
     margin:auto;
     background: white;
     padding: 7px 0px 0px 7px;
     font-family: 'Raleway', sans-serif;
-    min-width:200px;
-    min-height:100px;
 }
 div.infoWindow h1{
-    font-size:46px;
-    font-weight:600;
-}
-div.infoWindow h3{
-    font-size:45px;
-    font-weight:600;
+    text-transform: capitalize;
+    font-size:14px;
+    font-weight:200;
+    margin: 0 0 3px 0;
 }
 div.infoWindow p{
-    font-size: 45px;
+    font-size: 40px;
 }
 div.infoWindowSinal {
     margin:auto;
     background: white;
     padding: 7px 0px 0px 7px;
     font-family: 'Raleway', sans-serif;
-    min-width:200px;
-    min-height:1px;
+    min-width:150px;
+    min-height:50px;
 }
 /*FIM INFOWINDOW PONTO E SINALIZAÇÃO*/

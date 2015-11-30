@@ -242,11 +242,11 @@ endforeach;
                         dataType: "json",
                         success: function (data) {
                             $('#marker' + id).html(
-                                '<h1 style="font-size:1em;">' + data.titulo + '</h1>' +
-                                data.descricao +
+                                '<h1>' + data.titulo + '</h1>' +
                                 '<p style="font-size:0.8em; margin: 0 0 10px 0">'
-                                + 'Adicionado em ' + data.data_public.substr(8,2) + data.data_public.substr(4,3) + '-' + data.data_public.substr(0,4) + '</p>'
-                            );
+                                + 'Adicionado em ' + data.data_public.substr(8, 2) + data.data_public.substr(4, 3) + '-' + data.data_public.substr(0, 4) + '</p>'
+                                + data.descricao
+                                );
                             $('#marker' + id).css('background', 'none');
                         }
                     });
