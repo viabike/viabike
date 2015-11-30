@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
         $("#campoemail").css("border", "1px solid #bdc3c7");
         $("#campoSenha").css("border", "1px solid #bdc3c7");
         $("#campoConfSenha").css("border", "1px solid #bdc3c7");
-        $("#emailDisponivel").hide();
+        $("#emailIndisponivel").hide();
 
         $("#campoConfSenha").keyup(function() {
             var senha = $("#campoSenha").val();
@@ -47,10 +47,11 @@ if (isset($_POST['submit'])) {
     function getMessage(type) {
         if (type == 1) {
             $("#campoemail").css("border", "1px solid #f00");
-            $("#emailDisponivel").show();
+            $("#emailIndisponivel").show();      
         }
         else {
             $("#campoemail").css("border", "1px solid #40bd68");
+            $("#emailIndisponivel").hide();
         }
     }
 </script>
@@ -65,7 +66,7 @@ if (isset($_POST['submit'])) {
 
         <br><label for="email">E-mail:</label>
         <input type="email" name="email" id="campoemail" class="form" placeholder="ex: john@smith.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required title="email@email.com">
-        <span id="emailDisponivel" style="color: #f00">Este email já foi utilizado.</span>  
+        <span id="emailIndisponivel" style="color: #f00">Este email já foi utilizado.</span>  
         <?php if (isset($_POST['submit'])) {echo $emailExistenteErro;} ?>
         <?php if (isset($_POST['submit'])) {echo $emailNValidoErro;} ?>
 
