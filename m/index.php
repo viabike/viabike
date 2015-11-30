@@ -12,7 +12,7 @@ $buscaPonto->execute();
 $linhaPonto = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 
 // Sinalizações
-$buscaSinal = $pdo->prepare("SELECT `s`.* FROM `sinalizacao` as s 
+$buscaSinal = $pdo->prepare("SELECT `s`.* FROM `sinalizacao` as s
 INNER JOIN `usuario` as u ON `s`.`fk_id_usuario` = `u`.`id_usuario` WHERE `u`.`usuario_ativo` = 1 AND DATEDIFF(CURDATE(), `s`.`data_public`) <  60;");
 $buscaSinal->execute();
 
@@ -62,7 +62,7 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
                     $fotouser = $pdo->prepare("SELECT foto FROM usuario WHERE email = '" . $email . "'");
                     $fotouser->execute();
                     $fotolinha = $fotouser->fetchAll(PDO::FETCH_ASSOC);
-                    ?><div id="user" style="background-image: url('../imagens/users/<?= $fotolinha[0]['foto'] ?>'); background-size: 100%;">
+                    ?><div id="user" style="background: url('../imagens/users/<?= $fotolinha[0]['foto'] ?>') no-repeat center center; background-size: cover;">
                     </div>
                 <?php }
                 if (userLogado()) {
