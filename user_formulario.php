@@ -3,6 +3,10 @@ require_once("template/header.php");
 if (isset($_POST['cad-submit'])) {
     include_once("user_form_cad_verifica_dados.php");
 }
+
+if (isset($_POST['login-submit'])) {
+    include_once("user_form_log_verifica_dados.php");
+}
 ?>
 <link rel="stylesheet" type="text/css" href="admin/css/style.css">
 
@@ -83,11 +87,11 @@ if (isset($_POST['cad-submit'])) {
         <input type="submit" name="cad-submit" value="Cadastrar" class="button">
     </form>
 
-    <form action="confirma_login.php" class="form_user2" method="POST">
+    <form action="<?php $_SERVER['PHP_SELF']; ?>" class="form_user2" method="POST">
         <h1>Entrar</h1><br>
         E-mail:<input type="email" name="email" class="form" placeholder="ex: john@smith.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required title="email@email.com"><br>
         Senha:<input type="password" name="senha" class="form" required><br>
-        <input type="submit" value="Entrar" class="button">
+        <input type="submit" name="login-submit" value="Entrar" class="button">
     </form>
 </div>
 <?php
