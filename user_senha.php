@@ -13,4 +13,4 @@ echo '<h1 style="float: left; text-align: left">Alterar senha</h1>
 </form>
 
 <?php
-include("template/footer.php");
+require_once("template/footer.php");

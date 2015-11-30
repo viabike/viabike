@@ -1,5 +1,6 @@
 <?php
 require_once("template/header.php");
+require_once("verificaSessao.php");
 ?>
 <form action="sinal_confirmaCad.php" class="formSinal" name="formSinal" method="POST">
     <center>
@@ -96,4 +97,4 @@ require_once("template/header.php");
 
 		google.maps.event.addDomListener(window, 'load', initMap);
 	</script>
-<?php include("template/footer.php");?>
+<?php require_once("template/footer.php");?>

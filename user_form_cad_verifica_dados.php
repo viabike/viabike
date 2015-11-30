@@ -51,7 +51,7 @@ if ($senhaC != $senhaConf) {
 }
 
 if ($numErros == 0) {
-    include_once("user_confirmaCad.php");
+	require_once("user_confirmaCad.php");
 }
 
 ?>
