@@ -55,49 +55,49 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
 			});       
 		</script>
 		<style>
-  .ui-tooltip, .arrow:after {
-    background: black;
-    border: none;
-  }
-  .ui-tooltip {
-    padding: 3px 10px;
-    color: white;
-    border-radius: 2px;
-	font-size: 10px;
-  }
-  .arrow {
-    width: 70px;
-    height: 16px;
-    overflow: hidden;
-    position: absolute;
-    left: 50%;
-    margin-left: -35px;
-    bottom: -16px;
-  }
-  .arrow.top {
-    top: -16px;
-    bottom: auto;
-  }
-  .arrow.left {
-    left: 20%;
-  }
-  .arrow:after {
-    content: "";
-    position: absolute;
-    left: 20px;
-    top: -20px;
-    width: 25px;
-    height: 25px;
-    box-shadow: 6px 5px 9px -9px black;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-  .arrow.top:after {
-    bottom: -20px;
-    top: auto;
-  }
-  </style>
+		  .ui-tooltip, .arrow:after {
+			background: black;
+			border: none;
+		  }
+		  .ui-tooltip {
+			padding: 3px 10px;
+			color: white;
+			border-radius: 2px;
+			font-size: 10px;
+		  }
+		  .arrow {
+			width: 70px;
+			height: 16px;
+			overflow: hidden;
+			position: absolute;
+			left: 50%;
+			margin-left: -35px;
+			bottom: -16px;
+		  }
+		  .arrow.top {
+			top: -16px;
+			bottom: auto;
+		  }
+		  .arrow.left {
+			left: 20%;
+		  }
+		  .arrow:after {
+			content: "";
+			position: absolute;
+			left: 20px;
+			top: -20px;
+			width: 25px;
+			height: 25px;
+			box-shadow: 6px 5px 9px -9px black;
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+		  }
+		  .arrow.top:after {
+			bottom: -20px;
+			top: auto;
+		  }
+	</style>
 	</head>
     <body>
         <div id="wrapper-index">
@@ -119,7 +119,7 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
                             foreach ($user as $usuario):
                                 echo "
 						<li><a href='user_logout.php'>SAIR</a></li>
-						<li><a href='user_painel.php'>" . $_SESSION['nome'] . "</a></li>
+						<li><a href='user_painel.php' tooltip="Alterar Perfil'>" . $_SESSION['nome'] . "</a></li>
 						<li><a href='user_painel.php'><img src='imagens/users/" . $usuario->foto . "' width='30px' height='30px'></a></li>
 						<li style='color:#a7a7a7'> | </li>";
                             endforeach;

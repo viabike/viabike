@@ -43,6 +43,50 @@ require_once("admin/funcoes/funcoes.php");
 		$('#text-report_ifr *[title]').tooltip('disable');
 		$('#text-report_ifr').tooltip('disable');        
 		</script>
+				<style>
+		  .ui-tooltip, .arrow:after {
+			background: black;
+			border: none;
+		  }
+		  .ui-tooltip {
+			padding: 3px 10px;
+			color: white;
+			border-radius: 2px;
+			font-size: 10px;
+		  }
+		  .arrow {
+			width: 70px;
+			height: 16px;
+			overflow: hidden;
+			position: absolute;
+			left: 50%;
+			margin-left: -35px;
+			bottom: -16px;
+		  }
+		  .arrow.top {
+			top: -16px;
+			bottom: auto;
+		  }
+		  .arrow.left {
+			left: 20%;
+		  }
+		  .arrow:after {
+			content: "";
+			position: absolute;
+			left: 20px;
+			top: -20px;
+			width: 25px;
+			height: 25px;
+			box-shadow: 6px 5px 9px -9px black;
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+		  }
+		  .arrow.top:after {
+			bottom: -20px;
+			top: auto;
+		  }
+	</style>
     </head>
     <body>
         <div id="wrapper">
