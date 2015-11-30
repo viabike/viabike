@@ -1,13 +1,12 @@
 <?php
-
 require_once("conexao/conexao.php");
 
-$id_ponto = $_GET['id'];
+$id_sinal = $_GET['id'];
 $pdo = conectar();
 
-$buscaPonto = $pdo->prepare("SELECT * FROM ponto_interesse where id_ponto = $id_ponto");
-//Executando a QUERY
-$buscaPonto->execute();
+$buscaPonto = $pdo -> prepare("SELECT * FROM sinalizacao WHERE id_sinal = $id_sinal");
+
+$buscaPonto -> execute();
 $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 
 $linhas = $linha[0];

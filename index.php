@@ -12,7 +12,8 @@ $buscaPonto->execute();
 $linhaPonto = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 
 // Sinalizações
-$buscaSinal = $pdo->prepare("SELECT * FROM sinalizacao");
+$buscaSinal = $pdo->prepare("SELECT `s`.* FROM `sinalizacao` as s 
+INNER JOIN `usuario` as u ON `s`.`fk_id_usuario` = `u`.`id_usuario` WHERE `u`.`usuario_ativo` = 1 AND DATEDIFF(CURDATE(), `s`.`data_public`) <  60;");
 $buscaSinal->execute();
 
 $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
@@ -22,6 +23,8 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
 
     <title>ViaBike.me</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -65,13 +68,6 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
                     </ul>
                 </div>
             </div>
-            <!---
-            <?php // if(!userLogado()){   ?>
-        <div id="entrar">
-                            <p><center><a href="user_formulario.php">Cadastre-se / Entrar</a></center></p>
-                    </div>
-            <?php // }    ?>
-            -->
         </div>
 
 
@@ -111,31 +107,7 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
                     <a href="sinal_form_cadastro.php"><button style="background: #BD4040;"class="entrar">SINALIZAR</button></a>
                 </div>
             <?php } ?>
-
-
-            <!--
-                    <div id="info-viabike">
-                            <p>Para os ciclistas de Caraguatatuba que querem economizar tempo e encontrar uma rota segura o ViaBike.me é um sistema web que mostra um mapa de ciclovias.</p>
-                    </div>
-
-
-                        <div class="text-home">
-                                <p>Para os ciclistas de Caraguatatuba que querem economizar tempo e encontrar uma rota segura. O ViaBike.me é um sistema web que mostra um mapa de ciclovias.</p>
-                        </div>
-
-                        <div class="legenda-home" style="text-align:right">
-                                <ul>
-                                        <li>Ciclovia Ativa <span class="legenda-cic-ativa">&#9679;</span></li>
-                                        <li>Ciclovia em Obras <span class="legenda-cic-obras"> &#9679;</span></li></li>
-                                </ul>
-                        </div>
-                    </div>
-
-                    <div id="footer">
-                    <center><p>&copy ViaBike.me - 2015</p></center>
-            -->
         </div>
-
 
         <script>
 
@@ -185,9 +157,9 @@ endforeach;
                     var myLatLng = new google.maps.LatLng(ponto[1], ponto[2]);
                     var iconPonto = '';
                     if (ponto[3] === "PG") {
-                        iconPonto = 'imagens/posto1.png';
+                        iconPonto = 'imagens/ponto_posto.png';
                     } else if (ponto[3] === "BC") {
-                        iconPonto = 'imagens/bike1.png';
+                        iconPonto = 'imagens/ponto_bicicletaria.png';
                     }
                     markerP = new google.maps.Marker({
                         position: myLatLng,
@@ -197,7 +169,7 @@ endforeach;
                     });
                     markersPontos.push(markerP);
                     var id = ponto[0].toString();
-                    google.maps.event.addListener(markerP, "click", infoCallback(infowindow, markerP, id));
+                    google.maps.event.addListener(markerP, "click", infoCallbackPonto(infowindow, markerP, id));
                 }
                 ;
 
@@ -210,7 +182,7 @@ endforeach;
                         iconSinal = 'imagens/sinal_obras.png';
                     }
                     else if (sinal[5] === "IT") {
-                        iconSinal = 'imagens/sinal_inderditado.png';
+                        iconSinal = 'imagens/sinal_interditado.png';
                     }
                     else if (sinal[5] === "AC") {
                         iconSinal = 'imagens/sinal_acidentado.png';
@@ -226,19 +198,18 @@ endforeach;
                     });
                     markersSinal.push(markerS);
                     var id = sinal[0].toString();
-                    google.maps.event.addListener(markerS, "click", infoCallback(infowindow, markerS, id));
+                    google.maps.event.addListener(markerS, "click", infoCallbackSinal(infowindow, markerS, id));
                 }
                 ;
 
             }
 
             function getContentPonto(id) {
-
                 $.ajax({
                     type: "GET",
                     url: "/viabike/get_info_ponto.php?id=" + id, //online é somente /get...
                     dataType: "json",
-                    success: function (data) {
+                    success: function(data) {
                         $('#marker' + id).html(
                                 '<h1>' + data.nome + '</h1>' +
                                 '<p><i class="fa fa-map-marker"></i> ' + data.rua + ', ' + data.num + ' - ' + data.bairro + '</p>' +
@@ -251,13 +222,38 @@ endforeach;
                 });
             }
 
+            function getContentSinal(id) {
+                $.ajax({
+                    type: "GET",
+                    url: "/viabike/get_info_sinal.php?id=" + id,
+                    dataType: "json",
+                    success: function(data) {
+                        $('#marker' + id).html(
+                                '<h1>' + data.titulo + '</h1>' +
+                                '<p style="font-size:0.8em; margin: 0 0 10px 0">'
+                                + 'Adicionado em ' + data.data_public.substr(8, 2) + data.data_public.substr(4, 3) + '-' + data.data_public.substr(0, 4) + '</p>'
+                                + data.descricao
+                                );
+                        $('#marker' + id).css('background', 'none');
+                    }
+                });
+            }
 
 //FUNÇÃO QUE EXIBE JANELA DE INFORMAÇÕES DO PONTO
-            function infoCallback(infowindow, marker, id) {
-                return function () {
+            function infoCallbackPonto(infowindow, marker, id) {
+                return function() {
                     infowindow.setContent('<div class="infoWindow" id="marker' + id + '" style="width:auto; height:auto; background: url(imagens/loading.gif) no-repeat center center;"></div>');
                     infowindow.open(map, marker);
                     getContentPonto(id);
+                };
+            }
+
+//FUNÇÃO QUE EXIBE JANELA DE INFORMAÇÕES DA SINALIZAÇÃO
+            function infoCallbackSinal(infowindow, marker, id) {
+                return function() {
+                    infowindow.setContent('<div class="infoWindow" id="marker' + id + '" style="width:auto; height:auto; background: url(imagens/loading.gif) no-repeat center center;"></div>');
+                    infowindow.open(map, marker);
+                    getContentSinal(id);
                 };
             }
 
@@ -281,30 +277,30 @@ endforeach;
 // filtro-ponto (pontos de interesse)
 // filtro-sinal (sinalizações)
 
-            $(document).ready(function () {
+            $(document).ready(function() {
                 //pegando o valor do campo
                 var filtro_ponto;
                 var filtro_sinal;
 
                 // Programaçao do botão "Pontos de Interesse"
-                $("#filtro-ponto").change(function () {
+                $("#filtro-ponto").change(function() {
                     filtro_ponto = $("#filtro-ponto").val();
                     $.ajax({
                         type: "GET",
                         url: "/viabike/filtro_pega_ponto.php?filtro_ponto=" + filtro_ponto,
                         dataType: "json",
-                        success: function (resultado) {
+                        success: function(resultado) {
                             while (markersPontos.length) {
                                 markersPontos.pop().setMap(null);
                             }
 
-                            $.each(resultado, function (i, ponto) {
+                            $.each(resultado, function(i, ponto) {
                                 var myLatLng = new google.maps.LatLng(ponto['latitude'], ponto['longitude']);
                                 var iconPonto = '';
                                 if (ponto['categoria'] === "PG") {
-                                    iconPonto = 'imagens/posto1.png';
+                                    iconPonto = 'imagens/ponto_posto.png';
                                 } else if (ponto['categoria'] === "BC") {
-                                    iconPonto = 'imagens/bike1.png';
+                                    iconPonto = 'imagens/ponto_bicicletaria.png';
                                 }
                                 marker = new google.maps.Marker({
                                     position: myLatLng,
@@ -314,7 +310,7 @@ endforeach;
                                 });
                                 markersPontos.push(marker);
                                 var id_ponto = ponto['id_ponto'].toString();
-                                google.maps.event.addListener(marker, "click", infoCallback(infowindow, marker, id_ponto));
+                                google.maps.event.addListener(marker, "click", infoCallbackPonto(infowindow, marker, id_ponto));
                             });
                         }
                     });
@@ -322,25 +318,25 @@ endforeach;
                 });
 
                 // Programação do botão "Sinalizações"
-                $("#filtro-sinal").change(function () {
+                $("#filtro-sinal").change(function() {
                     filtro_sinal = $("#filtro-sinal").val();
                     $.ajax({
                         type: "GET",
                         url: "/viabike/filtro_pega_sinal.php?filtro_sinal=" + filtro_sinal,
                         dataType: "json",
-                        success: function (resultado) {
+                        success: function(resultado) {
                             while (markersSinal.length) {
                                 markersSinal.pop().setMap(null);
                             }
 
-                            $.each(resultado, function (i, sinal) {
+                            $.each(resultado, function(i, sinal) {
                                 var myLatLng = new google.maps.LatLng(sinal['latitude'], sinal['longitude']);
                                 var iconSinal = '';
                                 if (sinal['categoria'] === "OB") {
                                     iconSinal = 'imagens/sinal_obras.png';
                                 }
                                 else if (sinal['categoria'] === "IT") {
-                                    iconSinal = 'imagens/sinal_inderditado.png';
+                                    iconSinal = 'imagens/sinal_interditado.png';
                                 }
                                 else if (sinal['categoria'] === "AC") {
                                     iconSinal = 'imagens/sinal_acidentado.png';
@@ -356,7 +352,7 @@ endforeach;
                                 });
                                 markersSinal.push(markerS);
                                 var id_sinal = sinal['id_sinal'].toString();
-                                google.maps.event.addListener(markerS, "click", infoCallback(infowindow, markerS, id_sinal));
+                                google.maps.event.addListener(markerS, "click", infoCallbackSinal(infowindow, markerS, id_sinal));
                             });
                         }
                     });
