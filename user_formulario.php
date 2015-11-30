@@ -1,6 +1,6 @@
 <?php
 require_once("template/header.php");
-if (isset($_POST['submit'])) {
+if (isset($_POST['cad-submit'])) {
     include_once("user_form_cad_verifica_dados.php");
 }
 ?>
@@ -64,23 +64,23 @@ if (isset($_POST['submit'])) {
         
         <label for="nome">Nome Completo:</label>
         <input type="text" name="nome" class="form" placeholder="ex: John Smith" maxlength="45" pattern="^[a-zA-Z\s]{3,}[^0-9]+$" required title="Deve conter apenas letras, entre 3 e 5 caracteres.">
-        <?php if (isset($_POST['submit'])) {echo $nomeErro;} ?>
+        <?php if (isset($_POST['cad-submit'])) {echo $nomeErro;} ?>
 
         <br><label for="email">E-mail:</label>
         <input type="email" name="email" id="campoemail" class="form" placeholder="ex: john@smith.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required title="email@email.com">
         <span id="emailIndisponivel" style="color: #f00">Este email já foi utilizado.</span>  
-        <?php if (isset($_POST['submit'])) {echo $emailExistenteErro;} ?>
-        <?php if (isset($_POST['submit'])) {echo $emailNValidoErro;} ?>
+        <?php if (isset($_POST['cad-submit'])) {echo $emailExistenteErro;} ?>
+        <?php if (isset($_POST['cad-submit'])) {echo $emailNValidoErro;} ?>
 
         <br><label for="senha">Senha:</label>
         <input type="password" name="senha" id="campoSenha" class="form"  pattern=".{6,}" required title="A senha deve conter no mínimo 6 caracteres.">
-        <?php if (isset($_POST['submit'])) {echo $senhaErro;} ?>
+        <?php if (isset($_POST['cad-submit'])) {echo $senhaErro;} ?>
 
         <br><label for="senha_confirma">Confirme sua senha:</label>
         <input type="password" name="senha_confirma" id="campoConfSenha" class="form" required><br>
-        <?php if (isset($_POST['submit'])) {echo $senhaDifErro;} ?>
+        <?php if (isset($_POST['cad-submit'])) {echo $senhaDifErro;} ?>
 
-        <input type="submit" name="submit" value="Cadastrar" class="button">
+        <input type="submit" name="cad-submit" value="Cadastrar" class="button">
     </form>
 
     <form action="confirma_login.php" class="form_user2" method="POST">
