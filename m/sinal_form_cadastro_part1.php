@@ -15,7 +15,7 @@
 				<option value="OT">Outros</option>
 				</select><br>
 				<textarea placeholder="Descrição aqui..."class="formSinalInput"name="descricao"></textarea><br>
-				<input type="submit" value="Adicionar Ponto" style="margin-right: -20px;" class="button botaoSubmitSinal">
+                <input type="submit" value="Localização >>" style="margin-right: -20px;" class="button botaoSubmitSinal">
 			</div>
 		</form>		
 	</div>
