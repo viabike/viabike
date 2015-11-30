@@ -95,4 +95,3 @@ $user = $user_buscador->fetchAll(PDO::FETCH_OBJ);
     <?php
 endforeach;
 require_once("template/footer.php");
-?>

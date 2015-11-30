@@ -1,5 +1,5 @@
 <?php
-require_once("template/header.php"); 
+require_once("template/header.php");
 ?>
 <form action="sinal_confirmaCad.php" class="formSinal" name="formSinal" method="POST">
     <center>
@@ -41,30 +41,30 @@ require_once("template/header.php");
 
         addMarker(iconOb);
 
-        google.maps.event.addListener(marker, "dragend", function (event) {
+        google.maps.event.addListener(marker, "dragend", function(event) {
             document.getElementById("lat").value = event.latLng.lat();
             document.getElementById("lng").value = event.latLng.lng();
         });
 
     }
 
-   $("#categoria_sinal").change(function() {
+    $("#categoria_sinal").change(function() {
 
         var categoria_sinal = document.getElementById("categoria_sinal").value;
 
-        if(categoria_sinal == 'OB'){
+        if (categoria_sinal == 'OB') {
             marker.setMap(null);
             addMarker(iconOb);
         }
-        if(categoria_sinal == 'IT'){
+        if (categoria_sinal == 'IT') {
             marker.setMap(null);
             addMarker(iconIt);
         }
-        if(categoria_sinal == 'AC'){
+        if (categoria_sinal == 'AC') {
             marker.setMap(null);
             addMarker(iconAc);
         }
-        if(categoria_sinal == 'OT'){
+        if (categoria_sinal == 'OT') {
             marker.setMap(null);
             addMarker(iconOt);
         }
@@ -82,7 +82,7 @@ require_once("template/header.php");
             icon: myicon,
             position: {lat: parseFloat(mlat), lng: parseFloat(mlgn)}
         });
-        google.maps.event.addListener(marker, "dragend", function (event) {
+        google.maps.event.addListener(marker, "dragend", function(event) {
             document.getElementById("lat").value = event.latLng.lat();
             document.getElementById("lng").value = event.latLng.lng();
         });

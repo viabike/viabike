@@ -9,3 +9,5 @@ $user_conf->bindValue(":usuario_ativo", true, PDO::PARAM_BOOL);
 $user_conf->execute();
 
 header("location: user_sucesso_cadastro.php");
+
+?>
