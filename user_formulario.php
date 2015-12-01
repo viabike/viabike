@@ -89,8 +89,9 @@ if (isset($_POST['login-submit'])) {
 
     <form action="<?php $_SERVER['PHP_SELF']; ?>" class="form_user2" method="POST">
         <h1>Entrar</h1><br>
-        E-mail:<input type="email" name="email" class="form" placeholder="ex: john@smith.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required title="email@email.com"><br>
-        Senha:<input type="password" name="senha" class="form" required><br>
+        E-mail:<input type="text" name="email-login" class="form" placeholder="ex: john@smith.com" required=""><br>
+        Senha:<input type="password" name="senha-login" class="form" required>
+        <?php if (isset($_POST['login-submit'])) {echo $mensagem;}?>
         <input type="submit" name="login-submit" value="Entrar" class="button">
     </form>
 </div>
