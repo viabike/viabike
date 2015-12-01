@@ -16,16 +16,37 @@ if (isset($_POST['login-submit'])) {
         $("#campoSenha").css("border", "1px solid #bdc3c7");
         $("#campoConfSenha").css("border", "1px solid #bdc3c7");
         $("#emailIndisponivel").hide();
+        $("#senhasDiferentes").hide();
+        $("#senhasIguais").hide();
+        
         $("#campoConfSenha").keyup(function() {
             var senha = $("#campoSenha").val();
             var confSenha = $(this).val();
             
-            if (confSenha === senha) {
-                $("#campoConfSenha").css("border", "1px solid #40bd68");
+            if (confSenha === "") {
+                $("#campoConfSenha").css("border", "1px solid #bdc3c7");
+                $("#senhasDiferentes").hide();
+                $("#senhasIguais").hide();
             }
             else {
-                $("#campoConfSenha").css("border", "1px solid #f00");
+                if (confSenha === senha) {
+                    $("#campoConfSenha").css("border", "1px solid #40bd68");
+                    $("#senhasDiferentes").hide();
+                    $("#senhasIguais").show();
+                    
+                    var senhaIgual = '$("#senhasIguais").hide()';
+                    window.setTimeout(senhaIgual, 2500);
+                }
+                else {
+                    $("#campoConfSenha").css("border", "1px solid #f00");
+                    $("#senhasIguais").hide();
+                    $("#senhasDiferentes").show();
+                    
+                    var senhaDiferente = '$("#senhasDiferentes").hide()';
+                    window.setTimeout(senhaDiferente, 2500);
+                }
             }
+            
         });
         $("#campoemail").keyup(function() {
             var email = $(this).val();
@@ -53,7 +74,10 @@ if (isset($_POST['login-submit'])) {
     function getMessage(type) {
         if (type == 1) {
             $("#campoemail").css("border", "1px solid #f00");
-            $("#emailIndisponivel").show();      
+            $("#emailIndisponivel").show();  
+            
+            var emailIndis = '$("#emailIndisponivel").hide()';
+            window.setTimeout(emailIndis,2500);
         }
         else {
             $("#campoemail").css("border", "1px solid #40bd68");
@@ -81,10 +105,12 @@ if (isset($_POST['login-submit'])) {
         <?php if (isset($_POST['cad-submit'])) {echo $senhaErro;} ?>
 
         <br><label for="senha_confirma">Confirme sua senha:</label>
-        <input type="password" name="senha_confirma" id="campoConfSenha" class="form" required><br>
+        <input type="password" name="senha_confirma" id="campoConfSenha" class="form" required>
+        <span id="senhasDiferentes" style="color: #f00">As senhas não conferem!</span>
+        <span id="senhasIguais" style="color: #40bd68">As senhas conferem!</span>
         <?php if (isset($_POST['cad-submit'])) {echo $senhaDifErro;} ?>
 
-        <input type="submit" name="cad-submit" value="Cadastrar" class="button">
+        <br><input type="submit" name="cad-submit" value="Cadastrar" class="button">
     </form>
 
     <form action="<?php $_SERVER['PHP_SELF']; ?>" class="form_user2" method="POST">
@@ -92,7 +118,7 @@ if (isset($_POST['login-submit'])) {
         E-mail:<input type="text" name="email-login" class="form" placeholder="ex: john@smith.com" required=""><br>
         Senha:<input type="password" name="senha-login" class="form" required>
         <?php if (isset($_POST['login-submit'])) {echo $mensagem;}?>
-        <input type="submit" name="login-submit" value="Entrar" class="button">
+        <br><input type="submit" name="login-submit" value="Entrar" class="button">
     </form>
 </div>
 <?php
