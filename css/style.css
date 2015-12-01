@@ -358,7 +358,7 @@ table td{
 }
 
 
-/*TEXT Ã?REA*/
+/*TEXT ï¿½?REA*/
 .formSinal textarea { resize:both; } /* none|horizontal|vertical|both */
 .formSinal textarea.vert { resize:vertical; }
 .formSinal textarea.noResize { resize:none; }
