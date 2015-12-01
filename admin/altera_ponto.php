@@ -15,7 +15,7 @@
 ?>
 <script src="funcoes/funcoes.js"></script>
 <CENTER>
-	<h1>Alterar ponto de interesse</h1><br>
+	<h1>Alterar Ponto de Interesse</h1><br>
 		<form action="update_ponto.php" class="form_adm" name="form_adm" method="POST">
 
 			<div id="mapaadm"></div>
