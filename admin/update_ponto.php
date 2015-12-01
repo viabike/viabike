@@ -18,5 +18,5 @@
 			$updatePonto -> bindValue(":id_ponto"  ,  $_POST["id_ponto" ]);
 		// executando a QUERY
 		$updatePonto -> execute();
-	header("location: consulta_pontos.php");
+	header("location: consulta_pontos.php?altera=true");
 ?>

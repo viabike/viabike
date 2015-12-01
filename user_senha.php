@@ -2,8 +2,8 @@
 require_once("template/header.php");
 require_once("verificaSessao.php");
 
-echo '<h1 style="float: left; text-align: left">Alterar senha</h1>
-<a href="user_painel.php"><button class="button" style="float: right;">Editar perfil</button></a></h1><br>';
+echo '<h1 style="float: left; text-align: left">Alterar Senha</h1>
+<a href="user_painel.php"><button class="button" style="float: right;">Editar Perfil</button></a></h1><br>';
 ?>
 
 <form action="user_altera_senha.php" method="POST">
@@ -13,4 +13,4 @@ echo '<h1 style="float: left; text-align: left">Alterar senha</h1>
 </form>
 
 <?php
-include("template/footer.php");
+require_once("template/footer.php");

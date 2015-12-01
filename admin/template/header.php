@@ -13,6 +13,7 @@ include("funcoes/funcoes.php");
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="../js/bootstrap.js"></script>
 </head>
 <body>
 	<!-- //var_dump($_SESSION); //mostrar se a sessão esta criada -->

@@ -87,7 +87,7 @@ $user = $user_buscador->fetchAll(PDO::FETCH_OBJ);
 
         <a onClick="confirmaDesativar();" class="link-desativar"">Desativar conta</a>
 
-        <input type="button" value="Alterar" class="button" style="float: right; background-color: #c0c0c0; cursor: auto;" id="botaoNotOK">
+        <input type="button" value="Alterar" class="button" style="float: right; background-color: #c0c0c0; cursor: auto;" id="botaoNotOK" tooltip="Confirme sua senha">
         <input type="submit" value="Alterar" class="button" style="float: right; background-color: #40bd68;" id="botaoOk">
     </form>
 
