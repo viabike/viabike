@@ -38,7 +38,8 @@ if (isset($_POST['login-submit'])) {
         <span id="senhasIguais" style="color: #40bd68">As senhas conferem!</span>
         <?php if (isset($_POST['cad-submit'])) {echo $senhaDifErro;} ?>
 
-        <br><input type="submit" name="cad-submit" value="Cadastrar" class="button">
+        <br><input type="submit" value="Cadastrar" class="button" style="float: right; background-color: #c0c0c0; cursor: auto;" id="botaoNotOK" tooltip="Confira se os dados estão corretos">
+        <input type="submit" name="cad-submit" value="Cadastrar" class="button" style="float: right; background-color: #40bd68;" id="botaoOk">
     </form>
 
     <form action="<?php $_SERVER['PHP_SELF']; ?>" class="form_user2" method="POST">

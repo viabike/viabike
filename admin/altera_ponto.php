@@ -58,8 +58,8 @@
 	endforeach;
 	?>
 		<script>
-		var iconBicicletaria = '../imagens/bike1.png';
-		var iconPosto = '../imagens/posto1.png';//exemplo até colocar o original.
+		var iconBicicletaria = '../imagens/ponto_bicicletaria.png';
+		var iconPosto = '../imagens/ponto_posto.png';//exemplo até colocar o original.
 		var marker = '';
 		var map = '';
 
