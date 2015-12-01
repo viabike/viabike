@@ -1,4 +1,7 @@
-<?php include("template/header.php");?>
+<?php 
+require_once("template/header.php");
+require_once("verificaAdmin.php");
+?>
 	<script src="funcoes/funcoes.js"></script>
 
 	<center>
@@ -28,8 +31,8 @@
 		</form>
 	</center>
 	<script>
-		var iconBicicletaria = '../imagens/bike1.png';
-		var iconPosto = '../imagens/posto1.png';//exemplo até colocar o original.
+		var iconBicicletaria = '../imagens/ponto_bicicletaria.png';
+		var iconPosto = '../imagens/ponto_posto.png';//exemplo até colocar o original.
 		var marker = '';
 		var map = '';
 		var mlat = document.getElementById("lat").value;
@@ -81,4 +84,4 @@
 		google.maps.event.addDomListener(window, 'load', initMap);
 	</script>
 
-<?php include("template/footer.php");?>
+<?php require_once("template/footer.php");?>

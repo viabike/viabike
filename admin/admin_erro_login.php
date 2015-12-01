@@ -1,4 +1,4 @@
-<?php include("template/header.php");?>
+<?php require_once("template/header.php");?>
 
 <style>
 .botao {
@@ -45,4 +45,4 @@
 	<br>
 
 
-<?php include("template/footer.php");?>
+<?php require_once("template/footer.php");?>

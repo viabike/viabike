@@ -1,17 +1,24 @@
-<?php include("template/header.php");
-if(adminLogado()){
+<?php
+require_once("template/header.php");
+require_once("verificaAdmin.php");
 ?>
-<h1 style="text-align: left">Consultar pontos de interesse
-<a href="insere_ponto.php"><button class="button">Cadastar</button></a></h1><br>
-
+<h1 style="text-align: left">Consultar Pontos de Interesse
+<a href="insere_ponto.php"><button class="button">Cadastrar</button></a></h1><br>
 <?php
 require_once("../conexao/conexao.php");
 // =======================================================================
 if (array_key_exists("removido", $_GET) && $_GET['removido'] == 'true'):?>
-	<center><p>Ponto removido com sucesso.</p></center><br>
-
+	<div class="alert alert-success alert-dismissable" role="alert">Ponto removido com sucesso!
+	<button type="button" id="close" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
 <?php
 endif;
+
+if (array_key_exists("altera", $_GET) && $_GET['altera'] == 'true'):?>
+	<div class="alert alert-success alert-dismissable" role="alert">Ponto alterado com sucesso!
+	<button type="button" id="close" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+<?php
+endif;
+
 // SELECIONA TODOS OS REGISTROS DO BANCO VIABIKE_DB
 $pdo = conectar();
 $buscaPonto = $pdo -> prepare("SELECT * FROM ponto_interesse");
@@ -75,8 +82,5 @@ endforeach;
 }*/
 ?>
 <?php
-include("template/footer.php");
-}
-else{
-	header("location:index.php");
-} ?>
+require_once("template/footer.php");
+?>
