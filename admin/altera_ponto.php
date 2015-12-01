@@ -2,7 +2,7 @@
 	require_once("../conexao/conexao.php");
 	require_once("template/header.php");
 	require_once("verificaAdmin.php");
-	
+
 	$id_ponto = $_GET['id_ponto'];
 	$pdo = conectar();
 
@@ -21,6 +21,7 @@
 			<div id="mapaadm"></div>
 		<div id="form1">
 			<input type="hidden" name="id_ponto" value="<?=$linhas->id_ponto?>" class="form">
+			<input type="hidden" name="nome_antigo" value="<?=$linhas->nome?>" class="form">
 			Nome:<input type="text" name="nome" value="<?=$linhas->nome?>" class="form"  maxlength="45" minlength="3"><br>
 
 			Bairro:<input type="text" name="bairro" value="<?=$linhas->bairro?>" class="form"  maxlength="45" minlength="3"><br>

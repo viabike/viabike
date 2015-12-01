@@ -2,6 +2,8 @@
 	require_once("../conexao/conexao.php");
 	$pdo = conectar();
 
+		$nome_ant = $_POST['nome_antigo'];
+		$nome = $_POST['nome'];
 		// Preparando a QUERY
 		$updatePonto = $pdo -> prepare("UPDATE ponto_interesse set nome = :nome, bairro = :bairro, rua = :rua, num = :num, cep = :cep, telefone = :telefone, hr_inicio = :hr_inicio, hr_fecha = :hr_fecha, categoria = :categoria, latitude = :latitude, longitude = :longitude WHERE id_ponto = :id_ponto");
 			$updatePonto -> bindValue(":nome"      ,  $_POST["nome"     ]);
@@ -18,5 +20,11 @@
 			$updatePonto -> bindValue(":id_ponto"  ,  $_POST["id_ponto" ]);
 		// executando a QUERY
 		$updatePonto -> execute();
-	header("location: consulta_pontos.php?altera=true");
+
+		if($nome == $nome_ant){
+			header("location: consulta_pontos.php?altera=true&name=$nome");
+		}else{
+			header("location: consulta_pontos.php?altera=true&ant=$nome_ant&name=$nome");
+		}
+
 ?>

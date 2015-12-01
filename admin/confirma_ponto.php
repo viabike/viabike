@@ -37,5 +37,4 @@ $sql = $pdo -> prepare("INSERT INTO ponto_interesse(nome, bairro, rua, num, cep,
 // EXECUTANDO A QUERY
 $sql -> execute();
 
-header("location:consulta_pontos.php");
-
+header("location:consulta_pontos.php?cadponto=true");

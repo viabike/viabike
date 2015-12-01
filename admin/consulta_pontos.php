@@ -7,21 +7,33 @@ require_once("verificaAdmin.php");
 <?php
 require_once("../conexao/conexao.php");
 // =======================================================================
-if (array_key_exists("removido", $_GET) && $_GET['removido'] == 'true'):?>
-	<div class="alert alert-success alert-dismissable" role="alert">Ponto removido com sucesso!
-	<button type="button" id="close" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+if (array_key_exists("removido", $_GET) && $_GET['removido'] == 'true'){ ?>
+	<div class="alert alert-success alert-dismissable" role="alert"><strong><?=$_GET['name']?></strong> removido com sucesso!
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
 <?php
-endif;
+}
 
-if (array_key_exists("altera", $_GET) && $_GET['altera'] == 'true'):?>
-	<div class="alert alert-success alert-dismissable" role="alert">Ponto alterado com sucesso!
-	<button type="button" id="close" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+if ((array_key_exists("altera", $_GET) && $_GET['altera'] == 'true') and (array_key_exists("ant", $_GET))){ ?>
+	<div class="alert alert-success alert-dismissable" role="alert"><strong><?=$_GET['ant']?></strong> foi alterado para
+		<strong><?=$_GET['name']?></strong> com sucesso!
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
 <?php
-endif;
+}else if(array_key_exists("altera", $_GET) && $_GET['altera'] == 'true'){ ?>
+	<div class="alert alert-success alert-dismissable" role="alert"> <strong><?=$_GET['name']?></strong> foi alterado para
+		 com sucesso!
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+<?php
+ }
+
+if (array_key_exists("cadponto", $_GET) && $_GET['cadponto'] == 'true'){ ?>
+	<div class="alert alert-success alert-dismissable" role="alert"><strong><?=$_GET['name']?></strong> cadastrado com sucesso!
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+<?php
+}
 
 // SELECIONA TODOS OS REGISTROS DO BANCO VIABIKE_DB
 $pdo = conectar();
-$buscaPonto = $pdo -> prepare("SELECT * FROM ponto_interesse");
+$buscaPonto = $pdo -> prepare("SELECT * FROM ponto_interesse order by id_ponto desc");
 //Executando a QUERY
 $buscaPonto -> execute();
 //  FIM DA SELEÇÃO
@@ -68,7 +80,7 @@ $linha = $buscaPonto->fetchAll(PDO::FETCH_OBJ);?>
 				</script>
 				<a onClick="remove(<?php echo $linhas->id_ponto;?>);"><i class="fa fa-times font-icon"></i></a>
 				-->
-				<a href="delete_ponto.php?id_ponto=<?php echo $linhas->id_ponto;?>"><i class="fa fa-times font-icon"></i></a>
+				<a href="delete_ponto.php?id_ponto=<?=$linhas->id_ponto;?>&name=<?=$linhas->nome?>"><i class="fa fa-times font-icon"></i></a>
 			</td>
 		</tr>
 <?php
