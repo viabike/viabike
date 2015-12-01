@@ -119,7 +119,7 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
                             foreach ($user as $usuario):
                                 echo "
 						<li><a href='user_logout.php'>SAIR</a></li>
-						<li><a href='user_painel.php' tooltip="Alterar Perfil'>" . $_SESSION['nome'] . "</a></li>
+						<li><a href='user_painel.php' tooltip='Alterar Perfil'>" . $_SESSION['nome'] . "</a></li>
 						<li><a href='user_painel.php'><img src='imagens/users/" . $usuario->foto . "' width='30px' height='30px'></a></li>
 						<li style='color:#a7a7a7'> | </li>";
                             endforeach;
