@@ -5,6 +5,11 @@ if (isset($_POST['cad-submit'])) {
     include_once("user_cad_verifica_dados.php"); 
 }
 ?>
+
+<script type="text/javascript">
+<?php require_once("js/user_form_verifica.js"); ?>
+</script>
+
 <form action="<?php $_SERVER['PHP_SELF']; ?>" class="form_user1" method="POST">
 	<center><h1>Cadastre-se</h1></center>
     <br><br>
