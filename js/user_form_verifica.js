@@ -5,8 +5,9 @@ $(document).ready(function() {
         $("#emailIndisponivel").hide();
         $("#senhasDiferentes").hide();
         $("#senhasIguais").hide();
+        $("#botaoOk").hide();
         
-        $("#campoConfSenha").keyup(function() {
+        $("#campoConfSenha").blur(function() {
             var senha = $("#campoSenha").val();
             var confSenha = $(this).val();
             
@@ -20,6 +21,8 @@ $(document).ready(function() {
                     $("#campoConfSenha").css("border", "1px solid #40bd68");
                     $("#senhasDiferentes").hide();
                     $("#senhasIguais").show();
+                    $("#botaoOk").show();
+                    $("#botaoNotOK").hide();
                     
                     var senhaIgual = '$("#senhasIguais").hide()';
                     window.setTimeout(senhaIgual, 2500);
