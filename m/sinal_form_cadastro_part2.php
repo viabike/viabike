@@ -33,7 +33,8 @@ require_once("template/header.php");
 			center: {lat: parseFloat(mlat), lng: parseFloat(mlgn)},
 			disableDefaultUI: true
 		  });
-		  
+			loadKmlLayer('http://viabike.me/mapa/mapa-das-ciclovias-v2.kml', map);
+
 		var categoria = document.getElementById("tipo").value;
 			if(categoria == 'OB'){
 				addMarker(iconObras);
@@ -47,19 +48,24 @@ require_once("template/header.php");
 			else if(categoria == 'OT'){
 				addMarker(iconOutros);
 			}
-			
+
 			google.maps.event.addListener(marker, "dragend", function(event){
 			 document.getElementById("lat").value = event.latLng.lat();
 			 document.getElementById("lng").value = event.latLng.lng();
 			});
 
-
+			// FUNÇÃO QUE CARREGA KML
+			function loadKmlLayer(src, map) {
+					var kmlLayer = new google.maps.KmlLayer(src, {suppressInfoWindows: true, preserveViewport: true,
+							map: map
+					});
+			}
 		}
-		
-		
-			
-			
-		
+
+
+
+
+
 		function addMarker(myicon){
 			 var mlat = document.getElementById("lat").value;
 			 var mlgn = document.getElementById("lng").value;
