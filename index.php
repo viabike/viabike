@@ -2,6 +2,11 @@
 session_start();
 require_once("conexao/conexao.php");
 require_once("admin/funcoes/funcoes.php");
+require_once 'libs/Mobile_Detect.php';
+$detect = new Mobile_Detect;
+if ( $detect->isMobile() ) {
+   header('Location: http://m.viabike.me/');
+}
 
 $pdo = conectar();
 

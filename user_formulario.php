@@ -1,4 +1,5 @@
 <?php
+$page = 'cadastro';
 require_once("template/header.php");
 if (isset($_POST['cad-submit'])) {
     include_once("user_form_cad_verifica_dados.php");
@@ -7,6 +8,7 @@ if (isset($_POST['cad-submit'])) {
 if (isset($_POST['login-submit'])) {
     include_once("user_form_log_verifica_dados.php");
 }
+
 ?>
 <link rel="stylesheet" type="text/css" href="admin/css/style.css">
 
