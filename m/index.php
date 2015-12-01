@@ -3,6 +3,12 @@ ob_start();
 session_start();
 require_once("../conexao/conexao.php");
 require_once("funcoes/funcoes.php");
+require_once '../libs/Mobile_Detect.php';
+$detect = new Mobile_Detect;
+if (!$detect->isMobile() ) {
+   header('Location: http://viabike.me/');
+}
+
 $pdo = conectar();
 
 // Pontos de interesse
