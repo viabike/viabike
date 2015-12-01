@@ -1,14 +1,5 @@
 <?php
 
-session_start();
-require_once("conexao/conexao.php");
-
-// dados vindos da página index
-$user = $_POST['email'];
-$senha = sha1(strtolower($_POST['senha']));
-
-$conexao = conectar();
-
 //cria as vários com dados do banco
 $idb;
 $nomeb;
@@ -45,5 +36,5 @@ if ($user == $userb AND $senha == $senhab AND $tipob == "u") {// verifica se usu
     }
 }
 else {
-    header("location:erro_login.php");
+    header("location: index.php");
 }
