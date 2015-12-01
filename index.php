@@ -2,6 +2,11 @@
 session_start();
 require_once("conexao/conexao.php");
 require_once("admin/funcoes/funcoes.php");
+require_once 'libs/Mobile_Detect.php';
+$detect = new Mobile_Detect;
+if ( $detect->isMobile() ) {
+   header('Location: http://m.viabike.me/');
+}
 
 $pdo = conectar();
 
@@ -12,7 +17,7 @@ $buscaPonto->execute();
 $linhaPonto = $buscaPonto->fetchAll(PDO::FETCH_OBJ);
 
 // Sinalizações
-$buscaSinal = $pdo->prepare("SELECT `s`.* FROM `sinalizacao` as s 
+$buscaSinal = $pdo->prepare("SELECT `s`.* FROM `sinalizacao` as s
 INNER JOIN `usuario` as u ON `s`.`fk_id_usuario` = `u`.`id_usuario` WHERE `u`.`usuario_ativo` = 1 AND DATEDIFF(CURDATE(), `s`.`data_public`) <  60;");
 $buscaSinal->execute();
 
@@ -32,8 +37,8 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
 		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script src="js/jquery-ui.min.js"></script>
 		<link rel="stylesheet" href="css/jquery-ui-1.10.4.custom.min.css" id="theme">
-		<script>  
-			//Tooltip config    
+		<script>
+			//Tooltip config
 			$(function() {
 			  $( document ).tooltip({
 				position: {
@@ -50,9 +55,9 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
 				},
 				 items: "[tooltip]",
 				 content: function() {
-						  return $(this).attr("tooltip");}        
+						  return $(this).attr("tooltip");}
 			  });
-			});       
+			});
 		</script>
 		<style>
 		  .ui-tooltip, .arrow:after {
