@@ -1,7 +1,7 @@
 <?php
 require_once("template/header.php");
 ?>
-
+            <div id="titulo-form-cad">Localização</div>
 			<div id="mapaSinal"></div>
 			<form action="sinal_confirmaCad.php"  name="formSinal" method="POST" style="position:fixed; bottom:5%; right:5%; z-index:100;">
 				<?php

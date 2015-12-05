@@ -244,6 +244,22 @@ div#mapaSinal {
     bottom: 0;
     right: 0;
     position: absolute !important;
+    z-index: 1;
+}
+
+div#titulo-form-cad {
+    min-width: 80px;
+    width: auto;
+    height: 20px;
+    z-index: 99;
+    position: fixed;
+    font-size: 3.5em;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+    background: transparent;
+    margin: calc(100% - 90%) 0 0 calc(100% - 72%);
+    padding: 10px 5px;
 }
 
 /* CLASSES */
