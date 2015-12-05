@@ -2,6 +2,10 @@
 require_once("../conexao/conexao.php");
 require_once("template/header.php");
 
+if (isset($_GET['nc'])) {
+    echo'<span style="font-size: 2.5em; color: green;">Cadastro efetuado com sucesso!</span><br><br>';
+}
+
 echo '<center><h1>Editar Perfil</h1></center>';
 
 $conexao = conectar(); //Conexao com o banco de dados viabike_db

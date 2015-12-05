@@ -31,5 +31,5 @@ else {
     $_SESSION['tipo'] = 'user';
 
     setcookie('email', $email, time() + 3600);
-    header("location: user_painel.php");
+    header("location: user_painel.php?nc=true");
 }
