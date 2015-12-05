@@ -59,6 +59,11 @@ require_once("verificaSessao.php");
 </script>
 
 <?php
+
+if (isset($_GET['nc'])) {
+    echo'<span style="font-size: 1.5em; color: green;">Cadastro efetuado com sucesso!</span><br><br>';
+}
+
 echo '<h1 style="float: left; text-align: left">Editar Perfil</h1>
 <a href="user_senha.php"><button class="button" style="float: right;">Alterar senha</button></a></h1><br>';
 
