@@ -4,8 +4,8 @@ require_once("conexao/conexao.php");
 require_once("admin/funcoes/funcoes.php");
 require_once 'libs/Mobile_Detect.php';
 $detect = new Mobile_Detect;
-if ( $detect->isMobile() ) {
-   header('Location: http://m.viabike.me/');
+if ($detect->isMobile()) {
+    header('Location: http://m.viabike.me/');
 }
 
 $pdo = conectar();
@@ -22,88 +22,93 @@ INNER JOIN `usuario` as u ON `s`.`fk_id_usuario` = `u`.`id_usuario` WHERE `u`.`u
 $buscaSinal->execute();
 
 $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
+
+if (isset($_GET['idns'])) {
+    $nSLat = $_GET['lat'];
+    $nSLong = $_GET['long'];
+}
 ?>
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>ViaBike.me</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		<script src="https://maps.googleapis.com/maps/api/js"></script>
-		<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-		<script src="js/jquery-ui.min.js"></script>
-		<link rel="stylesheet" href="css/jquery-ui-1.10.4.custom.min.css" id="theme">
-		<script>
-			//Tooltip config
-			$(function() {
-			  $( document ).tooltip({
-				position: {
-				  my: "center bottom-15",
-				  at: "center top",
-				  using: function( position, feedback ) {
-					$( this ).css( position );
-					$( "<div>" )
-					  .addClass( "arrow" )
-					  .addClass( feedback.vertical )
-					  .addClass( feedback.horizontal )
-					  .appendTo( this );
-				  }
-				},
-				 items: "[tooltip]",
-				 content: function() {
-						  return $(this).attr("tooltip");}
-			  });
-			});
-		</script>
-		<style>
-		  .ui-tooltip, .arrow:after {
-			background: black;
-			border: none;
-		  }
-		  .ui-tooltip {
-			padding: 3px 10px;
-			color: white;
-			border-radius: 2px;
-			font-size: 10px;
-		  }
-		  .arrow {
-			width: 70px;
-			height: 16px;
-			overflow: hidden;
-			position: absolute;
-			left: 50%;
-			margin-left: -35px;
-			bottom: -16px;
-		  }
-		  .arrow.top {
-			top: -16px;
-			bottom: auto;
-		  }
-		  .arrow.left {
-			left: 20%;
-		  }
-		  .arrow:after {
-			content: "";
-			position: absolute;
-			left: 20px;
-			top: -20px;
-			width: 25px;
-			height: 25px;
-			box-shadow: 6px 5px 9px -9px black;
-			-webkit-transform: rotate(45deg);
-			-ms-transform: rotate(45deg);
-			transform: rotate(45deg);
-		  }
-		  .arrow.top:after {
-			bottom: -20px;
-			top: auto;
-		  }
-	</style>
-	</head>
+    <head>
+        <title>ViaBike.me</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="css/jquery-ui-1.10.4.custom.min.css" id="theme">
+        <script>
+            //Tooltip config
+            $(function() {
+                $(document).tooltip({
+                    position: {
+                        my: "center bottom-15",
+                        at: "center top",
+                        using: function(position, feedback) {
+                            $(this).css(position);
+                            $("<div>")
+                                    .addClass("arrow")
+                                    .addClass(feedback.vertical)
+                                    .addClass(feedback.horizontal)
+                                    .appendTo(this);
+                        }
+                    },
+                    items: "[tooltip]",
+                    content: function() {
+                        return $(this).attr("tooltip");
+                    }
+                });
+            });</script>
+        <style>
+            .ui-tooltip, .arrow:after {
+                background: black;
+                border: none;
+            }
+            .ui-tooltip {
+                padding: 3px 10px;
+                color: white;
+                border-radius: 2px;
+                font-size: 10px;
+            }
+            .arrow {
+                width: 70px;
+                height: 16px;
+                overflow: hidden;
+                position: absolute;
+                left: 50%;
+                margin-left: -35px;
+                bottom: -16px;
+            }
+            .arrow.top {
+                top: -16px;
+                bottom: auto;
+            }
+            .arrow.left {
+                left: 20%;
+            }
+            .arrow:after {
+                content: "";
+                position: absolute;
+                left: 20px;
+                top: -20px;
+                width: 25px;
+                height: 25px;
+                box-shadow: 6px 5px 9px -9px black;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+            .arrow.top:after {
+                bottom: -20px;
+                top: auto;
+            }
+        </style>
+    </head>
     <body>
         <div id="wrapper-index">
 
@@ -202,10 +207,17 @@ endforeach;
             var markersPontos = [];
             var markersSinal = [];
 
-//Função que inicia o mapa
-            function initMap() {
+            //Função que inicia o mapa
+            function initMap(nSLat, nSLong) {
+                if (nSLat === undefined || nSLong === undefined) {
+                    var latLong = new google.maps.LatLng(-23.6255903, -45.4241453);
+                }
+                else {
+                    var latLong = new google.maps.LatLng(nSLat, nSLong);
+                }
+
                 map = new google.maps.Map(document.getElementById('mapa'), {
-                    center: {lat: -23.6255903, lng: -45.4241453},
+                    center: latLong,
                     zoom: 15,
                     mapTypeId: google.maps.MapTypeId.ROADMAP,
                     mapTypeControl: true,
@@ -222,7 +234,6 @@ endforeach;
                     }
                 });
                 loadKmlLayer('http://viabike.me/mapa/mapa-das-ciclovias-v2.kml', map);
-
                 // Pontos de Interesse
                 for (var i = 0; i < pontos.length; i++) {
                     var ponto = pontos[i];
@@ -244,7 +255,6 @@ endforeach;
                     google.maps.event.addListener(markerP, "click", infoCallbackPonto(infowindow, markerP, id));
                 }
                 ;
-
                 // Sinalizações
                 for (var i = 0; i < sinais.length; i++) {
                     var sinal = sinais[i];
@@ -273,7 +283,6 @@ endforeach;
                     google.maps.event.addListener(markerS, "click", infoCallbackSinal(infowindow, markerS, id));
                 }
                 ;
-
             }
 
             function getContentPonto(id) {
@@ -339,9 +348,7 @@ endforeach;
             }
 
 //EVENTO QUE CHAMA FUNÇÃO initMap() QUANDO A JANELA FOR CARREGADA.
-            google.maps.event.addDomListener(window, 'load', initMap);
-
-
+            google.maps.event.addDomListener(window, 'load', initMap<?php if (isset($_GET['idns'])) { echo '(' . $nSLat . ', ' . $nSLong . ')'; } ?>);
             /*
              * Programação dos filtros
              */
@@ -353,7 +360,6 @@ endforeach;
                 //pegando o valor do campo
                 var filtro_ponto;
                 var filtro_sinal;
-
                 // Programaçao do botão "Pontos de Interesse"
                 $("#filtro-ponto").change(function() {
                     filtro_ponto = $("#filtro-ponto").val();
@@ -386,9 +392,7 @@ endforeach;
                             });
                         }
                     });
-
                 });
-
                 // Programação do botão "Sinalizações"
                 $("#filtro-sinal").change(function() {
                     filtro_sinal = $("#filtro-sinal").val();
@@ -428,9 +432,7 @@ endforeach;
                             });
                         }
                     });
-
                 });
-
             });
 
         </script>
