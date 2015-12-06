@@ -102,20 +102,22 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
                 <div id="filtros-menu">
                     <form id="filtro-ponto" style="margin-left:10%; margin-top:30px">
                         <h1 style="font-size:1em; font-weight:600; margin:0px 0px 5px 0px;">Pontos de Interesse</h1>
-                        <input type="radio" name="filtro-ponto" value="BC" class="filtro-input"> Bicicletarias<br>
-                        <input type="radio" name="filtro-ponto" value="PG" class="filtro-input"> Postos de Gasolina<br>
-                        <input type="radio" name="filtro-ponto" value="TODOS" class="filtro-input"> Todos<br>
-                        <input type="radio" name="filtro-ponto" value="" class="filtro-input"> Nenhum
+                        <input type="radio" name="filtro-ponto" value="BC" class="filtro-input" id="BC"><label for="BC"> Bicicletaria</label><br>
+                        <input type="radio" name="filtro-ponto" value="PG" class="filtro-input" id="PG"><label for="PG"> Postos de Gasolina</label><br>
+                        <input type="radio" name="filtro-ponto" value="TODOS" class="filtro-input" id="pontoTodos"><label for="pontoTodos"> Todos</label><br>
+                        <input type="radio" name="filtro-ponto" value="" class="filtro-input" id="pontoNenhum"><label for="pontoNenhum"> Nenhum</label>
                     </form>
-
+                    
+                    <br>
+                    
                     <form id="filtro-sinal" style="margin-left:10%; margin-top:5px">
                         <h1 style="font-size:1em; font-weight:600; margin:0px 0px 5px 0px;">Sinalizações</h1>
-                        <input type="radio" name="filtro-sinal" value="OB" class="filtro-input"> Obras<br>
-                        <input type="radio" name="filtro-sinal" value="IT" class="filtro-input"> Interditado<br>
-                        <input type="radio" name="filtro-sinal" value="AC" class="filtro-input"> Acidentado<br>
-                        <input type="radio" name="filtro-sinal" value="OT" class="filtro-input"> Outros<br>
-                        <input type="radio" name="filtro-sinal" value="TODOS" class="filtro-input"> Todos<br>
-                        <input type="radio" name="filtro-sinal" value="" class="filtro-input"> Nenhum
+                        <input type="radio" name="filtro-sinal" value="OB" id="OB" class="filtro-input"><label for="OB"> Obras</label><br>
+                        <input type="radio" name="filtro-sinal" value="IT" id="IT" class="filtro-input"><label for="IT"> Interditado</label><br>
+                        <input type="radio" name="filtro-sinal" value="AC" id="AC" class="filtro-input"><label for="AC"> Acidentado</label><br>
+                        <input type="radio" name="filtro-sinal" value="OT" id="OT"  class="filtro-input"><label for="OT"> Outros</label><br>
+                        <input type="radio" name="filtro-sinal" value="TODOS" id="sinalTodos" class="filtro-input"><label for="sinalTodos"> Todos</label><br>
+                        <input type="radio" name="filtro-sinal" value="" id="sinalNenhum" class="filtro-input"><label for="sinalNenhum"> Nenhum</label>
                     </form>
 
                     <br>
