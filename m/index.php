@@ -111,6 +111,7 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
                     <form id="filtro-sinal" style="margin-left:10%; margin-top:5px">
                         <h1 style="font-size:1em; font-weight:600; margin:0px 0px 5px 0px;">Sinalizações</h1>
                         <input type="radio" name="filtro-sinal" value="OB" class="filtro-input"> Obras<br>
+                        <input type="radio" name="filtro-sinal" value="IT" class="filtro-input"> Interditado<br>
                         <input type="radio" name="filtro-sinal" value="AC" class="filtro-input"> Acidentado<br>
                         <input type="radio" name="filtro-sinal" value="OT" class="filtro-input"> Outros<br>
                         <input type="radio" name="filtro-sinal" value="TODOS" class="filtro-input"> Todos<br>
