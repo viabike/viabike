@@ -234,8 +234,8 @@ div#form2{
 }
 div#form_user{
 	padding:30px 10px 40px 10px;
-	width: auto;
-	min-height: 520px;
+	width: calc(100% - 20px);
+	float: left;
 	height: auto;
 	line-height:1.467;
 	color:#34495e;
@@ -336,6 +336,12 @@ div#nav-header ul li a:hover {
   color: #3c763d;
   background-color: #dff0d8;
   border-color: #d6e9c6;
+}
+.alert-danger {
+	margin: 10px 0px -20px 0px;
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
 }
 .close {
   float: right;
