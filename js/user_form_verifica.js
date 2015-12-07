@@ -1,7 +1,4 @@
 $(document).ready(function() {
-        $("#campoemail").css("border", "1px solid #bdc3c7");
-        $("#campoSenha").css("border", "1px solid #bdc3c7");
-        $("#campoConfSenha").css("border", "1px solid #bdc3c7");
         $("#emailIndisponivel").hide();
         $("#senhasDiferentes").hide();
         $("#senhasIguais").hide();
@@ -12,28 +9,19 @@ $(document).ready(function() {
             var confSenha = $(this).val();
 
             if (confSenha === "") {
-                $("#campoConfSenha").css("border", "1px solid #bdc3c7");
                 $("#senhasDiferentes").hide();
                 $("#senhasIguais").hide();
             }
             else {
                 if (confSenha === senha) {
-                    $("#campoConfSenha").css("border", "1px solid #40bd68");
                     $("#senhasDiferentes").hide();
                     $("#senhasIguais").show();
                     $("#botaoOk").show();
                     $("#botaoNotOK").hide();
-
-                    var senhaIgual = '$("#senhasIguais").hide()';
-                    window.setTimeout(senhaIgual, 2500);
                 }
                 else {
-                    $("#campoConfSenha").css("border", "1px solid #f00");
                     $("#senhasIguais").hide();
                     $("#senhasDiferentes").show();
-
-                    var senhaDiferente = '$("#senhasDiferentes").hide()';
-                    window.setTimeout(senhaDiferente, 2500);
                 }
             }
 
@@ -42,7 +30,6 @@ $(document).ready(function() {
             var email = $(this).val();
 
             if (email === "") {
-                $("#campoemail").css("border", "1px solid #bdc3c7");
                 $("#emailIndisponivel").hide();
             }
             else {
@@ -63,11 +50,9 @@ $(document).ready(function() {
     });
     function getMessage(type) {
         if (type == 1) {
-            $("#campoemail").css("border", "1px solid #f00");
-            $("#emailIndisponivel").show();  
+            $("#emailIndisponivel").show();
         }
         else {
-            $("#campoemail").css("border", "1px solid #bdc3c7");
             $("#emailIndisponivel").hide();
         }
     }
