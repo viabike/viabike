@@ -19,14 +19,15 @@ if (isset($_POST['login-submit'])) {
 <div id='form_user'>
     <form action="<?php $_SERVER['PHP_SELF']; ?>" class="form_user1" method="POST" style="border-right: 1px solid #bdc3c7;">
         <h1>Cadastre-se</h1><br>
-        
+
         <label for="nome">Nome Completo:</label>
         <input type="text" name="nome" class="form" placeholder="ex: John Smith" maxlength="45" pattern="^[a-zA-Z\s]{3,}[^0-9]+$" required title="Deve conter apenas letras, entre 3 e 5 caracteres.">
         <?php if (isset($_POST['cad-submit'])) {echo $nomeErro;} ?>
 
         <br><label for="email">E-mail:</label>
         <input type="email" name="email" id="campoemail" class="form" placeholder="ex: john@smith.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required title="email@email.com">
-        <span id="emailIndisponivel" style="color: #f00">Este email já foi utilizado.</span>  
+        <div class="alert alert-danger alert-dismissable" role="alert" id="emailIndisponivel">Este email já foi utilizado. <br>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" id="emailIndisponivelC"><span aria-hidden="true">&times;</span></button></div>
         <?php if (isset($_POST['cad-submit'])) {echo $emailExistenteErro;} ?>
         <?php if (isset($_POST['cad-submit'])) {echo $emailNValidoErro;} ?>
 
@@ -36,8 +37,11 @@ if (isset($_POST['login-submit'])) {
 
         <br><label for="senha_confirma">Confirme sua senha:</label>
         <input type="password" name="senha_confirma" id="campoConfSenha" class="form" required>
-        <span id="senhasDiferentes" style="color: #f00">As senhas não conferem!</span>
-        <span id="senhasIguais" style="color: #40bd68">As senhas conferem!</span>
+
+        <div class="alert alert-danger alert-dismissable" role="alert" id="senhasDiferentes">As senhas não conferem! <br>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" id="senhasDiferentesC"><span aria-hidden="true">&times;</span></button></div>
+        <div class="alert alert-success alert-dismissable" role="alert" id="senhasIguais">As senhas conferem! <br>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" id="senhasIguaisC"><span aria-hidden="true">&times;</span></button></div>
         <?php if (isset($_POST['cad-submit'])) {echo $senhaDifErro;} ?>
 
         <br><input type="submit" value="Cadastrar" class="button" style="float: right; background-color: #c0c0c0; cursor: auto;" id="botaoNotOK" tooltip="Confira se os dados estão corretos">

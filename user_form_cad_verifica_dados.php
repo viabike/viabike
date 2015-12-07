@@ -27,26 +27,31 @@ while ($linha = $user_verif->fetch(PDO::FETCH_ASSOC)) {
 }
 
 if ((empty($nome) || (strlen($nome) < 3)) || (strlen($nome) > 45)) {
-    $nomeErro = "Nome deve conter entre 3 e 45 caracteres. <br>";
+    $nomeErro = '<div class="alert alert-danger alert-dismissable" role="alert" id="ufNMsg">Nome deve conter entre 3 e 45 caracteres. <br>
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close" id="ufNClose"><span aria-hidden="true">&times;</span></button></div>';
     $numErros++;
 }
 
 if ($Bemail == $email) {
-    $emailExistenteErro = "Este email já foi utilizado. <br>";
+    $emailExistenteErro = '<div class="alert alert-danger alert-dismissable" role="alert" id="ufEMsg">Este email já foi utilizado. <br>
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close" id="ufEClose"><span aria-hidden="true">&times;</span></button></div>';
     $numErros++;
 }
 
-if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){  
-    $emailNValidoErro = "Email inválido. <br>";
+if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
+    $emailNValidoErro =  '<div class="alert alert-danger alert-dismissable" role="alert" id="ufEIMsg">Email inválido. <br>
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close" id="ufSEIClose"><span aria-hidden="true">&times;</span></button></div>';
     $numErros++;
 }
 
 if (empty($senha) || (strlen($senha) < 6)) {
-    $senhaErro = "A senha deve conter no mínimo 6 caracteres. <br>";
+    $senhaErro = '<div class="alert alert-danger alert-dismissable" role="alert" id="ufSMsg">A senha deve conter no mínimo 6 caracteres. <br>
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close" id="ufSClose"><span aria-hidden="true">&times;</span></button></div>';
     $numErros++;
 }
 if ($senhaC != $senhaConf) {
-    $senhaDifErro = "As senhas não conferem. <br>";
+    $senhaDifErro = '<div class="alert alert-danger alert-dismissable" role="alert" id="ufSMsg">As senhas não conferem. <br>
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close" id="ufSClose"><span aria-hidden="true">&times;</span></button></div>';
     $numErros++;
 }
 

@@ -60,8 +60,8 @@ require_once("verificaSessao.php");
 <?php
 
 if (isset($_GET['nc'])) {
-    echo'<div class="alert alert-success alert-dismissable" role="alert">Cadastro realizado com com sucesso!
-	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+    echo'<div class="alert alert-success alert-dismissable" role="alert" id="upMsg">Cadastro realizado com com sucesso!
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close" id="upClose"><span aria-hidden="true">&times;</span></button></div>';
 }
 
 echo '<h1 style="float: left; text-align: left">Editar Perfil</h1>
