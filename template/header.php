@@ -16,10 +16,11 @@ require_once("admin/funcoes/funcoes.php");
         <script src="https://maps.googleapis.com/maps/api/js"></script>
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="admin/funcoes/funcoes.js"></script>
-		<link rel="stylesheet" href="css/jquery-ui-1.10.4.custom.min.css" id="theme">
-		<script src="js/jquery-ui.min.js"></script>
-		<script>  
-		//Tooltip config    
+        <script src="js/script.js"></script>
+    		<link rel="stylesheet" href="css/jquery-ui-1.10.4.custom.min.css" id="theme">
+    		<script src="js/jquery-ui.min.js"></script>
+		<script>
+		//Tooltip config
 		$(function() {
 		  $( document ).tooltip({
 			position: {
@@ -36,12 +37,12 @@ require_once("admin/funcoes/funcoes.php");
 			},
 			 items: "[tooltip]",
 			 content: function() {
-					  return $(this).attr("tooltip");}        
+					  return $(this).attr("tooltip");}
 		  });
 		});
 		$('#text-report_ifr').tooltip( "option", "disabled", true );
 		$('#text-report_ifr *[title]').tooltip('disable');
-		$('#text-report_ifr').tooltip('disable');        
+		$('#text-report_ifr').tooltip('disable');
 		</script>
 				<style>
 		  .ui-tooltip, .arrow:after {
@@ -116,7 +117,7 @@ require_once("admin/funcoes/funcoes.php");
                         ?>
 
 <?php if (!userLogado() && !isset($page)) {?>
-                         
+
                 <li><a href="user_formulario.php"><button class="entrar">Entrar </button></a></li>
 <?php } ?>
                         <li><a href="equipe.php">EQUIPE</a></li>
