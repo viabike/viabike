@@ -6,11 +6,11 @@ $(document).ready(function() {
         $("#senhasDiferentes").hide();
         $("#senhasIguais").hide();
         $("#botaoOk").hide();
-        
+
         $("#campoConfSenha").blur(function() {
             var senha = $("#campoSenha").val();
             var confSenha = $(this).val();
-            
+
             if (confSenha === "") {
                 $("#campoConfSenha").css("border", "1px solid #bdc3c7");
                 $("#senhasDiferentes").hide();
@@ -23,7 +23,7 @@ $(document).ready(function() {
                     $("#senhasIguais").show();
                     $("#botaoOk").show();
                     $("#botaoNotOK").hide();
-                    
+
                     var senhaIgual = '$("#senhasIguais").hide()';
                     window.setTimeout(senhaIgual, 2500);
                 }
@@ -31,16 +31,16 @@ $(document).ready(function() {
                     $("#campoConfSenha").css("border", "1px solid #f00");
                     $("#senhasIguais").hide();
                     $("#senhasDiferentes").show();
-                    
+
                     var senhaDiferente = '$("#senhasDiferentes").hide()';
                     window.setTimeout(senhaDiferente, 2500);
                 }
             }
-            
+
         });
         $("#campoemail").keyup(function() {
             var email = $(this).val();
-      
+
             if (email === "") {
                 $("#campoemail").css("border", "1px solid #bdc3c7");
                 $("#emailIndisponivel").hide();
@@ -65,12 +65,9 @@ $(document).ready(function() {
         if (type == 1) {
             $("#campoemail").css("border", "1px solid #f00");
             $("#emailIndisponivel").show();  
-            
-            var emailIndis = '$("#emailIndisponivel").hide()';
-            window.setTimeout(emailIndis,2500);
         }
         else {
-            $("#campoemail").css("border", "1px solid #40bd68");
+            $("#campoemail").css("border", "1px solid #bdc3c7");
             $("#emailIndisponivel").hide();
         }
     }
