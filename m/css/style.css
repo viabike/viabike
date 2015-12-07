@@ -403,8 +403,8 @@ div#titulo-form-cad {
 
 /*INFOWINDOW PONTO E SINALIZAÇÃO*/
 div.infoWindow {
-    min-width: 150px;
-    min-height: 50px;
+    min-width: 160px;
+    min-height: 100px;
     margin:auto;
     background: white;
     padding: 7px 0px 0px 7px;
