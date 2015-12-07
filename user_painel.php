@@ -3,7 +3,6 @@ require_once("conexao/conexao.php");
 require_once("template/header.php");
 require_once("verificaSessao.php");
 ?>
-
 <script>
     /*
      * Verifica campo de confrmação de senha e exibe mensagem de erro caso esteja errada
@@ -61,7 +60,8 @@ require_once("verificaSessao.php");
 <?php
 
 if (isset($_GET['nc'])) {
-    echo'<span style="font-size: 1.5em; color: green;">Cadastro efetuado com sucesso!</span><br><br>';
+    echo'<div class="alert alert-success alert-dismissable" role="alert">Cadastro realizado com com sucesso!
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
 }
 
 echo '<h1 style="float: left; text-align: left">Editar Perfil</h1>
