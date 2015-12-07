@@ -17,7 +17,7 @@
 				<option value="OT">Outros</option>
 				</select><br>
 				<span style="font-size:2em;">Descrição:</span><textarea style="padding:5px; width:calc(100% - 12px);" class="form" name="descricao"></textarea><br>
-                <input type="submit" value="Prosseguir" style="float:right;" class="button botaoSubmitSinal">
+                <input type="submit" value="Prosseguir" style="float:right;background-color: #e89401;" class="button botaoSubmitSinal">
 			</div>
 		</form>
 	</div>

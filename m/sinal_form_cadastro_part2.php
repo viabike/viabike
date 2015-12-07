@@ -14,7 +14,7 @@ require_once("template/header.php");
 				<input type="hidden" style="display:none;" name="descricao" value="<?php echo $descricao; ?>">
 				<input type="hidden" name="latitude"   id="lat" value="-23.6255903">
 				<input type="hidden" name="longitude"   id="lng" value="-45.4241453"><br>
-				<input type="submit" value="Salvar" class="button botaoSubmitSinal" onclick="return validar();">
+				<input type="submit" value="Salvar" class="button botaoSubmitSinal" style="background-color: #e89401;" onclick="return validar();">
 			</form>
 
 	<script>

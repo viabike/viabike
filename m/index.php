@@ -74,7 +74,7 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
                 if (userLogado()) {
                     echo "
                     <div id='botao-direito'>
-                        <a href='sinal_form_cadastro_part1.php'><button class='button_direito' style='background-color: #BD4040;'>SINALIZAR</button></a>
+                        <a href='sinal_form_cadastro_part1.php'><button class='button_direito' style='background-color: #e89401;'>SINALIZAR</button></a>
                     </div>
                     ";
                 }
@@ -107,9 +107,9 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
                         <input type="radio" name="filtro-ponto" value="TODOS" class="filtro-input" id="pontoTodos"><label for="pontoTodos"> Todos</label><br>
                         <input type="radio" name="filtro-ponto" value="" class="filtro-input" id="pontoNenhum"><label for="pontoNenhum"> Nenhum</label>
                     </form>
-                    
+
                     <br>
-                    
+
                     <form id="filtro-sinal" style="margin-left:10%; margin-top:5px">
                         <h1 style="font-size:1em; font-weight:600; margin:0px 0px 5px 0px;">Sinalizações</h1>
                         <input type="radio" name="filtro-sinal" value="OB" id="OB" class="filtro-input"><label for="OB"> Obras</label><br>
