@@ -1,5 +1,5 @@
 <?php
-include("template/header.php");
+require_once("template/header.php");
 ?>
 
 <center><h1>Sobre</h1></center><br>
@@ -22,5 +22,5 @@ include("template/header.php");
 </center>
 
 <?php
-include("template/footer.php");
+require_once("template/footer.php");
 ?>
