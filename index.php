@@ -26,6 +26,7 @@ $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
 if (isset($_GET['idns'])) {
     $nSLat = $_GET['lat'];
     $nSLong = $_GET['long'];
+
 }
 ?>
 <!DOCTYPE html>
@@ -281,6 +282,16 @@ endforeach;
                     markersSinal.push(markerS);
                     var id = sinal[0].toString();
                     google.maps.event.addListener(markerS, "click", infoCallbackSinal(infowindow, markerS, id));
+					
+					// EXIBIÇÃO INFOWINDOW APÓS O CADASTRO DA SINALIZAÇÃO
+					<?php 
+					if (isset($_GET['idns'])) { ?>
+						if (id == '<?php echo $_GET['idns']; ?>'){
+							google.maps.event.addDomListener(window, 'load',infoCallbackSinal(infowindow, markerS, id));
+						}
+					<?php
+					}
+					?>
                 }
                 ;
             }
@@ -389,6 +400,7 @@ endforeach;
                                 markersPontos.push(marker);
                                 var id_ponto = ponto['id_ponto'].toString();
                                 google.maps.event.addListener(marker, "click", infoCallbackPonto(infowindow, marker, id_ponto));
+								
                             });
                         }
                     });
@@ -428,7 +440,12 @@ endforeach;
                                 });
                                 markersSinal.push(markerS);
                                 var id_sinal = sinal['id_sinal'].toString();
+								
+								
                                 google.maps.event.addListener(markerS, "click", infoCallbackSinal(infowindow, markerS, id_sinal));
+								
+							
+								
                             });
                         }
                     });
