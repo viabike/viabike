@@ -230,6 +230,16 @@ endforeach;
                         markersSinal.push(markerS);
                         var id = sinal[0].toString();
                         google.maps.event.addListener(markerS, "click", infoCallbackSinal(infowindow, markerS, id));
+                        
+                        // EXIBIÇÃO INFOWINDOW APÓS O CADASTRO DA SINALIZAÇÃO
+					<?php 
+					if (isset($_GET['idns'])) { ?>
+						if (id == '<?php echo $_GET['idns']; ?>'){
+							google.maps.event.addDomListener(window, 'load',infoCallbackSinal(infowindow, markerS, id));
+						}
+					<?php
+					}
+					?>
                     }
                     ;
 
