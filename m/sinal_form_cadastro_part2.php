@@ -1,7 +1,7 @@
 <?php
 require_once("template/header.php");
 ?>
-            <div id="titulo-form-cad">Localização</div>
+<div class="alert alert-success"><center>Localização</center></div>
 			<div id="mapaSinal"></div>
 			<form action="sinal_confirmaCad.php"  name="formSinal" method="POST" style="position:fixed; bottom:5%; right:5%; z-index:100;">
 				<?php
@@ -19,7 +19,7 @@ require_once("template/header.php");
 
 	<script>
 		var iconObras = 'imagens/sinal_obras.png';
-		var iconInterditado = 'imagens/sinal_inderditado.png';
+		var iconInterditado = 'imagens/sinal_interditado.png';
 		var iconAcidentado = 'imagens/sinal_acidentado.png';
 		var iconOutros = 'imagens/sinal_outros.png';
 		var marker = '';
