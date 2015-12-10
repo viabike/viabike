@@ -23,6 +23,12 @@ INNER JOIN `usuario` as u ON `s`.`fk_id_usuario` = `u`.`id_usuario` WHERE `u`.`u
 $buscaSinal->execute();
 
 $linhaSinal = $buscaSinal->fetchAll(PDO::FETCH_OBJ);
+
+if (isset($_GET['idns'])) {
+    $nSLat = $_GET['lat'];
+    $nSLong = $_GET['long'];
+
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -148,10 +154,16 @@ endforeach;
                 var markersPontos = [];
                 var markersSinal = [];
 
-//Função que inicia o mapa
-                function initMap() {
-                    map = new google.maps.Map(document.getElementById('mapa'), {
-                        center: {lat: -23.6457413, lng: -45.4242261},
+            //Função que inicia o mapa
+            function initMap(nSLat, nSLong) {
+                if (nSLat === undefined || nSLong === undefined) {
+                    var latLong = new google.maps.LatLng(-23.6255903, -45.4241453);
+                }
+                else {
+                    var latLong = new google.maps.LatLng(nSLat, nSLong);
+                }
+                map = new google.maps.Map(document.getElementById('mapa'), {
+                    center: latLong,
                         zoom: 15,
                         mapTypeId: google.maps.MapTypeId.ROADMAP,
                         mapTypeControl: true,
@@ -287,7 +299,7 @@ endforeach;
                 }
 
                 //EVENTO QUE CHAMA FUNÇÃO initMap() QUANDO A JANELA FOR CARREGADA.
-                google.maps.event.addDomListener(window, 'load', initMap);
+                google.maps.event.addDomListener(window, 'load', initMap<?php if (isset($_GET['idns'])) { echo '(' . $nSLat . ', ' . $nSLong . ')'; } ?>);
 
                 /*
                  * Programação dos filtros

@@ -31,8 +31,14 @@ $addsinal->bindValue(":data_public", $data_public);
 $addsinal->bindValue(":fk_id_usuario", $fk_id_usuario);
 $addsinal->execute();
 
+$NovoSinal = $conexao->prepare("SELECT `id_sinal` FROM `sinalizacao` ORDER BY `id_sinal` DESC LIMIT 1");
+$NovoSinal->execute();
+foreach ($NovoSinal as $value) {
+    $idNovoSinal = $value['id_sinal'];
+}
+
 if ($addsinal) {
-    header("location: index.php");
+    header("location: index.php?idns=$idNovoSinal&lat=$latitude&long=$longitude");
 }
 else {
     echo "Erro ao cadastrar ponto.";
